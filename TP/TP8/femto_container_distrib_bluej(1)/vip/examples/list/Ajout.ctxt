@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Ajout
+comment1.params=elt\ list
+comment1.target=java.util.List\ execute(java.lang.Object,\ java.util.List)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

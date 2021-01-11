@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Caretaker
+comment1.params=
+comment1.target=Caretaker()
+comment2.params=
+comment2.target=Memento\ getMemento()
+comment3.params=memento
+comment3.target=void\ setMemento(Memento)
+comment4.params=
+comment4.target=void\ forget()
+numComments=5

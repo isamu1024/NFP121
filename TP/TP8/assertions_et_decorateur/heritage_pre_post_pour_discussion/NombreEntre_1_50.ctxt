@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=NombreEntre_1_50
+comment0.text=\ Liskov\ page\ 176\r\n\ pre_super\ \=\=>\ pre_this\r\n\ pre_super\ &&\ post_this\ \=\=>\ post_super\r\n\ \r\n\ Eiffel,\ \r\n\ \ The\ precondition\ can\ only\ become\ weaker\ than\ in\ the\ inherited\ contract.\r\n\ \ The\ postcondition\ can\ only\ become\ stronger\ than\ in\ the\ inherited\ contract.\ \r\n
+comment1.params=i
+comment1.target=boolean\ pre_setValeur(int)
+comment2.params=i
+comment2.target=boolean\ post_setValeur(int)
+comment3.params=i
+comment3.target=void\ setValeurLiskov(int)
+comment4.params=i
+comment4.target=void\ setValeurEiffel(int)
+numComments=5

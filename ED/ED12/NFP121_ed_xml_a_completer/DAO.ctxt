@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=t
+comment0.target=void\ create(T)
+comment0.text=Cr\u00E9ation\ de\ l'instance\ t\ en\ BDD.\n@param\ t\ l'instance\ de\ T\n@throws\ Exception\ si\ l'op\u00E9ration\ est\ en\ \u00E9chec\n\n
+comment1.params=id
+comment1.target=T\ retrieve(ID)
+comment1.text=Permet\ de\ retrouver\ une\ instance\ de\ T\ \u00E0\ partie\ de\ son\ identifiant.\n@param\ id\ l'identifiant\ associ\u00E9\ \u00E0\ t\n@return\ l'instance\ associ\u00E9e\n@throws\ Exception\ si\ l'op\u00E9ration\ est\ en\ \u00E9chec\n\n
+comment2.params=t
+comment2.target=void\ update(T)
+comment2.text=Mise\ \u00E0\ jour\ de\ t\ dans\ la\ base.\n@param\ t\ instance\ de\ T,\ existante\n@throws\ Exception\ si\ l'op\u00E9ration\ est\ en\ \u00E9chec\n\n
+comment3.params=id
+comment3.target=void\ delete(ID)
+comment3.text=Retrait\ de\ t\ dans\ la\ base.\n@param\ id\ l'identifiant\ associ\u00E9\ \u00E0\ t\n@throws\ Exception\ si\ l'op\u00E9ration\ est\ en\ \u00E9chec\n\n
+comment4.target=List<T>\ findAll()
+comment4.text=Obtention\ de\ la\ liste\ des\ T.\n@throws\ Exception\ si\ l'op\u00E9ration\ est\ en\ \u00E9chec\n\n
+numComments=5

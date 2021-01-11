@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=EnsembleRepOk
+comment1.params=c
+comment1.target=EnsembleRepOk(CollectionI)
+comment2.params=i
+comment2.target=void\ ajouter(int)
+comment3.params=c
+comment3.target=void\ ajouter(CollectionI)
+comment4.params=i
+comment4.target=void\ retirer(int)
+comment5.params=i
+comment5.target=boolean\ contient(int)
+comment6.params=
+comment6.target=int\ taille()
+comment7.params=o
+comment7.target=boolean\ equals(java.lang.Object)
+comment8.params=
+comment8.target=int\ hashCode()
+comment9.params=
+comment9.target=java.lang.Object\ af()
+numComments=10

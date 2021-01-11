@@ -1,0 +1,920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="FR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>NFP121 - TP4</title>
+  <style type="text/css">
+    body {
+      background: #e5ded6;
+      background-color: #fff;
+      color: #333333;
+      font-size: 14px;
+      font-family: Verdana, Arial;
+    }
+
+    table {
+      font-size: 20px;
+      border-color: #808080;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    h2 {
+      color: #c1002a;
+      font-family: Verdana, Arial;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    h3 {
+      color: #c1002a;
+      font-family: Verdana, Arial;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    hr {
+      margin: 15px 0 15px 0;
+    }
+
+    applet {
+      margin: 10px 0px 25px 250px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #777777;
+    }
+
+    questionSection {
+      color: #c1002a;
+      font-family: Verdana, Arial;
+      font-size: medium;
+    }
+
+    p,
+    a,
+    img {
+      font-size: normal;
+      padding-left: 15px;
+    }
+
+    /* li {
+            font-size: smaller;
+            padding-left: 15px;
+            content: #C1002A;
+        } */
+
+    ul {
+      font-size: normal;
+    }
+
+    ul li::before {
+      content: "\2022";
+      color: #c1002a;
+      width: 1em;
+      margin-left: -1em;
+      display: inline-block;
+    }
+
+    code {
+      background-color: antiquewhite;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align: center">NFP 121 - TP5</h2>
+  <h2 style="text-align: center">Classes abstraites, interface, héritage</h2>
+  <br />
+  <hr />
+  <br />
+  <table>
+    <tr>
+      <td>Nom</td>
+      <td>MORO</td>
+    </tr>
+    <tr>
+      <td>Prénom</td>
+      <td>ALEXANDRE</td>
+    </tr>
+    <tr>
+      <td>Matricule</td>
+      <td>0g5drredxv9</td>
+    </tr>
+  </table>
+
+  <br />
+  <hr />
+  <h3>Question 1.1</h3>
+
+  <questionSection>Complétez la classe "Ensemble", nommée Ensemble<T></T>
+  </questionSection>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> add(T t) <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+</span>        <span style='font-weight:bold;color:#7B0052;'>if</span> (table.contains(t))
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+        <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+            table.add(t);
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <p>On utilise ici la méthode <code>add()</code> de la classe <code>vector</code>.</p>
+  <p>On appelle la méthode <code>contains()</code> héritée de <code>java.util.AbstractCollection<E></E></code> qui
+    vérifie si l'objet a ajouter n'est pas déjà dans la collection.<br></p>
+  <p>Que se passe-t-il si on utilise this.add(...) dans cette méthode ?</p>
+  <p>Etant donné que la méthode <code>add()</code> n'est pas définie dans les superclasses on boucle sans fin dans la
+    méthode.</p>
+  <p> Et <code>this.contains()</code> ?</p>
+  <p>Nous avons eu un petit débats sur le discord de l'UE concernant cette méthode. En raison de la présence d'une "délégation" sur le type Vector, j'ai tout d'abord pensé que <br>
+  la méthode <code>contains()</code> devait également se baser sur la méthode issue de vector comme pour <code>add()</code>, mais il s'avère que l'on attendait ici celle <br>
+venant de la classe abstraite AbstractSet. la raison m'échappe une peu car j'ai du mal a voir la différence entre les 2 dans notre cas.</p>
+  <!--<p>Ici aucun problème a utiliser <code>this.contains(o)</code> au lieu de <code>table.contains(o)</code>, contains
+    étant défini dans la superclasse <code>AbstractCollection&ltE&gt</code> dont nous héritons.<br></p> 
+  <a
+    href="https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html#contains(java.lang.Object)">https://docs.oracle.com/javase/7/docs/api/java/util/AbstractCollection.html#contains(java.lang.Object)</a><br>
+  <p>Il en va de même pour la classe <code>Vector&ltE&gt</code> :</p>
+  <img src="./tpImage/Q1_1_1.png" alt="" />
+  <p>Les 2 appels renvoient à la même méthode au final.</p> -->
+  <p>Que déclenche la méthode <code>addAll</code> de la super-classe ? </p>
+  <p>Comme noté dans la javadoc :</p>
+  <p><i>Adds all of the elements in the specified collection to this collection</i></p>
+  <p>On pourrait être tenté de l'utiliser dans notre méthode <code>add()</code>,après tout un objet unique ou une
+    collection d'objet ne semble pas si éloigné, mais il ne faut pas oublier <br>
+    que <code>addAll()</code> s'appuie justement sur la méthode <code>add()</code> que la classe concrête se doit
+    d'implanter.</p>
+
+
+
+  <br />
+  <hr />
+  <h3>Question 1.2</h3>
+  <questionSection>Proposez une classe de tests unitaires de la classe "Ensemble<T>" (pour la méthode add())
+  </questionSection>
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testAdd()<span style='font-weight:bold;color:#D3171B'>{</span>
+            question1.Ensemble&lt;Integer&gt; e1, e3;
+            
+            e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;Integer&gt;();
+    
+            <span style='color:#3F7F5F'>// test de l'ajout d'un objet
+    </span>        
+            assertEquals(true, e1.add(2));
+            assertEquals(1, e1.size());
+            
+            <span style='color:#3F7F5F'>// test elt deja present dans la collection
+    </span>        assertFalse(e1.add(2));
+    
+            <span style='color:#3F7F5F'>// creation d'un nouvelle collection pour addAll()
+    </span>        e3 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;Integer&gt;();
+            e3.add(3); e3.add(4);
+    
+            <span style='color:#3F7F5F'>// test de l'insertion de la collection
+    </span>        assertTrue(e1.addAll(e3));
+            assertEquals(3,e1.size());
+    
+            <span style='color:#3F7F5F'>// test de l'echec d'un nouvel ajout de la collection
+    </span>        assertFalse(e1.addAll(e3));
+            assertEquals(3,e1.size());
+            
+            <span style='color:#3F7F5F'>// test de contains()
+    </span>        assertTrue(e1.contains(2));
+            assertTrue(e1.containsAll(e3));
+    
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+  <br />
+  <hr />
+  <h3>Question 1.3</h3>
+  <questionSection>Enrichissez la classe Ensemble<T> avec ces 4 opérations : </questionSection>
+
+
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.*;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Ensemble&lt;T&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> AbstractSet&lt;T&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>protected</span> java.util.Vector&lt;T&gt; table = <span style='font-weight:bold;color:#7B0052;'>new</span> java.util.Vector&lt;T&gt;();
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> size() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> table.size();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Iterator&lt;T&gt; iterator() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> table.iterator();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> add(T t) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// Ã  compléter pour la question1-1
+        </span>        <span style='font-weight:bold;color:#7B0052;'>if</span> (this.contains(t))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+                <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> this.table.add(t);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Ensemble&lt;T&gt; union(Ensemble&lt;? <span style='font-weight:bold;color:#7B0052;'>extends</span> T&gt; e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// utilisation de la methode addAll() de la classe abstraite AbstractSet&lt;T&gt;
+        </span>        Ensemble&lt;T&gt; e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> Ensemble&lt;T&gt;();
+                e1.addAll(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        
+                e1.addAll(e);
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> e1;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Ensemble&lt;T&gt; inter(Ensemble&lt;? <span style='font-weight:bold;color:#7B0052;'>extends</span> T&gt; e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// utilisation de la methode retainAll() de la classe abstraite AbstractSet&lt;T&gt;
+        </span>        Ensemble&lt;T&gt; e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> Ensemble&lt;T&gt;();
+                e1.addAll(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        
+                e1.retainAll(e);
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> e1;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Ensemble&lt;T&gt; diff(Ensemble&lt;? <span style='font-weight:bold;color:#7B0052;'>extends</span> T&gt; e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// utilisation de la methode retainAll() de la classe abstraite AbstractSet&lt;T&gt;
+        </span>        Ensemble&lt;T&gt; e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> Ensemble&lt;T&gt;();
+                e1.addAll(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        
+                e1.removeAll(e);
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> e1;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            Ensemble&lt;T&gt; diffSym(Ensemble&lt;? <span style='font-weight:bold;color:#7B0052;'>extends</span> T&gt; e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// il s'agit en fait de l'union - l'intersection
+        </span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> (this.union(e).diff(this.inter(e)));
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <ul>
+    <li>Union : utilisation de la méthode <code>addAll()</code> sur une copie de la collection principale pour retourner
+      une collection contenant les éléments des 2</li>
+    <li>Inter : utilisation de la méthode <code>retainAll()</code> sur une copie afin de ne conserver que les éléments
+      présents dans les 2 collections.</li>
+    <li>diff : utilisation de la méthode <code>removeAll()</code> afin d'enlever les éléments de la liste passée en
+      paramètre dans une copie de la collection principale</li>
+    <li>diffSym : chainage des fonctions précédemment développées : on unie les 2 listes puis on "retire" le résultat de
+      l'intersection</li>
+  </ul>
+  <br>
+
+  <p>Interface graphique :</p>
+  <p>Utilisation des classes anonymes : </p>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'>button1.addActionListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ActionListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    unionActionPerformed(ae);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>);</pre>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'>button2.addActionListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ActionListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+                  intersectionActionPerformed(ae);
+              <span style='font-weight:bold;color:#D3171B'>}</span>
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      );</pre>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'>button3.addActionListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ActionListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+            differenceActionPerformed(ae);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'>button4.addActionListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ActionListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+          diffSymetriqueActionPerformed(ae);
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <br />
+  <hr />
+  <h3>Question 1.4</h3>
+
+  <questionSection>Proposez une classe de tests unitaires de la classe "Ensemble<T>" (pour la méthode add())
+  </questionSection>
+  <br>
+  <p>On passe une fois dans chaque méthode pour tester le comportement des opérations.</p>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+      <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> EnsembleTest <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase <span style='font-weight:bold;color:#D3171B'>{</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testAdd()<span style='font-weight:bold;color:#D3171B'>{</span>
+              question1.Ensemble&lt;Integer&gt; e1, e3;
+      
+              e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;Integer&gt;();
+      
+              <span style='color:#3F7F5F'>// test de l'ajout d'un objet
+      </span>
+              assertEquals(true, e1.add(2));
+              assertEquals(1, e1.size());
+      
+              <span style='color:#3F7F5F'>// test elt deja present dans la collection
+      </span>        assertFalse(e1.add(2));
+      
+              <span style='color:#3F7F5F'>// creation d'un nouvelle collection pour addAll()
+      </span>        e3 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;Integer&gt;();
+              e3.add(3); e3.add(4);
+      
+              <span style='color:#3F7F5F'>// test de l'insertion de la collection
+      </span>        assertTrue(e1.addAll(e3));
+              assertEquals(3,e1.size());
+      
+              <span style='color:#3F7F5F'>// test de l'echec d'un nouvel ajout de la collection
+      </span>        assertFalse(e1.addAll(e3));
+              assertEquals(3,e1.size());
+      
+              <span style='color:#3F7F5F'>// test de contains()
+      </span>        assertTrue(e1.contains(2));
+              assertTrue(e1.containsAll(e3));
+      
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testUnion() <span style='font-weight:bold;color:#D3171B'>{</span>
+              question1.Ensemble&lt;Integer&gt; e1, e2;
+      
+              e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;Integer&gt;();
+              assertEquals(true, e1.add(2));
+              assertEquals(true, e1.add(3));
+      
+              e2 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;Integer&gt;();
+              assertEquals(true, e2.add(3));
+              assertEquals(true, e2.add(4));
+      
+              question1.Ensemble&lt;Integer&gt; union = e1.union(e2);
+      
+              assertEquals(3, union.size());
+              assertTrue(union.contains(2));
+              assertTrue(union.contains(3));
+              assertTrue(union.contains(4));
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testDiff() <span style='font-weight:bold;color:#D3171B'>{</span>
+              question1.Ensemble&lt;String&gt; e1, e2;
+      
+              e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;String&gt;();
+              assertEquals(true, e1.add(<span style='color:#2A00FF'>"aaa"</span>));
+              assertEquals(true, e1.add(<span style='color:#2A00FF'>"bbb"</span>));
+      
+              e2 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;String&gt;();
+              assertEquals(true, e2.add(<span style='color:#2A00FF'>"aaa"</span>));
+              assertEquals(true, e2.add(<span style='color:#2A00FF'>"ccc"</span>));
+      
+              question1.Ensemble&lt;String&gt; diff = e1.diff(e2);
+      
+              assertEquals(1, diff.size());
+              assertTrue(diff.contains(<span style='color:#2A00FF'>"bbb"</span>));
+              assertFalse(diff.contains(<span style='color:#2A00FF'>"aaa"</span>));
+              assertFalse(diff.contains(<span style='color:#2A00FF'>"ccc"</span>));
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testInter() <span style='font-weight:bold;color:#D3171B'>{</span>
+              question1.Ensemble&lt;String&gt; e1, e2;
+      
+              e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;String&gt;();
+              assertEquals(true, e1.add(<span style='color:#2A00FF'>"aaa"</span>));
+              assertEquals(true, e1.add(<span style='color:#2A00FF'>"bbb"</span>));
+      
+              e2 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;String&gt;();
+              assertEquals(true, e2.add(<span style='color:#2A00FF'>"aaa"</span>));
+              assertEquals(true, e2.add(<span style='color:#2A00FF'>"ccc"</span>));
+      
+              question1.Ensemble&lt;String&gt; inter = e1.inter(e2);
+      
+              assertEquals(1, inter.size());
+              assertTrue(inter.contains(<span style='color:#2A00FF'>"aaa"</span>));
+              assertFalse(inter.contains(<span style='color:#2A00FF'>"bbb"</span>));
+              assertFalse(inter.contains(<span style='color:#2A00FF'>"ccc"</span>));
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+          
+          <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testDiffSym() <span style='font-weight:bold;color:#D3171B'>{</span>
+              question1.Ensemble&lt;String&gt; e1, e2;
+      
+              e1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;String&gt;();
+              assertEquals(true, e1.add(<span style='color:#2A00FF'>"aaa"</span>));
+              assertEquals(true, e1.add(<span style='color:#2A00FF'>"bbb"</span>));
+      
+              e2 = <span style='font-weight:bold;color:#7B0052;'>new</span> question1.Ensemble&lt;String&gt;();
+              assertEquals(true, e2.add(<span style='color:#2A00FF'>"aaa"</span>));
+              assertEquals(true, e2.add(<span style='color:#2A00FF'>"ccc"</span>));
+      
+              question1.Ensemble&lt;String&gt; diffSym = e1.diffSym(e2);
+      
+              assertEquals(2, diffSym.size());
+              assertTrue(diffSym.contains(<span style='color:#2A00FF'>"bbb"</span>));
+              assertTrue(diffSym.contains(<span style='color:#2A00FF'>"ccc"</span>));
+              assertFalse(diffSym.contains(<span style='color:#2A00FF'>"aaa"</span>));
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+      <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <br />
+  <hr />
+  <h3>Question 2.1</h3>
+  <questionSection>Complétez la classe Chapitre2CoreJava2 en développant ces deux méthodes de classe</questionSection>
+  <ul>
+    <li>Obtention d'une liste de mots à partir de la constante CHAPITRE2.<br>
+      <pre
+        style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+        Courier New', Courier, monospace; overflow:
+        auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> List&lt;String&gt; listeDesMots()(utilisez une LinkedList)</pre>
+    </li>
+    <li>
+      Obtention d'une liste de couples <String,Integer>, à partir la liste des mots ci-dessus.
+        <pre
+          style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+          Courier New', Courier, monospace; overflow:
+          auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Map&lt;String,Integer&gt; occurrencesDesMots(List&lt;String&gt; listeDesMots)</pre>
+        <p>(utilisez une HashMap)</p>
+    </li>
+  </ul>
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> List&lt;String&gt; listeDesMots() <span style='font-weight:bold;color:#D3171B'>{</span>
+      List&lt;String&gt; liste = <span style='font-weight:bold;color:#7B0052;'>new</span> LinkedList&lt;String&gt;(); <span style='color:#3F7F5F'>// ï¿½ complï¿½ter
+</span>
+      StringTokenizer st = <span style='font-weight:bold;color:#7B0052;'>new</span> StringTokenizer(Chapitre2CoreJava2.CHAPITRE2,
+              <span style='color:#2A00FF'>"[](){};, :.\n\""</span>);
+
+      <span style='font-weight:bold;color:#7B0052;'>while</span> (st.hasMoreTokens()) <span style='font-weight:bold;color:#D3171B'>{</span>
+          liste.add(st.nextToken());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+
+      <span style='font-weight:bold;color:#7B0052;'>return</span> liste;
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='color:#3F5FBF'>/**
+   * Obtention d'une liste de couples &lt;String,Integer&gt;. 
+   * A chaque mot prï¿½sent dans la liste, est associï¿½ son nombre d'occurrence.
+   * 
+   * @param liste la liste des mots
+   */</span>
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Map&lt;String, Integer&gt; occurrencesDesMots(List&lt;String&gt; liste) <span style='font-weight:bold;color:#D3171B'>{</span>
+      Map&lt;String, Integer&gt; table = <span style='font-weight:bold;color:#7B0052;'>new</span> HashMap&lt;String, Integer&gt;(); <span style='color:#3F7F5F'>// ï¿½ complï¿½ter
+</span>
+      <span style='font-weight:bold;color:#7B0052;'>int</span> count= 0;
+
+      <span style='font-weight:bold;color:#7B0052;'>for</span> (String item : liste) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>if</span> (table.containsKey(item))<span style='font-weight:bold;color:#D3171B'>{</span>
+              count = table.get(item);
+              count++;
+              table.put(item, count);
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+          <span style='font-weight:bold;color:#7B0052;'>else</span>
+              table.put(item, 1);
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+
+      <span style='font-weight:bold;color:#7B0052;'>return</span> table;
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <p>Dans la méthode <code>public static List<String> listeDesMots()</code> on se repose sur la collection fournie
+    <code>StringTokenizer st = new StringTokenizer()</code><br>
+    et à l'aide d'un itérateur sur cette dernière on peuple notre <code>LinkedList</code> via la méthode
+    <code>add()</code></p>
+
+  <p> Pour la méthode <code>public static Map<String, Integer> occurrencesDesMots(List<String> liste)</code> c'est
+    finalement assez simple : <br>
+  <ul>
+    <li>On parcourt la liste de String à l'aide d'une boucle <code>for</code></li>
+    <li>Si la table contient le String en question, on itére le nombre occurence contenu dans la paire</li>
+    <li>Si ce n'est pas le cas on rajoute un entrée pour le mot dans la <code>HashMap</code></li>
+  </ul>
+  </p>
+
+  <br />
+  <hr />
+  <h3>Question 2.2</h3>
+  <questionSection>Complétez la classe JPanelListe afin d'implanter, toutes les actions associées aux noms des boutons
+  </questionSection>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='color:#3F7F5F'>// Réagie a la validation par la touche return
+    </span>        saisie.addActionListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+    
+            <span style='color:#3F7F5F'>// ActionListener sur les boutons
+    </span>        boutonRechercher.addActionListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            boutonRetirer.addActionListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            boutonOccurrences.addActionListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+    
+            ordreCroissant.addItemListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            ordreDecroissant.addItemListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);</pre>
+
+  <p>retirer : retrait de tous les mots commençant par le préfixe de la zone de saisie; le booléen, résultat du retrait
+    est affiché.</p>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> retirerDeLaListeTousLesElementsCommencantPar(String prefixe) <span style='font-weight:bold;color:#D3171B'>{</span>
+  <span style='font-weight:bold;color:#7B0052;'>boolean</span> resultat = <span style='font-weight:bold;color:#7B0052;'>false</span>;
+
+  Iterator it = occurrences.entrySet().iterator();
+
+  <span style='font-weight:bold;color:#7B0052;'>while</span> (it.hasNext())<span style='font-weight:bold;color:#D3171B'>{</span>
+      Map.Entry&lt;String, Integer&gt; entree = (Map.Entry)it.next();
+
+      <span style='font-weight:bold;color:#7B0052;'>if</span> (entree.getKey().startsWith(prefixe))<span style='font-weight:bold;color:#D3171B'>{</span>
+          occurrences.replace(entree.getKey(), 0);
+
+          Iterator listIt = liste.iterator();
+
+          <span style='font-weight:bold;color:#7B0052;'>while</span> (listIt.hasNext())<span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>if</span>(listIt.next().equals(entree.getKey()))<span style='font-weight:bold;color:#D3171B'>{</span>
+                  listIt.remove();
+                  resultat = <span style='font-weight:bold;color:#7B0052;'>true</span>;
+              <span style='font-weight:bold;color:#D3171B'>}</span>
+              
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+  texte.setText(liste.toString());
+
+  <span style='font-weight:bold;color:#7B0052;'>return</span> resultat;
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <p>croissant : tri du texte selon cet ordre, utilisez Collections.sort.</p>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>if</span> (ie.getSource() == ordreCroissant) <span style='font-weight:bold;color:#D3171B'>{</span>
+  Collections.sort(liste);
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+  <p>décroissant : proposer une classe interne implémentant l'interface Comparator.</p>
+
+  <p>Appel via : </p>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#7B0052;'>if</span> (ie.getSource() == ordreDecroissant)<span style='font-weight:bold;color:#D3171B'>{</span>
+  TriDecroissant triD = <span style='font-weight:bold;color:#7B0052;'>new</span> TriDecroissant();
+  Collections.sort(liste, triD);</pre>
+
+  <p>Classe interne : </p>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TriDecroissant <span style='font-weight:bold;color:#7B0052;'>implements</span> Comparator&lt;String&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+
+    @Override
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> compare(String a, String b)<span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>return</span> (a.compareToIgnoreCase(b) * -1);
+
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <p>Cette classe intene implemente l'interface <code>Comparator</code> pour le type String<br>
+    On override la méthode compare pour retourner un ordre décroissant en se basant sur la méthode de comparaison entre
+    2 String déjà disponible.</p>
+
+  <br />
+  <hr />
+  <h3>Question 2.3</h3>
+
+  <questionSection>Complétez maintenant, la classe JPanelListe2 afin d'implanter la possibilité d'annuler les actions de
+    modification du texte comme le retrait ou le tri sur la liste.</questionSection>
+
+  <p>On se basera essentiellement sur le pattern Memento</p>
+  <p>Je me suis beaucoup aidé de cette explication ; <br>
+    <a href="https://refactoring.guru/design-patterns/memento">https://refactoring.guru/design-patterns/memento</a></p>
+
+  <p>L'idée ici est de sauvegarder l'état d'un objet au moyen d'un autre objet "Memento".<br>
+    Imbriquer la classe <code>Memento</code> permet d'avoir accès aux propriétes privées de l'objet à sauvegarder
+    car<br>
+    comme spécifié dans le site cité plus haut, les objets ne sont pas forcément des hippies qui exposent tous leurs
+    attributs en public.
+  </p>
+
+  <p>La classe <code>CareTaker</code> se charge de stocker et retourner les états sauvegardés. Ici nous passons par une
+    <code>Stack()</code> comme "collection d'états", un <code>pop()</code><br>
+    retournera l'état tout juste sauvegardé.</p>
+
+  <p>La classe <code>JPanelListe2</code> implante 2 nouvelles méthodes :
+  <ul>
+    <li> <code>public Object saveToMemento()</code> <br>
+      Permet de sauvegarder l'état de l'objet courant dans un memento.</li>
+    <li> <code>public void restoreFromMemento(Memento m)</code><br>
+      Permet de restaurer l'état de l'objet courant depuis le mémento.</li>
+  </ul>
+  </p>
+
+  <p>La classe <code>Memento</code> :</p>
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Memento<span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>private</span> List&lt;String&gt; MementoListe; 
+            <span style='font-weight:bold;color:#7B0052;'>private</span> Map&lt;String, Integer&gt; MementoOccurrences;
+    
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Memento(List&lt;String&gt; liste,Map&lt;String, Integer&gt; occurrences) <span style='font-weight:bold;color:#D3171B'>{</span>
+                MementoListe = <span style='font-weight:bold;color:#7B0052;'>new</span> LinkedList&lt;String&gt;(liste);
+                MementoOccurrences = <span style='font-weight:bold;color:#7B0052;'>new</span> HashMap&lt;String, Integer&gt;(occurrences);            
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>public</span> List&lt;String&gt; getListe()<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> MementoListe;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Map&lt;String, Integer&gt; getOccurences()<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> MementoOccurrences;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <p>La classe <code>CareTaker</code> :</p>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question2;
+        
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.Stack;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.EmptyStackException;
+        
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> CareTaker <span style='font-weight:bold;color:#7B0052;'>extends</span> Exception
+        <span style='font-weight:bold;color:#D3171B'>{</span>
+            
+            <span style='font-weight:bold;color:#7B0052;'>private</span> Stack etats = <span style='font-weight:bold;color:#7B0052;'>new</span> Stack();
+            
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> addMemento(Object m)<span style='font-weight:bold;color:#D3171B'>{</span>
+            
+                etats.push(m);
+                
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> getSize()<span style='font-weight:bold;color:#D3171B'>{</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>return</span> etats.size();
+            
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Object getMemento()<span style='font-weight:bold;color:#D3171B'>{</span>
+            
+                Object o;
+                
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                
+                    o = etats.pop();
+                    
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (EmptyStackException e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    
+                    o = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                <span style='font-weight:bold;color:#7B0052;'>return</span> o;
+                
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+        
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <p>Les méthodes rajoutées dans <code>JPanelListe2</code>:</p>
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> Object saveToMemento()
+            <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Memento(liste, occurrences);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> restoreFromMemento(Memento m)
+            <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                Memento memento = m;
+        
+                liste = memento.getListe();
+                occurrences = memento.getOccurences();
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TriDecroissant <span style='font-weight:bold;color:#7B0052;'>implements</span> Comparator&lt;String&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                @Override
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> compare(String a, String b)<span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> (a.compareToIgnoreCase(b) * -1);
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> 
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+  <br />
+  <hr />
+  <h3>Question 3.1</h3>
+  <questionSection>Proposez les fabriques d'ensembles HashSetFactory, (en utilisant la classe concrète
+    java.util.HashSet) et TreeSetFactory,<br>
+    (en utilisant la classe concrète java.util.TreeSet, attention dans ce cas les éléments doivent être comparables...).
+  </questionSection>>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question3;
+  
+  <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.Set;
+  <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.TreeSet;
+  
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TreeSetFactory&lt;T <span style='font-weight:bold;color:#7B0052;'>extends</span> Comparable&gt; <span style='font-weight:bold;color:#7B0052;'>implements</span> Factory&lt;Set&lt;T&gt;&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+  
+      @Override
+      <span style='font-weight:bold;color:#7B0052;'>public</span> Set&lt;T&gt; create()<span style='font-weight:bold;color:#D3171B'>{</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> TreeSet&lt;T&gt;();
+      
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <pre
+    style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question3;
+  
+  <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.Set;
+  <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.HashSet;
+  
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HashSetFactory&lt;T&gt; <span style='font-weight:bold;color:#7B0052;'>implements</span> Factory&lt;Set&lt;T&gt;&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+  
+      @Override
+      <span style='font-weight:bold;color:#7B0052;'>public</span> Set&lt;T&gt; create()<span style='font-weight:bold;color:#D3171B'>{</span>
+  
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> HashSet&lt;T&gt;();
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+  <br>
+<p>Les 2 classes ont de fortes similitudes entre elles, toutes les deux implémentent l'interface <code>Factory&ltSet<T>></code> car notre fabrique nous retournera des types<br>
+venant de l'interface <code>&ltSet<E>></code>. La principale différence viendre de la classe <code>TreeSetFactory</code> qui imposera une contrainte sur le type générique pour <br>
+que celui-ci implante l'interface <code>Comparable</code>. Contrairement au type <code>HashSet</code> qui se base sur le hash pour vérifier qu'un élément est déjà présent, <br>
+<code>TreeSet</code> va devoir se reposer sur la méthode <code>compareTo()</code> pour s'assurer de la non présence d'un élément. </p>
+<p>les méthodes <code>create()</code> de nos 2 classes renverront chacune un type <code>&ltSet<T>></code>.</p>
+
+
+
+  <br />
+  <hr />
+  <h3>Question 3.2</h3>
+  <br>
+  <questionSection>Complétez les classes et la classe de Tests unitaires. </questionSection>
+
+  <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question3;
+
+    <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.Set;
+    
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Tests <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test1(question3.Factory&lt; ? <span style='font-weight:bold;color:#7B0052;'>extends</span> Set&lt;Integer&gt;&gt; f) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+            Set&lt;Integer&gt; set = f.create();
+    
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (<span style='font-weight:bold;color:#7B0052;'>int</span> i = 20; i &gt; 0; i--)
+                set.add(i);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testCreation() <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                test1(<span style='font-weight:bold;color:#7B0052;'>new</span> TreeSetFactory&lt;Integer&gt;());
+                test1(<span style='font-weight:bold;color:#7B0052;'>new</span> HashSetFactory&lt;Integer&gt;());
+            <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (NoSuchMethodError e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>"NoSuchMethodError : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception inattendue : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_TreeSetFactory()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+                question3.TreeSetFactory&lt;Integer&gt; treeSetF1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question3.TreeSetFactory&lt;Integer&gt;();
+                java.util.Set&lt;Integer&gt; ts = treeSetF1.create();
+                assertNotNull(<span style='color:#2A00FF'>"appel de create retourne null ???"</span>, ts);
+                assertEquals(<span style='color:#2A00FF'>" un TreeSet est attendu ???"</span>, ts.getClass().getName(), <span style='color:#2A00FF'>"java.util.TreeSet"</span>);
+                assertEquals(true, ts.add(5));
+                assertEquals(true, ts.add(3));
+                assertEquals(false, ts.add(3));
+                assertEquals(<span style='color:#2A00FF'>"[3, 5]"</span>, ts.toString());
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(NoSuchMethodError e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(NoClassDefFoundError e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception inattendue : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_HashMap()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                question3.HashSetFactory&lt;Integer&gt; HashSetF1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question3.HashSetFactory&lt;Integer&gt;();
+                java.util.Set&lt;Integer&gt; hs = HashSetF1.create();
+                assertNotNull(<span style='color:#2A00FF'>"appel de create retourne null ???"</span>, hs);
+                assertEquals(<span style='color:#2A00FF'>" un hashSet est attendu ???"</span>, hs.getClass().getName(), <span style='color:#2A00FF'>"java.util.HashSet"</span>);
+                assertEquals(true, hs.add(5));
+                assertEquals(true, hs.add(3));
+                assertEquals(false, hs.add(3)); <span style='color:#3F7F5F'>// comme TreeSet, si l'element est déjà present il ne sera pas ajoutés
+    </span>            assertEquals(<span style='color:#2A00FF'>"[3, 5]"</span>, hs.toString());
+    
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(NoSuchMethodError e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(NoClassDefFoundError e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception inattendue : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_ajoutNull()<span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            question3.HashSetFactory&lt;Integer&gt; HashSetF1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question3.HashSetFactory&lt;Integer&gt;();
+            java.util.Set&lt;Integer&gt; hs = HashSetF1.create();
+    
+            question3.TreeSetFactory&lt;Integer&gt; treeSetF1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question3.TreeSetFactory&lt;Integer&gt;();
+            java.util.Set&lt;Integer&gt; ts = treeSetF1.create();
+    
+            assertEquals(<span style='color:#2A00FF'>"L'ajout d'un objet null est autorisé"</span>,true, hs.add(<span style='font-weight:bold;color:#7B0052;'>null</span>));
+    
+            <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>ts.add(<span style='font-weight:bold;color:#7B0052;'>null</span>);
+                fail(<span style='color:#2A00FF'>"NullPointerException"</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (NullPointerException e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// "Une exception aurait du être levee"
+    </span>        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        
+        <span style='color:#3F7F5F'>// suite erreur que je ne comprenais pas, test du source 
+    </span>    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_HashSetFactory()
+        <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+                question3.HashSetFactory&lt;Integer&gt; hashSetF1 = <span style='font-weight:bold;color:#7B0052;'>new</span> question3.HashSetFactory&lt;Integer&gt;();
+                java.util.Set&lt;Integer&gt; hs = hashSetF1.create();
+                assertNotNull(<span style='color:#2A00FF'>"appel de create retourne null ???"</span>,hs);
+                assertEquals(<span style='color:#2A00FF'>" un HashSet est attendu ???"</span>, hs.getClass().getName(), <span style='color:#2A00FF'>"java.util.HashSet"</span>);
+                assertEquals(true, hs.add(5));
+                assertEquals(<span style='color:#2A00FF'>"toString curieux ?"</span>, <span style='color:#2A00FF'>"[5]"</span>, hs.toString());
+                assertTrue(<span style='color:#2A00FF'>"appel de add, ne retourne pas true (qui est attendu) ???"</span>, hs.add(3));
+                assertFalse(<span style='color:#2A00FF'>"appel de add, ne retourne pas false ???"</span>,hs.add(5));
+                assertTrue(<span style='color:#2A00FF'>"appel de contains, ne retourne pas true ???"</span>,hs.contains(3));
+                assertTrue(<span style='color:#2A00FF'>"appel de contains, ne retourne pas true ???"</span>,hs.contains(5));
+                assertFalse(<span style='color:#2A00FF'>"appel de contains, ne retourne pas false ???"</span>,hs.contains(33));
+                assertFalse(<span style='color:#2A00FF'>"appel de contains, ne retourne pas false, qui est attendu ???"</span>, hs.contains(55));
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(NoSuchMethodError e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                fail(<span style='color:#2A00FF'>" exception : "</span> + e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+  <br />
+  <hr />
+  <h3>Conclusion, biliographie et remarques :</h3>
+
+  <p>TP assez agréable et bien plus facile a interpréter que les précédents, j'ai particulièrement aimé que l'implantation du pattern Memento soit entièrement <br>
+  a notre charge. Il me reste principalement l'interrogation de la méthode <code>contains()</code> en Q1, qui a cette heure m'échappe un peu.<br>
+  J'ai pas mal lutté sur les test JNEWS de la dernière question, mais essentiellement parce que je n'avais pas pris le temps de réfléchir correctement au problème.</p>
+  <p>Le patron Fabrique est un peu plus clair maintenant mais j'aurais aimé un exercice plus approfondi de ce pattern. Je tenterais de l'utiliser sur un exemple plus concret.<br>
+  (quand j'aurais, je l'espère, rattrappé mon retard).
+  </p>
+
+
+  <p>Bibliographie, liens : </p>
+<ul>
+  <li><a href="https://refactoring.guru/design-patterns/memento/java/example">https://refactoring.guru/design-patterns/memento/java/example </a><br>
+  Le pattern memento par refactoring guru, toujours agréable à lire et comprendre</li>
+  <li><a href="https://fr.wikibooks.org/wiki/Patrons_de_conception/M%C3%A9mento">https://fr.wikibooks.org/wiki/Patrons_de_conception/M%C3%A9mentow</a><br>
+  Le pattern memento sur wikipedia, étonnement facile à lire pour un article Wikipedia.</li>
+  <li><a href="https://www.tutorialspoint.com/design_pattern/factory_pattern.htm">https://www.tutorialspoint.com/design_pattern/factory_pattern.htm</a><br>
+  Le pattern factory.</li>
+</ul>
+
+<p>Bon à l'attaque du N°6, qui, après le cours du 11/11 m'inquiète un peu.</p>
+<br>
+<br>
+
+</body>
+
+</html>

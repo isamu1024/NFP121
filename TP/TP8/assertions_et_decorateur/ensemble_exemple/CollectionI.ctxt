@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=CollectionI
+comment1.params=i
+comment1.target=void\ ajouter(int)
+comment1.text=\ Ajout\ d'un\ entier\ \u00E0\ la\ collection.\ \r\n\ @param\ i\ un\ entier\r\n
+comment2.params=c
+comment2.target=void\ ajouter(CollectionI)
+comment2.text=\ Ajout\ d'une\ collection\ \u00E0\ la\ collection\ en\ cours.\r\n\ @param\ c\ la\ collection\ \u00E0\ ajouter\r\n
+comment3.params=i
+comment3.target=void\ retirer(int)
+comment3.text=\ Retrait\ d'un\ entier\ de\ la\ collection.\r\n\ @param\ i\ l'entier\ \u00E0\ supprimer,\ aucun\ effet\ si\ l'\u00E9l\u00E9ment\ est\ absent.\r\n
+comment4.params=i
+comment4.target=boolean\ contient(int)
+comment5.params=
+comment5.target=int\ taille()
+comment6.params=
+comment6.target=boolean\ repOk()
+comment6.text=Invariant\ de\ classe.\ cf.\ B.\ Liskov.
+comment7.params=
+comment7.target=java.lang.Object\ af()
+comment7.text=Fonction\ d'abstraction.
+numComments=8

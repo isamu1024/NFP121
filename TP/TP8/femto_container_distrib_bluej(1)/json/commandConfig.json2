@@ -1,0 +1,23 @@
+[
+	{	"id":"invoker",
+		"class":"command.Invoker",
+		"property.1":"commande",
+		"property.1.param.1":"cmdProjecteur"
+	},
+	{	"id":"lampeDeLAmphi",
+		"class":"command.Light"
+	},
+	{	"id":"cmd",
+		"class":"command.CommandLight",
+		"property.1":"lampe",
+		"property.1.param.1":"lampeDeLAmphi"
+	},
+	{	"id":"projecteurDeLAmphi",
+		"class":"command.Projecteur"
+	},
+	{	"id":"cmdProjecteur",
+		"class":"command.CommandeProjecteur",
+		"property.1":"projecteur", 
+		"property.1.param.1":"projecteurDeLAmphi"
+	}
+]

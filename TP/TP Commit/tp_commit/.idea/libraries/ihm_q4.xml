@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ihm_q4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ihm_q4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

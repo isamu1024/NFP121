@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5d7a000-337c-4e4e-a412-48af37b5ac06" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../TP Commit/tp_commit/question3/VisiteurRestauration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP Commit/tp_commit/question3/VisiteurSauvegarde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP2/tp2/question1/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/tp2/question1/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP2/tp2/question1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/tp2/question1/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question1/IHMPile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question1/IHMPile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question1/IHMPile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question1/IHMPile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question1/Pile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question1/Pile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question1/Pile.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question1/Pile.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question1/Pile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question1/Pile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question1/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question1/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question1/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile$pileIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile$pileIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile2.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile2.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile4.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile4.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/Pile4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/PilesAuMemeComportement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/PilesAuMemeComportement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/PilesAuMemeComportement.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/PilesAuMemeComportement.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/PilesAuMemeComportement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/PilesAuMemeComportement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question2/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question2/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question3/Pile2.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question3/Pile2.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question3/Pile2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question3/Pile2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question3/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question3/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/question3/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/question3/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/tp3/submitter.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP3/tp3/submitter.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kvIMM7SwS2DFV7MiEgNYV1FnM6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RunManager" selected="Java Scratch.Scratch">
+    <configuration name="JFrameDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="question2.JFrameDemo" />
+      <module name="tp7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParIntrospectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tp7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question2" />
+      <option name="MAIN_CLASS_NAME" value="question2.ParIntrospectionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParIntrospectionTest.test_lierCheckBoxEtItemListener" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tp7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question2" />
+      <option name="MAIN_CLASS_NAME" value="question2.ParIntrospectionTest" />
+      <option name="METHOD_NAME" value="test_lierCheckBoxEtItemListener" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParIntrospectionTest.test_lierJComboBoxEtActionListener" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tp7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question2" />
+      <option name="MAIN_CLASS_NAME" value="question2.ParIntrospectionTest" />
+      <option name="METHOD_NAME" value="test_lierJComboBoxEtActionListener" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Java Scratch.Scratch" />
+        <item itemvalue="JUnit.ParIntrospectionTest" />
+        <item itemvalue="JUnit.ParIntrospectionTest.test_lierJComboBoxEtActionListener" />
+        <item itemvalue="JUnit.ParIntrospectionTest.test_lierCheckBoxEtItemListener" />
+        <item itemvalue="Application.JFrameDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5d7a000-337c-4e4e-a412-48af37b5ac06" name="Default Changelist" comment="" />
+      <created>1606574588601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606574588601</updated>
+      <workItem from="1606574589663" duration="28759000" />
+      <workItem from="1606765064748" duration="5000" />
+      <workItem from="1606765100307" duration="17735000" />
+      <workItem from="1606837044927" duration="1167000" />
+      <workItem from="1606854667995" duration="9367000" />
+      <workItem from="1606901214606" duration="1221000" />
+      <workItem from="1606926279366" duration="1207000" />
+      <workItem from="1606939841805" duration="13408000" />
+      <workItem from="1606988670524" duration="59000" />
+      <workItem from="1607358905139" duration="599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1010" y="447" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1606648993704">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="447" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606648993704" />
+    <state width="472" height="646" key="DebuggerActiveHint" timestamp="1606951348753">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="472" height="646" key="DebuggerActiveHint/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606951348753" />
+    <state width="2517" height="539" key="GridCell.Tab.0.bottom" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state width="2517" height="539" key="GridCell.Tab.0.center" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.0.center/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state width="2517" height="539" key="GridCell.Tab.0.left" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.0.left/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state width="2517" height="539" key="GridCell.Tab.0.right" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.0.right/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state width="2517" height="539" key="GridCell.Tab.1.bottom" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state width="2517" height="539" key="GridCell.Tab.1.center" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.1.center/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state width="2517" height="539" key="GridCell.Tab.1.left" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.1.left/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state width="2517" height="539" key="GridCell.Tab.1.right" timestamp="1606954761709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="539" key="GridCell.Tab.1.right/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606954761709" />
+    <state x="760" y="274" key="SettingsEditor" timestamp="1606861442992">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="760" y="274" key="SettingsEditor/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606861442991" />
+    <state x="825" y="436" width="909" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606946974443">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="825" y="436" width="909" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1400/2560.-412.1440.2560@0.0.2560.1400" timestamp="1606946974443" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/question2/ParIntrospection.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.reflect.Method" memberName="name" />
+        <PinnedItemInfo parentTag="question2.ParIntrospectionTest" memberName="fName" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Java Scratch">
+        <watch expression="param.getName()" language="TEXT" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

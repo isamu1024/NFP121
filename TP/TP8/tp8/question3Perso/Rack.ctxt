@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Rack
+comment1.params=
+comment1.target=boolean\ estPlein()
+comment2.params=
+comment2.target=int\ getColCapacity()
+comment3.params=
+comment3.target=int\ getNbCol()
+comment4.params=col\ slot
+comment4.target=java.lang.Object\ getColis(int,\ int)
+comment5.params=
+comment5.target=int\ freeSlots()
+numComments=6

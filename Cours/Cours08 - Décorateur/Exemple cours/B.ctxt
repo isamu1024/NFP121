@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=B
+comment0.text=\r\n\ B\ est\ une\ d\u00E9coration\ d'un\ texte\ brut\r\n
+comment1.params=unTexte
+comment1.target=B(TexteI)
+comment1.text=\r\n\ Constructeur\ d'objets\ de\ classe\ B\r\n
+comment2.params=
+comment2.target=java.lang.String\ toHtml()
+numComments=3

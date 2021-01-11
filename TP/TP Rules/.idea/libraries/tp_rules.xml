@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tp_rules">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/tp_rules.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

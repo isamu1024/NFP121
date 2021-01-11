@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ListeDeComposants
+comment1.params=nom
+comment1.target=ListeDeComposants(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ interpreter()
+comment3.params=visiteur
+comment3.target=java.lang.Object\ accepter(Visiteur)
+numComments=4

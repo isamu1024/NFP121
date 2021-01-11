@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Texte
+comment1.params=texte
+comment1.target=Texte(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toHtml()
+numComments=3

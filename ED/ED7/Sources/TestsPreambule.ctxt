@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=TestsPreambule
+comment1.params=
+comment1.target=void\ testCompositeBoucleRecursiveInfinie()
+comment2.params=
+comment2.target=void\ testCompositeNombreDeNoeuds()
+comment3.params=
+comment3.target=void\ testCompositeInterpreter()
+comment4.params=
+comment4.target=void\ testCompositeGetParent()
+comment5.params=
+comment5.target=void\ testCompositeInterpreterEtVisiteur()
+comment6.params=
+comment6.target=void\ testCompositeVisiteurAvecTabulations()
+comment7.params=
+comment7.target=void\ testVisiteurCompositeValide()
+numComments=8

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Noeud
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ Noeud\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=nom
+comment1.target=Noeud(java.lang.String)
+comment2.params=
+comment2.target=int\ nombreDeNoeuds()
+comment3.params=
+comment3.target=java.lang.String\ interpreter()
+comment4.params=visiteur
+comment4.target=java.lang.Object\ accepter(Visiteur)
+numComments=5

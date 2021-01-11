@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Ajout
+comment1.params=element
+comment1.target=void\ setElement(java.lang.Integer)
+comment2.params=list
+comment2.target=java.util.Collection\ execute(java.util.Collection)
+numComments=3

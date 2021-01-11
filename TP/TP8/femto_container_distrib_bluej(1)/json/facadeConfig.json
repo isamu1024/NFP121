@@ -1,0 +1,20 @@
+[
+	{	"id":"client1",
+		"class":"facade.Client1",
+		"property.1":"facade",
+		"property.1.param.1":"facade1"
+	},
+	{	"id":"client2",
+		"class":"facade.Client2",
+		"property.1":"facade",
+		"property.1.param.1":"facade2"
+	},
+	{	"id":"facade1",
+		"class":"facade.Facade1"
+	},
+	{	"id":"facade2",
+		"class":"facade.Facade2"
+	},
+	{	"verbose":true
+	}
+]

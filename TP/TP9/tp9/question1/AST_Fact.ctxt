@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=AST_Fact
+comment0.text=\r\n\ Calcul\ du\ factoriel\ d'un\ nombre\ entier\ depuis\ le\ langage\ WhileL\r\n\r\n\ @author\ Alexandre\ Moro\r\n\ @version\ V1\ 20/12/2020\r\n
+comment1.params=n
+comment1.target=AST_Fact(int)
+comment1.text=\r\n\ construire\ l'AST\ du\ programme\ "WhileL\ style"\ est\ \u00E0\ construire\ ci\ dessous\r\n\ xxx\:\=n\ ;\ fact\ \:\=\ 1\ ;\ while\ (~(xxx\=0)\ )\ do\ fact\ \:\=\ fact\ *\ xxx\ ;\ xxx\:\=\r\n\ xxx-1;\ ftp;\ afficher(fact);\ remarque\ \:\ on\ calcule\ ici\ fact(n)\ i.e.\ n\ est\r\n\ une\ donn\u00E9e\ fournie\ au\ moment\ de\ l'ex\u00E9cution,\ d'o\u00F9\ le\ constructeur\ suivant\r\n
+comment2.params=
+comment2.target=void\ generateAst()
+comment2.text=\r\n\ M\u00E9thode\ g\u00E9n\u00E9rant\ l'arbre\ de\ syntaxe\ abstraite\ apr\u00E8s\ affectation\ de\ la\ valeur\ \u00E0\ calculer\ dans\r\n\ la\ m\u00E9moire.\r\n
+comment3.params=
+comment3.target=tp6.question1.Contexte\ getMem()
+comment4.params=
+comment4.target=tp6.question3.Instruction\ getAST()
+numComments=5

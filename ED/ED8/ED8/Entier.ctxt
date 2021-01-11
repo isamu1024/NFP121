@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Entier
+comment1.params=valeur
+comment1.target=Entier(int)
+comment2.params=
+comment2.target=void\ inc()
+comment3.params=
+comment3.target=void\ dec()
+comment4.params=valeur
+comment4.target=void\ setValeur(int)
+comment5.params=
+comment5.target=Memento\ saveToMemento()
+comment6.params=m
+comment6.target=void\ restoreFromMemento(Memento)
+comment7.params=
+comment7.target=int\ getValeur()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

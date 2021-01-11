@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=url\ user\ password
+comment0.target=DBStationVelib(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=sv
+comment1.target=void\ create(StationVelib)
+comment2.params=id
+comment2.target=StationVelib\ retrieve(java.lang.Integer)
+comment3.params=sv
+comment3.target=void\ update(StationVelib)
+comment4.params=id
+comment4.target=void\ delete(java.lang.Integer)
+comment5.params=
+comment5.target=java.util.List\ findAll()
+numComments=6

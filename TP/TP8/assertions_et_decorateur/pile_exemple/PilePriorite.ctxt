@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=PilePriorite
+comment1.params=
+comment1.target=PilePriorite()
+comment2.params=capacite
+comment2.target=PilePriorite(int)
+comment3.params=t
+comment3.target=void\ empiler(java.lang.Comparable)
+comment4.params=
+comment4.target=boolean\ repOk()
+comment5.params=list
+comment5.target=boolean\ isOrdered(java.lang.Iterable)
+numComments=6

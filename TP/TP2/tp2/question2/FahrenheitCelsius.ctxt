@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=FahrenheitCelsius
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ FahrenheitCelsius\ ici.\r\n\ \r\n\ @author\ Alexandre\ Moro\ \ \ \r\n\ @version\ 11/10/2020\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ le\ point\ d'entr\u00E9e\ de\ cette\ application,\ dont\ le\ commentaire\ est\ \u00E0\ compl\u00E9ter\r\n\r\n\ @param\ args\ ...\r\n
+comment2.params=f
+comment2.target=float\ fahrenheitEnCelsius(int)
+numComments=3

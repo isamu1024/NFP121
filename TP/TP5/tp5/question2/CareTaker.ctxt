@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CareTaker
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ CareTaker\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=m
+comment1.target=void\ addMemento(java.lang.Object)
+comment2.params=
+comment2.target=int\ getSize()
+comment3.params=
+comment3.target=java.lang.Object\ getMemento()
+numComments=4

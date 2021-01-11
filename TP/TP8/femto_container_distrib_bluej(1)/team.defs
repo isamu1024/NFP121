@@ -1,0 +1,17 @@
+#Mon Jan 13 10:56:43 CET 2020
+bluej.teamsettings.groupname=
+bluej.teamsettings.ignore1=.*\\.class
+bluej.teamsettings.yourName=douin
+bluej.teamsettings.git.server=gitlab.cnam.fr
+bluej.teamsettings.yourEmail=douin@cnam.fr
+bluej.teamsettings.git.repositoryPrefix=/gitlab/douinj/femto_container.git
+bluej.teamsettings.vcs=git
+bluej.teamsettings.user=douinj
+bluej.teamsettings.ignore3=team\\.defs
+bluej.teamsettings.ignore2=bluej\\.pkh
+bluej.teamsettings.ignore5=.*\\~
+bluej.teamsettings.ignore4=.*\\.ctxt
+bluej.teamsettings.ignore7=.*\\\#backup
+bluej.teamsettings.ignore6=.*\\\#
+bluej.teamsettings.git.protocol=https
+bluej.teamsettings.ignore8=\\.DS_Store

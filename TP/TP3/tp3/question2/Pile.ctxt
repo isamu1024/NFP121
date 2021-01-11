@@ -1,0 +1,35 @@
+#BlueJ class context
+comment0.target=Pile
+comment0.text=\r\n\ A\ remplacer\ en\ partie\ par\ votre\ classe\ Pile\ de\ la\ question\ 1.\r\n\ \r\n\ @author\ Alexandre\ Moro\r\n\ @version\ 22/10/2020\r\n
+comment1.params=taille
+comment1.target=Pile(int)
+comment10.params=o
+comment10.target=boolean\ equals(java.lang.Object)
+comment11.params=
+comment11.target=int\ hashCode()
+comment12.params=index
+comment12.target=java.lang.Object\ atIndex(int)
+comment13.params=
+comment13.target=java.lang.String\ toString()
+comment14.params=
+comment14.target=java.util.Iterator\ iterator()
+comment2.params=
+comment2.target=Pile()
+comment3.params=o
+comment3.target=void\ empiler(java.lang.Object)
+comment4.params=
+comment4.target=java.lang.Object\ depiler()
+comment5.params=
+comment5.target=java.lang.Object\ sommet()
+comment5.text=\r\n\ Retourne\ retourne\ le\ sommet\ de\ la\ pile\ (sans\ d\u00C3\u00A9piler).\r\n\ Index\ du\ sommet\ \=\ (ptr\ -\ 1)\ ou\ la\ fonction\ taille()\ -1\r\n
+comment6.params=
+comment6.target=int\ capacite()
+comment6.text=\r\n\ Retourne\ le\ nombre\ maximal\ d'\u00C3\u00A9l\u00C3\u00A9ments\ que\ l'on\ peut\ empiler.\r\n
+comment7.params=
+comment7.target=int\ taille()
+comment7.text=\r\n\ Retourne\ le\ nombre\ d'\u00C3\u00A9l\u00EF\u00BF\u00BDments\ pr\u00C3\u00A9sents\ dans\ cette\ pile\r\n
+comment8.params=
+comment8.target=boolean\ estVide()
+comment9.params=
+comment9.target=boolean\ estPleine()
+numComments=15

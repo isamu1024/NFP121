@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=EnsembleOrdonne
+comment1.params=
+comment1.target=EnsembleOrdonne()
+comment2.params=i
+comment2.target=void\ ajouter(int)
+comment3.params=c
+comment3.target=void\ ajouter(CollectionI)
+comment4.params=
+comment4.target=boolean\ repOk()
+comment5.params=
+comment5.target=java.util.SortedSet\ af()
+comment6.params=iterable
+comment6.target=boolean\ isSorted(java.lang.Iterable)
+numComments=7

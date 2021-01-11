@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Not
+comment1.params=condition
+comment1.target=void\ setCondition(Condition)
+comment2.params=memory
+comment2.target=boolean\ isSatisfied(java.lang.Object)
+numComments=3

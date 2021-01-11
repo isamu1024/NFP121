@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=VisiteurCompositeValide
+comment1.params=
+comment1.target=VisiteurCompositeValide()
+comment2.params=n
+comment2.target=java.lang.Boolean\ visite(Noeud)
+comment3.params=l
+comment3.target=java.lang.Boolean\ visite(ListeDeComposants)
+numComments=4

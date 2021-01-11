@@ -1,0 +1,126 @@
+[
+	{	"id":"nombre1",
+		"class":"observer.Nombre",
+		"property.1":"valeur",
+		"property.1.param.1":1,
+		"property.2":"observer",
+		"property.2.param.1":"observateur1",
+		"property.3":"observer",
+		"property.3.param.1":"observateur2"
+	},
+	{	"id":"observateur1",
+		"class":"observer.NombreObserver",
+		"property.1":"nom",
+		"property.1.param.1":"obs_1"
+	},
+	{	"id":"observateur2",
+		"class":"observer.NombreObserver",
+		"property.1":"nom",
+		"property.1.param.1":"obs_2"
+	},
+	{	"id":"conditionEstPair",
+		"class":"observer.ConditionEstPair"
+	},
+	{	"id":"operationPlus1",
+		"class":"observer.OperationPlus",
+		"property.1":"operande",
+		"property.1.param.1":1	
+	},
+	{	"id":"commandePlus1",
+		"class":"observer.CommandNombre",
+		"property.1":"operation",
+		"property.1.param.1":"operationPlus1",
+		"property.2":"condition",
+		"property.2.param.1":"conditionEstPair"
+	},
+	{	"id":"macroPlus",
+		"class":"commands.MacroCommand",
+		"property.1":"commands",
+		"property.1.param.1":["plus","plus","plus","plus","plus"],
+		"property.2":"condition",
+		"property.2.param.1":"toujoursVrai"
+	},
+	{	"id":"plus",
+		"class":"observer.CommandNombre",
+		"property.1":"operation",
+		"property.1.param.1":"operationPlus1",
+		"property.2":"condition",
+		"property.2.param.1":"toujoursVrai"
+	},
+	{	"id":"toujoursVrai",
+		"class":"conditions.VRAI"
+	},
+	{	"id":"plus2",
+		"class":"observer.CommandNombre",
+		"property.1":"operation",
+		"property.1.param.1":"operationPlus2",
+		"property.2":"condition",
+		"property.2.param.1":"toujoursVrai"
+	},
+	{	"id":"operationPlus2",
+		"class":"observer.OperationPlus",
+		"property.1":"operande",
+		"property.1.param.1":2
+	},
+	{	"id":"macroPlusPlus",
+		"class":"commands.MacroCommand",
+		"property.1":"commands",
+		"property.1.param.1":["plus2","plus2","plus2","plus","plus","plus"],
+		"property.2":"condition",
+		"property.2.param.1":"toujoursVrai"
+	},
+	{	"id":"invoker",
+		"class":"commands.Invoker",
+		"property.1":"command",
+		"property.1.param.1":"macroPlusPlus",
+		"property.2":"exception",
+		"property.2.param.1":"invokerException"
+	},
+	{	"id":"invokerException",
+		"class":"observer.InvokerException",
+		"property.1":"resultat",
+		"property.1.param.1":"resultatException",
+		"property.2":"runtimeException",
+		"property.2.param.1":"runtimeException"
+	},
+	{	"id":"resultatException",
+		"class":"observer.Resultat",
+		"property.1":"valeur",
+		"property.1.param.1":-1
+	},
+	{	"id":"nombre1000",
+		"class":"observer.Nombre",
+		"property.1":"valeur",
+		"property.1.param.1":1000
+	},
+	{	"id":"nop",
+		"class":"operations.NOP"
+	},
+	{	"id":"runtimeException",
+		"class":"java.lang.RuntimeException"
+	},
+	{	"id":"peut_etre",
+		"class":"conditions.PEUT_ETRE"
+	},
+	{	"id":"macroPlusPlusPeutEtre",
+		"class":"commands.MacroCommand",
+		"property.1":"commands",
+		"property.1.param.1":["plus2b","plus2b","plus2b"],
+		"property.2":"condition",
+		"property.2.param.1":"toujoursVrai"
+	},
+	{	"id":"invokerPeutEtre",
+		"class":"commands.Invoker",
+		"property.1":"command",
+		"property.1.param.1":"macroPlusPlusPeutEtre"
+	},
+	{	"id":"plus2b",
+		"class":"observer.CommandNombre",
+		"property.1":"operation",
+		"property.1.param.1":"operationPlus2",
+		"property.2":"condition",
+		"property.2.param.1":"peut_etre"
+	},
+	{	"verbose":true
+	}
+]

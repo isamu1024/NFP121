@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="FR">
+  <head>
+    <meta charset="utf-8" />
+    <title>NFP121 - TP_commit</title>
+    <style type="text/css">
+      body {
+        background: #e5ded6;
+        background-color: #fff;
+        color: #333333;
+        font-size: 14px;
+        font-family: Verdana, Arial;
+      }
+
+      table {
+        font-size: 20px;
+        border-color: #808080;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      hr {
+        margin: 15px 0 15px 0;
+      }
+
+      applet {
+        margin: 10px 0px 25px 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #777777;
+      }
+
+      questionSection {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: medium;
+      }
+
+      p,
+      a,
+      img {
+        font-size: normal;
+        padding-left: 15px;
+      }
+
+      /* li {
+            font-size: smaller;
+            padding-left: 15px;
+            content: #C1002A;
+        } */
+
+      ul {
+        font-size: normal;
+      }
+
+      ul li::before {
+        content: "\2022";
+        color: #c1002a;
+        width: 1em;
+        margin-left: -1em;
+        display: inline-block;
+      }
+
+      code {
+        background-color: antiquewhite;
+        color: #c1002a;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">NFP 121 - TP Commit</h2>
+    <h2 style="text-align: center">Les transactions</h2>
+    <br />
+    <hr />
+    <br />
+    <table>
+      <tr>
+        <td>Nom</td>
+        <td>Moro</td>
+      </tr>
+      <tr>
+        <td>Prénom</td>
+        <td>Alexandre</td>
+      </tr>
+      <tr>
+        <td>Matricule</td>
+        <td>0g5drredxv9/td>
+      </tr>
+    </table>
+    <br />
+    <hr />
+    <h3>Question 1.1 :</h3>
+    <QuestionSection
+      >Écrire une implémentation complète de la classe
+      Contributeur.</QuestionSection
+    >
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Contributeur <span style='font-weight:bold;color:#7B0052;'>extends</span> Cotisant <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>int</span> solde;
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Contributeur(String nom, <span style='font-weight:bold;color:#7B0052;'>int</span> somme) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>super</span>(nom);
+        
+                this.affecterSolde(somme);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> solde() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> this.solde;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> nombreDeCotisants() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> 1;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> debit(<span style='font-weight:bold;color:#7B0052;'>int</span> somme) <span style='font-weight:bold;color:#7B0052;'>throws</span> SoldeDebiteurException <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (somme &lt; 0)
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> RuntimeException(<span style='color:#2A00FF'>"nombre négatif !!!"</span>);
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (this.solde - somme &lt; 0)
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> SoldeDebiteurException();
+        
+                this.solde -= somme;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='color:#3F5FBF'>/**
+             * throws RuntimeException new RuntimeException("nombre négatif !!!");
+             */</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> credit(<span style='font-weight:bold;color:#7B0052;'>int</span> somme) <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (somme &lt; 0)
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> RuntimeException(<span style='color:#2A00FF'>"nombre négatif !!!"</span>);
+                this.solde += somme;
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='color:#3F5FBF'>/**
+             * throws RuntimeException new RuntimeException("nombre négatif !!!");
+             */</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> affecterSolde(<span style='font-weight:bold;color:#7B0052;'>int</span> somme) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// if(somme &lt;0) throw new RuntimeException("nombre négatif !!!");
+        </span>        <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    debit(solde());
+                    credit(somme);
+                    <span style='color:#3F7F5F'>// mode élégant ... 
+        </span>        <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (SoldeDebiteurException sde) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='color:#3F7F5F'>// exception peu probable
+        </span>            this.solde = somme; <span style='color:#3F7F5F'>// mode efficace ...
+        </span>        <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> &lt;T&gt; T accepter(Visiteur&lt;T&gt; visiteur) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> visiteur.visite(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> String toString() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"&lt;Contributeur : "</span> + nom + <span style='color:#2A00FF'>","</span> + solde + <span style='color:#2A00FF'>"&gt;"</span>;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>J'implante ici les spécifications demandées pour détecter un entier négatif passé en paramètre.<br>
+Le constructeur exécutera la méthode <code>affecterSolde(int somme)</code> pour réaliser ce test et affecter le solde passé en paramètre.</p>
+
+    <hr />
+    <h3>Question 1.2 :</h3>
+    <QuestionSection>Écrire une implémentation complète de la classe GroupeDeContributeurs.</QuestionSection>        
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.Iterator;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.NoSuchElementException;
+        
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.List;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.ArrayList;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.Stack;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> GroupeDeContributeurs <span style='font-weight:bold;color:#7B0052;'>extends</span> Cotisant <span style='font-weight:bold;color:#7B0052;'>implements</span> Iterable&lt;Cotisant&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> List&lt;Cotisant&gt; liste;
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> GroupeDeContributeurs(String nomDuGroupe) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>super</span>(nomDuGroupe);
+                this.liste = <span style='font-weight:bold;color:#7B0052;'>new</span> ArrayList&lt;&gt;();
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> ajouter(Cotisant cotisant) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (liste.contains(cotisant))
+                    System.out.println(<span style='color:#2A00FF'>"Cotisant deja present"</span>);
+        
+                this.liste.add(cotisant);
+                cotisant.setParent(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> nombreDeCotisants() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>int</span> nombre = 0;
+        
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant cotisant : liste) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    nombre += cotisant.nombreDeCotisants();
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> nombre;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> String toString() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// format attendu :  "&lt;Contributeur : " + nom + "," + solde + "&gt;"
+        </span>        StringBuilder str = <span style='font-weight:bold;color:#7B0052;'>new</span> StringBuilder();
+        
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant cotisant : liste)
+                    str.append(<span style='color:#2A00FF'>"&lt;Contributeur :"</span>).append(cotisant.nom()).append(<span style='color:#2A00FF'>","</span>).append(cotisant.solde()).append(<span style='color:#2A00FF'>"&gt;"</span>);
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> str.toString();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> List&lt;Cotisant&gt; getChildren() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> this.liste;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> debit(<span style='font-weight:bold;color:#7B0052;'>int</span> somme) <span style='font-weight:bold;color:#7B0052;'>throws</span> SoldeDebiteurException <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant cotisant : liste)
+                    cotisant.debit(somme);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> credit(<span style='font-weight:bold;color:#7B0052;'>int</span> somme) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant cotisant : liste)
+                    cotisant.credit(somme);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> solde() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>int</span> solde = 0;
+        
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant cotisant : liste)
+                    solde += cotisant.solde();
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> solde;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='color:#3F7F5F'>// methodes fournies
+        </span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Iterator&lt;Cotisant&gt; iterator() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeIterator(liste.iterator());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> &lt;T&gt; T accepter(Visiteur&lt;T&gt; visiteur) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> visiteur.visite(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>class</span> GroupeIterator <span style='font-weight:bold;color:#7B0052;'>implements</span> Iterator&lt;Cotisant&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>private</span> Stack&lt;Iterator&lt;Cotisant&gt;&gt; stk;
+        
+                <span style='font-weight:bold;color:#7B0052;'>public</span> GroupeIterator(Iterator&lt;Cotisant&gt; iterator) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    this.stk = <span style='font-weight:bold;color:#7B0052;'>new</span> Stack&lt;Iterator&lt;Cotisant&gt;&gt;();
+                    this.stk.push(iterator);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> hasNext() <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>if</span> (stk.empty()) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+                    <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                        Iterator&lt;Cotisant&gt; iterator = stk.peek();
+                        <span style='font-weight:bold;color:#7B0052;'>if</span> (!iterator.hasNext()) <span style='font-weight:bold;color:#D3171B'>{</span>
+                            stk.pop();
+                            <span style='font-weight:bold;color:#7B0052;'>return</span> hasNext();
+                        <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+                        <span style='font-weight:bold;color:#D3171B'>}</span>
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Cotisant next() <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>if</span> (hasNext()) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        Iterator&lt;Cotisant&gt; iterator = stk.peek();
+                        Cotisant cpt = iterator.next();
+                        <span style='font-weight:bold;color:#7B0052;'>if</span> (cpt <span style='font-weight:bold;color:#7B0052;'>instanceof</span> GroupeDeContributeurs) <span style='font-weight:bold;color:#D3171B'>{</span>
+                            GroupeDeContributeurs gr = (GroupeDeContributeurs) cpt;
+                            stk.push(gr.liste.iterator());
+                        <span style='font-weight:bold;color:#D3171B'>}</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> cpt;
+                    <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> NoSuchElementException();
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> remove() <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> UnsupportedOperationException();
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+                    <ul>
+                        <li> La constructeur instancie la liste fournie par une <code>ArrayList</code>(choix guidé par les import)</li>
+                        <li>La méthode <code>ajouter()</code> rajoute le contributeur a la liste tout en se définissant comme parent</li>
+                        <li>La méthode <code>NombreDeCotisants()</code> passe par une boucle for (qui appelle l'itérateur fourni) et <br>
+                        utilise la liaison dynamique pour son choix d'exécution, soit on itère une liste, soit le contributeur renvoi 1 <br>
+                    J'avais fait l'erreur de passer par instanceof car j'itérais sur this et non sur la liste. (rappel à l'ordre de Jnews)</li>
+                    <li><code>debit()</code> , <code>credit()</code> et <code>solde()</code> utilise le même principe </li>
+                    </ul>
+
+    <hr />
+    <h3>Question 2.1 :</h3>
+    <QuestionSection>Écrire une implémentation complète de la classe CompositeValide</QuestionSection>
+    <p>Classe CompositeValide</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> CompositeValide <span style='font-weight:bold;color:#7B0052;'>implements</span> Visiteur&lt;Boolean&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='color:#3F7F5F'>// Le solde de chaque contributeur doit être supérieur ou égal à une valeur
+  </span>    <span style='color:#3F7F5F'>// et il n’existe pas de groupe n’ayant pas de contributeurs.
+  </span>    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> <span style='font-weight:bold;color:#7B0052;'>int</span> valeur;
+      
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> CompositeValide(<span style='font-weight:bold;color:#7B0052;'>int</span> valeur) <span style='font-weight:bold;color:#D3171B'>{</span>
+          this.valeur = valeur;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Contributeur c) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> c.solde() &gt;= this.valeur;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(GroupeDeContributeurs g) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>boolean</span> result = !g.getChildren().isEmpty();
+  
+          <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant c : g.getChildren())
+              result &= c.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+  
+          <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <ul>
+    <li><code>public Boolean visite(Contributeur c)</code> vérifie que le solde du Contributeur est bien supérieur ou égal à celui demandé en paramètre du visiteur.</li>
+    <li><code>public Boolean visite(GroupeDeContributeurs g)</code> vérifie que la liste n'est pas vide et applique le traitement précédent à tous ses enfants.</li>
+  </ul>
+
+  <p>visiteur SansDoublon</p>
+
+  <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> SansDoublon <span style='font-weight:bold;color:#7B0052;'>implements</span> Visiteur&lt;Boolean&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+
+    Set&lt;String&gt; doublons = <span style='font-weight:bold;color:#7B0052;'>new</span> TreeSet&lt;&gt;();
+<span style='color:#3F7F5F'>//    Set&lt;String&gt; groupeDeContributeurs = new TreeSet&lt;&gt;();
+</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Contributeur c) <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> doublons.add(c.nom());
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(GroupeDeContributeurs g) <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>boolean</span> result = doublons.add(g.nom()) ;
+
+        <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant c : g.getChildren())
+            result &= c.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+
+
+        <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<ul>
+  <li>J'utilise ici la valeur booléenne de la classe TreeSet qui renvoi true si l'ajout est effectif et false si l'ajout échoue en raison de la présence d'un doublon.<br>
+La comparaison ici s'effectue sur le nom des éléments GroupeDeContributeurs et Contributeur.
+  </li>
+</ul>
+
+    <hr />
+    <h3>Question 2.2 :</h3>
+    <QuestionSection>Écrire une implémentation complète de la classe DebitMaximal. </QuestionSection>
+    <p>Classe débit maximal</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> DebitMaximal <span style='font-weight:bold;color:#7B0052;'>implements</span> Visiteur&lt;Integer&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+
+      <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(Contributeur c) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> c.solde();
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(GroupeDeContributeurs g) <span style='font-weight:bold;color:#D3171B'>{</span>
+  
+          <span style='font-weight:bold;color:#7B0052;'>int</span> res = Integer.MAX_VALUE;
+  
+          List&lt;Cotisant&gt; contributeurs = g.getChildren();
+          <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant c : contributeurs)
+              res = Math.min(c.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>), res);
+  
+          <span style='font-weight:bold;color:#7B0052;'>return</span> res;
+  
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+  <ul>
+    <li> Fonctionnement assez simple pour cette classe, on applique sur les enfants du Groupe la méthode <code>Math.min()</code> qui renverra la plus petite des 2 valeurs.<br>
+     Les Contributeurs se contentants de restituer leur solde.</li>
+  </ul>
+
+  <hr />
+    <h3>Question 2.3 :</h3>
+
+    <br />
+
+    <QuestionSection>Complétez la classe de tests unitaires TestsDesVisiteurs pour les 3 visiteurs CompositeValide, SansDoublon et DebitMaximal . </QuestionSection>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testCompositeValide() <span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+          GroupeDeContributeurs g = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g"</span>);
+          assertFalse(<span style='color:#2A00FF'>" Ce composite n'est pas valide, revoyez CompositeValide !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(0)));
+
+          GroupeDeContributeurs g1 = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g1"</span>);
+          g.ajouter(g1);
+          assertFalse(<span style='color:#2A00FF'>" Ce composite n'est pas valide, revoyez CompositeValide !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(0)));
+
+          g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"c"</span>, 100));
+          assertTrue(<span style='color:#2A00FF'>" Ce composite est valide, revoyez CompositeValide !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(100)));
+          assertFalse(<span style='color:#2A00FF'>" Ce composite n'est pas valide, revoyez CompositeValide !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(150)));
+
+      <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+          fail(<span style='color:#2A00FF'>"exception inattendue !!! "</span> + e.getMessage());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testTroisContributeursUnGroupe() <span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+          GroupeDeContributeurs g = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g"</span>);
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_a"</span>, 100));
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_b"</span>, 200));
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_c"</span>, 300));
+          assertTrue(<span style='color:#2A00FF'>" Ce composite est valide, revoyez CompositeValide !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(0)));
+          assertEquals(<span style='color:#2A00FF'>" Revoyez DébitMaximal !!!"</span>, Integer.valueOf(100), g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> DebitMaximal()));
+          assertTrue(<span style='color:#2A00FF'>" Ce composite est valide, revoyez CompositeValide et/ou DebitMaximal!!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> DebitMaximal()))));
+          GroupeDeContributeurs g1 = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g1"</span>);
+          g.ajouter(g1);
+          assertFalse(<span style='color:#2A00FF'>" Ce composite n'est pas valide, revoyez CompositeValide !!!"</span>, g1.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(10)));
+      <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+          fail(<span style='color:#2A00FF'>"exception inattendue !!! "</span> + e.getMessage());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testUnContributeurUnGroupeAvecLeMemeNom() <span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+          GroupeDeContributeurs g = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g_a"</span>);
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_a"</span>, 100));
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_b"</span>, 200));
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_c"</span>, 300));
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_d"</span>, 80));
+          assertTrue(<span style='color:#2A00FF'>" Ce composite est valide, revoyez CompositeValide !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(10)));
+          assertFalse(<span style='color:#2A00FF'>" Ce composite a au moins un doublon, revoyez SansDoublon !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> SansDoublon()));
+      <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+          fail(<span style='color:#2A00FF'>"exception inattendue !!! "</span> + e.getMessage());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testUnContributeurDeuxGroupesAvecLeMemeNom() <span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+          GroupeDeContributeurs g = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g_a"</span>);
+          g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"a"</span>, 100));
+          GroupeDeContributeurs g1 = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g_a"</span>);
+          g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"b"</span>, 200));
+          g.ajouter(g1);
+          assertTrue(<span style='color:#2A00FF'>" Ce composite est valide, revoyez CompositeValide !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> CompositeValide(10)));
+          assertFalse(<span style='color:#2A00FF'>" Ce composite a au moins un doublon, revoyez SansDoublon !!!"</span>, g.accepter(<span style='font-weight:bold;color:#7B0052;'>new</span> SansDoublon()));
+      <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+          fail(<span style='color:#2A00FF'>"exception inattendue !!! "</span> + e.getMessage());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testVisiteurDebitMaximal() <span style='font-weight:bold;color:#D3171B'>{</span>
+
+      GroupeDeContributeurs g1 = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g1"</span>);
+      g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"a"</span>, 100));
+      g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"b"</span>, 50));
+      g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"c"</span>, 300));
+      DebitMaximal dMax = <span style='font-weight:bold;color:#7B0052;'>new</span> DebitMaximal();
+      assertEquals(<span style='color:#2A00FF'>"Le montant max devrait être 50"</span>, Integer.valueOf(50), g1.accepter(dMax));
+      g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"d"</span>, 10));
+      assertEquals(<span style='color:#2A00FF'>"Le montant max devrait être 10"</span>, Integer.valueOf(10), g1.accepter(dMax));
+      GroupeDeContributeurs g2 = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g1"</span>);
+      g2.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"d"</span>, 400));
+      g2.ajouter(g1);
+      assertEquals(<span style='color:#2A00FF'>"Le montant max devrait être 10"</span>, Integer.valueOf(10), g2.accepter(dMax));
+      g2.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"e"</span>, 3));
+      assertEquals(<span style='color:#2A00FF'>"Le montant max devrait être 3"</span>, Integer.valueOf(3), g2.accepter(dMax));
+
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testDoublons()<span style='font-weight:bold;color:#D3171B'>{</span>
+
+      GroupeDeContributeurs g1 = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g1"</span>);
+      Cotisant c1 = <span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"c1"</span>, 100);
+
+      SansDoublon sd = <span style='font-weight:bold;color:#7B0052;'>new</span> SansDoublon();
+
+      assertTrue(g1.accepter(sd));
+      assertTrue(c1.accepter(sd));
+
+      Cotisant g1_bis = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g1"</span>);
+      g1.ajouter(g1_bis);
+      assertFalse(g1.accepter(sd));
+
+      GroupeDeContributeurs c1_bis = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"c1"</span>);
+      c1_bis.ajouter(c1);
+      assertFalse(c1_bis.accepter(sd));
+
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <hr />
+    <h3>Question 3 :</h3>
+    <QuestionSection>Proposer une mise en oeuvre de la transaction, la classe concrète nommée TransactionDebit. celle-ci utilise un Memento, les transactions pouvant être imbriquées, le gardien devra gérer une pile de Memento. </QuestionSection> 
+
+    <p>La classe memento</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Memento <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='color:#3F7F5F'>// Note : Un usage du patron Memento,
+    </span>    <span style='color:#3F7F5F'>//        d’un premier visiteur pour la sauvegarde et
+    </span>    <span style='color:#3F7F5F'>//        d’un second pour la restitution du composite,
+    </span>    <span style='color:#3F7F5F'>//        représentent une solution possible.
+    </span>
+        <span style='font-weight:bold;color:#7B0052;'>private</span> GroupeDeContributeurs etats;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Memento(Cotisant c) <span style='font-weight:bold;color:#D3171B'>{</span>
+            this.etats = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"sauvegarde"</span>);
+            VisiteurSauvegarde vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurSauvegarde();
+            etats.ajouter(c.accepter(vs));
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setState(Cotisant c) <span style='font-weight:bold;color:#D3171B'>{</span>
+            VisiteurRestauration vr = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurRestauration(etats);
+            c.accepter(vr);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <ul>
+        <li>J'utilise ici comme conseillé deux visiteurs, un pour la sauvegarde et un pour la restauration.</li>
+        <li>Le visiteur de sauvegarde va stocker dans un groupe une copie de la structure GroupeDeContributeurs visitée.</li>
+    </ul>
+
+    <p>La Visiteur de sauvegarde :</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurSauvegarde <span style='font-weight:bold;color:#7B0052;'>implements</span> Visiteur&lt;Cotisant&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Cotisant visite(Contributeur c) <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(c.nom(), c.solde());
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Cotisant visite(GroupeDeContributeurs g) <span style='font-weight:bold;color:#D3171B'>{</span>
+            GroupeDeContributeurs gSave = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(g.nom());
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant c : g.getChildren())
+                gSave.ajouter(c.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> gSave;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>Assez simplement nous renvoyons la structure exacte du groupe visité. Chaque contributeur se chargeant de renvoyer un nouveau contributeur avec nom et solde identique.</p>
+
+    <p>Le visiteur de restitution :</p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurRestauration <span style='font-weight:bold;color:#7B0052;'>implements</span> Visiteur&lt;Void&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> GroupeDeContributeurs sauvegarde;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurRestauration(GroupeDeContributeurs sauvegarde) <span style='font-weight:bold;color:#D3171B'>{</span>
+            this.sauvegarde = sauvegarde;
+    
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Void visite(Contributeur c) <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant cotisant : sauvegarde) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (cotisant.equals(c))
+                    c.affecterSolde(cotisant.solde());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+    
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Void visite(GroupeDeContributeurs g) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (Cotisant c : g.getChildren())
+                c.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <ul>
+        <li>A la visite de chaque contributeur, je recherche dans la structure sauvegardée l'état sauvegardé de celui-ci et je lui restitue sa valeur.<br>
+        La méthode <code>public Void visite(GroupeDeContributeurs g)</code> se charge d'appliquer ce traitement sur tous ses enfants.</li>
+    </ul>
+
+    <br />
+    <hr />
+    <h3>Question 4 :</h3>
+
+    <QuestionSection>Compléter l’implémentation de la classe IHM</QuestionSection>
+    
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> IHM <span style='font-weight:bold;color:#7B0052;'>extends</span> JFrame <span style='font-weight:bold;color:#7B0052;'>implements</span> ActionListener <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> JTextArea resultat = <span style='font-weight:bold;color:#7B0052;'>new</span> JTextArea(<span style='color:#2A00FF'>""</span>, 7, 60);
+        <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> JButton debiter = <span style='font-weight:bold;color:#7B0052;'>new</span> JButton(<span style='color:#2A00FF'>"débiter"</span>);
+        <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> JButton crediter = <span style='font-weight:bold;color:#7B0052;'>new</span> JButton(<span style='color:#2A00FF'>"créditer"</span>);
+        <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> JTextField somme = <span style='font-weight:bold;color:#7B0052;'>new</span> JTextField(4);
+    
+        <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> GroupeDeContributeurs g;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> IHM() <span style='font-weight:bold;color:#D3171B'>{</span>
+            this.setTitle(<span style='color:#2A00FF'>"Cotisant"</span>);
+            Container container = this.getContentPane();
+            somme.setText(<span style='color:#2A00FF'>"40"</span>);
+            container.setLayout(<span style='font-weight:bold;color:#7B0052;'>new</span> BorderLayout());
+    
+            container.add(resultat, BorderLayout.NORTH);
+            JPanel p = <span style='font-weight:bold;color:#7B0052;'>new</span> JPanel(<span style='font-weight:bold;color:#7B0052;'>new</span> FlowLayout());
+            p.add(somme);
+            p.add(debiter);
+            p.add(crediter);
+            container.add(p, BorderLayout.SOUTH);
+    
+            g = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g"</span>);
+            g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_a"</span>, 100));
+            g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_b"</span>, 50));
+            g.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g_c"</span>, 150));
+            GroupeDeContributeurs g1 = <span style='font-weight:bold;color:#7B0052;'>new</span> GroupeDeContributeurs(<span style='color:#2A00FF'>"g1"</span>);
+            g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g1_a1"</span>, 70));
+            g1.ajouter(<span style='font-weight:bold;color:#7B0052;'>new</span> Contributeur(<span style='color:#2A00FF'>"g1_b1"</span>, 200));
+            g.ajouter(g1);
+    
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                resultat.setText(Main.arbreXML(g)); <span style='color:#3F7F5F'>//actualiser();
+    </span>        <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            debiter.addActionListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            crediter.addActionListener(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+    
+    
+            this.pack();
+            this.setVisible(<span style='font-weight:bold;color:#7B0052;'>true</span>);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>new</span> IHM();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae) <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>int</span> montant;
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                montant = (Integer.parseInt(somme.getText()));
+            <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                montant = 0;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            TransactionDebit t = <span style='font-weight:bold;color:#7B0052;'>new</span> TransactionDebit(g);
+    
+            <span style='font-weight:bold;color:#7B0052;'>if</span> (ae.getActionCommand().equals(<span style='color:#2A00FF'>"débiter"</span>)) <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    t.debit(montant);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>if</span> (ae.getActionCommand().equals(<span style='color:#2A00FF'>"créditer"</span>)) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    t.beginTransaction();
+                    g.credit(montant);
+                    t.endTransaction();
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    t.rollbackTransaction();
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                resultat.setText(Main.arbreXML(g)); <span style='color:#3F7F5F'>//actualiser();
+    </span>        <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                System.out.println(e.getMessage());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <ul>
+        <li>Je l'avoue, ici je me suis essentiellement basé sur ce qui avait été fait lors du TP3, n'ayant que 2 boutons, j'ai regroupé au sein d'une seule <br>
+méthode <code>public void actionPerformed(ActionEvent ae)</code> les actions effectuées par les boutons.</li>
+<li>La structure des opérations reprend l'ordre vu dans la question précédente. </li>
+<li>Cette structure est potentiellement inutile pour l'opération de crédit, mais c'était un peu pour le fun.</li>
+    </ul>
+
+    <br />
+    <hr />
+
+    <h3>Conclusion, biliographie et remarques :</h3>
+<p>Une bonne continuité du précédent TP au travers d'un exemple un peu plus concrêt, ce TP ce déroule finalement assez facilement, ce qui repose un 
+    peu l'esprit après le TP6 qui m'avait laissé une jolie migraine.<br>
+Encore une fois l'implémentation relativement libre du memento est appréciable et j'y ai pris du plaisir. Revoir le patron Templat method est également une bonne chose, je finis par parfois mélanger les patrons entre eux (l'UE est dense).<br>
+La récupération "automatique" des valeurs depuis le memento est également intéressante.</p>
+
+<br>
+<br>
+
+<p>A l'assaut du TP7 désormais.</p>
+
+  </body>
+</html>

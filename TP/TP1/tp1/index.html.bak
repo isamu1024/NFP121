@@ -1,0 +1,627 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>NFP121 - TP1</title>
+    <style type="text/css">
+      body {
+        background: #e5ded6;
+        background-color: #fff;
+        color: #333333;
+        font-size: 14px;
+        font-family: Verdana, Arial;
+      }
+
+      table {
+        font-size: 20px;
+        border-color: #808080;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      hr {
+        margin: 15px 0 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">NFP 121 - TP1</h2>
+    <h2 style="text-align: center">L'environnement de programmation BlueJ</h2>
+    <br>
+    <hr> <br>
+    <table border="1">
+      <tbody>
+        <tr>
+          <td>Nom</td>
+          <td>Moro</td>
+        </tr>
+        <tr>
+          <td>Prénom</td>
+          <td>Alexandre</td>
+        </tr>
+        <tr>
+          <td>Matricule</td>
+          <td>0g5drredxv9</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <hr>
+    <h3>Question 2 :</h3>
+    <ul>
+      <li><strong>1.1 Créez un cercle, puis créez un carré</strong></li>
+    </ul>
+    <ul>
+      <img src="tp1images/1-1_1.png">
+      <p><i>Création des instances</i></p>
+      <img src="tp1images/1-1_2.png">
+      <p> Utilisation de la méthode <code>makeVisible()</code> pour les faire
+        apparaitre sur le canvas </p>
+      <img src="tp1images/1-1_3.png">
+    </ul>
+    <strong>Appeler des méthodes</strong>
+    <ul>
+      <li>1.2 Que ce passe t'il si vous appelez <code>moveDown()</code> deux
+        fois? </li>
+      <p>L'instance sur laquelle s'applique la méthode se déplace deux fois.</p>
+      <li>Trois fois?</li>
+      <p>De la même manière, elle se déplace trois fois.</p>
+      <li>Que ce passe t'il si vous appelez <code>makeInvisible()</code> deux
+        fois ?</li>
+      <p>L'instance sur laquelle on applique deux fois la méthode <code>makeInvisible()</code>
+        reste invisible, le deuxième appel reste sans effet.</p>
+    </ul>
+    <strong>Paramètres</strong>
+    <ul>
+      <li>1.3 Essayez d'invoquer les méthodes <code>moveVertical</code>, <code>slowMoveVertical</code>,
+        et <code>changeSize</code>. Trouvez comment utiliser <code>moveHorizontal</code>
+        pour bouger le cercle de 70 pixels sur la gauche.</li>
+      <br>
+      <img src="tp1images/1-3_1.png">
+      <p></p>
+      <p><code>movevertical()</code> et son champs d'entrée avec comme type
+        attendu un entier.</p>
+      <p>Pour déplacer l'instance de 70 pixels sur la gauche, il faut spécifier
+        une valeur négative dans le champs (les valeurs positives déplacent
+        l'instance à droite).</p>
+    </ul>
+    <strong>Type de données</strong>
+    <ul>
+      <li>1.4 Invoquez <code>changeColor</code> sur l'un de vos objets cercle
+        et entrez le type string "red". Cela devrait changer la couleur de votre
+        cercle. Essayez d'autres couleurs.</li>
+    </ul>
+    <ul>
+      <img src="tp1images/1-4_1.png"><br>
+      <br>
+      <img src="tp1images/1-4_2.png">
+      <p>La méthode <code>changeColor(string newColor)</code> prend une chaine
+        de caractère (string) en paramètre et modifie la couleur de l'instance
+        affichée sur le canvas.</p>
+      <li>1.5 C'est un exemple très simple, et plusieurs autres couleurs sont
+        supportées. Regardez ce qu'il se passe lorsque vous spécifiez une
+        couleur inconnue.</li>
+    </ul>
+    <ul>
+      <img src="tp1images/1-5_1.png"><br>
+      <br>
+      <img src="tp1images/1-5_2.png">
+      <p>Une couleur inconnue renvoie "black" par défaut.</p>
+      <li>1.6 Invoquez la méthode changeColor, et écrivez la couleur dans le
+        champs de paramètre sans les guillemets. Que ce passe t'il ?</li>
+    </ul>
+    <ul>
+      <img src="tp1images/1-6_1.png">
+      <p></p>
+      <p>La valeur renseignée est refusée et retourne une erreur</p>
+      <code>Error: cannot find symbol - variable value</code>
+    </ul>
+    <strong>Instances multiples</strong>
+    <p></p>
+    <ul>
+      <li>1.7 Créez plusieurs objets de type cercle dans la zone objet. Vous
+        pouvez le faire en sélectionnant new Circle() depuis le menu pop-up de
+        la classe Circle.<br>
+        Rendez les visibles, puis bougez les sur l'écran en utilisant les
+        méthodes "move". Faites en un grand et jaune, un autre petit et vert.
+        Essayez les autres formes également, créez quelques triangles et carrés.<br>
+        Changez leurs position, tailles et couleurs. </li>
+    </ul>
+    <ul>
+      <p><img src="tp1images/1-7_1.png"></p>
+      <p>Test des formes, de couleurs et des mouvements à l'aide des méthodes
+        disponibles.</p>
+    </ul>
+    <strong>Etat</strong>
+    <ul>
+      <li>1.8 Assurez-vous d'avoir plusieurs objets dans l'espace de travail
+        puis inspectez les. Changez l'état d'un objet (par exemple en appelant
+        la méthode <code>moveLeft</code>) pendant que l'inspecteur est ouvert.<br>
+        Vous devriez voir les valeurs de l'inspecteur d'objet changer.</li>
+      <p></p>
+      <p><img src="tp1images/1-8_1.png" style="width: 432px; height: 279px;"></p>
+      <p>Etat initial de l'inspecteur</p>
+      <p>Appel de la méthode <code>moveLeft()</code></p>
+      <p><img src="tp1images/1-8_2.png" style="width: 428px; height: 276px;"></p>
+      <p>Etat de l'inspecteur après manipulation, la variable privée int
+        xPosition à&nbsp; été décrémentée de 20 pixels.</p>
+    </ul>
+    <p></p>
+    <strong>Qu'est ce qu'un objet ?</strong>
+    <p></p>
+    <ul>
+      <li>1.9 Utilisez les formes du projet shapes pour créer une image d'une
+        maison et d'un soleil similaire à&nbsp; celle de la figure 1.7. Tout en
+        le réalisant, notez ce que vous faites. Peux-il être fait d'une autre
+        manière ?</li>
+      <p><img src="tp1images/1-9_1.png"></p>
+      <p>Pour réaliser cette illustration, il a fallu créer les instances,
+        renseigner les propriétés et gérer les positions manuellement. C'est
+        long et fastidieux</p>
+      <p>Pour rendre ce processus efficace il serait préférable de créer une
+        méthode (par ex: <code>createHouse()</code> qui encapsule toutes ces
+        opérations et les réalisent à&nbsp; l'appel de celle-ci.</p>
+    </ul>
+    <strong>Interaction avec les objets</strong>
+    <p></p>
+    <ul>
+      <li>1.10 Ouvrez le projet picture. Créez une instance de la classe picture
+        et invoquez la méthode <code>draw()</code>. Par ailleurs, essayez les
+        méthode <code>setBlackandWhite()</code> et <code>setColor()</code>.</li>
+      <p><img src="tp1images/1-10_1.png"></p>
+      <p>Résultat de la méthode <code>draw()</code></p>
+      <p><img src="tp1images/1-10_2.png"></p>
+      <p>Résultat de la méthode <code>setBlackandWhite()</code></p>
+      <p><img src="tp1images/1-10_3.png"></p>
+      <p>Retour aux couleurs de base avec la méthode <code>setColor()</code></p>
+      <li>1.11 Comment pensez-vous que la classe Picture dessine l'image ?</li>
+      <p>La classe Picture possède une méthode <code>draw()</code> qui contient
+        le code d'instanciation des objets nécessaires, paramètre les couleurs
+        et invoque successivement les déplacements nécessaires à la composition
+        de l'image.</p>
+    </ul>
+    <p></p>
+    <strong>Code Source</strong>
+    <ul>
+      <li>La classe Picture possède une méthode <code>draw()</code> qui
+        contient le code d'instanciation des objets nécessaires, paramètre les
+        couleurs et invoque successivement les déplacements nécessaires à la
+        composition de l'image.</li>
+      <p><img src="tp1images/1-12_1.png" style="width: 674px; height: 651px;"></p>
+      <li>1.13 Dans le code source de la classe Picture, trouvez la partie qui
+        dessine actuellement l'image. <br>
+        Changez la pour que le soleil soit bleu au lieu de jaune.</li>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> <span
+style="font-weight:bold;color:#7B0052;">void</span> draw() <span style="font-weight:bold;color:#D3171B">{</span>
+            wall = <span style="font-weight:bold;color:#7B0052;">new</span> Square();
+            wall.moveVertical(80);
+            wall.changeSize(100);
+            wall.makeVisible();
+    
+            window = <span style="font-weight:bold;color:#7B0052;">new</span> Square();
+            window.changeColor(<span style="color:#2A00FF">"black"</span>);
+            window.moveHorizontal(20);
+            window.moveVertical(100);
+            window.makeVisible();
+    
+            roof = <span style="font-weight:bold;color:#7B0052;">new</span> Triangle();
+            roof.changeSize(50, 140);
+            roof.moveHorizontal(60);
+            roof.moveVertical(70);
+            roof.makeVisible();
+    
+            sun = <span style="font-weight:bold;color:#7B0052;">new</span> Circle();
+            <span style="color:#3F7F5F">//sun.changeColor("yellow");
+            </span>sun.changeColor(<span style="color:#2A00FF">"blue"</span>);
+            sun.moveHorizontal(180);
+            sun.moveVertical(-10);
+            sun.changeSize(60);
+            sun.makeVisible();
+        <span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <li>1.14 Ajoutez un second soleil a l'image. Pour ce faire, faites
+        attention au champs définition dans la partie supérieure de la classe,
+        vous devriez trouver ce code: </li>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'="">        <span
+style="font-weight:bold;color:#7B0052;">private</span> Square wall;
+        <span style="font-weight:bold;color:#7B0052;">private</span> Square window;
+        <span style="font-weight:bold;color:#7B0052;">private</span> Triangle roof;
+        <span style="font-weight:bold;color:#7B0052;">private</span> Circle sun;</pre>
+      <p>Vous aurez besoin de rajouter cette ligne:</p>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">private</span> Circle sun2;</pre>
+      <p>Puis écrire le code approprié pour la création du second soleil.</p>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'="">            sun2 = <span
+style="font-weight:bold;color:#7B0052;">new</span> Circle();
+            sun2.changeColor(<span style="color:#2A00FF">"blue"</span>);
+            sun2.moveHorizontal(120);
+            sun2.moveVertical(-15);
+            sun2.changeSize(30);
+            sun2.makeVisible();</pre>
+      <p><img src="tp1images/1-14_1.png"></p>
+      <li>1.15 Exercice challenge, ajoutez un coucher de soleil dans la version
+        simple soleil de Picture. faites bouger lentement le soleil
+        verticalement. Rappelez-vous, Circle à une méthode <code>slowMoveVertical()</code>
+        que vous pouvez utiliser pour le faire.</li>
+      <p></p>
+      <p>On rajoute une nouvelle méthode <code>sunset()</code> afin d'invoquer
+        le coucher de soleil sur sun.</p>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> <span
+style="font-weight:bold;color:#7B0052;">void</span> sunset() <span style="font-weight:bold;color:#D3171B">{</span>
+                sun.slowMoveVertical(300);
+        <span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <li>1.16 Exercice challenge, Si vous ajoutez votre coucher de soleil à la
+        fin de la méthode draw() (de façon à ce que le coucher de soleil se
+        fasse automatiquement quand l'image est dessinée), changez la
+        maintenant. Nous souhaitons que notre coucher de soleil soit dans une
+        méthode séparée, lorsque l'on appellera draw(), on verra l'image avec le
+        soleil levée, puis nous appellerons sunset (une méthode séparée!) pour
+        réaliser notre coucher de soleil.</li>
+      <p><i>Voir 1.15</i></p>
+    </ul>
+    <strong>Autres exemple</strong>
+    <p></p>
+    <ul>
+      <li>1.17 Créez un objet de la classe student. Vous remarquerez que cette
+        fois il vous sera demandé non seulement un nom à l'instance mais
+        également d'autres paramètres. Remplissez les avant de valider.</li>
+      <p></p>
+      <p><img src="tp1images/1-17_1.png"></p>
+    </ul>
+    <p></p>
+    <strong>Valeur de retour</strong>
+    <ul>
+      <li>1.18 Créez d'autres objets students. Appelez la méthode <code>getName()</code>
+        pour chaque objet. Explique ce qui se passe.</li>
+      <p><img src="tp1images/1-18_1.png"></p>
+      <p>Pour le moment la méthode ne renvoi rien.</p>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'="">            <span
+style="color:#3F5FBF">/**
+            * Lecture du nom de l'auditeur.
+            * 
+            * @return son nom
+            */</span>
+           <span style="font-weight:bold;color:#7B0052;">public</span> String nom() <span
+style="font-weight:bold;color:#D3171B">{</span>
+               <span style="font-weight:bold;color:#7B0052;">return</span> <span
+style="font-weight:bold;color:#7B0052;">null</span>;<span style="color:#3F7F5F">// Ã&nbsp; complÃ©ter
+           </span><span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <p></p>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> String nom() <span
+style="font-weight:bold;color:#D3171B">{</span>
+	        <span style="font-weight:bold;color:#7B0052;">return</span> this.nom;
+            <span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <p>Ce qui renverra</p>
+      <p><img src="tp1images/1-18_2.png"></p>
+    </ul>
+    <p></p>
+    <strong>En résumé</strong>
+    <p></p>
+    <ul>
+      <li>1.26 Dans ce chapitre nous avons mentionné les types de donnée <code>int</code>
+        et <code>string</code>. Java a plusieurs autres types prédéfinis.
+        Trouvez lesquels, ce qu'ils sont et ce pourquoi ils sont utilisés. </li>
+      <p></p>
+      <table cellspacing="3" cellpadding="3" border="1">
+        <tbody>
+          <tr>
+            <td style="width: 78.8px;">byte</td>
+            <td style="">Entier trés court</td>
+          </tr>
+          <tr>
+            <td>short</td>
+            <td>Entier court</td>
+          </tr>
+          <tr>
+            <td>int</td>
+            <td>Entier</td>
+          </tr>
+          <tr>
+            <td>long</td>
+            <td>Entier long</td>
+          </tr>
+          <tr>
+            <td>float</td>
+            <td>Flottant</td>
+          </tr>
+          <tr>
+            <td>double</td>
+            <td>Flottant double</td>
+          </tr>
+          <tr>
+            <td>boolean</td>
+            <td>Booléen</td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p>Principaux type présents dans Java</p>
+      <p>Source : <a href="https://web.maths.unsw.edu.au/%7Elafaye/CCM/java/javatype.htm">https://web.maths.unsw.edu.au/~lafaye/CCM/java/javatype.htm</a></p>
+      <li>1.27 Quels sont les types des valeurs suivantes? </li>
+      <p></p>
+      <table cellspacing="3" cellpadding="3" border="1">
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>int</td>
+          </tr>
+          <tr>
+            <td>"hello"</td>
+            <td>String</td>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>int</td>
+          </tr>
+          <tr>
+            <td>-1</td>
+            <td>int</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>booléen</td>
+          </tr>
+          <tr>
+            <td>"33"</td>
+            <td>String</td>
+          </tr>
+          <tr>
+            <td>3.1415</td>
+            <td>float / double</td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <li>1.28 Que faudrait il faire pour ajouter un nouveau champs ? Par
+        exemple un nommé <code>name</code>, a un objet cercle ?</li>
+      <p>Il faudrait pour cela définir une nouvelle variable d'instance et
+        écrire les mutateurs associés si celle-ci était déclarée <code>private</code>.</p>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> <span
+style="font-weight:bold;color:#7B0052;">class</span> Circle <span style="font-weight:bold;color:#D3171B">{</span> 
+            <span style="color:#3F7F5F">//...
+            </span>
+            <span style="font-weight:bold;color:#7B0052;">private</span> String nom;
+            
+            <span style="font-weight:bold;color:#7B0052;">public</span> <span style="font-weight:bold;color:#7B0052;">void</span> setNom(String nom)<span
+style="font-weight:bold;color:#D3171B">{</span>
+                    this.nom = nom;
+                <span style="font-weight:bold;color:#D3171B">}</span>
+                
+            <span style="font-weight:bold;color:#7B0052;">public</span> String getNom()<span
+style="font-weight:bold;color:#D3171B">{</span>
+                    <span style="font-weight:bold;color:#7B0052;">return</span> this.nom;
+                <span style="font-weight:bold;color:#D3171B">}</span>
+            ...<span style="color:#3F7F5F">//
+            </span>
+            <span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <li>1.29 Ecrivez la signature de la méthode appelée <code>send</code>
+        dont un de ces paramètres est de type <code>String</code> et ne
+        retourne pas de valeur.</li>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> <span
+style="font-weight:bold;color:#7B0052;">void</span> send(String exercice)<span style="font-weight:bold;color:#D3171B">{</span>
+        <span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <p></p>
+      <li>1.30 Ecrivez la signature de la méthode average qui possède 2
+        paramètres, tous deux de type <code>int</code> et retournant une valeur
+        de type <code>int</code>.</li>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> <span
+style="font-weight:bold;color:#7B0052;">int</span> average(<span style="font-weight:bold;color:#7B0052;">int</span> param1, <span
+style="font-weight:bold;color:#7B0052;">int</span> param2)<span style="font-weight:bold;color:#D3171B">{</span>
+            <span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <li>1.31 Regardez le livre que vous lisez actuellement, est-ce un objet ou
+        une classe ? Si c'est une classe, nommez des objets, si c'est un objet,
+        nommez sa classe.</li>
+      <p>Ce livre peut être vu comme une instance (objet) d'une classe livre qui
+        pourrait contenir diverses méthodes et données d'instance comme :</p>
+      <ul>
+        <li>Nombre de pages</li>
+        <li>Auteur</li>
+        <li>Langue</li>
+        <li>ISBN etc...</li>
+      </ul>
+      <p></p>
+      <li>1.32 Un objet peut il avoir plusieurs classes différentes ?
+        Argumentez.</li>
+      <p>Un objet ne peut se construire que depuis une seule classe (qui définit
+        son type), mais celle-ci peut hériter d'une classe supérieure. cette
+        notion d'héritage rend donc l'objet dépendant de plusieurs classes.</p>
+      <p>Par ailleurs en Java, tout objet hérite par défaut de la classe <code>Object</code>
+        donc tous les objets autre que <code>Object </code>héritent de
+        plusieurs classes.</p>
+    </ul>
+    <hr>
+    <h3>Question 3 :</h3>
+    <ul>
+      <li>1. Le paquetage question3 contient la classe AuditeurCnan fondée sur
+        le squelette de programme suivant : Ok</li>
+      <li>2. Lire la documentation de cette classe : Ok</li>
+      <li>3. Complétez cette classe</li>
+      <p>Le point le plus complexe de cette partie est la méthode <code>login()</code>
+      </p>
+      <p>Mon principal soucis fut de remplacer les caractères accentuées par
+        leur équivalent sans accent.</p>
+      <p>Utiliser la méthode <code>replaceAll()</code> avec une règle pour
+        chaque caractère accentué semblait une tache laborieuse et je l'avoue,
+        j'étais un poil trop feignant pour les faire (sans compter qu'il était
+        fort probable que j'en oublie).<br>
+        Une recherche Google m'a renvoyé vers une page StackOverflow
+        recommandant l'utilisation de la classe Normalizer .</p>
+      <a href="https://stackoverflow.com/questions/4122170/java-change-%C3%A1%C3%A9%C5%91%C5%B1%C3%BA-to-aeouu">https://stackoverflow.com/questions/4122170/java-change-%C3%A1%C3%A9%C5%91%C5%B1%C3%BA-to-aeouu</a>
+      <p>Le règles sur nom et prenom ayant plusieurs similarités, j'ai regoupé
+        certains traitements dans une méthode privée <code>CommonLoginRules()</code>
+        les regroupants :</p>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">private</span> <span
+style="font-weight:bold;color:#7B0052;">static</span> String CommonLoginRules(String input) <span
+style="font-weight:bold;color:#D3171B">{</span>
+
+            <span style="font-weight:bold;color:#7B0052;">return</span> Normalizer
+                    .normalize(input, c)
+                    .replaceAll(<span style="color:#2A00FF">"[^\\p{ASCII}]"</span>, <span
+style="color:#2A00FF">""</span>)
+                    .toLowerCase()
+                    .replaceAll(<span style="color:#2A00FF">"[\\s \\W]"</span>, <span
+style="color:#2A00FF">"_"</span>);
+            <span style="font-weight:bold;color:#D3171B">}</span></pre>
+      <p>Normalizer impose au préalable d'importer le module <code>java.text.Normalizer</code>
+        ce qui se fait en déclarant en entête de fichier : <code>import
+          java.text.Normalizer</code>;</p>
+      Pour plus de détail sur la méthode normalize :
+      <p><a href="https://docs.oracle.com/javase/tutorial/i18n/text/normalizerapi.html">https://docs.oracle.com/javase/tutorial/i18n/text/normalizerapi.html</a></p>
+      <ul>
+        <li>La méthode <code>.toLowerCase()</code> va forcer la casse d'un
+          caractère si celui-ci est en majuscule</li>
+        <li>La méthode <code>replaceAll()</code> présente deux fois dans ce
+          chainage va nous permettre de faire concorder une expression régulière
+          (regex) avec un caractère de remplacement.</li>
+      </ul>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Je ne suis vraiment pas habitué aux
+      regex donc il m'a fallu y aller de façon un peu empirique avec l'aide
+      bienvenue de sites d'aide à leur détermination comme :<br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="https://regexr.com/" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
+        class="notion-link-token notion-enable-hover" target="_blank" rel="noopener noreferrer"
+        data-token-index="1" data-reactroot=""><span style="border-bottom:0.05em solid;border-color:rgba(55,53,47,0.4);opacity:0.7">https://regexr.com/</span></a>
+      <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; et diverses documentations trouvées
+      via des recherches google, notamment :</p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html</a></p>
+    <ul>
+      <ul>
+        <li>La regex<code> "[\\s \\W]"</code> passée en paramètre de la fonction
+          <code>replaceAll()</code> va capturer tous les espace <code>\\S</code>
+          et tous les caractères "non mot" <code>\\W</code> , pour les
+          remplacer par le caractère '_'.</li>
+      </ul>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ensuite, dans l'appel de cette
+      méthode pour les données d'instance, je passe en paramètre la donnée
+      voulue avec une méthode <code>substring()</code>.<br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Permettant ainsi de limiter le
+      nombre de caractères max pour nom et prenom, avec une évaluation au niveau
+      des paramètres à l'aide la<br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; méthode <code>min()</code> de la
+      classe <code>Math</code> (renverra la plus petite des valeurs, soit <code>this.nom.length()</code>ou
+      le <code>String</code> en entier).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+    <ul>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> String login() <span
+style="font-weight:bold;color:#D3171B">{</span>
+
+        String loginNom = CommonLoginRules(this.nom.substring(0, Math.min(this.nom.length(), 6)));
+        String loginPrenom = CommonLoginRules(this.prenom.substring(0, Math.min(this.nom.length(), 1)));
+
+        <span style="font-weight:bold;color:#7B0052;">return</span> loginNom + <span
+style="color:#2A00FF">"_"</span> + loginPrenom;
+    <span style="font-weight:bold;color:#D3171B">}</span></pre>
+    </ul>
+    <ul>
+      <li>4. Créer plusieurs instances (clic droit sur la classe), vérifiez la
+        valeur des données d'instances avec l'inspecteur d'objets.</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="tp1images/3-3_1.png" alt="3_3_1"
+        style="width: 381px; height: 198px;"></p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="file:///D:/Onedrive/CNAM/NFP121/TP1/tp1/tp1images/3-3_2.png"
+        alt="3_3_2" style="width: 462px; height: 601px;"></p>
+    <ul>
+      <li>5. Exécutez les tests unitaires proposés, ceux-ci sont minimaux 6 .
+        Ajoutez vos propres tests, voir le tutoriel "Unit Testing in BlueJ"</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; L'ajout de test personnalisés se
+      passent de la même manière qu'énoncé en Webconférence, un clic sur la
+      méthode de tests fournis donne accès au menu suivant:</p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="file:///D:/Onedrive/CNAM/NFP121/TP1/tp1/tp1images/3-5_1.png"
+        alt="3_5_1" style="width: 298px; height: 131px;"></p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; On peut alors créer une instance et
+      appeler la méthode voulue:</p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="file:///D:/Onedrive/CNAM/NFP121/TP1/tp1/tp1images/3-5_2.png"
+        alt="3_5_2" style="width: 382px; height: 349px;"></p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; et par la suite renseigner le
+      résultat attendu et terminer l'enregistrement.<br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Reste ensuite a exécuter les test
+      avec nos méthodes personnalisées et celles demandés en question 5:</p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="file:///D:/Onedrive/CNAM/NFP121/TP1/tp1/tp1images/3-5_3.png"
+        alt="3_5_3" style="width: 491px; height: 372px;"></p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Tout semble bon pour la première
+      phase de tests.</p>
+    <ul>
+      <li>7. Effectuez une évaluation de votre classe avec JNEWS installé au
+        Cnam:</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="file:///D:/Onedrive/CNAM/NFP121/TP1/tp1/tp1images/3-5_4.png"
+        alt="3_5_4" style="width: 879px; height: 416px;"></p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Une grande partie des tests ont
+      réussis sur les tests en ligne, seul les tests personnalisés demandés ne
+      sont pas détectés.<br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Je n'ai pas réussi à trouver le
+      pourquoi de cet échec, malgré une méthode testant un booléen comme demandé
+      dans les commentaires du code de l'exercice.</p>
+    <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="file:///D:/Onedrive/CNAM/NFP121/TP1/tp1/tp1images/3-7_1.png"
+        alt="3_7_1" style="width: 438px; height: 386px;"></p>
+    <ul>
+      <pre style="text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:"
+courier="" new',="" courier,="" monospace;="" overflow:="" auto;'=""><span style="font-weight:bold;color:#7B0052;">public</span> <span
+style="font-weight:bold;color:#7B0052;">void</span> testBool()
+    <span style="font-weight:bold;color:#D3171B">{</span>
+        question3.AuditeurCNAM auditeur3 = <span style="font-weight:bold;color:#7B0052;">new</span> question3.AuditeurCNAM(<span
+style="color:#2A00FF">"bool"</span>, <span style="color:#2A00FF">"Boulot"</span>, <span
+style="color:#2A00FF">"123456"</span>);
+        assertEquals(true, auditeur3.equals(auditeur3));
+    <span style="font-weight:bold;color:#D3171B">}</span></pre>
+    </ul>
+    <ul>
+    </ul>
+    <br>
+    <hr>
+    <h3>Conclusion, biliographie et remarques :</h3>
+    <p> </p>
+    <ul>
+      <li>En conclusion ce TP m'a permis de me familiariser avec l'outil BlueJ
+        qui a ses particularités propres, surtout dans la possibilité de générer
+        des instances et de les inspecter.<br>
+        Cela aide à l'apprentissage mais les multiples fenêtres, l'ergonomie
+        perfectible (surtout de l'éditeur), et son instabilité chronique sur mon
+        système a un peu gâché le plaisir de la découverte.</li>
+      <li>Comme posté sur le forum je suis un peu déçu de ne pas avoir trouvé
+        comment passer le test Jnews avec les méthodes de tests personnalisées.
+        <br>
+        Résoudre ce soucis m'aurait permis d'engager sereinement les prochains
+        TP, espérons que je puisse mieux prendre en main l'outil par la suite.</li>
+      <li>Reste que la partie 3 m'a demandé un peu de recherche et m'a fait
+        découvrir des méthodes qui m'étaient jusque la inconnues. Je n'ai vu la
+        correction qu'après rédaction de ce TP et la <br>
+        solution proposée était d'une élégante simplicité comparée à celle que
+        j'ai pu mettre en oeuvre, je tacherais d'améliorer ce point à l'avenir.</li>
+      <li>A noter : j'ai rencontré de sérieux soucis sur l'encodage des fichiers
+        proposées, que ce soit les fichiers blueJ ou les fichiers Html, imposant
+        un nettoyage manuel des caractères accentués et posant<br>
+        de sérieux soucis sur les tests proposés.<br>
+      </li>
+    </ul>
+    <p><br>
+    </p>
+    <ul>
+    </ul>
+  </body>
+</html>

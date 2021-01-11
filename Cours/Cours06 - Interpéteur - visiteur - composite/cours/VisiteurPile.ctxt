@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=VisiteurPile
+comment1.params=stk
+comment1.target=VisiteurPile(java.util.Stack)
+comment2.params=n
+comment2.target=java.lang.Integer\ visite(Nombre)
+comment3.params=a
+comment3.target=java.lang.Integer\ visite(Addition)
+numComments=4

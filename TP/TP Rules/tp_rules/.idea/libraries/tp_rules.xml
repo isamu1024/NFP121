@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="tp_rules">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/femto_container_distrib_bluej.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-4.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

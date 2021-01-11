@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=IRule
+comment1.params=context\ result
+comment1.target=java.lang.Object\ execute(java.lang.Object,\ java.lang.Object)
+comment1.text=\ Ex\u00E9cution\ d'une\ r\u00E8gle\ de\ la\ forme\:\r\n\ Si\ la\ condition\ est\ satisfaite\ alors\ la\ commande\ est\ ex\u00E9cut\u00E9e.\r\n\ if(condition.isSatisfied(context))\r\n\ \ \ return\ command.execute(result);\r\n\ \ \ \r\n\ @param\ context\ l'entit\u00E9\r\n\ @parama\ result\ le\ r\u00E9sultat\r\n\ @return\ le\ r\u00E9sultat\ de\ l'ex\u00E9cution\r\n
+numComments=2

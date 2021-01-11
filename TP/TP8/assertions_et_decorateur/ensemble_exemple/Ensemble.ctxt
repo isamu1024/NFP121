@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Ensemble
+comment1.params=
+comment1.target=Ensemble()
+comment10.params=
+comment10.target=int\ hashCode()
+comment11.params=
+comment11.target=java.util.Set\ af()
+comment12.params=
+comment12.target=boolean\ repOk()
+comment2.params=i
+comment2.target=void\ ajouter(int)
+comment3.params=e
+comment3.target=void\ ajouter(CollectionI)
+comment4.params=i
+comment4.target=void\ retirer(int)
+comment5.params=
+comment5.target=int\ taille()
+comment6.params=i
+comment6.target=boolean\ contient(int)
+comment7.params=
+comment7.target=java.util.Iterator\ iterator()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=o
+comment9.target=boolean\ equals(java.lang.Object)
+numComments=13

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=selecteur
+comment0.target=Observateur(String)
+comment1.params=source\ arg
+comment1.target=void\ update(Observable,\ Object)
+numComments=2

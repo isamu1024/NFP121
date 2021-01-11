@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=className\ args
+comment2.target=java.lang.String[]\ execStatic(java.lang.String,\ java.lang.String[])
+comment2.text=\ Obtention\ de\ l'affichage\ produit\ par\ l'ex\u00E9cution\ de\ la\ m\u00E9thode\ main\ d'une\ classe.\r\n\ @param\ className\ le\ nom\ de\ la\ classe\r\n\ @param\ args\ les\ arguments\ de\ la\ ligne\ de\ commande\r\n\ @return\ le\ texte\ en\ tableau\ de\ lignes\r\n\ @throws\ une\ exception\ est\ lev\u00E9e\ si\ la\ classe\ est\ inconnue\r\n
+numComments=3

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Entier
+comment1.params=
+comment1.target=Entier()
+comment2.params=valeur
+comment2.target=Entier(int)
+comment3.params=valeur
+comment3.target=void\ setValeur(int)
+comment4.params=o
+comment4.target=boolean\ equals(java.lang.Object)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=
+comment6.target=int\ hashCode()
+comment7.params=e
+comment7.target=int\ compareTo(Entier)
+numComments=8

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=i
+comment0.target=void\ setValeurEiffel(int)
+comment0.text=\ Affectation\ de\ la\ valeur\ du\ nombre.\r\n\ La\ valeur\ est\ 2*i.\r\n
+comment1.params=i
+comment1.target=void\ setValeurLiskov(int)
+comment1.text=\ Affectation\ de\ la\ valeur\ du\ nombre.\r\n\ La\ valeur\ est\ 2*i.\r\n
+comment2.params=
+comment2.target=int\ getValeur()
+comment2.text=\ Lecture\ de\ la\ valeur\ de\ ce\ nombre.\r\n\ @return\ la\ valeur\ de\ ce\ nombre.\r\n
+numComments=3

@@ -1,0 +1,388 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Exercices dirigés NFP121</title>
+</head>
+
+<body>
+
+<p align="left"><font color="#800080" size="4"><strong>Exercices dirigés </strong></font>
+<strong><font size="4" color="#800080">NFP121</font></strong></p>
+
+<hr>
+
+<blockquote>
+    <p><font size="4">Le Patron Observateur</font></p>
+</blockquote>
+
+<hr>
+
+
+<blockquote>
+
+
+<p><span dir="ltr"><img border="0" src="index.4.jpg" width="543" height="217"></span></p>
+
+
+</blockquote>
+
+
+<p>&nbsp;</p>
+
+
+<p><font size="4">La classe <i>Subject</i> du schéma ci-dessus est remplacée par
+<i>java.util.Observable</i>, et l'interface Observer par <i>java.util.Observer</i></font></p>
+
+
+<p><font size="4">Le projet Bluej pour cet ED est constitué de deux paquetages</font></p>
+
+
+<blockquote>
+
+
+<p><span dir="rtl"><img border="0" src="index.5.jpg" width="419" height="112"></span></p>
+
+
+<p>&nbsp;</p>
+
+
+</blockquote>
+
+
+<p><font size="4">Choisissez le paquetage <i>patternObservateur</i></font></p>
+
+
+<blockquote>
+
+
+<p><img border="0" src="index.6.jpg" width="523" height="171"></p>
+
+
+</blockquote>
+
+
+<p><font size="4">QUESTION 1 : Complétez la classes <i>Entier</i> ci dessous<i>, </i>cette 
+classe doit permettre une exécution sans échec de la classe de tests 
+unitaires <i>TestsObservateurEntier</i> fournie ci-dessous</font></p>
+
+
+<p><font size="4">La classe <i>Entier</i> est <font color="#FF0000">à compléter</font></font></p>
+
+
+<div style="background:#FFFFFF; color:#000000; border:solid 1px black; margin:10px; padding:10px;"> 
+<pre><FONT color="#AA0000"><b>package</b></FONT> patternObservateur;
+
+<FONT color="#AA0000"><b>import</b></FONT> java.util.Observable;
+
+<FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>class</b></FONT> Entier <FONT color="#AA0000"><b>extends</b></FONT> Observable{
+  <FONT color="#990044"><b>private</b></FONT> <FONT color="#FF0000"><b>int</b></FONT> valeur;
+
+  <FONT color="#990044"><b>public</b></FONT> Entier(<FONT color="#FF0000"><b>int</b></FONT> valeur){
+    this.valeur = valeur;
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> inc(){
+    this.valeur++;
+   <b><font color="#FF0000" size="4"> // à compléter</font></b>
+  }
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> dec(){
+    this.valeur--;
+   <b><font color="#FF0000" size="4"> // à compléter</font></b>
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#FF0000"><b>int</b></FONT> getValeur(){<FONT color="#990044"><b>return</b></FONT> this.valeur;}
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> setValeur(<FONT color="#FF0000"><b>int</b></FONT> valeur){
+    this.valeur = valeur;
+   <b><font color="#FF0000" size="4"> // à compléter</font></b>
+  }
+
+  <FONT color="#990044"><b>public</b></FONT> String toString(){
+    <FONT color="#990044"><b>return</b></FONT> Integer.toString(this.valeur);
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> String toString(<FONT color="#FF0000"><b>int</b></FONT> base){
+    <FONT color="#990044"><b>return</b></FONT> Integer.toString(this.valeur, base);
+  }
+  
+
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#FF0000"><b>boolean</b></FONT> equals(Object obj){
+    <FONT color="#990044"><b>if</b></FONT>(obj <FONT color="#990044"><b>instanceof</b></FONT> Entier){
+      Entier e = (Entier) obj;
+      <FONT color="#990044"><b>return</b></FONT> this.valeur == e.valeur;
+    }
+    <FONT color="#990044"><b>return</b></FONT> false;
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#FF0000"><b>int</b></FONT> hashCode(){
+    <FONT color="#990044"><b>return</b></FONT> this.valeur;
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#990044"><b>static</b></FONT> Entier parseEntier(String s) <FONT color="#990044"><b>throws</b></FONT> NumberFormatException{
+      <FONT color="#FF0000"><b>int</b></FONT> valeur = Integer.parseInt(s);
+      <FONT color="#990044"><b>return</b></FONT> <FONT color="#990044"><b>new</b></FONT> Entier(valeur);
+  }
+}
+</pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --></p>
+
+<p><font size="4">La classe <i>ObservateurEntier</i>&nbsp; est fournie et 
+complète, et ne doit pas être modifiée</font></p>
+
+<div style="background:#FFFFFF; color:#000000; border:solid 1px black; margin:10px; padding:10px;"> 
+<pre><FONT color="#AA0000"><b>import</b></FONT> java.util.Observer;
+<FONT color="#AA0000"><b>import</b></FONT> java.util.Observable;
+
+<FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>class</b></FONT> ObservateurEntier <FONT color="#AA0000"><b>implements</b></FONT> Observer{
+ 
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> update(Observable source, Object arg){
+    System.out.println(source + <FONT color="#00AA00">"update !!! "</FONT> + arg);
+  }
+}
+</pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --></p>
+
+<p><font size="4">La classe de tests unitaires doit être lue attentivement avant de 
+compléter la classe Entier</font></p>
+
+<div style="background:#FFFFFF; color:#000000; border:solid 1px black; margin:10px; padding:10px;"> 
+<pre><FONT color="#AA0000"><b>package</b></FONT> patternObservateur;
+
+<FONT color="#AA0000"><b>import</b></FONT> java.util.Observable;
+<FONT color="#AA0000"><b>import</b></FONT> java.util.Observer;
+
+<FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>class</b></FONT> TestsObservateurEntier <FONT color="#AA0000"><b>extends</b></FONT> junit.framework.TestCase{
+ 
+  <FONT color="#990044"><b>private</b></FONT> <FONT color="#AA0000"><b>class</b></FONT> ObservateurTest <FONT color="#AA0000"><b>extends</b></FONT> ObservateurEntier { 
+    <FONT color="#990044"><b>private</b></FONT> <FONT color="#FF0000"><b>int</b></FONT> notifications;
+    <FONT color="#990044"><b>private</b></FONT> Observable source;
+    
+    <FONT color="#990044"><b>public</b></FONT> ObservateurTest(Observable src){
+      this.source = src;
+    }
+    <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> update(Observable src, Object arg){
+      super.update(src,arg);
+      notifications++;
+    }
+    <FONT color="#990044"><b>public</b></FONT> <FONT color="#FF0000"><b>int</b></FONT> getNotifications(){
+      <FONT color="#FF0000"><b>int</b></FONT> nombre = notifications;
+      notifications =0;
+      <FONT color="#990044"><b>return</b></FONT> nombre;
+    }
+    <FONT color="#990044"><b>public</b></FONT> Observable getSource(){
+      <FONT color="#990044"><b>return</b></FONT> source;
+    }
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> testUnEntierUnObservateurTest(){
+    Entier e = <FONT color="#990044"><b>new</b></FONT> Entier(1);
+    ObservateurTest obs = <FONT color="#990044"><b>new</b></FONT> ObservateurTest(e);
+    e.addObserver(obs);
+    e.inc();
+    assertEquals(<FONT color="#00AA00">"inc() n'engendre pas de notifications ???"</FONT>, 1, obs.getNotifications());
+    e.dec();
+    assertEquals(<FONT color="#00AA00">"dec() n'engendre pas de notifications ???"</FONT>,1, obs.getNotifications());
+    e.setValeur(e.getValeur()+1);
+    assertEquals(<FONT color="#00AA00">"setValeur() n'engendre pas de notifications ???"</FONT>,1, obs.getNotifications());
+    e.inc();e.inc();
+    assertEquals(2, obs.getNotifications());
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> testUnEntierDeuxObservateurTests(){
+    Entier e = <FONT color="#990044"><b>new</b></FONT> Entier(1);
+    ObservateurTest o1 = <FONT color="#990044"><b>new</b></FONT> ObservateurTest(e);
+    e.addObserver(o1);
+    ObservateurTest o2 = <FONT color="#990044"><b>new</b></FONT> ObservateurTest(e);
+    e.addObserver(o2);
+    e.inc();
+    assertEquals(<FONT color="#00AA00">"inc() n'engendre pas de notifications ???"</FONT>, 1, o1.getNotifications());
+    assertEquals(<FONT color="#00AA00">"inc() n'engendre pas de notifications ???"</FONT>, 1, o2.getNotifications());
+    e.dec();
+    assertEquals(<FONT color="#00AA00">"dec() n'engendre pas de notifications ???"</FONT>,1, o1.getNotifications());
+    assertEquals(<FONT color="#00AA00">"dec() n'engendre pas de notifications ???"</FONT>,1, o2.getNotifications());
+    e.setValeur(e.getValeur()+1);
+    assertEquals(<FONT color="#00AA00">"setValeur() n'engendre pas de notifications ???"</FONT>,1, o1.getNotifications());
+    assertEquals(<FONT color="#00AA00">"setValeur() n'engendre pas de notifications ???"</FONT>,1, o2.getNotifications());
+    e.inc();e.inc();
+    assertEquals(2, o1.getNotifications());
+    assertEquals(2, o2.getNotifications());
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> testDeuxEntiersUnObservateurTest(){
+    Entier e1 = <FONT color="#990044"><b>new</b></FONT> Entier(1);
+    Entier e2 = <FONT color="#990044"><b>new</b></FONT> Entier(1);
+    ObservateurTest obs = <FONT color="#990044"><b>new</b></FONT> ObservateurTest(e1);
+    e1.addObserver(obs);
+    e2.addObserver(obs);
+    e1.inc();e2.inc();
+    assertEquals(<FONT color="#00AA00">"inc() n'engendre pas de notifications ???"</FONT>, 2, obs.getNotifications());
+    e1.dec();
+    assertEquals(<FONT color="#00AA00">"dec() n'engendre pas de notifications ???"</FONT>,1, obs.getNotifications());
+    e2.setValeur(e2.getValeur()+1);
+    assertEquals(<FONT color="#00AA00">"setValeur() n'engendre pas de notifications ???"</FONT>,1, obs.getNotifications());
+    e1.inc();e2.inc();
+    assertEquals(2, obs.getNotifications());
+  }
+  
+   <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> testInterrogationEntier(){
+    Entier e = <FONT color="#990044"><b>new</b></FONT> Entier(1);
+    ObservateurTest obs = <FONT color="#990044"><b>new</b></FONT> ObservateurTest(e);
+    e.addObserver(obs);
+    <FONT color="#FF0000"><b>int</b></FONT> v = e.getValeur();
+    assertTrue(<FONT color="#00AA00">"getValeur() engendre (au moins)une notification ???"</FONT>, 0==obs.getNotifications());
+    String s = e.toString();
+    assertTrue(<FONT color="#00AA00">"toString() engendre (au moins)une notification ???"</FONT>, 0==obs.getNotifications());
+ 
+  }
+  
+}
+</pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --></p>
+
+<p><font size="4">Dès que votre classe Entier a été complétée, complétez cette classe de tests</font></p>
+
+<p><font size="4">QUESTION 2 : Une autre classe de tests est fournie, elle 
+permet de mémoriser dans une pile toutes les notifications effectuées, complétez 
+cette classe de tests et vérifiez le bon fonctionnement</font></p>
+
+<div style="background:#FFFFFF; color:#000000; border:solid 1px black; margin:10px; padding:10px;"> 
+<pre><FONT color="#AA0000"><b>package</b></FONT> patternObservateur;
+
+<FONT color="#AA0000"><b>import</b></FONT> java.util.Observable;
+<FONT color="#AA0000"><b>import</b></FONT> java.util.Observer;
+<FONT color="#AA0000"><b>import</b></FONT> java.util.Stack;
+<FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>class</b></FONT> TestsObservateur <FONT color="#AA0000"><b>extends</b></FONT> junit.framework.TestCase{
+ 
+  <FONT color="#990044"><b>private</b></FONT> <FONT color="#990044"><b>static</b></FONT> <FONT color="#AA0000"><b>class</b></FONT> ObservateurTest <FONT color="#AA0000"><b>implements</b></FONT> Observer{
+
+    <FONT color="#990044"><b>public</b></FONT> <FONT color="#990044"><b>static</b></FONT> <FONT color="#AA0000"><b>class</b></FONT> Notification{
+      <FONT color="#990044"><b>protected</b></FONT> Object arg;
+      <FONT color="#990044"><b>protected</b></FONT> Observable source;
+      Notification(Observable source, Object arg){
+        this.source = source;
+        this.arg = arg;
+      }
+    }
+    
+    <FONT color="#990044"><b>private</b></FONT> Stack&lt;Notification&gt; stk;
+    
+    <FONT color="#990044"><b>public</b></FONT> ObservateurTest(){
+      this.stk = <FONT color="#990044"><b>new</b></FONT> Stack&lt;Notification&gt;();
+    }
+    <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> update(Observable src, Object arg){
+      stk.push(<FONT color="#990044"><b>new</b></FONT> Notification(src,arg));
+    }
+    <FONT color="#990044"><b>public</b></FONT> Notification getNotification(){
+      <FONT color="#990044"><b>return</b></FONT> stk.peek();
+    }
+    <FONT color="#990044"><b>public</b></FONT> Notification lastNotification(){
+      <FONT color="#990044"><b>return</b></FONT> stk.pop();
+    }
+    <FONT color="#990044"><b>public</b></FONT> <FONT color="#FF0000"><b>boolean</b></FONT> isEmpty(){
+      <FONT color="#990044"><b>return</b></FONT> stk.isEmpty();
+    }
+    <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> reset(){
+      stk.clear();
+    }
+
+  }
+  
+  <FONT color="#990044"><b>public</b></FONT> <FONT color="#AA0000"><b>void</b></FONT> testUnEntierUnObservateur(){
+    Entier e = <FONT color="#990044"><b>new</b></FONT> Entier(1);
+    ObservateurTest obs = <FONT color="#990044"><b>new</b></FONT> ObservateurTest();
+    assertTrue(obs.isEmpty());
+    e.addObserver(obs);
+    assertTrue(obs.isEmpty());
+    e.inc();
+    assertFalse(<FONT color="#00AA00">"pas de notifications ???"</FONT>, obs.isEmpty());
+    ObservateurTest.Notification notification = obs.lastNotification();
+    assertEquals(<FONT color="#00AA00">"la source est-elle correcte ???"</FONT>,e,notification.source);
+    assertEquals(<FONT color="#00AA00">"l'argument est-il correct ???"</FONT>,2,notification.arg);
+    obs.reset();
+    
+    e.dec();
+    e.setValeur(33);
+    assertFalse(<FONT color="#00AA00">"pas de notifications ???"</FONT>, obs.isEmpty());
+    notification = obs.lastNotification();
+    assertEquals(<FONT color="#00AA00">"la source est-elle correcte ???"</FONT>,e,notification.source);
+    assertEquals(<FONT color="#00AA00">"l'argument est-il correct ???"</FONT>,33,notification.arg);
+
+    assertFalse(<FONT color="#00AA00">"pas de notifications ???"</FONT>, obs.isEmpty());
+    notification = obs.lastNotification();
+    assertEquals(<FONT color="#00AA00">"la source est-elle correcte ???"</FONT>,e,notification.source);
+    assertEquals(<FONT color="#00AA00">"l'argument est-il correct ???"</FONT>,1,notification.arg);
+    assertTrue(<FONT color="#00AA00">&quot;encore une notification, curieux ???"</FONT>, obs.isEmpty());
+
+  }
+  
+}
+</pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --></p>
+
+<p>&nbsp;</p>
+
+<p><font size="4">QUESTION 3 : On souhaite maintenant installer un observateur 
+par méthode, un observateur pour &quot;inc&quot;, un autre pour &quot;dec&quot; et un dernier pour &quot;setValeur&quot;, 
+chaque observateur affiche simplement le nombre d'appel de la méthode auquel il 
+est associé. Il vous faudra pour cela modifier la classe Entier. </font></p>
+
+<blockquote>
+
+<p><font size="4">Ce patron est-il le plus approprié ? confer le patron publish/subscribe 
+à lire sur <a href="https://fr.wikipedia.org/wiki/Publish-subscribe">wikipedia</a></font></p>
+
+<p><font size="4">un extrait : </font><i><b>Publish-subscribe</b></i> 
+(littéralement&nbsp;: <i>publier-souscrire</i>) est un mécanisme de publication et de 
+souscription de messages dans lequel les émetteurs (<i>publisher</i>, 
+littéralement&nbsp;: <i>éditeurs</i>) ne destinent pas a priori les messages à des 
+destinataires (<i>subscriber</i>, littéralement&nbsp;: <i>abonné</i>). À la place, 
+une catégorie est associée aux messages émis sans savoir s'il y a des 
+destinataires. De la même manière, les destinataires souscrivent aux catégories 
+les intéressant, et ne reçoivent que les messages correspondant, sans savoir 
+s'il y a des émetteurs.</p>
+
+<p>&nbsp;</p>
+
+</blockquote>
+
+<p><font size="4">LECTURE : Dès la mise en ligne du projet Bluej, vérifiez 
+l'usage du patron Strategie dans le paquetage avecLePatternStrategie, </font>le 
+contenu de la méthode update est décidée à la configuration, en fonction d'une 
+stratégie</p>
+
+<blockquote>
+
+<p><img border="0" src="index.7.jpg" width="538" height="220"></p>
+
+</blockquote>
+
+<p>&nbsp;</p>
+
+<blockquote>
+
+<p><br>
+</p>
+
+</blockquote>
+
+<font size="4">
+
+<p>&nbsp;</p>
+</font><font size="5">
+
+<p>Post-liminaire : </font><font size="4"><font size="5">Préparation du tp5, exécution et tests de l'applette de 
+l'énoncé</font></p>
+<blockquote>
+  <p><font size="5">console&gt; appletviewer http://jfod.cnam.fr/progAvancee/tp5/tp5.html<br>
+  avec si nécessaire sous windows set PATH=D:\BlueJ-315\jdk\bin;%PATH%</font></p>
+  <p><font size="5">Depuis votre navigateur
+  <a href="http://jfod.cnam.fr/progAvancee/tp4/tp4.html">http://jfod.cnam.fr/progAvancee/tp5/tp5.html</a></font></p>
+</blockquote>
+
+  <p><font size="4"><br>
+  /* Une <a href="solution/">idée</a>...</font></p>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=NombreI
+comment1.params=valeur
+comment1.target=void\ setValeur(int)
+comment2.params=
+comment2.target=void\ inc()
+comment3.params=
+comment3.target=void\ dec()
+comment4.params=
+comment4.target=int\ getValeur()
+comment5.params=
+comment5.target=int\ getMin()
+comment6.params=
+comment6.target=int\ getMax()
+comment7.params=
+comment7.target=java.lang.Object\ af()
+comment8.params=
+comment8.target=boolean\ repOk()
+numComments=9

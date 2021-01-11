@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Irack
+comment1.params=t
+comment1.target=void\ addItem(java.lang.Object)
+comment2.params=col\ slot
+comment2.target=java.lang.Object\ removeItem(int,\ int)
+comment3.params=
+comment3.target=boolean\ estPlein()
+comment4.params=
+comment4.target=int\ getNbCol()
+comment5.params=
+comment5.target=int\ getColCapacity()
+comment6.params=col\ slot
+comment6.target=java.lang.Object\ getColis(int,\ int)
+comment7.params=
+comment7.target=int\ freeSlots()
+comment8.params=
+comment8.target=java.lang.Object[][]\ af()
+comment9.params=
+comment9.target=boolean\ repOk()
+numComments=10

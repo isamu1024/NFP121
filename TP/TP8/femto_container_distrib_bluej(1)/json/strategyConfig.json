@@ -1,0 +1,26 @@
+[
+	{	"id":"context1",
+		"class":"strategy.Context",
+		"property.1":"strategy",
+		"property.1.param.1":"plus"
+	},
+	{	"id":"context2",
+		"class":"strategy.Context",
+		"property.1":"strategy",
+		"property.1.param.1":"moins"
+	},
+	{	"id":"context3",
+		"class":"strategy.Context",
+		"property.1":"strategy",
+		"property.1.param.1":"mul"
+	},
+	{	"id":"plus",
+		"class":"strategy.OperationAdd"
+	},
+	{	"id":"moins",
+		"class":"strategy.OperationSubstract"
+	},
+	{	"id":"mul",
+		"class":"strategy.OperationMultiply"
+	}
+]

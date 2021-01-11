@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Variable
+comment1.params=elt
+comment1.target=void\ setValue(java.lang.Integer)
+comment2.params=
+comment2.target=java.lang.Integer\ getValue()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=obj
+comment4.target=boolean\ equals(java.lang.Object)
+comment5.params=
+comment5.target=int\ hashCode()
+numComments=6

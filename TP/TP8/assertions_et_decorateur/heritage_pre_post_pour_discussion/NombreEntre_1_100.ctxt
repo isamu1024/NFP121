@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=NombreEntre_1_100
+comment1.params=i
+comment1.target=boolean\ pre_setValeur(int)
+comment2.params=i
+comment2.target=boolean\ post_setValeur(int)
+comment3.params=i
+comment3.target=void\ setValeurEiffel(int)
+comment4.params=i
+comment4.target=void\ setValeurLiskov(int)
+comment5.params=
+comment5.target=int\ getValeur()
+numComments=6

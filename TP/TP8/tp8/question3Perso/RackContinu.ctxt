@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=RackContinu
+comment1.params=col\ capacity
+comment1.target=RackContinu(int,\ int)
+comment1.text=\r\n\ Creat\ an\ empty\ rack\ for\ Santa\r\n\r\n\ @param\ col\ \ \ \ \ \ number\ if\ subrack\r\n\ @param\ capacity\ number\ of\ slot\ that\ can\ store\ an\ item\r\n
+comment2.params=t
+comment2.target=void\ addItem(java.lang.Object)
+comment2.text=\r\n\ Add\ an\ object\ to\ the\ rack\r\n\ The\ rack\ is\ stayed\ organized\ and\ do\ not\ allow\ empty\ cell\ between\ object\ (work\ like\ a\ stack)\r\n\r\n\ @param\ t\ object\ to\ add\r\n\ @throws\ Exception\ if\ rack\ is\ full\r\n
+comment3.params=col\ slot
+comment3.target=java.lang.Object\ removeItem(int,\ int)
+comment3.text=\r\n\ Return\ the\ item\ at\ the\ specified\ location\r\n\ Ensure\ that\ there\ is\ no\ empty\ slot\ between\ items\r\n\r\n\ @param\ col\ \ Column\ where\ the\ slot\ is\r\n\ @param\ slot\ Slot\ containing\ the\ object\r\n\ @return\ Object\ contained\ in\ the\ slot\r\n
+comment4.params=
+comment4.target=java.lang.Object[][]\ af()
+comment4.text=\r\n\ The\ rack\ can\ be\ represented\ by\ an\ array\ between\ each\ operation\r\n\ @return\ an\ equivalent\ of\ the\ rack\ in\ the\ form\ of\ an\ arrayList\r\n
+comment5.params=
+comment5.target=boolean\ repOk()
+numComments=6

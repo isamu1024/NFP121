@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=TestRules
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ testGiveIndividualLongStanding_whenFireRule_thenCorrectDiscount()
+comment3.params=
+comment3.target=void\ testGiveIndvidualRecent_whenFireRule_thenCorrectDiscount()
+comment4.params=
+comment4.target=void\ testGiveBusinessAny_whenFireRule_thenCorrectDiscount()
+numComments=5

@@ -1,0 +1,847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="FR">
+  <head>
+    <meta charset="utf-8" />
+    <title>NFP121 - TP_8</title>
+    <style type="text/css">
+      body {
+        background: #e5ded6;
+        background-color: #fff;
+        color: #333333;
+        font-size: 14px;
+        font-family: Verdana, Arial;
+      }
+
+      table {
+        font-size: 20px;
+        border-color: #808080;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      hr {
+        margin: 15px 0 15px 0;
+      }
+
+      applet {
+        margin: 10px 0px 25px 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #777777;
+      }
+
+      questionSection {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: medium;
+      }
+
+      p,
+      a,
+      img {
+        font-size: normal;
+        padding-left: 15px;
+      }
+
+      /* li {
+            font-size: smaller;
+            padding-left: 15px;
+            content: #C1002A;
+        } */
+
+      ul {
+        font-size: normal;
+      }
+
+      ul li::before {
+        content: "\2022";
+        color: #c1002a;
+        width: 1em;
+        margin-left: -1em;
+        display: inline-block;
+      }
+
+      code {
+        background-color: antiquewhite;
+        color: #c1002a;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">NFP 121 - TP_Rules</h2>
+    <h2 style="text-align: center">Le Patron Specification</h2>
+    <br />
+    <hr />
+    <br />
+    <table>
+      <tr>
+        <td>Nom</td>
+        <td>MORO</td>
+      </tr>
+      <tr>
+        <td>Prénom</td>
+        <td>Alexandre</td>
+      </tr>
+      <tr>
+        <td>Matricule</td>
+        <td>0g5drredxv9</td>
+      </tr>
+    </table>
+    <br />
+    <hr />
+    <h3>Question 1 :</h3>
+
+    <QuestionSection
+      >Complétez les différentes classes du composite Specification, la classe
+      de tests unitaires ne doit pas être simplifiée mais enrichie et s'exécute
+      sans erreur.</QuestionSection
+    >
+
+    <p>La classe Xor (ou exclusif)</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Xor&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> Binary&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+ 
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Xor(SpecificationI&lt;E&gt; spec1, SpecificationI&lt;E&gt; spec2)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>super</span>(spec1,spec2);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Xor()<span style='font-weight:bold;color:#D3171B'>{</span><span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> spec1.isSatisfiedBy(e) ^ spec2.isSatisfiedBy(e);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+         <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + spec1 + <span style='color:#2A00FF'>") xor ("</span> + spec2 +<span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>La classe Or (ou) </p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Or&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> Binary&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+ 
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Or(SpecificationI&lt;E&gt; spec1, SpecificationI&lt;E&gt; spec2)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>super</span>(spec1,spec2);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Or()<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> spec1.isSatisfiedBy(e) || spec2.isSatisfiedBy(e);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+         <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + spec1 + <span style='color:#2A00FF'>") or ("</span> + spec2 +<span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>La classe And (Et)</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> And&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> Binary&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>public</span> And(SpecificationI&lt;E&gt; spec1, SpecificationI&lt;E&gt; spec2)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>super</span>(spec1,spec2);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> And()<span style='font-weight:bold;color:#D3171B'>{</span><span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> spec1.isSatisfiedBy(e) && spec2.isSatisfiedBy(e);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + spec1 + <span style='color:#2A00FF'>") and ("</span> + spec2 +<span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>La classe All (tout)</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> All&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> CompositeSpecification&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>boolean</span> result = <span style='font-weight:bold;color:#7B0052;'>true</span>;
+            
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (SpecificationI&lt;E&gt; spec : super.specifications)
+                result &= spec.isSatisfiedBy(e);
+            
+            <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"all"</span> + super.toString();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>La classe OneOf (l'une d'elles)</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> OneOf&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> CompositeSpecification&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+  
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>boolean</span> result = <span style='font-weight:bold;color:#7B0052;'>false</span>;
+            
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (SpecificationI&lt;E&gt; spec : super.specifications)
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (spec.isSatisfiedBy(e))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+            
+            <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"oneOf"</span> + super.toString();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>La classe OnlyOne (Seulement l'une)</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> OnlyOne&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> CompositeSpecification&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+    
+    
+  
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>boolean</span> result = <span style='font-weight:bold;color:#7B0052;'>false</span>;
+            <span style='font-weight:bold;color:#7B0052;'>int</span> count = 0;
+            
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (SpecificationI&lt;E&gt; spec : super.specifications)
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (spec.isSatisfiedBy(e) == <span style='font-weight:bold;color:#7B0052;'>true</span>)
+                    count++;
+            
+            <span style='font-weight:bold;color:#7B0052;'>return</span> count == 1;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"onlyOne"</span> + super.toString();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>La classe None (aucune)</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> None&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> CompositeSpecification&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+
+        List&lt;SpecificationI&lt;E&gt;&gt; specList ;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> None()<span style='font-weight:bold;color:#D3171B'>{</span>
+            specList = <span style='font-weight:bold;color:#7B0052;'>new</span> ArrayList&lt;&gt;();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='color:#3F5FBF'>/**
+         * Return true if none of the rules are satisfied, false if at least one of them is satisfied
+         * @param e Element
+         * @return
+         */</span>
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            allSpecInList(super.specifications.iterator());
+    
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (SpecificationI&lt;E&gt; spec : specList)<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (spec.isSatisfiedBy(e))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"none"</span> + super.toString();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='color:#3F5FBF'>/**
+         * Flatten all nested list into a single one
+         * add to the Instance list
+         * @param i an iterotor from a List
+         */</span>
+        <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>void</span> allSpecInList(Iterator&lt;SpecificationI&lt;E&gt;&gt; i)<span style='font-weight:bold;color:#D3171B'>{</span>
+            SpecificationI&lt;E&gt; s = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+            <span style='font-weight:bold;color:#7B0052;'>while</span> (i.hasNext()) <span style='font-weight:bold;color:#D3171B'>{</span>
+                s = i.next();
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (s <span style='font-weight:bold;color:#7B0052;'>instanceof</span> CompositeSpecification)
+                    allSpecInList(((CompositeSpecification&lt;E&gt;) s).specifications.iterator());
+                <span style='font-weight:bold;color:#7B0052;'>else</span>
+                    specList.add(s);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <QuestionSection>Proposez une implémentation de la classe ReflectSpecification qui permet de générer une specification à partir des noms des classes.</QuestionSection>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>import</span> java.lang.reflect.*;
+
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ReflectSpecification&lt;E&gt; <span style='font-weight:bold;color:#7B0052;'>implements</span> SpecificationI&lt;E&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>protected</span> SpecificationI&lt;E&gt;  instanceSpecification=<span style='font-weight:bold;color:#7B0052;'>null</span>;
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> SpecificationI&lt;E&gt; getSpecification()<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> instanceSpecification;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setSpecification(String specification)<span style='font-weight:bold;color:#D3171B'>{</span>
+                Class c = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                     c = Class.forName(specification);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (ClassNotFoundException e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    System.out.println(<span style='color:#2A00FF'>"Class not found ! "</span>+ e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    this.instanceSpecification = (SpecificationI&lt;E&gt;) c.newInstance();
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(E e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                Method mSpecification=<span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> this.instanceSpecification.isSatisfiedBy(e);
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception exc)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    exc.printStackTrace();
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> RuntimeException(exc);
+                <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>finally</span><span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <QuestionSpecification>Complétez la classe de tests unitaires TestsSpecification</QuestionSpecification>
+
+        <p>Rajout de quelques règles :</p>
+
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span>  <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>class</span> estDivisiblePar3 <span style='font-weight:bold;color:#7B0052;'>implements</span> SpecificationI&lt;Integer&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> estDivisiblePar3()<span style='font-weight:bold;color:#D3171B'>{</span><span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(Integer i)<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> i%3==0;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>class</span> sumDigitIsEqualTo10 <span style='font-weight:bold;color:#7B0052;'>implements</span> SpecificationI&lt;Integer&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>public</span> sumDigitIsEqualTo10()<span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            @Override
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(Integer i) <span style='font-weight:bold;color:#D3171B'>{</span>
+                String[] toArray = i.toString().split(<span style='color:#2A00FF'>""</span>);
+                <span style='font-weight:bold;color:#7B0052;'>int</span> current = 0;
+    
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (String s : toArray)
+                    current += Integer.valueOf(s);
+    
+                <span style='font-weight:bold;color:#7B0052;'>return</span> current == 10;
+    
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>Rajout de quelques tests :</p>
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testImpair()<span style='font-weight:bold;color:#D3171B'>{</span>
+        SpecificationI&lt;Integer&gt; imp = <span style='font-weight:bold;color:#7B0052;'>new</span> EstImpair();
+        assertTrue(imp.isSatisfiedBy(11));
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testRegeleEt()<span style='font-weight:bold;color:#D3171B'>{</span>
+        SpecificationI&lt;Integer&gt; imp = <span style='font-weight:bold;color:#7B0052;'>new</span> EstImpair();
+        SpecificationI&lt;Integer&gt; pair = <span style='font-weight:bold;color:#7B0052;'>new</span> EstPair();
+        SpecificationI&lt;Integer&gt; et = <span style='font-weight:bold;color:#7B0052;'>new</span> And&lt;&gt;();
+        ((Binary) et).setSpec1(imp);
+        ((Binary) et).setSpec2(pair);
+        assertFalse(et.isSatisfiedBy(10));
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testOneOfAndNone()<span style='font-weight:bold;color:#D3171B'>{</span>
+        assertTrue(<span style='font-weight:bold;color:#7B0052;'>new</span> OneOf&lt;Integer&gt;().add( <span style='font-weight:bold;color:#7B0052;'>new</span> EstPair()).add(<span style='font-weight:bold;color:#7B0052;'>new</span> estDivisiblePar3()).isSatisfiedBy(12));
+        assertFalse(<span style='font-weight:bold;color:#7B0052;'>new</span> None&lt;Integer&gt;().add( <span style='font-weight:bold;color:#7B0052;'>new</span> EstPair()).add(<span style='font-weight:bold;color:#7B0052;'>new</span> estDivisiblePar3()).isSatisfiedBy(14));
+        assertFalse(<span style='font-weight:bold;color:#7B0052;'>new</span> OneOf&lt;Integer&gt;().add( <span style='font-weight:bold;color:#7B0052;'>new</span> EstPair()).add(<span style='font-weight:bold;color:#7B0052;'>new</span> estDivisiblePar3()).isSatisfiedBy(7));
+        assertTrue(<span style='font-weight:bold;color:#7B0052;'>new</span> sumDigitIsEqualTo10().isSatisfiedBy(91));
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <hr />
+    <h3>Question 2 :</h3>
+    <QuestionSection>Complétez les différentes classes du composite Command, la classe de tests unitaires ne doit pas être modifiée et s'exécute sans erreur.</QuestionSection>
+
+    <p>Classe MacroCommand</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MacroCommand&lt;E,R&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> CompositeCommand&lt;E,R&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>public</span> R execute(E e, R r) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+            R result = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+    
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (CommandI command : super.commands) <span style='font-weight:bold;color:#D3171B'>{</span>
+                result = (R) command.execute(e, r);
+                r = result;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>Classe MacroCommandException</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MacroCommandException&lt;E, R&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> CompositeCommand&lt;E, R&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>private</span> CommandI&lt;E, R&gt; exception;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setException(CommandI&lt;E, R&gt; exception) <span style='font-weight:bold;color:#D3171B'>{</span>
+            this.exception = exception;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> R execute(E e, R r) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+            R result = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+    
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (CommandI command : super.commands) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    result = (R) command.execute(e, r);
+                    r = result;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception exc) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (exception != <span style='font-weight:bold;color:#7B0052;'>null</span>)
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> exception.execute(e, r);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <QuestionSection>Proposez une implémentation de la classe ReflectCommand qui permet de générer une commande à partir des noms des classes</QuestionSection>
+
+    <p>Classe ReflectCommand :</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ReflectCommand&lt;E, R&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> Command&lt;E, R&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>protected</span> CommandI&lt;E, R&gt; instanceCommand = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setCommand(String command) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+                Class&lt;?&gt; c = Class.forName(command);
+                this.instanceCommand = (CommandI&lt;E, R&gt;) c.newInstance();
+                super.setCommand(this.instanceCommand);
+    
+            <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                e.printStackTrace();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> R execute(E entity, R result) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>if</span> (instanceCommand == <span style='font-weight:bold;color:#7B0052;'>null</span>)
+                <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> RuntimeException();
+    
+            Method mCommand = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (Method method : instanceCommand.getClass().getMethods()) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>if</span> (method.getName().equals(<span style='color:#2A00FF'>"execute"</span>) && method.getParameterTypes().length == 2) <span style='font-weight:bold;color:#D3171B'>{</span>
+                                 mCommand = method;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (mCommand == <span style='font-weight:bold;color:#7B0052;'>null</span>)
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> NoSuchMethodException();
+    
+                     result = (R) mCommand.invoke(this.instanceCommand, entity, result);
+    
+            <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                e.printStackTrace();
+                <span style='font-weight:bold;color:#7B0052;'>throw</span> e;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+            <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <QuestionSection>Complétez la classe de tests unitaires TestsCommands</QuestionSection>
+
+    <p> Un petit rajout pour réviser la réflectivité</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testMacroReflectivite() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        Class&lt;?&gt; macroClass = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+        CommandI&lt;Integer, Integer&gt; macro = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+
+        <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+            macroClass = Class.forName(<span style='color:#2A00FF'>"question2.MacroCommand"</span>);
+            macro = (CommandI&lt;Integer, Integer&gt;) macroClass.getDeclaredConstructor().newInstance();
+        <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>if</span> (macroClass == <span style='font-weight:bold;color:#7B0052;'>null</span>)
+            <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> RuntimeException();
+
+        Method add = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+
+        <span style='font-weight:bold;color:#7B0052;'>for</span> (Method m : macroClass.getMethods()) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>if</span> (m.getName().equals(<span style='color:#2A00FF'>"add"</span>))
+                add = m;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+
+        Class&lt;?&gt; decClass = Class.forName(<span style='color:#2A00FF'>"question2.TestsCommands$Dec"</span>);
+        CommandI&lt;Integer, Integer&gt; dec = (CommandI&lt;Integer, Integer&gt;) decClass.getDeclaredConstructor().newInstance();
+
+        add.invoke(macro, dec);
+        add.invoke(macro, dec);
+        add.invoke(macro, dec);
+
+        assertEquals(Integer.valueOf(0), macro.execute(null, 3));
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+    <br />
+    <hr />
+    <h3>Question 3 :</h3>
+
+    <QuestionSection>Ecrivez une implémentation complète de la classe Rules</QuestionSection>
+
+    <p>Classe Rules : </p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+        Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Rules&lt;E,R&gt; <span style='font-weight:bold;color:#7B0052;'>implements</span> RuleI&lt;E,R&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>private</span> List&lt;RuleI&lt;E,R&gt;&gt; rules;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Rules()<span style='font-weight:bold;color:#D3171B'>{</span>
+            this.rules = <span style='font-weight:bold;color:#7B0052;'>new</span> ArrayList&lt;&gt;();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setRules(RuleI&lt;E,R&gt;[] rules)<span style='font-weight:bold;color:#D3171B'>{</span>
+            this.rules.addAll(Arrays.asList(rules));
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> Rules&lt;E,R&gt; add(RuleI&lt;E,R&gt; rule)<span style='font-weight:bold;color:#D3171B'>{</span>
+            rules.add(rule);
+            <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> R execute(E e,R r) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (RuleI&lt;E,R&gt; rule : rules)
+                r = rule.execute(e,r);
+            <span style='font-weight:bold;color:#7B0052;'>return</span> r;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            String className=this.getClass().getSimpleName();
+            StringBuffer sb = <span style='font-weight:bold;color:#7B0052;'>new</span> StringBuffer(className+<span style='color:#2A00FF'>":"</span>+<span style='color:#2A00FF'>"("</span>);
+            Iterator&lt;RuleI&lt;E,R&gt;&gt; it = this.rules.iterator();
+            <span style='font-weight:bold;color:#7B0052;'>while</span>(it.hasNext())<span style='font-weight:bold;color:#D3171B'>{</span>
+                sb.append(it.next().toString());
+                <span style='font-weight:bold;color:#7B0052;'>if</span>(it.hasNext())sb.append(<span style='color:#2A00FF'>","</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+            sb.append(<span style='color:#2A00FF'>")"</span>);
+            <span style='font-weight:bold;color:#7B0052;'>return</span> sb.toString();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <QuestionSection>Proposez une implémentation complète de la classe ReflectRule.</QuestionSection>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+        Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ReflectRule&lt;E,R&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> Rule&lt;E,R&gt;  <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>protected</span> ReflectSpecification&lt;E&gt;  instanceSpecification=<span style='font-weight:bold;color:#7B0052;'>null</span>;
+        <span style='font-weight:bold;color:#7B0052;'>protected</span> ReflectCommand&lt;E,R&gt;  instanceCommand=<span style='font-weight:bold;color:#7B0052;'>null</span>;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setSpecification(String specification)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+    
+                Class rSpec = Class.forName(specification);
+                Object oSpec = rSpec.newInstance();
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (oSpec <span style='font-weight:bold;color:#7B0052;'>instanceof</span> ReflectSpecification)
+                    this.instanceSpecification = (ReflectSpecification&lt;E&gt;) oSpec;
+                <span style='font-weight:bold;color:#7B0052;'>else</span>
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> NoClassDefFoundError();
+    
+    
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                e.printStackTrace();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setCommand(String command)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+                Class rComm = Class.forName(command);
+                Object oComm = rComm.newInstance();
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (oComm <span style='font-weight:bold;color:#7B0052;'>instanceof</span> ReflectCommand)
+                    this.instanceCommand = (ReflectCommand&lt;E,R&gt;) oComm;
+                <span style='font-weight:bold;color:#7B0052;'>else</span>
+                    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> NoClassDefFoundError();
+             <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                e.printStackTrace();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <QuestionSection>Complétez la classe de tests unitaires TestsRules</QuestionSection>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+        Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testRuleReflection() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+            ReflectSpecification&lt;Integer&gt; inf = <span style='font-weight:bold;color:#7B0052;'>new</span> ReflectSpecification&lt;&gt;();
+            inf.setSpecification(<span style='color:#2A00FF'>"question3.EstInferieur"</span>);
+    
+            ReflectCommand&lt;Integer, Integer&gt; inc = <span style='font-weight:bold;color:#7B0052;'>new</span> ReflectCommand&lt;&gt;();
+            inc.setCommand(<span style='color:#2A00FF'>"question3.Inc"</span>);
+    
+            Rule&lt;Integer, Integer&gt; rule = <span style='font-weight:bold;color:#7B0052;'>new</span> Rule&lt;&gt;();
+            rule.setCommand(inc);
+            rule.setSpecification(inf);
+    
+            <span style='color:#3F7F5F'>// TODO setValeur(4) TODO ???
+    </span>
+            ((EstInferieur) inf.getSpecification()).setValeur(5);
+    
+            Integer x = 0;
+    
+            Integer result = rule.execute(x,5);
+            assertEquals(Integer.valueOf(6), result);
+    
+            <span style='color:#3F7F5F'>// nouveau test
+    </span>        ReflectSpecification&lt;Integer&gt; sup = <span style='font-weight:bold;color:#7B0052;'>new</span> ReflectSpecification&lt;&gt;();
+            sup.setSpecification(<span style='color:#2A00FF'>"question3.EstSuperieur"</span>);
+    
+            rule.setCommand(inc);
+            rule.setSpecification(sup);
+    
+            ((EstSuperieur) sup.getSpecification()).setValeur(0);
+    
+            x = 1;
+    
+            result = rule.execute(x, 0);
+            assertEquals(Integer.valueOf(1), result);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testRules()<span style='font-weight:bold;color:#D3171B'>{</span>
+            Rules&lt;Integer,Integer&gt; rules = <span style='font-weight:bold;color:#7B0052;'>new</span> Rules&lt;&gt;();
+            rules.add(<span style='font-weight:bold;color:#7B0052;'>new</span> Rule&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> EstInferieur(4), <span style='font-weight:bold;color:#7B0052;'>new</span> Inc(1)))
+            .add(<span style='font-weight:bold;color:#7B0052;'>new</span> Rule&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> EstSuperieur(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Inc(10)));
+    
+            <span style='font-weight:bold;color:#7B0052;'>int</span> res = 3;
+            <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                rules.execute(3, res);
+                assertEquals(11, res);
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception ex) <span style='font-weight:bold;color:#D3171B'>{</span>
+                System.out.println(<span style='color:#2A00FF'>"Oups"</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <QuestionSection>Ajoutez le décorateur de votre choix, un générateur de fichiers XML, une trace d'exécution plus pertinente et persitante
+        ?...
+</QuestionSection>
+
+<p>Ajout d'un décorateur XML :</p>
+<p>Sur la base de l'impémentation déjà vue au niveau des décorateurs.</p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Element;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> XmlDecorator&lt;E, R&gt; <span style='font-weight:bold;color:#7B0052;'>extends</span> DecoratorRule&lt;E, R&gt;
+<span style='font-weight:bold;color:#D3171B'>{</span>
+
+    Element element = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> XmlDecorator(RuleI&lt;E,R&gt; rule, Element e)
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>super</span>(rule);
+        this.element = e;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> XmlDecorator()<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>super</span>();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    @Override
+    <span style='font-weight:bold;color:#7B0052;'>public</span> R execute (E e, R r) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        Element rule = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Rule"</span>);
+
+        Element initValue = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Valeur_initiale"</span>);
+        initValue.setText(r.toString());
+        rule.addContent(initValue);
+
+        Element specification = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Specification"</span>);
+        specification.setText(<span style='color:#2A00FF'>"si : "</span> + ((Rule&lt;E,R&gt;) super.rule).getSpecification().toString());
+        rule.addContent(specification);
+
+        Element commande = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Commande"</span>);
+        commande.setText(<span style='color:#2A00FF'>"alors : "</span> + ((Rule&lt;E,R&gt;) super.rule).getCommand().toString());
+        rule.addContent(commande);
+
+        R result = super.rule.execute(e, r);
+
+        Element resultat = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Resultat"</span>);
+        resultat.addContent(result.toString());
+        rule.addContent(resultat);
+
+        this.element.addContent(rule);
+
+        <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+    
+<p>L'execution associée :</p>
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Document;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Element;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.input.SAXBuilder;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.output.Format;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.output.XMLOutputter;
+<span style='font-weight:bold;color:#7B0052;'>import</span> question2.MacroCommand;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> java.io.File;
+<span style='font-weight:bold;color:#7B0052;'>import</span> java.io.FileOutputStream;
+
+<span style='color:#3F5FBF'>/**
+ * Décrivez votre classe TestXML ici.
+ *
+ * @author (votre nom)
+ * @version (un numéro de version ou une date)
+ */</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestXML <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase <span style='font-weight:bold;color:#D3171B'>{</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testExportXml() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+        String path = <span style='color:#2A00FF'>"testExport"</span> + <span style='color:#2A00FF'>".xml"</span>;
+        File file = <span style='font-weight:bold;color:#7B0052;'>new</span> File(path);
+        Element racine = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Rule"</span>);
+        Document document = <span style='font-weight:bold;color:#7B0052;'>new</span> Document(racine);
+
+        Rule&lt;Integer, Integer&gt; rule = <span style='font-weight:bold;color:#7B0052;'>new</span> Rule&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> EstInferieur(4), <span style='font-weight:bold;color:#7B0052;'>new</span> Inc(1));
+
+        XmlDecorator&lt;Integer, Integer&gt; ruleDec = <span style='font-weight:bold;color:#7B0052;'>new</span> XmlDecorator&lt;&gt;(rule, racine);
+
+        ruleDec.execute(3, 3);
+
+        XMLOutputter out = <span style='font-weight:bold;color:#7B0052;'>new</span> XMLOutputter(Format.getPrettyFormat());
+        out.output(document, <span style='font-weight:bold;color:#7B0052;'>new</span> FileOutputStream(path));
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testExportXMLRules() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+
+        String path = <span style='color:#2A00FF'>"testExportXmlRules"</span> + <span style='color:#2A00FF'>".xml"</span>;
+        File file = <span style='font-weight:bold;color:#7B0052;'>new</span> File(path);
+        Element racine = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Rules"</span>);
+        Document document = <span style='font-weight:bold;color:#7B0052;'>new</span> Document(racine);
+
+        Rules&lt;Integer,Integer&gt; rules = <span style='font-weight:bold;color:#7B0052;'>new</span> Rules&lt;&gt;();
+        RuleI&lt;Integer,Integer&gt; rule = <span style='font-weight:bold;color:#7B0052;'>new</span> XmlDecorator&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> Rule&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> EstInferieur(4), <span style='font-weight:bold;color:#7B0052;'>new</span> Inc(1)), racine);
+        rules.add(rule).add(rule);
+
+        rules.execute(0,0);
+
+        Element tree = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"rule"</span>);
+
+
+        XMLOutputter out = <span style='font-weight:bold;color:#7B0052;'>new</span> XMLOutputter(Format.getPrettyFormat());
+        out.output(document, <span style='font-weight:bold;color:#7B0052;'>new</span> FileOutputStream(path));
+
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>Le résultat en sortie : </p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'
+    Courier New', Courier, monospace; overflow: auto;'>&lt;?xml version=<span style='color:#2A00FF'>"1.0"</span> encoding=<span style='color:#2A00FF'>"UTF-8"</span>?&gt;
+&lt;Rules&gt;
+  &lt;Rule&gt;
+    &lt;Valeur_initiale&gt;0&lt;/Valeur_initiale&gt;
+    &lt;Specification&gt;si : estInferieur_a_4&lt;/Specification&gt;
+    &lt;Commande&gt;alors : inc_de_1&lt;/Commande&gt;
+    &lt;Resultat&gt;1&lt;/Resultat&gt;
+  &lt;/Rule&gt;
+  &lt;Rule&gt;
+    &lt;Valeur_initiale&gt;1&lt;/Valeur_initiale&gt;
+    &lt;Specification&gt;si : estInferieur_a_4&lt;/Specification&gt;
+    &lt;Commande&gt;alors : inc_de_1&lt;/Commande&gt;
+    &lt;Resultat&gt;2&lt;/Resultat&gt;
+  &lt;/Rule&gt;
+&lt;/Rules&gt;</pre>
+    
+<QuestionSection>Des exemples se trouvent dans plusieurs paquetages, complétez l'exemple de votre choix en ajoutant des règles :</QuestionSection>
+<p>Rajout de règles pour "exemple_alcool" (forcément...) </p>
+<p>Sur la base des évènements récents, j'inclus une règle de fermeture administrative basée sur le nom du bar en raison de la pandémie</p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FermetureTemporaire <span style='font-weight:bold;color:#7B0052;'>implements</span> SpecificationI&lt;ClientDuBar&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>final</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> T = <span style='font-weight:bold;color:#7B0052;'>true</span>;
+
+    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> HashMap&lt;String, Boolean&gt; estFerme;
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> FermetureTemporaire() <span style='font-weight:bold;color:#D3171B'>{</span>
+        estFerme = <span style='font-weight:bold;color:#7B0052;'>new</span> HashMap&lt;&gt;();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setFermetureTemporaire(String nomDuBar, Boolean fermeture) <span style='font-weight:bold;color:#D3171B'>{</span>
+        estFerme.put(nomDuBar, fermeture);
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    @Override
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isSatisfiedBy(ClientDuBar candidate) <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        String lieu = candidate.getBar().getNom();
+        <span style='font-weight:bold;color:#7B0052;'>boolean</span> statut;
+
+        statut = estFerme.getOrDefault(lieu, <span style='font-weight:bold;color:#7B0052;'>false</span>);
+
+        <span style='font-weight:bold;color:#7B0052;'>if</span> (T)
+            System.out.println(<span style='color:#2A00FF'>"Le bar est fermé administrativement : "</span> + estFerme.get(lieu));
+
+        <span style='font-weight:bold;color:#7B0052;'>return</span> statut;
+
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> (<span style='color:#2A00FF'>"EstFermeAdministrativement"</span> + <span style='color:#2A00FF'>"()"</span>);
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>Modification du Main fourni pour intégration de la nouvelle règle : </p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>
+    System.out.println(<span style='color:#2A00FF'>"exemple non terminé, extrait de https://gist.github.com/marc-bouvier/84a6d0f1836762912ebe84d4828d0b13"</span>);
+
+    Bar pouchla = <span style='font-weight:bold;color:#7B0052;'>new</span> Bar(<span style='color:#2A00FF'>"POUCHLA"</span>, <span style='color:#2A00FF'>"10 rue Mandar Paris, France"</span>);
+    Bar zurSteipe = <span style='font-weight:bold;color:#7B0052;'>new</span> Bar(<span style='color:#2A00FF'>"Zur Steipe"</span>, <span style='color:#2A00FF'>"Dietrichstrasse 54 Trier, Allemagne"</span>);
+
+    ClientDuBar clientDuBar = <span style='font-weight:bold;color:#7B0052;'>new</span> ClientDuBar(<span style='color:#2A00FF'>"Jim"</span>, 20, zurSteipe, <span style='color:#2A00FF'>"erdinger"</span>);
+
+    CompositeSpecification&lt;ClientDuBar&gt; regle =
+            <span style='font-weight:bold;color:#7B0052;'>new</span> OneOf&lt;ClientDuBar&gt;()
+                    .add(<span style='font-weight:bold;color:#7B0052;'>new</span> And&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> EstEn(<span style='color:#2A00FF'>"France"</span>), <span style='font-weight:bold;color:#7B0052;'>new</span> APlusDe(18)))
+                    .add(<span style='font-weight:bold;color:#7B0052;'>new</span> And&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> EstAux(<span style='color:#2A00FF'>"EtatsUnis"</span>), <span style='font-weight:bold;color:#7B0052;'>new</span> APlusDe(21)))
+                    .add(<span style='font-weight:bold;color:#7B0052;'>new</span> And&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> EstEn(<span style='color:#2A00FF'>"Allemagne"</span>),
+                            <span style='font-weight:bold;color:#7B0052;'>new</span> Or&lt;&gt;(<span style='font-weight:bold;color:#7B0052;'>new</span> And&lt;&gt;(
+                                    <span style='font-weight:bold;color:#7B0052;'>new</span> VinsMousseuxEtBieres(), <span style='font-weight:bold;color:#7B0052;'>new</span> TRUE&lt;&gt;()),<span style='color:#3F7F5F'>// à terminer
+</span>                                        <span style='font-weight:bold;color:#7B0052;'>new</span> APlusDe(18))));
+
+    System.out.println(<span style='color:#2A00FF'>"regle:"</span> + regle);
+
+    <span style='font-weight:bold;color:#7B0052;'>boolean</span> consommationDAlcoolEstLegale = regle.isSatisfiedBy(clientDuBar);
+    System.out.println(<span style='color:#2A00FF'>"clientDuBar: "</span> + clientDuBar);
+    System.out.println(<span style='color:#2A00FF'>"consommationDAlcoolEstLegale: "</span> + consommationDAlcoolEstLegale);
+
+    ClientDuBar clientDuBar1 = <span style='font-weight:bold;color:#7B0052;'>new</span> ClientDuBar(<span style='color:#2A00FF'>"Alexandre"</span>, 38, pouchla, <span style='color:#2A00FF'>"erdinger"</span>);
+
+    FermetureTemporaire fermeture = <span style='font-weight:bold;color:#7B0052;'>new</span> FermetureTemporaire();
+    fermeture.setFermetureTemporaire(pouchla.getNom(), <span style='font-weight:bold;color:#7B0052;'>true</span>);
+
+    SpecificationI&lt;ClientDuBar&gt; regleFermeture = <span style='font-weight:bold;color:#7B0052;'>new</span> And&lt;&gt;(regle, <span style='font-weight:bold;color:#7B0052;'>new</span> Not&lt;&gt;(fermeture)); <span style='color:#3F7F5F'>// on ajoute notre règle à celle existante
+</span>
+    System.out.println(<span style='color:#2A00FF'>"regle:"</span> + regleFermeture);
+
+    consommationDAlcoolEstLegale = regleFermeture.isSatisfiedBy(clientDuBar1);
+    System.out.println(<span style='color:#2A00FF'>"clientDuBar: "</span> + clientDuBar1);
+    System.out.println(<span style='color:#2A00FF'>"consommationDAlcoolEstLegale: "</span> + consommationDAlcoolEstLegale);
+    
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <br />
+    <hr />
+
+    <h3>Conclusion, biliographie et remarques :</h3>
+    <i style="font-size: 12px"
+      >... Une seule page html, limitez le nombre de clics, (plus de 200
+      rapports � corriger chaque semaine)</i
+    >
+  </body>
+</html>

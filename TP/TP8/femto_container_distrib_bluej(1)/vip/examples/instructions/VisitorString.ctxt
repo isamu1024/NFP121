@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=VisitorString
+comment1.params=inc
+comment1.target=java.lang.String\ visit(Inc)
+comment2.params=inc
+comment2.target=java.lang.String\ visit(IncVariable)
+comment3.params=lessThan
+comment3.target=java.lang.String\ visit(LessThan)
+numComments=4

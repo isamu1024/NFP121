@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Visiteur
+comment1.params=expr
+comment1.target=java.lang.Object\ visite(Expression)
+numComments=2

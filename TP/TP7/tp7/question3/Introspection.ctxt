@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Introspection
+comment1.params=nomDeLaClasse
+comment1.target=java.util.Set\ getHeritees(java.lang.String)
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment3.params=c
+comment3.target=java.util.List\ localMethodsMap(java.lang.Class)
+comment4.params=m
+comment4.target=boolean\ IsPublicOrProtected(java.lang.reflect.Method)
+comment5.params=a\ b
+comment5.target=boolean\ isEqual(java.lang.reflect.Method,\ java.lang.reflect.Method)
+comment6.params=list
+comment6.target=java.util.List\ checkInherent(java.util.List)
+comment6.text=\r\n\r\n\ @param\ list\r\n\ @return\r\n
+numComments=7

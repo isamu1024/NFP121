@@ -1,0 +1,477 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="FR">
+<head>
+    <meta charset="utf-8" />
+    <title>NFP121 - TP2</title>
+    <style type="text/css">
+        body {
+            background: #E5DED6;
+            background-color: #fff;
+            color: #333333;
+            font-size: 14px;
+            font-family: Verdana, Arial;
+        }
+
+        table {
+            font-size: 20px;
+            border-color: #808080;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        h2 {
+            color: #C1002A;
+            font-family: Verdana, Arial;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        h3 {
+            color: #C1002A;
+            font-family: Verdana, Arial;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        hr {
+            margin: 15px 0 15px 0;
+        }
+		
+		applet {
+			margin: 10px 0px 25px 250px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #777777;
+		}
+
+        questionSection {
+            color: #C1002A;
+            font-family: Verdana, Arial;
+            font-size:medium;
+        }
+
+        p{
+            font-size: normal;
+            padding-left: 15px;
+        }
+
+        /* li {
+            font-size: smaller;
+            padding-left: 15px;
+            content: #C1002A;
+        } */
+
+        ul {
+            font-size: normal;
+        }
+
+        ul li::before {
+        content: "\2022";
+        color: #C1002A;;  
+        width: 1em; 
+        margin-left: -1em;
+        display: inline-block;
+        }
+
+        code {
+        background-color:antiquewhite;     
+        }
+
+
+		
+    </style>
+
+</head>
+<body>
+    <h2 style="text-align: center">NFP 121 - TP2</h2>
+    <h2 style="text-align: center">Conversion Fahrenheit - Celsius</h2>
+    <br />
+    <hr>
+    <br />
+    <table>
+        <tr>
+            <td>Nom
+            </td>
+            <td>Moro
+            </td>
+        </tr>
+        <tr>
+            <td>Prénom
+            </td>
+            <td>Alexandre
+            </td>
+        </tr>
+        <tr>
+            <td>Matricule
+            </td>
+            <td>0g5drredxv9
+            </td>
+        </tr>
+    </table>
+    <br />
+    <hr />
+    <h3>Question 1 : canversion Fahrenheit - Celsius</h3>
+    
+
+    <questionSection>Définition de la méthode fahrenheitEnCelsius</questionSection>
+    
+    <p>En se basant sur la formule donnée en énoncé on complète la méthode prédéfinie pour l'adapter à notre besoin.</p>
+
+    
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='color:#3F5FBF'>/**
+        * la méthode à compléter.
+        * 
+        * @param f la valeur en degré Fahrenheit
+        * @return la conversion en degré Celsius
+        */</span>
+       <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>float</span> fahrenheitEnCelsius(<span style='font-weight:bold;color:#7B0052;'>int</span> f) <span style='font-weight:bold;color:#D3171B'>{</span>
+   
+           <span style='font-weight:bold;color:#7B0052;'>return</span> (<span style='font-weight:bold;color:#7B0052;'>int</span>)(((f - 32) * 5/9f)*10) / 10.0f;
+         
+       <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>Ce calcul se réalise en "plusieurs temps"</p>
+    <ul><li>Le calcul de conversion est réalisé de type <code>float</code></li>
+        <li>le résultat obtenu est multiplié par 10</li>
+        <li>le cast en int ne retient que la partie entière du réel</li>
+        <li>la divison par 10 en <code>float</code> formatte le résultat a un chiffre après la virgule comme demandé</li>
+    </ul>
+
+    <p>A noter que l'on aurait pu garder le résultat sans la multiplication / division et retourner le float au complet. <br>
+        La mise en forme se serait alors faite au moyen d'un <code>String.format("%.1f", floatValue)</code> dans la méthode <code>System.out.println()</code> dans le <code>main</code>. <br>
+        La différence est que le séparateur décimal aurait été celui des paramètre régionaux locaux de la machine (la virgule au lieu du point dans mon cas), ce cas de figure ne fausse pas les tests<br>
+        car la vérification est fait sur le résultat numérique en lui même et non sur la valeur de la chaine String affichée.</p> 
+
+
+    <questionSection>Définition de la méthode main</questionSection>
+
+   
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'>
+        <span style='color:#3F5FBF'>/**
+        * le point d'entrée de cette application, dont le commentaire est à
+        * compléter
+        * 
+        * @param args : Les données en °F a convertir
+        *   
+        */</span>
+       <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>
+   
+           <span style='font-weight:bold;color:#7B0052;'>for</span> (String item : args) <span style='font-weight:bold;color:#D3171B'>{</span>
+   
+               <span style='font-weight:bold;color:#7B0052;'>int</span> fahrenheit = Integer.parseInt(item);
+               <span style='font-weight:bold;color:#7B0052;'>float</span> celsius = fahrenheitEnCelsius(fahrenheit);
+   
+               System.out.println(fahrenheit + <span style='color:#2A00FF'>"\u00B0F -&gt; "</span> + celsius + <span style='color:#2A00FF'>"\u00B0C"</span>);
+           <span style='font-weight:bold;color:#D3171B'>}</span>														
+       <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+       <p>La variable <code>fahrenheit</code> convertira les valeurs de type <code>String</code> passée en paramètre (args) de la méthode <code>main</code> en <code>int</code> <br>
+        Pour cela on va utiliser une méthode disponible dans la classe <code>Integer</code>, <code>parseInt()</code>. <br>
+        Elle parcourera toute la chaine de caractère <code>String</code> et convertira les chiffres recontrés qui sont de type <code>char</code> en un entier <code>int</code> </p>
+    
+        <p>La variable celsius de type <code>float</code> appelera la méthode <code>fahrenheitEnCelsius()</code> et stockera la valeur calculée</p>
+    
+        <p>Comme nous passons plusieurs valeurs en argument de la méthode main, il nous faudra une boucle <code>for</code> pour itérer dans le tableau d'arguments <code>String[] args</code>.</p>
+
+
+    <p></p>
+		
+    <hr />
+
+    <h3>Question 1.1 : classe de test</h3>
+  
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'>
+        <span style='color:#3F5FBF'>/**
+        * Il ne vous reste plus qu'à définir une ou plusieurs méthodes de test. Ces
+        * méthodes doivent vérifier les résultats attendus à l'aide d'assertions
+        * assertTrue(&lt;boolean&gt;). Par convention, leurs noms devraient débuter par
+        * "test". Vous pouvez ébaucher le corps grâce au menu contextuel
+        * "Enregistrer une méthode de test".
+        */</span>
+       <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_fahrenheitEnCelsius() <span style='font-weight:bold;color:#D3171B'>{</span>
+           assertEquals(<span style='color:#2A00FF'>"    0 °F -&gt; -17.7 °C ? "</span>, -17.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(0), 0.1);
+           assertEquals(<span style='color:#2A00FF'>"  100 °F -&gt; 37.7 °C ? "</span>, 37.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(100), 0.1);
+           assertEquals(<span style='color:#2A00FF'>" 2000 °F -&gt; 1093.3 °C ?"</span>, 1093.3, question1.FahrenheitCelsius.fahrenheitEnCelsius(2000), 0.1);
+           assertEquals(<span style='color:#2A00FF'>"   54 °F -&gt; 12.2 °C ?"</span>, 12.2, question1.FahrenheitCelsius.fahrenheitEnCelsius(54), 0.1);
+           assertEquals(<span style='color:#2A00FF'>"1000°F -&gt; 537,8°C ?"</span>, 537.8, question1.FahrenheitCelsius.fahrenheitEnCelsius(1000), 0.1);
+       
+       <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+       <ul><li>Afin de se familiariser avec les classes de test, quelques cas sur le principe de ceux fournis sont rajoutés</li></ul>
+
+       <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_lgPartieDecimale() <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>float</span> result =  question1.FahrenheitCelsius.fahrenheitEnCelsius(54);
+        String stringResult = Float.toString(result);
+        String decimal = stringResult.substring(stringResult.lastIndexOf(<span style='color:#2A00FF'>'.'</span>)+1, stringResult.length());
+        
+        assertTrue(decimal.length() == 1);
+        
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <ul><li>Rajout d'une classe de test qui vérifie que l'on ai bien qu'un seul chiffre décimal sur le résultat renvoyé </li></ul>
+    <p><code>String decimal = stringResult.substring(stringResult.lastIndexOf('.')+1, stringResult.length());</code> <br>
+            on découpe à l'aide de la méthode <code>substring</code> vu dans le TP1, le résultat préalablement converti en String<br>
+            le paramètre de début est renseigné au moyen de <code>lastIndexOf()</code>, avec un chiffre décimal après le séparateur, la longueur du longueur du<br>
+            tableau qui contient la partie décimale doit être de 1.</p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_separateur()<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>float</span> result =  question1.FahrenheitCelsius.fahrenheitEnCelsius(54);
+        String stringResult = Float.toString(result);
+        int[] n = stringResult.chars().filter(x -&gt; x == <span style='color:#2A00FF'>'.'</span>).toArray();
+
+        assertEquals(<span style='color:#2A00FF'>""</span>,1, n.length); 
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <ul><li>Sous une forme simimlaire, rajout d'une méthode de test qui détecte que l'on ai bien un séparateur sous la forme d'un caractère <code>'.'</code> .<br>
+    Cette fois-ci nous convertissons le résultat en un tableau regoupant les index renvoyés par la méthode <code>filter()</code>, si le résultat renvoyé ne comportait pas de point <br>
+    par ex : 40,8 , la variable <code>n</code> aurait une longueur de 0.<br>
+
+    <p></p>
+
+    <img src="./tpImages/1_1_1.png" alt="Execution des tests"/> <br>
+    Execution des tests, pas d'erreur(s) retounée(s)
+
+
+
+    </li></ul>
+
+    <br />
+    <hr />
+    <h3>Question 2 : Exception "runtime"</h3>
+    
+    <questionSection>La gestion de l'exception "NumberFormatException"</questionSection>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'>
+        <span style='font-weight:bold;color:#7B0052;'>package</span> question2;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> question1.*;
+        
+        <span style='color:#3F5FBF'>/**
+         * Décrivez votre classe FahrenheitCelsius ici.
+         * 
+         * @author Alexandre Moro   
+         * @version 11/10/2020
+         */</span>
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FahrenheitCelsius <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='color:#3F5FBF'>/**
+             * le point d'entrée de cette application, dont le commentaire est à compléter
+             *
+             * @param args ...
+             */</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>for</span> (String item : args) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>int</span> fahrenheit = 0;
+                    <span style='font-weight:bold;color:#7B0052;'>float</span> celsius = 0;
+                    <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                        fahrenheit = Integer.parseInt(item);
+                        celsius = question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheit);
+                        
+                        System.out.println(fahrenheit + <span style='color:#2A00FF'>"\u00B0F -&gt; "</span> + celsius + <span style='color:#2A00FF'>"\u00B0C"</span>);
+                        
+                    <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (NumberFormatException nfe) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        
+                        System.err.println(<span style='color:#2A00FF'>"error : "</span> + nfe.getMessage());
+                        
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <ul>
+            <li> Implantation de l'exception "NumberFormatException" </li>
+   
+        <p></p>
+        Cette partie du TP reprenant la méthode développée en 1. J'ai donc  été tenté d'importer celle précédemment développée en ajoutant <br>
+            <code>import question1.*;</code> l'appel se faisait ensuite via <code>question1.FahrenheitCelsius.fahrenheitEnCelsius()</code><br>
+            Malheureusement cet import échoue aux tests en ligne, j'ai donc du recopier la méthode créé auparavant.
+            
+            <p></p>
+
+            <img src="./tpImages/2_0_1.png" alt="Implantation volontaire d'une erreur" /> <br>
+            <img src="./tpImages/2_0_2.png" alt="Fenêtre de sortie avec affichage de l'erreur" /><br>
+
+            La fenêtre de sortie dispose de 2 "volets", un qui correspond au <code>System.out</code> et un autre au <code>System.err</code>.<br>
+            Pour la réussite des tests en ligne, il est obligatoire de passer par <code>System.out</code><br>
+
+            Ici <code>"ZZ"</code>, était en position 1 du tableau, les requêtes suivantes ont été exécutées.<br><br>
+            Vérification avec <code>System.out</code> : <br>
+
+            <br>
+            <img src="./tpImages/2_0_3.png" alt="avec méthode sysout" />
+
+            <br>
+            L'ensemble s'exécute correctement malgré la présence d'une exception.
+
+        </ul>
+
+
+
+    <questionSection>La classe de tests unitaires</questionSection>
+    
+    <ul>
+        <li>Aux test précédemment effectués, nous incorporons deux tests en rapport avec la levée d'exception</li>
+
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'>
+            <span style='color:#3F5FBF'>/** Obtention de l'affichage produit par l'exécution de la méthode main d'une classe.
+            * @param className le nom de la classe
+            * @param args les arguments de la ligne de commande
+            * @return le texte en tableau de lignes
+            * @throws une exception est levée si la classe est inconnue
+            */</span>
+           <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> String[] mainExec(String className, String[] args)<span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+               java.io.PrintStream out = System.out;
+               String[] consoleOut = <span style='font-weight:bold;color:#7B0052;'>null</span>; <span style='color:#3F7F5F'>// ou new String[]{""};
+       </span>        <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+                   java.io.ByteArrayOutputStream baos = <span style='font-weight:bold;color:#7B0052;'>new</span> java.io.ByteArrayOutputStream();
+                   java.io.PrintStream ps = <span style='font-weight:bold;color:#7B0052;'>new</span> java.io.PrintStream(baos);
+                   Class&lt;?&gt; c = Class.forName(className);
+                   System.setOut(ps);
+                   c.getMethod(<span style='color:#2A00FF'>"main"</span>,String[].class).invoke(null, <span style='font-weight:bold;color:#7B0052;'>new</span>  Object[]<span style='font-weight:bold;color:#D3171B'>{</span>args<span style='font-weight:bold;color:#D3171B'>}</span>);
+                   consoleOut = baos.toString().split(System.getProperty(<span style='color:#2A00FF'>"line.separator"</span>));
+               <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>finally</span><span style='font-weight:bold;color:#D3171B'>{</span>
+                   System.setOut(out);
+               <span style='font-weight:bold;color:#D3171B'>}</span>
+               <span style='font-weight:bold;color:#7B0052;'>return</span> consoleOut;
+           <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>auparavant nous reprenons la méthode vue en ED2</p>
+
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_exceptionDansConsole() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+
+            String[] out = mainExec(<span style='color:#2A00FF'>"question1.FahrenheitCelsius"</span>,new String[]<span style='font-weight:bold;color:#D3171B'>{</span><span style='color:#2A00FF'>"ZZ"</span><span style='font-weight:bold;color:#D3171B'>}</span>);
+            assertTrue(out[0].contains(<span style='color:#2A00FF'>"error : For input string:"</span>));
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>Cette méthode de test vérifie que l'on a bien l'écriture en console d'une erreur et quelle s'affiche avec le formatage voulu</p>
+
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_typeOfException() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span> question1.FahrenheitCelsius.main(<span style='font-weight:bold;color:#7B0052;'>new</span> String[]<span style='font-weight:bold;color:#D3171B'>{</span><span style='color:#2A00FF'>"Z"</span><span style='font-weight:bold;color:#D3171B'>}</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e)<span style='font-weight:bold;color:#D3171B'>{</span> 
+                assertTrue(e <span style='font-weight:bold;color:#7B0052;'>instanceof</span> NumberFormatException);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>Cette méthode teste le format de l'exception renvoyée</p>
+    </ul>
+
+
+    <br />
+    <hr />
+    <h3>Question 3 :</h3>
+	<applet code="question3.AppletteFahrenheit.class" align="baseline" width="400" height="66"><PARAM name="backgroundColor" value="0xc0c0c0"></applet>
+    <h1><P align=center>L'applette complète</p></h1>
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question3;
+
+            <span style='font-weight:bold;color:#7B0052;'>import</span> question2.*;
+            <span style='font-weight:bold;color:#7B0052;'>import</span> javax.swing.*;
+            <span style='font-weight:bold;color:#7B0052;'>import</span> java.awt.*;
+            <span style='font-weight:bold;color:#7B0052;'>import</span> java.awt.event.*;
+            
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> IHMFahrenheit <span style='font-weight:bold;color:#7B0052;'>extends</span> JFrame <span style='font-weight:bold;color:#7B0052;'>implements</span> ActionListener<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>private</span> JTextField entree = <span style='font-weight:bold;color:#7B0052;'>new</span> JTextField( 6 );
+                <span style='color:#3F5FBF'>/** Le bouton de conversion. */</span>
+                <span style='font-weight:bold;color:#7B0052;'>private</span> JButton  boutonDeConversion = <span style='font-weight:bold;color:#7B0052;'>new</span> JButton( <span style='color:#2A00FF'>"convertir"</span> );
+                <span style='color:#3F5FBF'>/** La sortie en degré Celsius. */</span>
+                <span style='font-weight:bold;color:#7B0052;'>private</span> JTextField sortie = <span style='font-weight:bold;color:#7B0052;'>new</span> JTextField( 6 );
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> IHMFahrenheit()<span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>super</span>(<span style='color:#2A00FF'>"IHM Fahrenheit"</span>);
+            
+                    setLayout(<span style='font-weight:bold;color:#7B0052;'>new</span> FlowLayout());
+                    add( entree ); add( boutonDeConversion ); add( sortie );
+                    sortie.setEditable( <span style='font-weight:bold;color:#7B0052;'>false</span> );
+                    getContentPane().setBackground( Color.pink );
+                    setLocation(100,100);
+                    pack();setVisible(<span style='font-weight:bold;color:#7B0052;'>true</span>);
+            
+                    boutonDeConversion.addActionListener( <span style='font-weight:bold;color:#7B0052;'>this</span> );
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='color:#3F5FBF'>/** 
+                 * méthode déclenchée lorsque le bouton de conversion est appuyé. 
+                 * remarquer que le champs de droite (les degrés Celsius) n'est pas éditable.
+                 * @param ae l'événement transmis
+                 */</span>
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed( ActionEvent ae )<span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>int</span> fahrenheit = Integer.parseInt(entree.getText());
+                        <span style='font-weight:bold;color:#7B0052;'>float</span> celsius = FahrenheitCelsius.fahrenheitEnCelsius(fahrenheit);
+            
+                        <span style='font-weight:bold;color:#7B0052;'>if</span>(celsius &lt; -273.1f) <span style='font-weight:bold;color:#D3171B'>{</span>
+                            sortie.setText(<span style='color:#2A00FF'>"-273.1"</span>);
+                        <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                            sortie.setText(Float.toString(celsius));
+                        <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                    <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(NumberFormatException nfe)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        sortie.setText(<span style='color:#2A00FF'>"error ! "</span>);
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>new</span> IHMFahrenheit();
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+    
+            <p>Code complet de l'IHM</p>
+    <br />
+    <hr />
+    <h3>Question 3.1 :</h3>
+    <questionSection> Prise en compte de l'exception "NumberFormatException"</questionSection>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed( ActionEvent ae )<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>int</span> fahrenheit = Integer.parseInt(entree.getText());
+            <span style='font-weight:bold;color:#7B0052;'>float</span> celsius = FahrenheitCelsius.fahrenheitEnCelsius(fahrenheit);
+
+            sortie.setText( Float.toString( celsius));
+        <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(NumberFormatException nfe)<span style='font-weight:bold;color:#D3171B'>{</span>
+            sortie.setText(<span style='color:#2A00FF'>"error ! "</span>);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <ul>
+        <li>D'une manière identique à ce que l'on a réalisé précédemment, l'exception est interceptée dans un bloc <code>try{}catch{}</code> .<br>
+        Cette fois par contre, au lieu d'affecter la sortie de l'erreur à <code>SysOut</code> on affecte un texte <code>"Error !"</code> au champs texte sortie via la méthode <code>setText</code> .</li>
+    </ul>
+
+    <br />
+    <hr />
+    <h3>Question 3.3 :</h3>
+    <questionSection>Prise en compte du zéro absolu</questionSection>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>if</span>(celsius &lt; -273.1f) <span style='font-weight:bold;color:#D3171B'>{</span>
+        sortie.setText(<span style='color:#2A00FF'>"-273.1"</span>);
+    <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+        sortie.setText(Float.toString(celsius));
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <ul>
+        <li>Mise en place d'un simple test <code>if()</code> pour détecter une valeur de conversion inférieure à -237.1°c<br>
+            si tel est le cas, on affecte la valeur <code>"-273.1"</code>> à <code>sortie</code>.
+        </li>
+        
+    </ul>
+
+
+    <hr />    
+        <h3>Conclusion</h3>
+            <p>Ce TP m'aura donné un peu de fil à retordre sur des points finalements assez basiques.<br>
+        En premier lieu le cast en float ou le fait de devoir rappeler à Java que la valeur passé est bien un float, en dépit du type qui est affecté à la variable.<br>
+        ceci est particulièrement vrai dans une condition <code>if</code>, mon code s'exécutait normalement en apparence, mais échouait à 1 test sur la question 3 en raison d'une condition mal évaluée.<br>
+        J'ai également voulu reprendre la méthode développée en q1 pour l'appeler en q2 (souhait de réutiliser une méthode déjà préalablement testée) mais pareil, cela engendrait une erreur au tests.<br>
+        La petite IHM demandée fut l'occasion de faire connaissance avec la structure de celle-ci et une petite recherche dans la documentation pour touver les méthodes de lecture et d'affectation des <br>
+        champs de texte.<br>
+        J'ai également tenté de réaliser des tests un peu personnalisés, mais il faut avouer que trouver et écrire des tests pertinents n'est vraiment une chose facile quand on y est peu habitué.<br>
+        Il est vite tentant d'être plus ou moins complaisant avec le code écrit</h3>
+        </p>
+
+        <br>
+        <br>
+
+</body>
+</html>

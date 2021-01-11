@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TestNombre50ComparatifEiffelLiskov
+comment1.params=message
+comment1.target=void\ failed(java.lang.String)
+comment2.params=
+comment2.target=void\ testSetValeur_50_Nombre_200_300()
+comment3.params=
+comment3.target=void\ testSetValeur_50_Nombre_1_300()
+comment4.params=
+comment4.target=void\ testSetValeur_50_Nombre_1_50()
+comment5.params=
+comment5.target=void\ testSetValeur_50_Nombre_1_100()
+numComments=6

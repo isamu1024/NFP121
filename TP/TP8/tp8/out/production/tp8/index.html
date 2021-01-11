@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="FR">
+  <head>
+    <meta charset="utf-8" />
+    <title>NFP121 - TP_8</title>
+    <style type="text/css">
+      body {
+        background: #e5ded6;
+        background-color: #fff;
+        color: #333333;
+        font-size: 14px;
+        font-family: Verdana, Arial;
+      }
+
+      table {
+        font-size: 20px;
+        border-color: #808080;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      hr {
+        margin: 15px 0 15px 0;
+      }
+
+      applet {
+        margin: 10px 0px 25px 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #777777;
+      }
+
+      questionSection {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: medium;
+      }
+
+      p,
+      a,
+      img {
+        font-size: normal;
+        padding-left: 15px;
+      }
+
+      /* li {
+            font-size: smaller;
+            padding-left: 15px;
+            content: #C1002A;
+        } */
+
+      ul {
+        font-size: normal;
+      }
+
+      ul li::before {
+        content: "\2022";
+        color: #c1002a;
+        width: 1em;
+        margin-left: -1em;
+        display: inline-block;
+      }
+
+      code {
+        background-color: antiquewhite;
+        color: #c1002a;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">NFP 121 - TP8</h2>
+    <h2 style="text-align: center">Les décorateurs</h2>
+    <br />
+    <hr />
+    <br />
+    <table>
+      <tr>
+        <td>Nom</td>
+        <td>MORO</td>
+      </tr>
+      <tr>
+        <td>Prénom</td>
+        <td>Alexandre</td>
+      </tr>
+      <tr>
+        <td>Matricule</td>
+        <td>0g5drredxv9</td>
+      </tr>
+    </table>
+
+    <br />
+    <hr />
+    <h3>Question 1</h3>
+    <h4>Une IHM à compléter : une PIZZA cela se décore !!!</h4>
+    <QuestionSection>Complétez L'IHM "PizzaStore" qui permet :
+        <ul>
+            <li>d'élaborer une pizza à la demande, et</li>
+            <li>de calculer son prix "en temps réel" au fur et à mesure des désirs de l'acheteur</li>
+        </ul>
+    </QuestionSection>
+
+<p>Extrait de la classe <code>PizzaStore</code> :</p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'>boutonSolo.addActionListener(
+        <span style='font-weight:bold;color:#7B0052;'>new</span> ActionListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+                pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> PizzaSolo();
+                validerLesDécorations();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>);
+
+    boutonClassic.addActionListener(
+        <span style='font-weight:bold;color:#7B0052;'>new</span> ActionListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+                pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> Classic();
+                validerLesDécorations();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>);
+
+    boutonCrust.addActionListener(		  
+        <span style='font-weight:bold;color:#7B0052;'>new</span> ActionListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> actionPerformed(ActionEvent ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+                pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> GenerousCrust();
+                validerLesDécorations();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>);
+
+    parmesan.addItemListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ItemListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> itemStateChanged(ItemEvent ie)<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span>(ie.getStateChange()==ItemEvent.SELECTED)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> Parmesan(pizza);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                afficherLaPizzaEtSonCoût();
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#D3171B'>}</span>); 
+    mozarella.addItemListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ItemListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> itemStateChanged(ItemEvent ie)<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span>(ie.getStateChange()==ItemEvent.SELECTED)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> FreshMozarella(pizza);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                afficherLaPizzaEtSonCoût();
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#D3171B'>}</span>);
+    ham.addItemListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ItemListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> itemStateChanged(ItemEvent ie)<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span>(ie.getStateChange()==ItemEvent.SELECTED)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> Ham(pizza);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                afficherLaPizzaEtSonCoût();
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#D3171B'>}</span>); 
+    tomato.addItemListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ItemListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> itemStateChanged(ItemEvent ie)<span style='font-weight:bold;color:#D3171B'>{</span>
+                pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> Tomato(pizza);
+                afficherLaPizzaEtSonCoût();
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#D3171B'>}</span>);
+    mushrooms.addItemListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ItemListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> itemStateChanged(ItemEvent ie)<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span>(ie.getStateChange()==ItemEvent.SELECTED)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> Mushrooms(pizza);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                afficherLaPizzaEtSonCoût();
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#D3171B'>}</span>); 
+    clams.addItemListener(<span style='font-weight:bold;color:#7B0052;'>new</span> ItemListener()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> itemStateChanged(ItemEvent ie)<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span>(ie.getStateChange()==ItemEvent.SELECTED)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    pizza = <span style='font-weight:bold;color:#7B0052;'>new</span> Clams(pizza);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#7B0052;'>else</span> clams.setState(<span style='font-weight:bold;color:#7B0052;'>true</span>);
+                afficherLaPizzaEtSonCoût();
+            <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#D3171B'>}</span>);</pre>
+
+<p> Finalement, la complétion demandée est assez simple, à la sélection d'une pate, on va instancier l'objet de base qui servira a nos décorateurs (<code>private Pizza pizza;</code>).</p>
+<p>Une action sur les boutons d'ingrédient créera une instance d'un des décorateurs (le picking de la pizza) et prendra la pizza précédemment stockées comme argument.<br>
+Et ainsi de suite pour les autres décorations.<br>
+Cette question est assez simple car on ne peut pas revenir en arrière, si tel aurait été le cas, aurions nous du utiliser une stack ?</p>
+
+
+    <br />
+    <hr />
+    <h3>Question 2.1</h3>
+    
+    <QuestionSection>On demande de compléter cette architecture en ajoutant le chocolat (classe Chocolate) comme boisson, le coût de cette boisson est de 2.10 et de compléter toutes les méthodes de la classe de test ChocolateTest, les méthodes correspondent aux boissons suivantes: 
+        <ul>
+            <li>un chocolat seul</li>
+            <li>un chocolat avec de la crème(Whip)</li>
+            <li>un chocolat avec deux rations de crème</li>
+            <li>un chocolat avec de la crème, du soja(soy) et du moka(mocha),... ( les goûts ne se discutent pas ...)</li>
+            <li>un café décaféiné avec du lait</li>
+        </ul>
+    </QuestionSection>
+
+        <p>La classe <code>Chocolate</code> :</p>
+
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span>  <span style='font-weight:bold;color:#7B0052;'>class</span> Chocolate  <span style='font-weight:bold;color:#7B0052;'>extends</span> Beverage <span style='font-weight:bold;color:#D3171B'>{</span>
+
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Chocolate() <span style='font-weight:bold;color:#D3171B'>{</span>
+                super.description = <span style='color:#2A00FF'>"Chocolate"</span>;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>double</span> cost() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> 2.10;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+    
+        <p>La classe <code>Chocolate</code> reprend la structure des autres objects <code>Beverage</code> fournis. On prend soin d'hériter de la classe abstraite Beverage afin de pouvoir par la suite être décorée.</p>
+
+    <br />
+    <hr />
+    <h3>Question 2.2</h3>
+    <QuestionSection> Ajouter le condiment sucre de betteraves, (classe BeetSugar), dont le coût est de 0.1, sa description : "Beet Sugar".  Attention à l'espace entre Beet et Sugar.</QuestionSection>
+    
+<p>La classe <code>BeetSugar</code> :</p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span>  <span style='font-weight:bold;color:#7B0052;'>class</span> BeetSugar <span style='font-weight:bold;color:#7B0052;'>extends</span> CondimentDecorator <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>public</span> BeetSugar(Beverage beverage) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>super</span>(beverage);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String getDescription() <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> super.getDescription() + <span style='color:#2A00FF'>", Beet Sugar"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>double</span> cost() <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> .10 + super.cost();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p> La encore du classique, on hérite de la classe abstraite CondimentDecorator qui elle même hérite de Beverage, nous permettant de manipuler les décorateurs comme des Beverage.</p>
+    <p> Comme vu précédemment on prend en paramètre une instance de Beverage qui sera ensuite décoré.</p>
+    <p> Ce décorateur modifiera la description (voir question 2.3), et modifiera le coût total de la boisson (rien n'est gratuit).</p>
+
+    <br />
+    <hr />
+    <h3>Question 2.3</h3>
+    
+    <QuestionSection>Ajouter la méthode public String toString(); qui se contente de retourner la description et le coût du produit choisi par le client, selon ce format description $cost</QuestionSection>
+
+    <p>On modifie la méthode toSting() de la classe abstraite CondimentDecorator et Beverage</p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> <span style='font-weight:bold;color:#7B0052;'>class</span> CondimentDecorator <span style='font-weight:bold;color:#7B0052;'>extends</span> Beverage <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>protected</span> Beverage beverage;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> CondimentDecorator(Beverage beverage)<span style='font-weight:bold;color:#D3171B'>{</span>
+            this.beverage = beverage;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String getDescription()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> beverage.getDescription();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>double</span> cost()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> beverage.cost();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> String toString() <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> this.getDescription() + <span style='color:#2A00FF'>" $"</span>+ cost();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Beverage <span style='font-weight:bold;color:#D3171B'>{</span>
+        String description = <span style='color:#2A00FF'>"Unknown Beverage"</span>;
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String getDescription() <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> description;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> <span style='font-weight:bold;color:#7B0052;'>double</span> cost();
+    
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String toString()<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> this.description + <span style='color:#2A00FF'>" $"</span>+ this.cost();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>Même si on aime les boissons sans fioritures il nous est nécessaire de connaitre son prix donc toString de Beverage devra renvoyer la syntaxe demandée.</p>
+    <p>Dans le cas d'une boisson décorée la méthode toString() de CondimentDecorator sera appelée (liaison dynamique).</p>
+    <p>Même si ! un chocolat avec de la crème, du soja et du moka .... c'est tout de même un peu spécial.</p>
+
+    <br />
+    <hr />
+    <h3>Question 3</h3>
+    Votre r�ponse...
+
+    <br />
+    <hr />
+    <h3>Question 4.1</h3>
+    <QuestionSection>Proposez la classe UpperCaseInputStream (en grisé ci dessus), un des décorateurs possibles de FilterInputStream, qui transforme en Majuscule tous les caractères du fichier transmis en paramètre. </QuestionSection>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> UpperCaseInputStream  <span style='font-weight:bold;color:#7B0052;'>extends</span> FilterInputStream <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>protected</span> UpperCaseInputStream(InputStream in) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>super</span>(in);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> read() <span style='font-weight:bold;color:#7B0052;'>throws</span> IOException <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>int</span> c = super.read();
+            <span style='font-weight:bold;color:#7B0052;'>if</span> (c == -1)
+                <span style='font-weight:bold;color:#7B0052;'>return</span> -1;
+            <span style='font-weight:bold;color:#7B0052;'>else</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> Character.toUpperCase(c);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> read(<span style='font-weight:bold;color:#7B0052;'>byte</span> b[]) <span style='font-weight:bold;color:#7B0052;'>throws</span> IOException <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> this.read(b, 0, b.length);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        @Override
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> read(<span style='font-weight:bold;color:#7B0052;'>byte</span> b[], <span style='font-weight:bold;color:#7B0052;'>int</span> off, <span style='font-weight:bold;color:#7B0052;'>int</span> len) <span style='font-weight:bold;color:#7B0052;'>throws</span> IOException <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>int</span> result = super.read(b, off, len);
+            <span style='font-weight:bold;color:#7B0052;'>for</span> (<span style='font-weight:bold;color:#7B0052;'>int</span> i = off ; i &lt; off + result ; i++)
+                b[i] = (<span style='font-weight:bold;color:#7B0052;'>byte</span>) Character.toUpperCase((<span style='font-weight:bold;color:#7B0052;'>char</span>) b[i]);
+            <span style='font-weight:bold;color:#7B0052;'>return</span> result;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>Reprenons le schéma donné en énoncé : </p>
+    <img src="./tpImg/schema.png" alt="heritage classe"/>
+    <p>Notre classe va devoir hériter de FilterInputStream, et masquer les différentes méthode read() (une sans paramètres, et deux surcharges)</p>
+    <a href="https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html"> javadoc</a>
+    
+    <p>Pour la méthode <code>read()</code> on vérifie pour chaque lecture d'octet  que l'on a pas atteint la fin du fichier, auquel cas on retourne -1.<br>
+    dans le cas contraire, on cast l'octet en (char) puis on invoque la méthode toUpperCase() qui se chargera de vérifier que le caractère en paramètre dispose d'une majuscule ou non.</p>
+
+
+    <p>La méthode <code>read(byte b[])</code> prend un tableau de byte d'une longeur donnée et sera remplie par la méthode read(), il s'agit ici d'un cas d'écriture  de la classe qui suit.</p>
+
+    <p>La méthode <code>read(byte b[], int off, int len)</code> va remplir un tableau de byte mais en prenant compte un offset et une longueur d'octets lu.<br>
+    par exemple, pour un tableau de taille 7, avec un offset de 2 et une longueur de 3 on aura :<br>
+    [0,0,xx,xx,xx,0,0] avec xx l'octet lu, l'offset + la longueur ne devra bien sur pas dépasser la taille totale du tableau.<br>
+    Je ne vois pas encore ce a quoi peut me servir une telle méthode pour le moment, en expérimentant son utilisation, je me suis amusé a insérer des caractères entre chaque "trame" lue.<br> </p>
+
+    <p>Exemple :</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testInpustreamWithByte() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+		InputStream is = <span style='font-weight:bold;color:#7B0052;'>new</span> UpperCaseInputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> FileInputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> File(<span style='color:#2A00FF'>"question4\\README.TXT"</span>)));
+
+		byte[] data = <span style='font-weight:bold;color:#7B0052;'>new</span> byte[7];
+		<span style='font-weight:bold;color:#7B0052;'>int</span> byteRead = is.read(data, 2, 4);
+
+		<span style='font-weight:bold;color:#7B0052;'>while</span>(byteRead != -1) <span style='font-weight:bold;color:#D3171B'>{</span>
+
+			<span style='font-weight:bold;color:#7B0052;'>for</span> (<span style='font-weight:bold;color:#7B0052;'>int</span> i = 0; i &lt; 2; i++) <span style='font-weight:bold;color:#D3171B'>{</span>
+				data[i] = (<span style='font-weight:bold;color:#7B0052;'>byte</span>) <span style='color:#2A00FF'>'Z'</span>;
+			<span style='font-weight:bold;color:#D3171B'>}</span>
+
+			<span style='font-weight:bold;color:#7B0052;'>for</span> (<span style='font-weight:bold;color:#7B0052;'>byte</span> b : data)
+				System.out.print((<span style='font-weight:bold;color:#7B0052;'>char</span>) b);
+			byteRead = is.read(data);
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		is.close();
+	<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <br />
+    <hr />
+    <h3>Question 4.2</h3>
+    
+    <QuestionSection>Créez une instance de la classe UpperCaseInputStream enrichie des fonctionnalités offertes par la classe PushbackInputStream
+    Vérifiez en proposant un test supplémentaire de la de test UpperCaseInputStreamTest, le bon fonctionnement de cette instance ainsi décorée....
+    </QuestionSection>
+        
+    <p>PushbackInputStream va nous permettre de "remettre un octet lu dans le stream pour le relire ensuite". Il est possible de définir une limite de pushback afin de limiter cette fonctionnalitée.
+        La classe de test ci-dessus se limite au premier mot du fichier texte et fait apparaitre que l'objet PushbackInputStream se comporte comme un InputStream mais dispose également de fonctionnalité supplémentaire.
+        <br> La méthode <code>unread()</code> n'étant pas déclarée dans la méthode abstraite inpuStream, il n'est pas possible de passer directement par un type déclaré "inpuStream" sans caster ou déclarer directement un objet de type PushbackInputStream.
+    </p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testPushPackUpperCase_README_TXT() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+		StringBuilder output = <span style='font-weight:bold;color:#7B0052;'>new</span> StringBuilder();
+		PushbackInputStream pbis = <span style='font-weight:bold;color:#7B0052;'>new</span> PushbackInputStream( <span style='font-weight:bold;color:#7B0052;'>new</span> UpperCaseInputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> FileInputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> File(<span style='color:#2A00FF'>"question4\\README.TXT"</span>))));
+
+		<span style='font-weight:bold;color:#7B0052;'>int</span> count = 0;
+		<span style='font-weight:bold;color:#7B0052;'>int</span> c = pbis.read();
+
+		<span style='color:#3F7F5F'>// Sans le unread()
+</span>		<span style='font-weight:bold;color:#7B0052;'>while</span>(count &lt; 5)<span style='font-weight:bold;color:#D3171B'>{</span>
+			output.append((<span style='font-weight:bold;color:#7B0052;'>char</span>) c);
+			c = pbis.read();
+			count++;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		pbis.close();
+
+		assertEquals(<span style='color:#2A00FF'>"TESTS"</span>, output.toString());
+
+		output.delete(0, output.length());
+		count = 0;
+
+		<span style='color:#3F7F5F'>// Avec le unread()
+</span>		PushbackInputStream pbis2 = <span style='font-weight:bold;color:#7B0052;'>new</span> PushbackInputStream( <span style='font-weight:bold;color:#7B0052;'>new</span> UpperCaseInputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> FileInputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> File(<span style='color:#2A00FF'>"question4\\README.TXT"</span>))));
+
+		c = pbis2.read();
+
+		<span style='font-weight:bold;color:#7B0052;'>while</span>(count &lt; 5)<span style='font-weight:bold;color:#D3171B'>{</span>
+			output.append((<span style='font-weight:bold;color:#7B0052;'>char</span>) c);
+			pbis2.unread(c);
+			c = pbis2.read();
+			count++;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		assertEquals(<span style='color:#2A00FF'>"TTTTT"</span>, output.toString());
+
+		pbis2.close();
+
+	<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+    <br />
+    <hr />
+    <h3>Conclusion, bibliographie et remarques :</h3>
+    <i style="font-size: 12px"
+      >... Une seule page html, limitez le nombre de clics, (plus de 200
+      rapports � corriger chaque semaine)</i>
+  </body>
+</html>

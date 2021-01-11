@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rule>
+  <Rule>
+    <Valeur_initiale>3</Valeur_initiale>
+    <Specification>si : estInferieur_a_4</Specification>
+    <Commande>alors : inc_de_1</Commande>
+    <Resultat>4</Resultat>
+  </Rule>
+</Rule>
+

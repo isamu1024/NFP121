@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="tp_commit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/tp_commit/junit-4.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/tp_commit/ihm_q4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

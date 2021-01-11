@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="FR">
+  <head>
+    <meta charset="utf-8" />
+    <title>NFP121 - TP6</title>
+    <style type="text/css">
+      body {
+        background: #e5ded6;
+        background-color: #fff;
+        color: #333333;
+        font-size: 14px;
+        font-family: Verdana, Arial;
+      }
+
+      table {
+        font-size: 20px;
+        border-color: #808080;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      hr {
+        margin: 15px 0 15px 0;
+      }
+
+      applet {
+        margin: 10px 0px 25px 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #777777;
+      }
+
+      questionSection {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: medium;
+      }
+
+      p,
+      a,
+      img {
+        font-size: normal;
+        padding-left: 15px;
+      }
+
+      /* li {
+            font-size: smaller;
+            padding-left: 15px;
+            content: #C1002A;
+        } */
+
+      ul {
+        font-size: normal;
+      }
+
+      ul li::before {
+        content: "\2022";
+        color: #c1002a;
+        width: 1em;
+        margin-left: -1em;
+        display: inline-block;
+      }
+
+      code {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">NFP 121 - TP6</h2>
+    <h2 style="text-align: center">WhileL et les Visiteurs</h2>
+    <br />
+    <hr />
+    <br />
+    <table>
+      <tr>
+        <td>Nom</td>
+        <td>MORO</td>
+      </tr>
+      <tr>
+        <td>Prénom</td>
+        <td>ALEXANDRE</td>
+      </tr>
+      <tr>
+        <td>Matricule</td>
+        <td>0g5drredxv9</td>
+      </tr>
+    </table>
+
+    <br />
+    <hr />
+    <h3>Question 1</h3>
+    <QuestionSection>
+      En vous inspirant de la classe VisiteurInfixe qui est complète, complétez
+      les classes <b>VisiteurEvaluation et VisiteurPostfixe</b> et proposez les
+      tests des classes de tests appropriés (cf : classe TestsAFaire).
+    </QuestionSection>
+
+      <p>Visiteur évaluation :</p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurEvaluation <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurParDefaut&lt;Integer&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>private</span> Contexte c;
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurEvaluation(Contexte c) <span style='font-weight:bold;color:#D3171B'>{</span>
+        this.c = c;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(Constante c)<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> c.valeur();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(Variable v)<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> c.lire(v.nom());
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(Division d)<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>int</span> dividende = d.op1.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        <span style='font-weight:bold;color:#7B0052;'>int</span> diviseur = d.op2.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+
+        <span style='font-weight:bold;color:#7B0052;'>if</span> (diviseur == 0)
+            <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> ArithmeticException();
+        <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>return</span> dividende / diviseur;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(Addition a) <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> a.op1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + a.op2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(Multiplication m) <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> m.op1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) * m.op2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Integer visite(Soustraction s) <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> s.op1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) - s.op2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte contexte() <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> c;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p> On créé ici un visiteur pour chaque classe de la structure. <br>
+Le visiteur par défaut ayant été inialisé au type <code>Integer</code> les signatures des visites sont initialisées en conséquence.
+Lorsque dans le programme le visiteur sera passé en paramètre d'une méthode accepter du type : </p>
+
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> &lt;T&gt; T accepter(VisiteurExpression&lt;T&gt; v) <span style='font-weight:bold;color:#D3171B'>{</span>
+  <span style='font-weight:bold;color:#7B0052;'>return</span> v.visite(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>la signature correspondant au type de la classe appelante sera sélectionnée et traité selon le code de la méthode.<br>
+A partir de la la on peut enchainer les logiques de traitement. (une visite amène une autre visite etc ...)</p>
+
+<p>Visiteur postFixe :</p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurPostfixe <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurParDefaut&lt;String&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>private</span> Contexte c;
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurPostfixe(Contexte c) <span style='font-weight:bold;color:#D3171B'>{</span>
+          this.c = c;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Constante c) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> Integer.toString(c.valeur());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Variable v) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> v.nom();
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Division d) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + d.op1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>","</span> + d.op2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>)
+          + <span style='color:#2A00FF'>")"</span> + <span style='color:#2A00FF'>"/"</span>;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Addition a) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + a.op1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>","</span> + a.op2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>)
+          + <span style='color:#2A00FF'>")"</span> + <span style='color:#2A00FF'>"+"</span>;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Multiplication m) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + m.op1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>","</span> + m.op2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>)
+          + <span style='color:#2A00FF'>")"</span> + <span style='color:#2A00FF'>"*"</span>;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Soustraction s) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + s.op1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>","</span> + s.op2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>)
+          + <span style='color:#2A00FF'>")"</span> + <span style='color:#2A00FF'>"-"</span>;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+      <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte contexte() <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> c;
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+  <p>Ici l'écriture diffère peu de la classe fournie de base pour le TP, mais il met en lumière l'intérêt premier des visiteurs a savoir que si l'on souhaite un traitement légèrement<br>
+  on peut se reposer sur une écriture existante et l'adapter sans modifier quoi que ce soit à la structure existante.</p>
+
+
+<p>Classe de test :</p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestsACompleter <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase<span style='font-weight:bold;color:#D3171B'>{</span>
+  <span style='font-weight:bold;color:#7B0052;'>private</span> Memoire m;
+  <span style='font-weight:bold;color:#7B0052;'>private</span> Variable i,j;
+  <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;Integer&gt; ve;
+  <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;String&gt;  vp,vi;
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setUp()<span style='font-weight:bold;color:#D3171B'>{</span>
+      m  = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+      i  = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m,<span style='color:#2A00FF'>"i"</span>,3);
+      j = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m,<span style='color:#2A00FF'>"j"</span>,5);
+      ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation( m);
+      vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe( m);
+      vp = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurPostfixe( m);
+      assertNotNull(i);assertNotNull(j);
+      assertNotNull(ve);assertNotNull(vp);assertNotNull(vi);
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testUneAddition()<span style='font-weight:bold;color:#D3171B'>{</span>
+      Expression expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+      assertEquals(<span style='color:#2A00FF'>" 3+2 != 5 ?, curieux "</span>,5,expr.accepter(ve).intValue());
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testMultiplication()<span style='font-weight:bold;color:#D3171B'>{</span>
+      Variable c  = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m,<span style='color:#2A00FF'>"c"</span>,5);
+      Variable d = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"d"</span>, 4);
+
+      Expression expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Multiplication(c, d);
+      assertEquals(<span style='color:#2A00FF'>" 5*4 != 20 ?, curieux "</span>,20,expr.accepter(ve).intValue());
+
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSoustraction()<span style='font-weight:bold;color:#D3171B'>{</span>
+      Expression expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(5), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(4));
+      assertEquals(<span style='color:#2A00FF'>" 5 - 4 != 1 ?, curieux "</span>,1,expr.accepter(ve).intValue());
+
+      Expression expr2 = <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(4), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(5));
+      assertEquals(<span style='color:#2A00FF'>" 4 - 5 != -1 ?, curieux "</span>,-1,expr2.accepter(ve).intValue());
+
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testDivision()<span style='font-weight:bold;color:#D3171B'>{</span>
+      Variable a  = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m,<span style='color:#2A00FF'>"a"</span>,10);
+      Variable b = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"b"</span>, 5);
+
+      Expression expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Division(a, b);
+      assertEquals(<span style='color:#2A00FF'>" 10 / 5 != 2 ?, curieux "</span>,2,expr.accepter(ve).intValue());
+
+      <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>new</span> Division(i,new Constante(0)).accepter(ve);
+          fail(<span style='color:#2A00FF'>"division par zéro ? possible "</span>);
+      <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(ArithmeticException ae)<span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testVisiteurInfixe()<span style='font-weight:bold;color:#D3171B'>{</span>
+
+      <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+
+          Expression expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+          assertEquals(<span style='color:#2A00FF'>"(3 + 2)"</span>, expr.accepter(vi));
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(expr, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+
+          assertEquals(<span style='color:#2A00FF'>"((3 + 2) + 2)"</span>, expr.accepter(vi));
+          assertEquals(<span style='color:#2A00FF'>"{i=3, j=5}"</span>, m.toString());
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(expr, expr);
+          assertEquals(<span style='color:#2A00FF'>"(((3 + 2) + 2) - ((3 + 2) + 2))"</span>, expr.accepter(vi));
+
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Division(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+          assertEquals(<span style='color:#2A00FF'>"(3 / 2)"</span>, expr.accepter(vi));
+
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Multiplication(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+          assertEquals(<span style='color:#2A00FF'>"(3 * 2)"</span>, expr.accepter(vi));
+
+      <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)<span style='font-weight:bold;color:#D3171B'>{</span>
+          fail(<span style='color:#2A00FF'>" exception inattendue ???"</span> + e.getClass().getName() + e.getMessage());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testVisiteurPostfixe()<span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#7B0052;'>try</span><span style='font-weight:bold;color:#D3171B'>{</span>
+          Expression expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+          assertEquals(<span style='color:#2A00FF'>"(3,2)+"</span>, expr.accepter(vp));
+
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(expr, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+          assertEquals(<span style='color:#2A00FF'>"((3,2)+,2)+"</span>, expr.accepter(vp));
+          assertEquals(<span style='color:#2A00FF'>"{i=3, j=5}"</span>,m.toString());
+
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(expr, expr);
+          assertEquals(<span style='color:#2A00FF'>"(((3,2)+,2)+,((3,2)+,2)+)-"</span>, expr.accepter(vp));
+
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Division(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+          assertEquals(<span style='color:#2A00FF'>"(3,2)/"</span>, expr.accepter(vp));
+
+          expr = <span style='font-weight:bold;color:#7B0052;'>new</span> Multiplication(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2));
+          assertEquals(<span style='color:#2A00FF'>"(3,2)*"</span>, expr.accepter(vp));
+
+      <span style='font-weight:bold;color:#D3171B'>}</span><span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)<span style='font-weight:bold;color:#D3171B'>{</span>
+          fail(<span style='color:#2A00FF'>" exception inattendue ???"</span> + e.getClass().getName() + e.getMessage());
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+  <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+    <br />
+    <hr />
+    <h3>Question 2.1</h3>
+    <QuestionSection>
+      Complétez le visiteur "VisiteurBoolTojava" ;<br>
+       "vérifiez" avec le compilateur javac (et grâce à la classe de tests fournie) que le code java est syntaxiquement correct.
+    </QuestionSection>
+
+    <p>Classe VisiteurBoolTojava :</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question2;
+
+      <span style='font-weight:bold;color:#7B0052;'>import</span> question1.VisiteurExpression;
+      
+      <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurBoolToJava <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurExpressionBooleenne&lt;String&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;String&gt; ve;
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurBoolToJava(VisiteurExpression&lt;String&gt; ve) <span style='font-weight:bold;color:#D3171B'>{</span>
+          this.ve = ve;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Vrai v) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"true"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Faux f) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"false"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Non n) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"!("</span> + n.bop().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Ou ou) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + ou.bop1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>" || "</span> + ou.bop2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Et et) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + et.bop1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>" && "</span> + et.bop2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) + <span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Sup sup) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + sup.op1().accepter(this.ve) + <span style='color:#2A00FF'>" &gt; "</span> + sup.op2().accepter(this.ve) + <span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Egal eg) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + eg.op1().accepter(this.ve) + <span style='color:#2A00FF'>" == "</span> + eg.op2().accepter(this.ve) + <span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+        <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Inf inf) <span style='font-weight:bold;color:#D3171B'>{</span>
+          <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"("</span> + inf.op1().accepter(this.ve) + <span style='color:#2A00FF'>" &lt; "</span> + inf.op2().accepter(this.ve) + <span style='color:#2A00FF'>")"</span>;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+      <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+      <p>Les signatures etants déjà données, on se repose sur ce que l'on a vue en Q1 <br>
+      On peut noter ici que l'on va utiliser un des visiteurs écrit en Q1 (<code>VisiteurInfixe</code>, dans le cadre de la méthode de test fournie) pour retourner un String compatible avec l'éciture du code java correspondant.<br>
+      Ce visiteur ne va s'ocupper que la syntaxe, les expressions seront retournées par le visteur d'expression qui a été précédemment implanté.<br>
+    On spécialise les visiteurs, sachant que le précédent était fonctionnel et valide, on s'appuie dessus au lieu de réinventer la roue.</p>
+
+    <br />
+    <hr />
+    <h3>Question 2.2</h3>
+    <QuestionSection>Complétez le visiteur "VisiteurBoolEvaluation" et proposez une classe de tests de ce visiteur. </QuestionSection>
+    
+    <p>Classe VisiteurBoolEvaluation</p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>import</span> question1.VisiteurExpression;
+
+      <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurBoolEvaluation <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurExpressionBooleenne&lt;Boolean&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;Integer&gt; ve;
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurBoolEvaluation(VisiteurExpression&lt;Integer&gt; ve) <span style='font-weight:bold;color:#D3171B'>{</span>
+              this.ve = ve;
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Vrai v) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Faux f) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Non n) <span style='font-weight:bold;color:#D3171B'>{</span> 
+              <span style='font-weight:bold;color:#7B0052;'>return</span>  !(n.bop().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Ou ou) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> (ou.bop1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) || ou.bop2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Et et) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> (et.bop1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>) && et.bop2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Sup sup) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> sup.op1().accepter(this.ve) &gt; sup.op2().accepter(this.ve);
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Egal eg) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> eg.op1().accepter(this.ve).equals(eg.op2().accepter(this.ve)); 
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean visite(Inf inf) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> inf.op1().accepter(this.ve) &lt; inf.op2().accepter(this.ve);
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+      <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+      <p>Classe de test :</p>
+
+      <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question2;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> question1.*;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestsDuVisiteurBoolEvaluation <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>protected</span> Contexte m;
+            <span style='font-weight:bold;color:#7B0052;'>protected</span> VisiteurExpressionBooleenne&lt;Boolean&gt; veb;
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setUp() <span style='font-weight:bold;color:#D3171B'>{</span>
+                m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                veb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(<span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m));
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testVisiteurBoolEvaluation() <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                assertTrue(<span style='font-weight:bold;color:#7B0052;'>new</span> Vrai().accepter(veb));
+                assertFalse(<span style='font-weight:bold;color:#7B0052;'>new</span> Faux().accepter(veb));
+                assertTrue(<span style='font-weight:bold;color:#7B0052;'>new</span> Sup(<span style='font-weight:bold;color:#7B0052;'>new</span> Constante(5), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(3)).accepter(veb));
+        
+                Vrai vrai = <span style='font-weight:bold;color:#7B0052;'>new</span> Vrai();
+                Faux faux = <span style='font-weight:bold;color:#7B0052;'>new</span> Faux();
+                Non non = <span style='font-weight:bold;color:#7B0052;'>new</span> Non(vrai);
+                Ou ou = <span style='font-weight:bold;color:#7B0052;'>new</span> Ou(faux, non);
+                Ou ou2 = <span style='font-weight:bold;color:#7B0052;'>new</span> Ou(vrai, faux);
+                Et et = <span style='font-weight:bold;color:#7B0052;'>new</span> Et(vrai, vrai);
+        
+                Variable a = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"a"</span>, 10);
+                Variable b = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"b"</span>, 5);
+                
+                Sup sup = <span style='font-weight:bold;color:#7B0052;'>new</span> Sup(a , b);
+                Egal egal = <span style='font-weight:bold;color:#7B0052;'>new</span> Egal(a , b);
+                Inf inf = <span style='font-weight:bold;color:#7B0052;'>new</span> Inf(a , b );
+                
+                assertTrue(vrai.accepter(veb));
+                assertFalse(faux.accepter(veb));
+                assertFalse(non.accepter(veb));
+                assertFalse(ou.accepter(veb));
+                assertTrue(ou2.accepter(veb));
+                assertTrue(et.accepter(veb));
+                assertTrue(sup.accepter(veb));
+                assertFalse(inf.accepter(veb));
+                
+                m.ecrire(<span style='color:#2A00FF'>"a"</span>,4);
+                
+                assertFalse(sup.accepter(veb));
+                assertTrue(inf.accepter(veb));
+                
+                assertFalse(egal.accepter(veb));
+                
+                m.ecrire(<span style='color:#2A00FF'>"a"</span>, 5);
+                
+                assertTrue(egal.accepter(veb));	
+                
+                
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+        <p>On se repose ici sur ce que l'on a vu précédemment pour implanter une méthode d'évaluation des expressions Booléenne.<br>
+        La mécanique est strictement la même que celle vue plus haut.</p>
+
+        <p>Tout ceci n'est que l'entracte qui mène au véritable plat de résistance : les questions 3 ...</p>
+
+    <br />
+    <hr />
+    <h3>Question 3.1</h3>
+    
+    <QuestionSection>Complétez les visiteurs <b>"VisiteurInstEvaluation"</b> et <b>"VisiteurInstTojava"</b>. Vérifiez que le code obtenu avec "VisiteurInstTojava" est bien syntaxiquement correct pour java.
+   </QuestionSection>
+
+  <p>Classe VisiteurInstEvaluation</p>
+
+   <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurInstEvaluation <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurInstruction&lt;Contexte&gt;<span style='font-weight:bold;color:#D3171B'>{</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;Integer&gt; vi;
+    <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpressionBooleenne&lt;Boolean&gt; vb;
+
+    <span style='color:#3F5FBF'>/** Création d'un visiteur d'instructions
+     * @param vi le visiteur d'expressions arithmétiques
+     * @param vb le visiteur d'expression booléennes
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurInstEvaluation(VisiteurExpression&lt;Integer&gt; vi, VisiteurExpressionBooleenne&lt;Boolean&gt; vb)<span style='font-weight:bold;color:#D3171B'>{</span>
+        this.vi = vi;
+        this.vb = vb;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** obtention du contexte, ici celui du visiteur d'expression arithmétiques 
+     * @return le contexte ici de vi(le visiteur d'expression)
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte contexte()<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** Visite d'une instance de la classe Affectation.
+     * 
+     * l'affectation, X = Exp, Exp est une expression arithmétique &lt;br&gt; 
+     * &lt;code&gt;
+     * 
+     *     M,Exp -interprete-&gt; N       &lt;br&gt;      
+     * ________________________________&lt;br&gt;               
+     * M, X = Exp -interprete-&gt; M[X]=N &lt;br&gt;
+     * &lt;/code&gt;
+     * 
+     * @param a  une affectation
+     * @return la mémoire résultante 
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte visite(Affectation a)<span style='font-weight:bold;color:#D3171B'>{</span>
+        this.vi.contexte().ecrire(a.v().nom(), a.exp().accepter(vi));
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** Visite d'une séquence seq(I1,I2) &lt;br&gt;
+     * &lt;code&gt;
+     * 
+     *    M,I1 -interprete-&gt; M1        &lt;br&gt;
+     *    M1,I2 -interprete-&gt; M2       &lt;br&gt;
+     * ________________________________&lt;br&gt;
+     *    M,seq(I,I2)-interprete-&gt; M2  &lt;br&gt;
+     *&lt;/code&gt;
+     * 
+     * @param seq  une séquence
+     * @return la mémoire résultante 
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte visite(Sequence seq)<span style='font-weight:bold;color:#D3171B'>{</span>
+        seq.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        seq.i2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** Visiste d'une sélection si (Bexp) alors I1 sinon I2 fsi &lt;br&gt;
+     * ou si (Bexp) alors I1 fsi &lt;br&gt;
+     *
+     * &lt;code&gt;
+     * 
+     *      M,Bexp-interprete-&gt; vrai             &lt;br&gt;
+     *      M,I1 -interprete-&gt; M1                &lt;br&gt;
+     * _________________________________________ &lt;br&gt;               
+     * M,si(Bexp)alorsI1 sinon I2-interprete-&gt; M1&lt;br&gt;
+     * 
+     *      M,Bexp -interprete-&gt; faux            &lt;br&gt;
+     *      M,I2 -interprete-&gt; M2                &lt;br&gt;
+     * __________________________________________&lt;br&gt;
+     * M,si(Bexp)alorsI1 sinon I2-interprete-&gt;M2 &lt;br&gt;
+     * &lt;/code&gt;
+     * 
+     * @param sel  une sélection
+     * @return la mémoire résultante 
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte visite(Selection sel)<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>if</span>(sel.cond().accepter(vb))
+            sel.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>if</span> (sel.i2() != <span style='font-weight:bold;color:#7B0052;'>null</span>)  <span style='font-weight:bold;color:#D3171B'>{</span>  <span style='color:#3F7F5F'>// constructeur : public Selection(ExpressionBooleenne cond, Instruction i1)
+</span>                sel.i2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** La boucle tantque(Bexp,I1)&lt;br&gt;
+     * &lt;code&gt;
+     * 
+     *     M,Bexp -interprete-&gt;faux              &lt;br&gt;
+     * _________________________________________ &lt;br&gt;
+     * M,tantque(Bexp) faire I1-interprete-&gt; M   &lt;br&gt;
+     * 
+     * &lt;br&gt;
+     * 
+     * M,Bexp -interprete-&gt; vrai                          &lt;br&gt;
+     * M,seq(I1,tantque(Bexp)faire I1)-interprete-&gt; M1    &lt;br&gt;
+     * ___________________________________________________&lt;br&gt;                 
+     * M,tantque(Bexp)faire I1-interprete-&gt; M1
+     * &lt;/code&gt;
+     * 
+     * @param tq  une itération de la classe tantque
+     * @return la mémoire résultante 
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte visite(TantQue tq)<span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='color:#3F7F5F'>// Merci a Jocelyn par sa très grande aide sur cette méthode.
+</span>        <span style='font-weight:bold;color:#7B0052;'>if</span> (tq.cond().accepter(this.vb)) <span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(tq.i1(), tq).accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** La boucle pour(init,Bexp,inc)I1&lt;br&gt;
+     * &lt;code&gt;
+     * M,seq(init,tantque(Bexp)seq(I1,inc))-visite-&gt;faux &lt;br&gt;
+     * _____________________________________________________ &lt;br&gt;
+     * M,pour(init,Bexp,inc) faire I1-visite-&gt; M         &lt;br&gt;
+     * &lt;/code&gt;
+     * 
+     * 
+     * 
+     * @param pour  une itération de la classe Pour
+     * @return la mémoire résultante 
+     */</span>  
+    <span style='color:#3F7F5F'>// public Contexte visite(Pour pour){
+</span>
+    <span style='color:#3F7F5F'>// pour.init().accepter(this);
+</span>
+    <span style='color:#3F7F5F'>// new TantQue(pour.cond(),
+</span>    <span style='color:#3F7F5F'>// new Sequence(pour.i1(), pour.inc())).accepter(this);
+</span>    <span style='color:#3F7F5F'>// return this.vi.contexte(); // à compléter en retournant le contexte modifié;
+</span>    <span style='color:#3F7F5F'>// }
+</span>
+    
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte visite(Pour pour) <span style='font-weight:bold;color:#D3171B'>{</span>
+        Sequence seq = <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                pour.init(),
+                <span style='font-weight:bold;color:#7B0052;'>new</span> TantQue( <span style='color:#3F7F5F'>// et on repart pour un tour dans TantQue
+</span>                    pour.cond(),
+                    <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(pour.i1(), pour.inc())
+                ) 
+            );
+        seq.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** L'affichage&lt;br&gt;
+     * &lt;code&gt;
+     *     
+     *    M,Exp-visite-&gt; n                              &lt;br&gt;
+     * ________________________________System.out.print(n)&lt;br&gt;                 
+     * M,afficher(Exp)-visite-&gt; M
+     * &lt;/code&gt;
+     * 
+     * @param a  une instruction d'affichage d'une expression arithmétique
+     * @return la mémoire intacte 
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte visite(Afficher a)<span style='font-weight:bold;color:#D3171B'>{</span>
+        System.out.println(a.exp().accepter(this.vi));
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F5FBF'>/** Une assertion, 
+     * si celle-ci échoue une exception est levée, 
+     * emploi de la clause &lt;a href=http://java.sun.com/j2se/1.5.0/docs/guide/language/assert.html&gt; assert&lt;/a&gt; Expr : "un Message";
+     * 
+     * @param a  une assertion
+     * @return la mémoire intacte 
+     * @throws une exception AssertionError
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte visite(Assertion a) <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>if</span> (a.cond().accepter(this.vb) == <span style='font-weight:bold;color:#7B0052;'>false</span>)<span style='font-weight:bold;color:#D3171B'>{</span>
+            <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> AssertionError(); <span style='color:#3F7F5F'>//throws une exception AssertionError
+</span>        <span style='font-weight:bold;color:#D3171B'>}</span>
+
+        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>Il est primordial ici de bien se baser sur les règles d'inférences données, en particulier pour TantQue et Pour. L'une des méthodes la plus importante ici est : <code>public Contexte visite(Sequence seq)</code> .
+Elle va nous permettre de réaliser un enchainement de 2 instructions et d'y appliquer une visite sur chacun d'eux. Elle est au coeur des méthodes de visite de  <code>TantQue</code> et <code>Pour</code> et donc d'appliquer <br>
+la mécanique de base de ses 2 fonctions : exécuter une instruction (ou suite d'instruction encore via sequence) et tester si la condition de sortie est bonne ou non.<br>
+A noter également, la mécanique du <code>Pour</code> (for) qui s'appuie sur <code>TantQue</code>, qui elle utilise la récursivité pour effectuer une suite d'instruction jusqu'a validation de la condition de sortie.<br>
+Il est également de faire TRES attention a visiter l'ensemble de la séquence et non chaque élements comme j'ai pu le faire dans le code commenté. La visite des instructions se fera dans la sequence en elle même (nul besoin de le faire 2 fois au risque d'altérer la mémoire / renvoyer un résultat erroné).</p>
+
+    <p>Classe VisiteurInstTojava</p>
+
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question3;
+
+      <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.*;
+      
+      <span style='font-weight:bold;color:#7B0052;'>import</span> question1.*;
+      <span style='font-weight:bold;color:#7B0052;'>import</span> question2.*;
+      
+      <span style='color:#3F5FBF'>/**
+       * 
+       */</span>
+      <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurInstToJava <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurInstruction&lt;String&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>int</span> TAB = 2;
+          <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>final</span> String lineSeparator = System.getProperties().getProperty(<span style='color:#2A00FF'>"line.separator"</span>);
+      
+          <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;String&gt; vi;
+          <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpressionBooleenne&lt;String&gt; vb;
+      
+          <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>int</span> tabulations;
+      
+          <span style='color:#3F5FBF'>/**
+           * Création d'un visiteur d'instructions
+           * 
+           * @param vi
+           *            le visiteur d'expressions arithmétiques
+           * @param vb
+           *            le visiteur d'expression booléennes
+           * @param tabulations
+           *            tabulations initiales
+           */</span>
+          <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurInstToJava(VisiteurExpression&lt;String&gt; vi, VisiteurExpressionBooleenne&lt;String&gt; vb, <span style='font-weight:bold;color:#7B0052;'>int</span> tabulations) <span style='font-weight:bold;color:#D3171B'>{</span>
+              this.vi = vi;
+              this.vb = vb;
+              this.tabulations = tabulations;
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='color:#3F5FBF'>/**
+           * Création d'un visiteur d'instructions
+           * 
+           * @param vi
+           *            le visiteur d'expressions arithmétiques
+           * @param vb
+           *            le visiteur d'expression booléennes
+           */</span>
+          <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurInstToJava(VisiteurExpression&lt;String&gt; vi, VisiteurExpressionBooleenne&lt;String&gt; vb) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>this</span>(vi, vb, 0);
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='color:#3F5FBF'>/**
+           * obtention du contexte, ici celui du visiteur d'expression arithmétiques
+           * 
+           * @return le contexte ici de vi(le visiteur d'expression)
+           */</span>
+          <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte contexte() <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='color:#3F5FBF'>/**
+           * Visite d'une instance de la classe Affectation.
+           * 
+           * 
+           * @param a
+           *            une affectation
+           * @return a := exp
+           */</span>
+          <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Affectation a) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> a.v().accepter(this.vi) + <span style='color:#2A00FF'>"="</span> + a.exp().accepter(this.vi);
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='color:#3F5FBF'>/**
+           * Visiste d'une séquence seq(I1,I2) &lt;br&gt;
+           * 
+           * @param seq
+           *            une séquence
+           * @return i1;i2
+           */</span>
+          <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Sequence seq) <span style='font-weight:bold;color:#D3171B'>{</span>
+              String seqString = tab(2)  + seq.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+              <span style='font-weight:bold;color:#7B0052;'>if</span> (seq.i1() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Affectation)
+                  seqString += <span style='color:#2A00FF'>";"</span>;
+      
+              seqString += tab(2) + seq.i2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+              <span style='font-weight:bold;color:#7B0052;'>if</span> (seq.i2() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Affectation)
+                  seqString += <span style='color:#2A00FF'>";"</span>;
+              tab(-2);
+      
+              <span style='font-weight:bold;color:#7B0052;'>return</span> seqString; <span style='color:#3F7F5F'>// à compléter
+      </span>    <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Selection sel) <span style='font-weight:bold;color:#D3171B'>{</span>
+              String selString = <span style='color:#2A00FF'>"if"</span> + sel.cond().accepter(vb) + <span style='color:#2A00FF'>"{"</span>;
+              selString += sel.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+              
+              <span style='font-weight:bold;color:#7B0052;'>if</span> (sel.i1() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Affectation)
+                  selString += <span style='color:#2A00FF'>";"</span>;
+                  
+              selString += tab(2) +<span style='color:#2A00FF'>"}"</span>;
+      
+              <span style='font-weight:bold;color:#7B0052;'>if</span> (sel.i2() != <span style='font-weight:bold;color:#7B0052;'>null</span>) <span style='font-weight:bold;color:#D3171B'>{</span>
+                  selString += <span style='color:#2A00FF'>"else"</span> + tab(2) + <span style='color:#2A00FF'>"{"</span>;
+                  selString += sel.i2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+                  selString += tab(-2)+ <span style='color:#2A00FF'>"};"</span>;
+              <span style='font-weight:bold;color:#D3171B'>}</span>
+              
+              tabulations -= 2;
+      
+              <span style='font-weight:bold;color:#7B0052;'>return</span> selString; <span style='color:#3F7F5F'>// à compléter
+      </span>    <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(TantQue tq) <span style='font-weight:bold;color:#D3171B'>{</span>
+      
+              String tqString = <span style='color:#2A00FF'>"while"</span> + tq.cond().accepter(vb);
+              tqString += tab(2) + <span style='color:#2A00FF'>"{"</span>;
+      
+              tqString += tq.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+      
+              <span style='font-weight:bold;color:#7B0052;'>if</span> (tq.i1() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Affectation)
+                  tqString += <span style='color:#2A00FF'>";"</span>;
+                  
+              tqString += tab(2) + <span style='color:#2A00FF'>"};"</span>;
+      
+              <span style='font-weight:bold;color:#7B0052;'>return</span> tqString; <span style='color:#3F7F5F'>// à compléter
+      </span>    <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Pour pour) <span style='font-weight:bold;color:#D3171B'>{</span>
+              String pString =  <span style='color:#2A00FF'>"for("</span>;
+              pString += pour.init().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>)+ <span style='color:#2A00FF'>";"</span>;
+              pString += pour.cond().accepter(vb) + <span style='color:#2A00FF'>";"</span>;
+              pString += pour.inc().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+              pString += <span style='color:#2A00FF'>")"</span>;
+      
+              pString += tab(2) + <span style='color:#2A00FF'>"{"</span>;
+      
+              <span style='font-weight:bold;color:#7B0052;'>if</span> (!(pour.i1() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Iteration || pour.i1() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Sequence || pour.i1() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Afficher))
+                  pString += tab(2);
+      
+              pString += pour.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>);
+              <span style='font-weight:bold;color:#7B0052;'>if</span> (pour.i1() <span style='font-weight:bold;color:#7B0052;'>instanceof</span> Affectation)
+                  pString += <span style='color:#2A00FF'>";"</span>;
+              pString += tab(-2) + <span style='color:#2A00FF'>"};"</span>;
+              
+              tab(-2);
+      
+              <span style='font-weight:bold;color:#7B0052;'>return</span> pString;
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Afficher a) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"System.out.println("</span> + a.exp().accepter(vi) + <span style='color:#2A00FF'>");"</span>; <span style='color:#3F7F5F'>// à compléter
+      </span>    <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>public</span> String visite(Assertion a) <span style='font-weight:bold;color:#D3171B'>{</span>
+              <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"assert("</span> + a.cond().accepter(this.vb) + <span style='color:#2A00FF'>");"</span>; <span style='color:#3F7F5F'>// à compléter
+      </span>    <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+          <span style='font-weight:bold;color:#7B0052;'>private</span> String tab(<span style='font-weight:bold;color:#7B0052;'>int</span> n) <span style='font-weight:bold;color:#D3171B'>{</span>
+              String str = <span style='font-weight:bold;color:#7B0052;'>new</span> String();
+      
+              str = str + lineSeparator;
+              <span style='font-weight:bold;color:#7B0052;'>for</span> (<span style='font-weight:bold;color:#7B0052;'>int</span> i = 0; i &lt; this.tabulations + n; i++) <span style='font-weight:bold;color:#D3171B'>{</span>
+                  str = str + <span style='color:#2A00FF'>" "</span>;
+              <span style='font-weight:bold;color:#D3171B'>}</span>
+              this.tabulations += n;
+              <span style='font-weight:bold;color:#7B0052;'>return</span> str;
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+      
+      <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>On retrouve ici une mécnique plus simple qui se rapproche de ce qui était demandé en Q1 et surtout de <code>VisiteurBoolToJava</code>. <br>
+A noter dans ce code, que l'indentation n'est pas parfaite (on pourrait encore dire , totalement perfectible), il faut simplement faire attention à tester que nous somme ou non dans une classe terminale pour <br>
+insérer ou le ";", le reste est plutôt classique arrivé à ce niveau du TP.<br>
+Egalement au niveau de la sélection comme dans la classe précédente, bien veiller à tester la présence d'une instruction si la condition <code>cond()</code> est fausse. (Je me suis bien sur fait rappeler à l'ordre par Jnews ...)</p>
+
+    <br />
+    <hr />
+    <h3>Question 3.2</h3>
+
+<QuestionSection>On a ajouté la boucle "Pour" au paquetage question3 sur le modèle de la boucle "for" java (cf. classe "Pour"). Modifiez les visiteurs en conséquence. </QuestionSection>
+
+<p>Rajout de la visite de la classe Pour dans la classe abstraite </p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurInstruction&lt;T&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> T visite(Affectation aff);
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> T visite(Sequence seq);
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> T visite(Selection sel);
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> T visite(TantQue tq);
+
+  <span style='color:#3F7F5F'>// ajouter la visite de l'instruction Pour
+</span>    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> T visite(Pour pour);
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> T visite(Afficher a);
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> T visite(Assertion a);
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> Contexte contexte();
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>Et bien sur la méthode pour accepter une visite dans la classe Pour</p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Pour <span style='font-weight:bold;color:#7B0052;'>extends</span> Iteration <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> Instruction init, inc;
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Pour(Instruction init, ExpressionBooleenne cond, Instruction i1,
+			Instruction inc) <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>super</span>(cond, i1);
+		this.init = init;
+		this.inc = inc;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> &lt;T&gt; T accepter(VisiteurInstruction&lt;T&gt; vi) <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> vi.visite(<span style='font-weight:bold;color:#7B0052;'>this</span>); <span style='color:#3F7F5F'>// à compléter (voir rajout dans VisiteurInstruction&lt;T&gt;)
+</span>	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Instruction init() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> init;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Instruction inc() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> inc;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>Tout cela se repose évidemment sur ce qui a été vu précédemment et la manière de parcourir cette classe et la rajouter au visiteur est identique aux autres.<br>
+Faire évoluer sa structure et la déclarer la visite des rajouts est très simple et ne remet pas en cause ce qui a été précédemment codé.</p>
+
+    <br />
+    <hr />
+    <h3>Question 3.3</h3>
+
+    <QuestionSection>Vérifiez le bon fonctionnement des classes de Tests. </QuestionSection>
+    <p>Bien sur à l'issue de la rédaction du TP les classes de tests fonctionnaient correctement, MAIS, ne garantissaient en rien que le code soit correct. Sans l'écriture de la classe Assertion on se retrouvait avec des tests<br>
+    toujours bons. J'ai du faire quelques essais dans des tests dérivées de ceux donnés pour analyser certains comportements. Ue des classes test ne s'occupait d'ailleurs que d'écrire les codes sources générés et ne garantissaient en rien<br>
+    que le code écris soit correct.</p>
+
+    <br />
+    <hr />
+    <h3>Conclusion, biliographie et remarques :</h3>
+
+    <p>Alors étonnement peu ou pas de bibliographie pour ce TP, par contre je tiens a remercier les autres auditeurs présents sur le forum ou discord, espace dans lequel nous avons longutement parlé du fonctionnement du patron  mis en oeuvre dans ce TP.<br>
+    </p>
+    <p>Vous avez demandé pendant le cours ce que nous penserions de la beauté de ce TP. Je vais tout de suite évacuer le fait que ce fut difficile, non pas par la complexité , mais par l'effort de visualisation nécessaire<br>
+      lorsque l'on est pas "habitué" à ce type de raisonnement. 
+      La logique mise en place ici est belle par sa simplicité. Faire appel à l'objet visiteur en cours pour changer le traitement sur un objet en sélectionnant la bonne signature de méthode (en jouant sur les surcharges) est diaboliquement efficace et simple quand on en a compris le mécanisme.<br>
+
+      Enfin le découplage est réel, la question 3.2 peut paraitre anodine, mais elle met en avant tout l'intérêt du patron visiteur, rajouter une classe demande un effort  de modification minime sur les visiteurs pour ensuite la parcourir. <br>
+      A noter pour finir que durant tout ce TP on s'est beaucoup reposé sur des "visiteurs dans les visiteurs" pour retourner l'analyse souhaitée.</p>
+
+      <p>Ce qui est moins beau ici est le code que j'ai pu écrire qui mériterait un gros coup de nettoyage / refactorisation, mais je vais avouer que stratégiquement je préfère passer à la suite.</p>
+
+    <p> Encore un grand merci aux utilisateurs du forum pour leur aide.</p>
+
+    <br>
+    <br>
+
+    <p>Mais question beauté dans la simplicité, je préfère une bonne "four" d'origine ;) .</p>
+    
+    
+  </body>
+</html>

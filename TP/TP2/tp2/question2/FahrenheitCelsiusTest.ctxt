@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=FahrenheitCelsiusTest
+comment0.text=\r\n\ Classe-test\ FahrenheitCelsiusTest.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00EF\u00BF\u00BDro\ de\ version\ ou\ une\ date)\r\n\r\n\ \ \ \ \ \ \ \ \ \ Les\ classes-test\ sont\ document\u00EF\u00BF\u00BDes\ ici\ \:\r\n\ \ \ \ \ \ \ \ \ \ http\://junit.sourceforge.net/javadoc/junit/framework/TestCase.html\r\n\ \ \ \ \ \ \ \ \ \ et\ sont\ bas\u00EF\u00BF\u00BDes\ sur\ le\ document\ \u00EF\u00BF\u00BD\ 2002\ Robert\ A.\ Ballance\ intitul\u00EF\u00BF\u00BD\r\n\ \ \ \ \ \ \ \ \ \ \u00EF\u00BF\u00BDJUnit\:\ Unit\ Testing\ Framework\u00EF\u00BF\u00BD.\r\n\r\n\ \ \ \ \ \ \ \ \ \ Les\ objets\ Test\ (et\ TestSuite)\ sont\ associ\u00EF\u00BF\u00BDs\ aux\ classes\ \u00EF\u00BF\u00BD\ tester\r\n\ \ \ \ \ \ \ \ \ \ par\ la\ simple\ relation\ yyyTest\ (e.g.\ qu'un\ Test\ de\ la\ classe\r\n\ \ \ \ \ \ \ \ \ \ Name.java\ se\ nommera\ NameTest.java);\ les\ deux\ se\ retrouvent\ dans\ le\r\n\ \ \ \ \ \ \ \ \ \ m\u00EF\u00BF\u00BDme\ paquetage.\ Les\ "engagements"\ (anglais\ \:\ "fixture")\ forment\ un\r\n\ \ \ \ \ \ \ \ \ \ ensemble\ de\ conditions\ qui\ sont\ vraies\ pour\ chaque\ m\u00EF\u00BF\u00BDthode\ Test\ \u00EF\u00BF\u00BD\r\n\ \ \ \ \ \ \ \ \ \ ex\u00EF\u00BF\u00BDcuter.\ Il\ peut\ y\ avoir\ plus\ d'une\ m\u00EF\u00BF\u00BDthode\ Test\ dans\ une\ classe\r\n\ \ \ \ \ \ \ \ \ \ Test;\ leur\ ensemble\ forme\ un\ objet\ TestSuite.\ BlueJ\ d\u00EF\u00BF\u00BDcouvrira\r\n\ \ \ \ \ \ \ \ \ \ automatiquement\ (par\ introspection)\ les\ m\u00EF\u00BF\u00BDthodes\ Test\ de\ votre\r\n\ \ \ \ \ \ \ \ \ \ classe\ Test\ et\ g\u00EF\u00BF\u00BDn\u00EF\u00BF\u00BDrera\ la\ TestSuite\ cons\u00EF\u00BF\u00BDquente.\ Chaque\ appel\ d'une\r\n\ \ \ \ \ \ \ \ \ \ m\u00EF\u00BF\u00BDthode\ Test\ sera\ pr\u00EF\u00BF\u00BDc\u00EF\u00BF\u00BDd\u00EF\u00BF\u00BD\ d'un\ appel\ de\ setUp(),\ qui\ r\u00EF\u00BF\u00BDalise\ les\r\n\ \ \ \ \ \ \ \ \ \ engagements,\ et\ suivi\ d'un\ appel\ \u00EF\u00BF\u00BD\ tearDown(),\ qui\ les\ d\u00EF\u00BF\u00BDtruit.\r\n
+comment1.params=
+comment1.target=FahrenheitCelsiusTest()
+comment1.text=\r\n\ Constructeur\ de\ la\ classe-test\ FahrenheitCelsiusTest\r\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\r\n\ Met\ en\ place\ les\ engagements.\r\n\r\n\ M\u00E9thode\ appel\u00E9e\ avant\ chaque\ appel\ de\ m\u00E9thode\ de\ test.\r\n
+comment3.params=
+comment3.target=void\ tearDown()
+comment3.text=\r\n\ Supprime\ les\ engagements\r\n\r\n\ M\u00E9thode\ appel\u00E9e\ apr\u00E8s\ chaque\ appel\ de\ m\u00E9thode\ de\ test.\r\n
+comment4.params=
+comment4.target=void\ test_fahrenheitEnCelsius()
+comment5.params=
+comment5.target=void\ test_lgPartieDecimale()
+comment6.params=
+comment6.target=void\ test_separateur()
+comment7.params=
+comment7.target=void\ test_exceptionDansConsole()
+comment8.params=
+comment8.target=void\ test_typeOfException()
+comment9.params=className\ args
+comment9.target=java.lang.String[]\ mainExec(java.lang.String,\ java.lang.String[])
+comment9.text=\ Obtention\ de\ l'affichage\ produit\ par\ l'ex\u00E9cution\ de\ la\ m\u00E9thode\ main\ d'une\ classe.\r\n\ @param\ className\ le\ nom\ de\ la\ classe\r\n\ @param\ args\ les\ arguments\ de\ la\ ligne\ de\ commande\r\n\ @return\ le\ texte\ en\ tableau\ de\ lignes\r\n\ @throws\ une\ exception\ est\ lev\u00E9e\ si\ la\ classe\ est\ inconnue\r\n
+numComments=10

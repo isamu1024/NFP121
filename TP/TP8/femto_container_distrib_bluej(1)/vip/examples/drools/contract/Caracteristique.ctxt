@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Caracteristique
+comment1.params=
+comment1.target=Caracteristique()
+comment2.params=numDossier\ nom\ valeur
+comment2.target=Caracteristique(int,\ java.lang.String,\ int)
+comment3.params=
+comment3.target=int\ getNumDossier()
+comment4.params=
+comment4.target=java.lang.String\ getNom()
+comment5.params=
+comment5.target=int\ getValeur()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

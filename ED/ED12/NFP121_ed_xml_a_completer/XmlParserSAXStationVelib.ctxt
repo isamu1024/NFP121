@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=XmlParserSAXStationVelib
+comment1.params=in
+comment1.target=XmlParserSAXStationVelib(java.io.InputStream)
+comment2.params=
+comment2.target=void\ parse()
+comment3.params=uri\ localName\ qName\ attributes
+comment3.target=void\ startElement(java.lang.String,\ java.lang.String,\ java.lang.String,\ org.xml.sax.Attributes)
+numComments=4

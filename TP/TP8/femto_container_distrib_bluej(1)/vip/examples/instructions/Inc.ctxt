@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Inc
+comment1.params=operand
+comment1.target=void\ setOperand(int)
+comment2.params=i
+comment2.target=java.util.concurrent.atomic.AtomicInteger\ execute(java.util.concurrent.atomic.AtomicInteger)
+numComments=3

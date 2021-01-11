@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=numero
+comment0.target=StationVelib\ getStation(int)
+comment0.text=\ Obtention\ de\ la\ station\ V\u00E9lib\ \u00E0\ partir\ de\ son\ num\u00E9ro.\r\n\ @param\ numero\ le\ num\u00E9ro\ de\ la\ station\ par\ ex.\ 3011\r\n\ @throws\ un\ exception\ si\ ce\ num\u00E9ro\ est\ incorrect\r\n
+comment1.params=s
+comment1.target=InfoStation\ getInfoStation(StationVelib)
+comment1.text=\ Obtention\ des\ informations\ "temps-r\u00E9\u00E9l"\ de\ la\ station\ v\u00E9lib.\r\n\ En\ mode\ d\u00E9grad\u00E9,\ ce\ seront\ les\ derni\u00E8res\ valeurs\ enregistr\u00E9es.\r\n\ @param\ s\ la\ station\ v\u00E9lib\r\n\ @return\ toutes\ les\ informations\ sur\ cette\ station\r\n
+comment2.params=
+comment2.target=java.util.Collection\ getListeDesStations()
+comment2.text=\ Obtention\ de\ la\ liste\ des\ stations,\ celle-ci\ est\ immutable.\r\n\ L'it\u00E9rateur\ retourn\u00E9\ par\ l'appel\ de\ la\ m\u00E9thode\ iterator(),\ l\u00E8ve\r\n\ une\ exception\ lors\ de\ l'appel\ d'un\ retrait\ par\ l'appel\ de\ la\ m\u00E9thode\ remove\r\n\ @return\ la\ liste\ immuable\ des\ stations\ V\u00E9lib\r\n
+comment3.params=latitude\ longitude\ s
+comment3.target=double\ getDistance(double,\ double,\ StationVelib)
+comment3.text=\ Obtention\ de\ la\ distance\ d'une\ station\ \u00E0\ partir\ de\ coordonn\u00E9es\ GPS.\r\n\ Calcul\ de\ la\ distance\ extrait\ de\ http\://www.geodatasource.com/developers/java\r\n\ @param\ latitude\ la\ latitude\r\n\ @param\ longitude\ la\ longitude\r\n\ @param\ s\ la\ station\ v\u00E9lib\r\n\ @return\ la\ distance\ en\ kilom\u00E8tre\ entre\ ce\ point\ et\ la\ station\ s,\ \r\n\ \ \ \ \ \ \ \ \ \ 0.0\ si\ la\ station\ n'existe\ pas\r\n
+comment4.params=
+comment4.target=XmlParserStationVelibI\ getParser()
+comment4.text=\ Obtention\ du\ parser\ Xml\ associ\u00E9.\r\n\ @return\ le\ parser\ Xml\ choisi\r\n
+comment5.params=parser
+comment5.target=void\ setParser(XmlParserStationVelibI)
+comment5.text=\ Affectation,\ s\u00E9lection\ du\ parser\ Xml.\r\n\ @param\ parser\ le\ parser\ Xml\r\n
+numComments=6

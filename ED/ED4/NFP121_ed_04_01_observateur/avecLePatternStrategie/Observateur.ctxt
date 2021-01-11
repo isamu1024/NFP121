@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Observateur()
+comment1.params=strategie
+comment1.target=void\ setStrategie(Strategie)
+comment2.params=source\ args
+comment2.target=void\ update(java.util.Observable,\ java.lang.Object)
+numComments=3

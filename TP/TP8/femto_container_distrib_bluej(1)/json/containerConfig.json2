@@ -1,0 +1,19 @@
+[
+	{	"id":"list",
+		"class":"java.util.ArrayList"
+	},
+
+	{	"id":"set",
+		"class":"java.util.TreeSet"
+	},
+
+	{	"id":"container",
+		"class":"container.FileSystemJSONApplicationContext2",
+		"property.1":"name",
+		"property.1.param.1":"MartinFowlerTests",
+		"property.2":"fileName",
+		"property.2.param.1":"./json/martinFowlerConfig.json"
+	},
+	{	"verbose":true
+	}
+]

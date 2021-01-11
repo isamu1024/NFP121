@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=EntierPositif
+comment1.params=valeur
+comment1.target=EntierPositif(int)
+comment2.params=
+comment2.target=void\ plus1Bis()
+comment3.params=
+comment3.target=EntierPositif\ copie()
+numComments=4

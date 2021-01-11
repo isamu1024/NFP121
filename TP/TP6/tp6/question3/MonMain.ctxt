@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MonMain
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ MonMain\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=
+comment1.target=void\ Factoriel()
+comment2.params=
+comment2.target=void\ Mult()
+comment3.params=
+comment3.target=void\ UneBouclePour()
+numComments=4

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=VisiteurStringAvecTabulations
+comment1.params=n
+comment1.target=java.lang.String\ visite(Noeud)
+comment2.params=l
+comment2.target=java.lang.String\ visite(ListeDeComposants)
+numComments=3

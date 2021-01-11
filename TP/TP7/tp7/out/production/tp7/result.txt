@@ -1,0 +1,20 @@
+public boolean java.util.AbstractCollection.contains(java.lang.Object)
+protected void java.lang.Object.finalize() throws java.lang.Throwable
+protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+public boolean java.util.AbstractCollection.addAll(java.util.Collection)
+public java.lang.String java.util.AbstractCollection.toString()
+public java.lang.Object[] java.util.AbstractCollection.toArray(java.lang.Object[])
+public java.lang.Object[] java.util.AbstractCollection.toArray()
+public boolean java.util.AbstractCollection.retainAll(java.util.Collection)
+public boolean java.util.AbstractCollection.add(java.lang.Object)
+public final native void java.lang.Object.notify()
+public boolean java.util.AbstractCollection.containsAll(java.util.Collection)
+public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+public final void java.lang.Object.wait() throws java.lang.InterruptedException
+public void java.util.AbstractCollection.clear()
+public boolean java.util.AbstractCollection.isEmpty()
+public final native java.lang.Class java.lang.Object.getClass()
+public boolean java.util.AbstractCollection.remove(java.lang.Object)
+public final native void java.lang.Object.notifyAll()
+

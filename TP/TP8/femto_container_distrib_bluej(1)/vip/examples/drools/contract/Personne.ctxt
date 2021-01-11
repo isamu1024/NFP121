@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Personne
+comment1.params=
+comment1.target=Personne()
+comment2.params=numDossier
+comment2.target=Personne(int)
+comment3.params=
+comment3.target=int\ getNumDossier()
+comment4.params=caracteristique
+comment4.target=void\ addCaracteristique(Caracteristique)
+comment5.params=
+comment5.target=java.util.List\ getCaracteristiques()
+comment6.params=pros
+comment6.target=void\ setPros(int)
+comment7.params=
+comment7.target=int\ getPros()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

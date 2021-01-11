@@ -1,0 +1,3 @@
+classe_adaptateur=question3.Adaptateur
+classe_a_adapter=question3.NewPlugRCA
+classe_param_cons=question3.Plug

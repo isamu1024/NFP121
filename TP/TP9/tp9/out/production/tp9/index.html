@@ -1,0 +1,1682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="FR">
+  <head>
+    <meta charset="utf-8" />
+    <title>NFP121 - TP_8</title>
+    <style type="text/css">
+      body {
+        background: #e5ded6;
+        background-color: #fff;
+        color: #333333;
+        font-size: 14px;
+        font-family: Verdana, Arial;
+      }
+
+      table {
+        font-size: 20px;
+        border-color: #808080;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      hr {
+        margin: 15px 0 15px 0;
+      }
+
+      applet {
+        margin: 10px 0px 25px 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #777777;
+      }
+
+      questionSection {
+        color: #c1002a;
+        font-family: Verdana, Arial;
+        font-size: medium;
+      }
+
+      p,
+      a,
+      img {
+        font-size: normal;
+        padding-left: 15px;
+      }
+
+      /* li {
+            font-size: smaller;
+            padding-left: 15px;
+            content: #C1002A;
+        } */
+
+      ul {
+        font-size: normal;
+      }
+
+      ul li::before {
+        content: "\2022";
+        color: #c1002a;
+        width: 1em;
+        margin-left: -1em;
+        display: inline-block;
+      }
+
+      code {
+        background-color: antiquewhite;
+        color: #c1002a;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">NFP 121 - TP9</h2>
+    <h2 style="text-align: center">XML & DAO</h2>
+
+    <br />
+    <hr />
+    <br />
+    <table>
+      <tr>
+        <td>Nom</td>
+        <td>MORO</td>
+      </tr>
+      <tr>
+        <td>Prénom</td>
+        <td>Alexandre</td>
+      </tr>
+      <tr>
+        <td>Matricule</td>
+        <td>0g5drredxv9</td>
+      </tr>
+    </table>
+
+    <br />
+    <hr />
+    <h3>Question 1.1</h3>
+    <QuestionSection>Compléter les classes suivantes par l'AST correspondant au Programme donné en commentaire et rappelé dans le tableau suivant.</QuestionSection>
+    <p>La classe AST_Fact</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+        
+        <span style='color:#3F5FBF'>/**
+         * Calcul du factoriel d'un nombre entier depuis le langage WhileL
+         *
+         * @author Alexandre Moro
+         * @version V1 20/12/2020
+         */</span>
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AST_Fact <span style='font-weight:bold;color:#7B0052;'>extends</span> AST_Progr <span style='font-weight:bold;color:#7B0052;'>implements</span> java.io.Serializable <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable xxx = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"xxx"</span>);
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable fact = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"fact"</span>);
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable n = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"n"</span>);
+            <span style='font-weight:bold;color:#7B0052;'>private</span> Instruction ast;
+        
+            <span style='color:#3F7F5F'>/*
+             * construire l'AST du programme "WhileL style" est à construire ci dessous
+             * xxx:=n ; fact := 1 ; while (~(xxx=0) ) do fact := fact * xxx ; xxx:=
+             * xxx-1; ftp; afficher(fact); remarque : on calcule ici fact(n) i.e. n est
+             * une donnée fournie au moment de l'exécution, d'où le constructeur suivant
+             */</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> AST_Fact(<span style='font-weight:bold;color:#7B0052;'>int</span> n) <span style='font-weight:bold;color:#D3171B'>{</span>
+                this.m.ecrire(<span style='color:#2A00FF'>"n"</span>, n);
+                this.generateAst();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='color:#3F5FBF'>/**
+             * Méthode générant l'arbre de syntaxe abstraite après affectation de la valeur à calculer dans
+             * la mémoire.
+             */</span>
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>void</span> generateAst() <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                this.ast = <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                        <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(this.xxx, this.n),
+                        <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(this.fact, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(1)),
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                        <span style='font-weight:bold;color:#7B0052;'>new</span> TantQue(<span style='font-weight:bold;color:#7B0052;'>new</span> Non(<span style='font-weight:bold;color:#7B0052;'>new</span> Egal(this.xxx, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(0))),
+                                                <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(this.fact, <span style='font-weight:bold;color:#7B0052;'>new</span> Multiplication(this.fact, this.xxx)),
+                                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(this.xxx, <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(this.xxx, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(1))))
+                                        ),
+                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Afficher(this.fact))
+                        )
+                );
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte getMem() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> this.m;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Instruction getAST() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> this.ast;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>La classe AST_Mult1</p>
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+            <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+            <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+            <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+            
+            <span style='color:#3F5FBF'>/**
+             * Décrivez votre classe AST_Mult1 ici.
+             *
+             * @author (votre nom)
+             * @version (un numéro de version ou une date)
+             */</span>
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AST_Mult1 <span style='font-weight:bold;color:#7B0052;'>extends</span> AST_Progr <span style='font-weight:bold;color:#7B0052;'>implements</span> java.io.Serializable <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>/*
+                 * modèle "java Style" dont l'AST "WhileL style" est à construire ci dessous
+                 * a = n1 ; b = n2 ; produit = 0 ; while (b &gt; 0) { produit = produit + a ;
+                 * b=b-1; } afficher(produit);
+                 */</span>
+                <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable produit = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"produit"</span>);
+                <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable a = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"a"</span>);
+                <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable b = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"b"</span>);
+                <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Constante z = <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(0);
+                <span style='font-weight:bold;color:#7B0052;'>private</span> Instruction ast = <span style='font-weight:bold;color:#7B0052;'>null</span>; <span style='color:#3F7F5F'>// à compléter
+            </span>
+                <span style='font-weight:bold;color:#7B0052;'>public</span> AST_Mult1(<span style='font-weight:bold;color:#7B0052;'>int</span> n1, <span style='font-weight:bold;color:#7B0052;'>int</span> n2) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    this.m.ecrire(<span style='color:#2A00FF'>"a"</span>, n1);
+                    this.m.ecrire(<span style='color:#2A00FF'>"b"</span>, n2);
+                    this.generateAst();
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>void</span> generateAst() <span style='font-weight:bold;color:#D3171B'>{</span>
+                    this.ast = <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                            <span style='font-weight:bold;color:#7B0052;'>new</span> TantQue(<span style='font-weight:bold;color:#7B0052;'>new</span> Sup(b, z),
+                                    <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(<span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(produit, <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(produit, a)),
+                                            <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(b, <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(b, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(1))))),
+                            <span style='font-weight:bold;color:#7B0052;'>new</span> Afficher(produit));
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte getMem() <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> m;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Instruction getAST() <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> ast;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+            <p>La classe AST_Mult2</p>
+            <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+                
+                <span style='color:#3F5FBF'>/**
+                 * Décrivez votre classe AST_Mult2 ici.
+                 *
+                 * @author (votre nom)
+                 * @version (un numéro de version ou une date)
+                 */</span>
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AST_Mult2 <span style='font-weight:bold;color:#7B0052;'>extends</span> AST_Progr <span style='font-weight:bold;color:#7B0052;'>implements</span> java.io.Serializable <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='color:#3F7F5F'>/*
+                     * a := 7 ; b := 85 ; produit := 0 ; m1:=a ; m2:=b; while (m2 &gt; 0) do if
+                     * (m2/2*2)=m2 then m1:= m1*2 ; m2 := m2/2;end produit := produit + m1 ;
+                     * m2:=m2-1; end afficher(produit);
+                     */</span>
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable produit = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"produit"</span>);
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable m1 = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"m1"</span>);
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable m2 = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"m2"</span>);
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> Instruction ast = <span style='font-weight:bold;color:#7B0052;'>null</span>; <span style='color:#3F7F5F'>// à compléter
+                </span>
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> AST_Mult2(<span style='font-weight:bold;color:#7B0052;'>int</span> n1, <span style='font-weight:bold;color:#7B0052;'>int</span> n2) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        m.ecrire(<span style='color:#2A00FF'>"m1"</span>, n1);
+                        m.ecrire(<span style='color:#2A00FF'>"m2"</span>, n2);
+                        this.generateAst();
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>void</span> generateAst() <span style='font-weight:bold;color:#D3171B'>{</span>
+                        this.ast = <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(<span style='font-weight:bold;color:#7B0052;'>new</span> TantQue(
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Sup(
+                                        m2, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(0)),
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Selection(
+                                                <span style='font-weight:bold;color:#7B0052;'>new</span> Egal(
+                                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Multiplication(
+                                                                <span style='font-weight:bold;color:#7B0052;'>new</span> Division(m2, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2)), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2)), m2),
+                                                <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(<span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(m1, <span style='font-weight:bold;color:#7B0052;'>new</span> Multiplication(m1, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2))),
+                                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(m2, <span style='font-weight:bold;color:#7B0052;'>new</span> Division(m2, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(2))))),
+                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                                <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(produit, <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(produit, m1)),
+                                                <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(m2, <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(m2, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(1))))
+                                )
+                        ), <span style='font-weight:bold;color:#7B0052;'>new</span> Afficher(produit));
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte getMem() <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> m;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Instruction getAST() <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> ast;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+            <p>La classe AST_SOM_W</p>
+            <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+                
+                <span style='color:#3F5FBF'>/**
+                 * Décrivez votre classe AST_SOM_W ici.
+                 *
+                 * @author (votre nom)
+                 * @version (un numéro de version ou une date)
+                 */</span>
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AST_SOM_W <span style='font-weight:bold;color:#7B0052;'>extends</span> AST_Progr <span style='font-weight:bold;color:#7B0052;'>implements</span> java.io.Serializable <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='color:#3F7F5F'>/*
+                     * modèle "java Style" dont l'AST "WhileL style" est à construire ci dessous
+                     * n=100; som = 0 ; while (n&gt; 0) { som = som+n ; n = n - 1 ; }
+                     * afficher(som);
+                     */</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> Instruction ast = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable som = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"som"</span>);
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>final</span> Variable n = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"n"</span>);
+                
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> AST_SOM_W(<span style='font-weight:bold;color:#7B0052;'>int</span> n) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        this.m.ecrire(<span style='color:#2A00FF'>"n"</span>, n);
+                        this.generateAst();
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>void</span> generateAst() <span style='font-weight:bold;color:#D3171B'>{</span>
+                        this.ast = <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> TantQue(
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Sup(n, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(0)),
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(som, <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(som, n)),
+                                        <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(n, <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(n, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(1)))
+                                )),
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Afficher(som));
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte getMem() <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> m;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Instruction getAST() <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> ast;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+                <p>La classe AST_SOM_F</p>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+<span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+<span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+
+<span style='color:#3F5FBF'>/**
+ * Décrivez votre classe AST_SOM_F ici.
+ *
+ * @author (votre nom)
+ * @version (un numéro de version ou une date)
+ */</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AST_SOM_F <span style='font-weight:bold;color:#7B0052;'>extends</span> AST_Progr <span style='font-weight:bold;color:#7B0052;'>implements</span> java.io.Serializable <span style='font-weight:bold;color:#D3171B'>{</span>
+    <span style='color:#3F7F5F'>/*
+     * n=100; som = 0 ; for(i=0 ; i&lt;n ; i++){ (n&gt; 0) { som := som+i ; }
+     * afficher(som);
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>private</span> Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+    <span style='font-weight:bold;color:#7B0052;'>private</span> Variable som = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"som"</span>);
+    <span style='font-weight:bold;color:#7B0052;'>private</span> Variable i = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"i"</span>);
+    <span style='font-weight:bold;color:#7B0052;'>private</span> Variable n = <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"n"</span>);
+    <span style='font-weight:bold;color:#7B0052;'>private</span> Instruction ast = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> AST_SOM_F(<span style='font-weight:bold;color:#7B0052;'>int</span> n) <span style='font-weight:bold;color:#D3171B'>{</span>
+        this.m.ecrire(<span style='color:#2A00FF'>"n"</span>, n);
+        this.generateAst();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F7F5F'>//    som := 0;
+</span>    <span style='color:#3F7F5F'>//for (i = 0; i &lt; n; i++) { (n&gt; 0) {
+</span>    <span style='color:#3F7F5F'>//        som := som + i;
+</span>    <span style='color:#3F7F5F'>//    }
+</span>
+    <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>void</span> generateAst() <span style='font-weight:bold;color:#D3171B'>{</span>
+        this.ast = <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(<span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(<span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"som"</span>), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(0)),
+                <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                        <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(<span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, <span style='color:#2A00FF'>"i"</span>), <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(0)),
+                        <span style='font-weight:bold;color:#7B0052;'>new</span> TantQue(<span style='font-weight:bold;color:#7B0052;'>new</span> Inf(i, n), <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(som, <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(som, i)),
+                                <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation(i, <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(i, <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(1))))
+                        )
+                )),
+                <span style='font-weight:bold;color:#7B0052;'>new</span> Afficher(som));
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte getMem() <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> m;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Instruction getAST() <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> ast;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<p>2 difficultés ici : 
+    <ul>
+        <li>Se replonger dans le "langage" WhileL du TP6 :D</li>
+        <li>La classe AST_SOM_F, qui dans un premier temps semblait donner satisfaction et passait les tests, mais en continuant plus loin dans le TP, j'ai eu un soucis de
+            sérialisation qui m'a demandé une réécriture complète. Il a fallu se souvenir de son usage en reprenant le TP6 et passé sur un "TantQue" avec "adaptation".
+        </li>
+    </ul>
+</p>
+
+    <br />
+    <hr />
+    <h3>Question 1.2</h3>
+    <QuestionSection>Vérifiez par une classe de Test (Junit/BlueJ) que l'évaluation d'objets instances de toutes vos Classes écrites en Q1.1 donnent les résultats attendus. </QuestionSection>
+
+    <p>La classe TestAST</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.Contexte;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.VisiteurEvaluation;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.VisiteurExpression;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.VisiteurInfixe;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.VisiteurBoolEvaluation;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.VisiteurBoolToString;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.VisiteurExpressionBooleenne;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.Instruction;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.VisiteurInstEvaluation;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.VisiteurInstToString;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.VisiteurInstruction;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestAST <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>int</span> mult1(<span style='font-weight:bold;color:#7B0052;'>int</span> a, <span style='font-weight:bold;color:#7B0052;'>int</span> b) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>int</span> produit = 0;
+                <span style='font-weight:bold;color:#7B0052;'>while</span> (b &gt; 0) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    produit += a;
+                    b -= 1;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> produit;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>int</span> mult2(<span style='font-weight:bold;color:#7B0052;'>int</span> n1, <span style='font-weight:bold;color:#7B0052;'>int</span> n2) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>int</span> m1 = n1;
+                <span style='font-weight:bold;color:#7B0052;'>int</span> m2 = n2;
+                <span style='font-weight:bold;color:#7B0052;'>int</span> produit = 0;
+                <span style='font-weight:bold;color:#7B0052;'>while</span> (m2 &gt; 0) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>if</span> ((m2 / 2) * 2 == m2) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        m1 = m1 * 2;
+                        m2 = m2 / 2;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                    produit = produit + m1;
+                    m2 = m2 - 1;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> produit;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>int</span> som_w(<span style='font-weight:bold;color:#7B0052;'>int</span> n) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>int</span> som = 0;
+                <span style='font-weight:bold;color:#7B0052;'>while</span> (n &gt; 0) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    som += n;
+                    n -= 1;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> som;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>int</span> som_f(<span style='font-weight:bold;color:#7B0052;'>int</span> n) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>int</span> som = 0;
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (n &gt; 0)
+                    <span style='font-weight:bold;color:#7B0052;'>for</span> (<span style='font-weight:bold;color:#7B0052;'>int</span> i = 0; i &lt; n; i++)
+                        som += i;
+                <span style='font-weight:bold;color:#7B0052;'>return</span> som;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testMult1() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    assertEquals(<span style='color:#2A00FF'>"Devrait être 30, revoir methode statique"</span>, 30, TestAST.mult1(10, 3));
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"revoir methode statique"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    AST_Mult1 p = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_Mult1(10, 3);
+                    Contexte m = p.getMem();
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                    Instruction ast = p.getAST();
+                    ast.accepter(vi);
+        
+                    assertEquals(ast.accepter(vs) + <span style='color:#2A00FF'>" ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"produit"</span>), TestAST.mult1(10, 3));
+                    assertEquals(<span style='color:#2A00FF'>"{a=10, b=0, produit=30}"</span>, ast.accepter(vi).toString());
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"oups !!"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testMult2() <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    assertEquals(<span style='color:#2A00FF'>"Devrait être 30, revoir methode statique"</span>, 40, TestAST.mult2(10, 4));
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"revoir methode statique"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    AST_Mult2 p = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_Mult2(10, 4);
+                    Contexte m = p.getMem();
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                    Instruction ast = p.getAST();
+                    ast.accepter(vi);
+        
+                    assertEquals(ast.accepter(vs) + <span style='color:#2A00FF'>" ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"produit"</span>), TestAST.mult2(10, 4));
+                    assertEquals(<span style='color:#2A00FF'>"{m1=20, m2=0, produit=40}"</span>, ast.accepter(vi).toString());
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"oups !!"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSomW() <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='color:#3F7F5F'>//        System.out.println(TestAST.som_w(10)); 55
+        </span>        <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    assertEquals(<span style='color:#2A00FF'>"Devrait être egal a 55, revoir la methode statique"</span>, 55, TestAST.som_w(10));
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"oups !!"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    AST_SOM_W p = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_SOM_W(10);
+                    Contexte m = p.getMem();
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                    Instruction ast = p.getAST();
+                    ast.accepter(vi);
+        
+                    assertEquals(ast.accepter(vs) + <span style='color:#2A00FF'>" ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"som"</span>), TestAST.som_w(10));
+                    assertEquals(<span style='color:#2A00FF'>"{n=0, som=55}"</span>, ast.accepter(vi).toString());
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"oups !!"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSomF()<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    assertEquals(<span style='color:#2A00FF'>"Devrait être egal a 45, revoir la methode statique"</span>, 45, TestAST.som_f(10));
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"oups !!"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    AST_SOM_F p = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_SOM_F(10);
+                    Contexte m = p.getMem();
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                    Instruction ast = p.getAST();
+                    Contexte t = ast.accepter(vi);
+        
+                    assertEquals(ast.accepter(vs) + <span style='color:#2A00FF'>" ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"som"</span>), TestAST.som_f(10));
+                    assertEquals(<span style='color:#2A00FF'>"{i=10, n=10, som=45}"</span>, t.toString());
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"oups !!"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+        <p>On reprend chaque méthodes demandées en code "java" puis on reprend chaque classe WhileL et on compare les valeurs obtenues.</br>
+        Je vérifie aussi que les variables internes ne changent pas en comparant la valeur toString() retournée.
+        </p>
+    <br />
+    <hr />
+    <h3>Question 1.3</h3>
+    <QuestionSection>Construire la Classe "boite à outils" JAVASerialiseDeserialise qui contient les méthodes statiques :</QuestionSection>
+    <div class="paragraphe">
+        Construire la Classe "boite à outils" JAVASerialiseDeserialise qui contient les méthodes statiques :<br>
+
+        <div class="codesource">
+            <code>
+                </code><ul>
+                    <li>
+                        <font color="#ffffff"></font><font color="#7f0055"><b>public&nbsp;static&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">serialjava</font><font color="#000000">(</font><font color="#000000">IProgr&nbsp;progr,&nbsp;String&nbsp;nomDuFichier</font><font color="#000000">){</font><font color="#000000">...</font>
+                        <br>
+                        Devra générer la sérialisation de 'progr' dans le fichier   'nomDuFichier'
+                    </li>
+                    <br>
+                    <li>
+                        <font color="#ffffff"></font><font color="#7f0055"><b>public&nbsp;static&nbsp;</b></font><font color="#000000">IProgr&nbsp;deserialjava</font><font color="#000000">(</font><font color="#000000">String&nbsp;nomDuFichier</font><font color="#000000">){</font><font color="#000000">...</font>
+                        <br>
+
+Lit le fichier 'nomFichier' qui doit contenir un objet JAVA de type
+'IProgr' sérialisé et retourne cet objet. </li>
+
+<pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question1;
+
+
+    <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.*;
+    
+    <span style='color:#3F5FBF'>/**
+     * Décrivez votre classe JAVASerialiseDeserialise ici.
+     *
+     * @author (votre nom)
+     * @version (un numéro de version ou une date)
+     */</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> JAVASerialiseDeserialise <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='color:#3F5FBF'>/**
+         * Sauvegarde un objet de type IProgr
+         * @param p Objet de tyoe IProgr
+         * @param nomDuFichier path et nom du fichier ser de sauvegarde
+         * @throws IOException
+         */</span>
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> serialjava(IProgr p, String nomDuFichier) <span style='font-weight:bold;color:#7B0052;'>throws</span> IOException <span style='font-weight:bold;color:#D3171B'>{</span>
+                ObjectOutputStream oos = <span style='font-weight:bold;color:#7B0052;'>new</span> ObjectOutputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> FileOutputStream(nomDuFichier));
+                oos.writeObject(p);
+                oos.close();
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+        <span style='color:#3F5FBF'>/**
+         * Restitue un objet de type IProgr
+         * @param nomDuFichier
+         * @return
+         * @throws Exception
+         */</span>
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> IProgr deserialjava(String nomDuFichier) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+            ObjectInputStream ois = <span style='font-weight:bold;color:#7B0052;'>new</span> ObjectInputStream(<span style='font-weight:bold;color:#7B0052;'>new</span> FileInputStream(nomDuFichier));
+            IProgr obj = (IProgr) ois.readObject();
+            ois.close();
+            <span style='font-weight:bold;color:#7B0052;'>return</span> obj;
+        <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+    <p>Comme vu dans le cours, on sert de la classe <code>ObjectOutputStream</code> pour sérialiser l'objet dans un fichier .ser et à l'inverse <code>ObjectInputStream</code> pour déserialiser l'objet.<br/>
+        Il faut également prendre soin de bien fermer les flux pour rendre la ressource disponible après utilisation.
+    </p>
+
+    <br />
+    <hr />
+    <h3>Question 1.4</h3>
+    <QuestionSection>Vérifier par une classe de Test (Junit/BlueJ) que les évaluations de (Q1.2) et de nouvelles évaluations après sérialisation et désérialisation donnent des résultats identiques.</QuestionSection>
+
+    <p>La classe de test TestEvaluations</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'>ackage question1;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestEvaluations <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSerDesFact() <span style='font-weight:bold;color:#D3171B'>{</span>
+                IProgr fact = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_Fact(10);
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    JAVASerialiseDeserialise.serialjava(fact, <span style='color:#2A00FF'>"question1\\testFact.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la sauvegarde est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                IProgr factRestore = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    factRestore = JAVASerialiseDeserialise.deserialjava(<span style='color:#2A00FF'>"question1\\testFact.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la restitution est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                Contexte restoreM = factRestore.getMem();
+        
+                VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(restoreM);
+                VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(restoreM);
+                VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                Instruction ast = factRestore.getAST();
+                ast.accepter(vi);
+        
+                assertEquals(<span style='color:#2A00FF'>"{fact=3628800, n=10, xxx=0}"</span>, ast.accepter(vi).toString());
+                assertEquals(fact.getAST().accepter(vi).toString(), ast.accepter(vi).toString());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSerDesMult1() <span style='font-weight:bold;color:#D3171B'>{</span>
+                IProgr mult1 = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_Mult1(10, 3);
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    JAVASerialiseDeserialise.serialjava(mult1, <span style='color:#2A00FF'>"question1\\testMult1.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la sauvegarde est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                IProgr Mult1Restore = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    Mult1Restore = JAVASerialiseDeserialise.deserialjava(<span style='color:#2A00FF'>"question1\\testMult1.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la restitution est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                Contexte restoreM = Mult1Restore.getMem();
+        
+                VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(restoreM);
+                VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(restoreM);
+                VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                Instruction ast = Mult1Restore.getAST();
+                ast.accepter(vi);
+        
+                assertEquals(<span style='color:#2A00FF'>"{a=10, b=0, produit=30}"</span>, ast.accepter(vi).toString());
+                assertEquals(mult1.getAST().accepter(vi).toString(), ast.accepter(vi).toString());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSerDesMult2()<span style='font-weight:bold;color:#D3171B'>{</span>
+                IProgr mult2 = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_Mult2(10, 4);
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    JAVASerialiseDeserialise.serialjava(mult2, <span style='color:#2A00FF'>"question1\\testMult2.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la sauvegarde est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                IProgr Mult2Restore = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    Mult2Restore = JAVASerialiseDeserialise.deserialjava(<span style='color:#2A00FF'>"question1\\testMult2.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la restitution est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                Contexte restoreM = Mult2Restore.getMem();
+        
+                VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(restoreM);
+                VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(restoreM);
+                VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                Instruction ast = Mult2Restore.getAST();
+                ast.accepter(vi);
+        
+                assertEquals(<span style='color:#2A00FF'>"{m1=20, m2=0, produit=40}"</span>, ast.accepter(vi).toString());
+                assertEquals(mult2.getAST().accepter(vi).toString(), ast.accepter(vi).toString());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSerDesSomW()<span style='font-weight:bold;color:#D3171B'>{</span>
+                IProgr somW = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_SOM_W(10);
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    JAVASerialiseDeserialise.serialjava(somW, <span style='color:#2A00FF'>"question1\\testSomW.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la sauvegarde est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                IProgr somWRestore = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    somWRestore = JAVASerialiseDeserialise.deserialjava(<span style='color:#2A00FF'>"question1\\testSomW.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la restitution est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                Contexte restoreM = somWRestore.getMem();
+        
+                VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(restoreM);
+                VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(restoreM);
+                VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                Instruction ast = somWRestore.getAST();
+                ast.accepter(vi);
+        
+                assertEquals(<span style='color:#2A00FF'>"{n=0, som=55}"</span>, ast.accepter(vi).toString());
+                assertEquals(somW.getAST().accepter(vi).toString(), ast.accepter(vi).toString());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testSerDesSomF()<span style='font-weight:bold;color:#D3171B'>{</span>
+                IProgr somF = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_SOM_F(10);
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    JAVASerialiseDeserialise.serialjava(somF, <span style='color:#2A00FF'>"question1\\testSomF.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la sauvegarde est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                IProgr somFRestore = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    somFRestore = JAVASerialiseDeserialise.deserialjava(<span style='color:#2A00FF'>"question1\\testSomF.ser"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Une erreur dans la restitution est survenue"</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                Contexte restoreM = somFRestore.getMem();
+        
+                VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(restoreM);
+                VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(restoreM);
+                VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+        
+                Instruction ast = somFRestore.getAST();
+                Contexte t = ast.accepter(vi);
+        
+                assertEquals(<span style='color:#2A00FF'>"{i=10, n=10, som=45}"</span>,  t.toString());
+                assertEquals(somF.getAST().accepter(vi).toString(), t.toString());
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>En reprenant la classe de tests vue en 1.2, on sérialise et désérialise au préalable puis on vérifie que les résultats obtenues sont conformes.</p>
+    
+    <br />
+    <hr />
+    <h3>Question 2.1</h3>
+    <QuestionSection>(Retour sur le TP6) : Ajouter les visiteurs JDOM pour 'Expression' , 'ExpressionBooléenne' et 'Instruction' permettant de générer le code XML pour les AST de programmes WhileL.</QuestionSection>
+    <p>Le visiteur JDOM pour "Expression" :</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> tp6.question1;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.*;
+        
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Element;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurJDOM <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurParDefaut&lt;Element&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> Contexte c;
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurJDOM(Contexte c) <span style='font-weight:bold;color:#D3171B'>{</span>
+                this.c = c;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Constante c) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element cst = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Constante"</span>);
+                cst.setText(Integer.toString(c.valeur()));
+                <span style='font-weight:bold;color:#7B0052;'>return</span> cst;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Variable v) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element varName = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Variable"</span>);
+                varName.setText(v.nom());
+                <span style='font-weight:bold;color:#7B0052;'>return</span> varName;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Division d) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element division = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Division"</span>);
+                division.addContent(d.op1.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                division.addContent(d.op2.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                <span style='font-weight:bold;color:#7B0052;'>return</span>  division;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Addition a) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element addition = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Addition"</span>);
+                addition.addContent(a.op1.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                addition.addContent(a.op2.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                <span style='font-weight:bold;color:#7B0052;'>return</span> addition;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Multiplication m) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element multiplication = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Multiplication"</span>);
+                multiplication.addContent(m.op1.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                multiplication.addContent(m.op2.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                <span style='font-weight:bold;color:#7B0052;'>return</span> multiplication;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Soustraction s) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element soustraction = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Soustraction"</span>);
+                soustraction.addContent(s.op1.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                soustraction.addContent(s.op2.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                <span style='font-weight:bold;color:#7B0052;'>return</span>  soustraction;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte contexte() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>return</span> c;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>Le visiteur JDOM pour ExpressionBooléenne :</p>
+        <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> tp6.question2;
+
+            <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.*;
+            <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Element;
+            
+            <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.VisiteurExpression;
+            
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurBoolJDOM <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurExpressionBooleenne&lt;Element&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;Element&gt; ve;
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurBoolJDOM(VisiteurExpression&lt;Element&gt; ve) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    this.ve = ve;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Vrai v)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element vrai = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Vrai"</span>);
+                    vrai.addContent(v.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> vrai;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Faux f)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element faux  = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Faux"</span>);
+                    faux.addContent(f.accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> faux;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Non n)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element non = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Non"</span>);
+                    non.addContent(n.bop().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> non;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Ou o)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element ou = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Ou"</span>);
+                    ou.addContent(o.bop1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                    ou.addContent(o.bop2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> ou;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Et e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element et = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Et"</span>);
+                    et.addContent(e.bop1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                    et.addContent(e.bop2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> et;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Sup s)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element sup = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Sup"</span>);
+                    sup.addContent(s.op1().accepter(this.ve));
+                    sup.addContent(s.op2().accepter(this.ve));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> sup;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Egal e)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element egal = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Egal"</span>);
+                    egal.addContent(e.op1().accepter(this.ve));
+                    egal.addContent(e.op2().accepter(this.ve));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> egal;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+                <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Inf i)<span style='font-weight:bold;color:#D3171B'>{</span>
+                    Element inf = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Inf"</span>);
+                    inf.addContent(i.op1().accepter(this.ve));
+                    inf.addContent(i.op2().accepter(this.ve));
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> inf;
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            
+            <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+            <p>Le visiteur JDOM pour instruction :</p>
+            <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> tp6.question3;
+
+                <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Element;
+                
+                <span style='font-weight:bold;color:#7B0052;'>import</span> org.junit.Assert;
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.Contexte;
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.VisiteurExpression;
+                <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.VisiteurExpressionBooleenne;
+                
+                <span style='color:#3F5FBF'>/**
+                 * Visiteur d'instruction, chaque classe concrète possède une implémentation de
+                 * la visite
+                 * 
+                 */</span>
+                <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> VisiteurInstJDOM <span style='font-weight:bold;color:#7B0052;'>extends</span> VisiteurInstruction&lt;Element&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpression&lt;Element&gt; vi;
+                    <span style='font-weight:bold;color:#7B0052;'>private</span> VisiteurExpressionBooleenne&lt;Element&gt; vb;
+                
+                    <span style='color:#3F5FBF'>/**
+                     * Création d'un visiteur d'instructions
+                     * 
+                     * @param vi
+                     *            le visiteur d'expressions arithmétiques
+                     * @param vb
+                     *            le visiteur d'expression booléennes
+                     */</span>
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> VisiteurInstJDOM(VisiteurExpression&lt;Element&gt; vi,
+                            VisiteurExpressionBooleenne&lt;Element&gt; vb) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        this.vi = vi;
+                        this.vb = vb;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='color:#3F5FBF'>/**
+                     * obtention du contexte,
+                     * 
+                     * @return le contexte ici de vi(le visiteur d'expression)
+                     */</span>
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Contexte contexte() <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> this.vi.contexte();
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Affectation a)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        Element affectation = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Affectation"</span>);
+                        affectation.addContent(a.v().accepter(this.vi));
+                        affectation.addContent(a.exp().accepter(this.vi));
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> affectation;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Sequence s)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        Element sequence = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Sequence"</span>);
+                        sequence.addContent(s.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                        sequence.addContent(s.i2().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> sequence;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Selection s)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        Element selection = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Selection"</span>);
+                        selection.addContent(s.cond().accepter(this.vb));
+                        selection.addContent(s.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> selection;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(TantQue t)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        Element tantque = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"TantQue"</span>);
+                        tantque.addContent(t.cond().accepter(this.vb));
+                        tantque.addContent(t.i1().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> tantque;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Pour p)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        Element pour = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Pour"</span>);
+                        pour.addContent(p.init().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                        pour.addContent(p.cond().accepter(this.vb));
+                        pour.addContent(p.inc().accepter(<span style='font-weight:bold;color:#7B0052;'>this</span>));
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> pour;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Afficher a)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        Element afficher = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Afficher"</span>);
+                        afficher.addContent(a.exp().accepter(this.vi));
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> afficher;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                    <span style='font-weight:bold;color:#7B0052;'>public</span> Element visite(Assertion a)<span style='font-weight:bold;color:#D3171B'>{</span>
+                        Element assertion = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Assertion"</span>);
+                        assertion.addContent(a.cond().accepter(this.vb));
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> assertion;
+                    <span style='font-weight:bold;color:#D3171B'>}</span>
+                
+                <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+                <p>En se basant sur le fonctionnement des visiteurs déjà vu dans les précédents TP (et fournis ici), on applique ce fonctionnement en retounant un Element (noeud XML) avec le contenu de la visite</p>
+    <br />
+    <hr />
+    <h3>Question 2.2</h3>
+    <QuestionSection>Construire la classe "boite à outils" SerialiseDeserialiseAST_XML</QuestionSection>
+
+    <p>La classe SerialiseDeserialiseAST_XML :</p>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question2;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Document;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.input.SAXBuilder;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.output.Format;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.output.XMLOutputter;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> question1.IProgr;
+        
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Element;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.VisiteurBoolJDOM;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.VisiteurExpressionBooleenne;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.VisiteurInstJDOM;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.VisiteurInstruction;
+        
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.File;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.FileOutputStream;
+        
+        <span style='color:#3F5FBF'>/**
+         * Décrivez votre classe SerialiseDeserialiseAST_XML ici.
+         *
+         * @author (votre nom)
+         * @version (un numéro de version ou une date)
+         */</span>
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> SerialiseDeserialiseAST_XML <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> serialAst2xml(IProgr p, String nomDuFichier) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                Contexte m = p.getMem();
+                VisiteurExpression&lt;Element&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurJDOM(m);
+                VisiteurExpressionBooleenne&lt;Element&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolJDOM(ve);
+                VisiteurInstruction&lt;Element&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstJDOM(ve, vb);
+        
+                Element racine = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"programme"</span>);
+                Document document = <span style='font-weight:bold;color:#7B0052;'>new</span> Document(racine);
+                racine.addContent(p.getAST().accepter(vi));
+                XMLOutputter out = <span style='font-weight:bold;color:#7B0052;'>new</span> XMLOutputter(Format.getPrettyFormat());
+                out.output(document, <span style='font-weight:bold;color:#7B0052;'>new</span> FileOutputStream(nomDuFichier));
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Element deserialXml(String nomDuFichier) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                SAXBuilder sxb = <span style='font-weight:bold;color:#7B0052;'>new</span> SAXBuilder();
+                Document document = sxb.build(<span style='font-weight:bold;color:#7B0052;'>new</span> File(nomDuFichier));
+                <span style='font-weight:bold;color:#7B0052;'>return</span> document.getRootElement();
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>Nous mettons ici en oeuvre nos visiteurs écrits en 2.1 pour écrire le fichier XML avec la procédure vue en cours.
+        <p>La méthode <code>deserialXml(String nomDuFichier)</code> retourne un Objet de type Element qui sera la racine de notre document XML avec tous les noeuds précédemment exportés.</p>
+        <p>Il va falloir par contre réaliser un traitement supplémentaire pour recréer notre Iprog ... Ce sera le but de la classe qui suit (la fameuse ... ) </p>
+
+
+    <br />
+    <hr />
+    <h3>Question 2.3</h3>
+    <QuestionSection>Dans la Classe XML2AST complétez la méthode statique  <code>public static Instruction xmlInst2ast(Contexte m, Element element)</code></QuestionSection>
+    
+    <p>Alors si il y a une question qui m'a fait faire une "presque" nuit blanche c'est bien celle-ci ...</p>
+    <p>En résumé voici ce que je pense de ma "réponse" :</p>
+    <img src="./tpImage/a8GpvLd_700b.jpg" alt="awfull code"/>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question2;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.lang.reflect.Method;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.Element;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.*;
+        
+        
+        <span style='color:#3F5FBF'>/**
+         * Décrivez votre classe XML2AST ici.
+         * version très naïve et complètement ignoble de l'exercice demandé.
+         *
+         * @author Alexandre Moro
+         * @version 28/12/2020
+         */</span>
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> XML2AST <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Queue&lt;Element&gt; listElt = <span style='font-weight:bold;color:#7B0052;'>new</span> LinkedList&lt;&gt;();
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Instruction instruction = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Instruction xmlInst2ast(Contexte m, Element element) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='color:#3F7F5F'>// Solution un peu violente pour ne pas traiter &lt;Programme/&gt;
+        </span>        XML2AST.XmlRecursive(element.getChildren().iterator());
+        
+                <span style='color:#3F7F5F'>// Nous devons retourner une Instruction, cette limite fait que nous n'avons pas
+        </span>        <span style='color:#3F7F5F'>// a tester quelle méthode entre toInst, toExp, toBool appeler en premier.
+        </span>        <span style='font-weight:bold;color:#7B0052;'>return</span> toInst(m);
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> XmlRecursive(Iterator&lt;Element&gt; list) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element element = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+        
+                <span style='font-weight:bold;color:#7B0052;'>while</span> (list.hasNext()) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    element = list.next();
+                    listElt.add(element);
+                    XmlRecursive(element.getChildren().iterator());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Instruction toInst(Contexte m) <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                Element current = listElt.poll();
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Sequence"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Sequence(toInst(m), toInst(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Affectation"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Affectation((Variable) toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Selection"</span>))<span style='font-weight:bold;color:#D3171B'>{</span>
+                    <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getChildren().size() == 3)
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Selection(toBool(m), toInst(m), toInst(m));
+                    <span style='font-weight:bold;color:#7B0052;'>else</span>
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Selection(toBool(m), toInst(m));
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"TantQue"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> TantQue(toBool(m), toInst(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Pour"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Pour(toInst(m), toBool(m), toInst(m), toInst(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Afficher"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Afficher(toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Assertion"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Assertion(toBool(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Expression toExpr(Contexte m) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element current = listElt.poll();
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Constante"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Constante(Integer.parseInt(current.getText()));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Variable"</span>)) <span style='font-weight:bold;color:#D3171B'>{</span>
+                        <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Variable(m, current.getText());
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Addition"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Addition(toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Soustraction"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Soustraction(toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Division"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Division(toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Multiplication"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Multiplication(toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> ExpressionBooleenne toBool(Contexte m) <span style='font-weight:bold;color:#D3171B'>{</span>
+                Element current = listElt.poll();
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Vrai"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Vrai();
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Faux"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Faux();
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Non"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Non(toBool(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Ou"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Ou(toBool(m), toBool(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Et"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Et(toBool(m), toBool(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Inf"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Inf(toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Egal"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Egal(toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (current.getName().equals(<span style='color:#2A00FF'>"Sup"</span>))
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Sup(toExpr(m), toExpr(m));
+        
+                <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+        
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+        <p>Alors comment dire ... (que j'ai honte) </br></p>
+        <ul>
+            <li> Dans un premier temps je "linéarise" la structure XML renvoyée par la désérialisation dans une structure de type FIFO.</li>
+            <li>Je traite ensuite cette structure à l'aide de la méthode .poll() qui me renvoi l'objet de type Element présent en tête de la structure</li>
+            <li>Puis je compare (naïvement) le contenu de Element qui contient le type encapsulé attendu (d'ou la chaine de if).</li>
+    </ul>
+    <p>Je "passe" le contexte a chaque appel pour être certains qu'une suite d'instructions malheureuses ne débouche sur un "null" si celui-ci est perdu.</p>
+    <p> Note programme commencera quoi qu'il arrive par une Instruction, donc nous n'avons pas besoin de faire une analyse préalable au premier appel. (un programme qui ne ferait qu'une affectation aurait peu de sens mais reste possible, et ne serait dans ce cas pas traité.) </p>
+    <p> La Sequence dispose de 2 constructeurs, il faut donc analyser le nombre de noeuds renvoyés par la méthode getChildren() pour sélectionner le bon</p>
+    <p> Cette classe limite la construction de la variable a celle sans constructeur par défaut, l'écriture d'une valeur ne pourra se faire que par Affectation</p>
+    <p>Cette solution est très fortement couplée et ne devrait servir que "d'analyse". Notre structure composites + visiteurs a pour but de rendre l'évolution simple et peu couteuse en modifications et au final cette classe est tout l'inverse du but que l'on cherche a atteindre.</p>
+
+    <p>J'avais en tête une méthode passant par l'introspection : à l'analyse de Element on appelle un Class.getForName(Element.getElement) et un getDeclaredMethod() renvoyait correctement vers le type attendu pour chaque paramètre (avec le package ou trouver la classe du type attendu, limitation de l'introspection + import que j'ai découverte en faisant de petits tests) , 
+        j'avais fait quelques essais qui donnait des résultats intéressants, mais je n'ai pas eu le temps de développer cette partie.</p>
+    <p>La fourniture d'une correction officielle de cette partie sera très appréciée, c'est une question qui m'a donné beacoup de mal (et 1 nuit très très courte).</p>
+    <p>NB: l'appel récursif par passage d'un type Iterator à été piquée sur StackOverflow, je trouve la solution mignonne et la conserve en note pour des usages futurs :)</p>
+    <br />
+    <hr />
+    <h3>Question 2.4</h3>
+    <QuestionSection>Vérifier par une classe de Test (Junit/BlueJ) que les évaluations de (1.2) et de nouvelles évaluations après sérialisation-XML et désérialisation-XML + reconstruction de l'AST donnent des résultats identiques. </QuestionSection>
+    <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='font-weight:bold;color:#7B0052;'>package</span> question2;
+
+        <span style='font-weight:bold;color:#7B0052;'>import</span> question1.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question1.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question2.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> tp6.question3.*;
+        
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.output.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> org.jdom.input.*;
+        
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.*;
+        <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.concurrent.ExecutionException;
+        
+        <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestXML2AST <span style='font-weight:bold;color:#7B0052;'>extends</span> junit.framework.TestCase <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> String nomDuFichier;
+        
+            <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>int</span> fact(<span style='font-weight:bold;color:#7B0052;'>int</span> n) <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>if</span> (n == 0)
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> 1;
+                <span style='font-weight:bold;color:#7B0052;'>else</span>
+                    <span style='font-weight:bold;color:#7B0052;'>return</span> n * fact(n - 1);
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setUp() <span style='font-weight:bold;color:#D3171B'>{</span>
+                nomDuFichier = <span style='color:#2A00FF'>"test_tp9q2_XML2AST.xml"</span>;
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> tearDown() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='color:#3F7F5F'>// try{new File(nomDuFichier).delete();}catch(Exception e){}
+        </span>    <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_XML2AST() <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                    SerialiseDeserialiseAST_XML.serialAst2xml(<span style='font-weight:bold;color:#7B0052;'>new</span> AST_Fact(10), nomDuFichier);
+                    Element astXML = SerialiseDeserialiseAST_XML.deserialXml(nomDuFichier);
+        
+                    Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    Instruction inst = XML2AST.xmlInst2ast(m, astXML);
+        
+                    m.ecrire(<span style='color:#2A00FF'>"n"</span>, 5);
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+                    inst.accepter(vi);
+        
+                    assertTrue(m + inst.accepter(vs) + <span style='color:#2A00FF'>" ne donne pas le résultat attendu ..."</span>, m.lire(<span style='color:#2A00FF'>"fact"</span>) == fact(5));
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"exception inattendue !!! : "</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_XML2ASTMult1() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    nomDuFichier = nomDuFichier + <span style='color:#2A00FF'>"mult1"</span>;
+                    SerialiseDeserialiseAST_XML.serialAst2xml(<span style='font-weight:bold;color:#7B0052;'>new</span> AST_Mult1(10, 3), nomDuFichier);
+                    Element astXMLMult1 = SerialiseDeserialiseAST_XML.deserialXml(nomDuFichier);
+        
+                    Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    Instruction inst = XML2AST.xmlInst2ast(m, astXMLMult1);
+        
+                    m.ecrire(<span style='color:#2A00FF'>"a"</span>, 10);
+                    m.ecrire(<span style='color:#2A00FF'>"b"</span>, 3);
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+                    inst.accepter(vi);
+        
+                    assertEquals(<span style='color:#2A00FF'>" mult1 ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"produit"</span>), question1.TestAST.mult1(10, 3));
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"exception inattendue !!! : "</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_XMLASTMult2() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    nomDuFichier = nomDuFichier + <span style='color:#2A00FF'>"mult2"</span>;
+                    SerialiseDeserialiseAST_XML.serialAst2xml(<span style='font-weight:bold;color:#7B0052;'>new</span> AST_Mult2(10, 4), nomDuFichier);
+                    Element astXMLMult2 = SerialiseDeserialiseAST_XML.deserialXml(nomDuFichier);
+        
+                    Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    Instruction inst = XML2AST.xmlInst2ast(m, astXMLMult2);
+        
+                    m.ecrire(<span style='color:#2A00FF'>"m1"</span>, 10);
+                    m.ecrire(<span style='color:#2A00FF'>"m2"</span>, 4);
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+                    inst.accepter(vi);
+        
+                    assertEquals(<span style='color:#2A00FF'>" mult2 ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"produit"</span>), question1.TestAST.mult2(10, 4));
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"exception inattendue !!! : "</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_XAMLASTSOM_W() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    nomDuFichier = nomDuFichier + <span style='color:#2A00FF'>"somW"</span>;
+                    SerialiseDeserialiseAST_XML.serialAst2xml(<span style='font-weight:bold;color:#7B0052;'>new</span> AST_SOM_W(10), nomDuFichier);
+                    Element astXMLSomW = SerialiseDeserialiseAST_XML.deserialXml(nomDuFichier);
+        
+                    Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    Instruction inst = XML2AST.xmlInst2ast(m, astXMLSomW);
+        
+                    m.ecrire(<span style='color:#2A00FF'>"n"</span>, 10);
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+                    inst.accepter(vi);
+        
+                    assertEquals(<span style='color:#2A00FF'>" mult2 ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"som"</span>), question1.TestAST.som_w(10));
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"exception inattendue !!! : "</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_XAMLASTSOM_F()<span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    nomDuFichier = nomDuFichier + <span style='color:#2A00FF'>"somF"</span>;
+                    SerialiseDeserialiseAST_XML.serialAst2xml(<span style='font-weight:bold;color:#7B0052;'>new</span> AST_SOM_F(10), nomDuFichier);
+                    Element astXMLSomF = SerialiseDeserialiseAST_XML.deserialXml(nomDuFichier);
+        
+                    Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    Instruction inst = XML2AST.xmlInst2ast(m, astXMLSomF);
+        
+                    m.ecrire(<span style='color:#2A00FF'>"n"</span>, 10);
+        
+                    VisiteurExpression&lt;Integer&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurEvaluation(m);
+                    VisiteurExpressionBooleenne&lt;Boolean&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolEvaluation(ve);
+                    VisiteurInstruction&lt;Contexte&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstEvaluation(ve, vb);
+        
+                    VisiteurExpression&lt;String&gt; ves = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInfixe(m);
+                    VisiteurExpressionBooleenne&lt;String&gt; vbs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolToString(ves);
+                    VisiteurInstruction&lt;String&gt; vs = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstToString(ves, vbs);
+                    inst.accepter(vi);
+        
+                    assertEquals(<span style='color:#2A00FF'>" mult2 ne donne pas le résultat attendu ..."</span>, (<span style='font-weight:bold;color:#7B0052;'>int</span>) m.lire(<span style='color:#2A00FF'>"som"</span>), question1.TestAST.som_f(10));
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"exception inattendue !!! : "</span> + e.getMessage());
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_VisiteurXml() <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                IProgr test = <span style='font-weight:bold;color:#7B0052;'>new</span> AST_Fact(2);
+        
+                VisiteurExpression&lt;Element&gt; ve = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurJDOM(m);
+                VisiteurExpressionBooleenne&lt;Element&gt; vb = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurBoolJDOM(ve);
+                VisiteurInstruction&lt;Element&gt; vi = <span style='font-weight:bold;color:#7B0052;'>new</span> VisiteurInstJDOM(ve, vb);
+        
+                Element racine = <span style='font-weight:bold;color:#7B0052;'>new</span> Element(<span style='color:#2A00FF'>"Programme"</span>);
+                Document document = <span style='font-weight:bold;color:#7B0052;'>new</span> Document(racine);
+                racine.addContent(test.getAST().accepter(vi));
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    XMLOutputter out = <span style='font-weight:bold;color:#7B0052;'>new</span> XMLOutputter(Format.getPrettyFormat());
+                    out.output(document, System.out);
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (IOException e) <span style='font-weight:bold;color:#D3171B'>{</span>
+                    fail(<span style='color:#2A00FF'>"Ahahah foutu !"</span>);
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+            <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> test_Parsing() <span style='font-weight:bold;color:#D3171B'>{</span>
+                <span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                    SerialiseDeserialiseAST_XML.serialAst2xml(<span style='font-weight:bold;color:#7B0052;'>new</span> AST_Fact(10), nomDuFichier);
+                    Element astXML = SerialiseDeserialiseAST_XML.deserialXml(nomDuFichier);
+        
+                    Contexte m = <span style='font-weight:bold;color:#7B0052;'>new</span> Memoire();
+                    XML2AST.xmlInst2ast(m, astXML);
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) <span style='font-weight:bold;color:#D3171B'>{</span>
+        
+                <span style='font-weight:bold;color:#D3171B'>}</span>
+            <span style='font-weight:bold;color:#D3171B'>}</span>
+        
+        <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+        <p>Parti confiant dans un premier temps, cette classe de test a prouvé par la suite que ma réponse à la question précédente était incomplète. 
+            Je m'étais basé sur l'exemple Fact pour la réaliser et les classes suivantes ont mis en lumière une insuffisance sur mon analyse de "Sequence" et une mauvaise interprétation de "Pour".</p>
+
+            <br />
+            <hr />
+            <h3>Question 3</h3>
+            <QuestionSection>Proposer une implémentation de la classe FileAuditeurDAO de votre choix, le patron DAO permet l'accès à une structure persistante constituée d'une liste d'auditeurs, à l'identique de la persistance en base de données.</QuestionSection>
+
+            <pre style='text-align: left; border: 1px dashed #008DEF; line-height: 18px; padding: 15px; font-size: 13px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='color:#3F5FBF'>/**
+                * Biblio :
+                * https://stackabuse.com/reading-and-writing-csvs-in-java/
+                */</span>
+               
+               
+               <span style='font-weight:bold;color:#7B0052;'>package</span> question3;
+               
+               
+               <span style='font-weight:bold;color:#7B0052;'>import</span> java.util.*;
+               <span style='font-weight:bold;color:#7B0052;'>import</span> java.io.*;
+               
+               
+               <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FileAuditeurDAO <span style='font-weight:bold;color:#7B0052;'>implements</span> DAO&lt;Auditeur, Integer&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>private</span> String fileName;
+                   <span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>int</span> lastId;
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> FileAuditeurDAO(<span style='font-weight:bold;color:#7B0052;'>final</span> String path, <span style='font-weight:bold;color:#7B0052;'>final</span> String fileName) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception<span style='font-weight:bold;color:#D3171B'>{</span>
+               
+                       File dir = <span style='font-weight:bold;color:#7B0052;'>new</span> File(path);
+                       <span style='font-weight:bold;color:#7B0052;'>if</span> (!dir.exists()) <span style='font-weight:bold;color:#D3171B'>{</span> <span style='color:#3F7F5F'>// si le répertoire n'existe pas (1 seul niveau)
+               </span>            dir.mkdir();
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+                       this.fileName = path + fileName;
+                       File f = <span style='font-weight:bold;color:#7B0052;'>new</span> File(this.fileName);
+                       <span style='font-weight:bold;color:#7B0052;'>if</span> (!(f.isFile())) <span style='font-weight:bold;color:#D3171B'>{</span> <span style='color:#3F7F5F'>// si le fichier n'existe pas
+               </span>            f.createNewFile();
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> FileAuditeurDAO(<span style='font-weight:bold;color:#7B0052;'>final</span> String fileName) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                       <span style='font-weight:bold;color:#7B0052;'>this</span>(<span style='color:#2A00FF'>"."</span> + File.separator, fileName);
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> create(Auditeur a) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                       String row;
+                       this.lastId = 0;
+                       String[] auditeurData;
+                       BufferedReader br = <span style='font-weight:bold;color:#7B0052;'>new</span> BufferedReader(<span style='font-weight:bold;color:#7B0052;'>new</span> FileReader(this.fileName));
+               
+               
+                       <span style='font-weight:bold;color:#7B0052;'>while</span> ((row = br.readLine()) != <span style='font-weight:bold;color:#7B0052;'>null</span>) <span style='font-weight:bold;color:#D3171B'>{</span>
+                           String[] data = row.split(<span style='color:#2A00FF'>";"</span>);
+                           this.lastId = Integer.parseInt(data[0]) + 1;
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                       br.close();
+               
+                       a.setId(this.lastId);
+                       auditeurData = <span style='font-weight:bold;color:#7B0052;'>new</span> String[]<span style='font-weight:bold;color:#D3171B'>{</span>
+                               String.valueOf(a.getId()),
+                               a.getNom(),
+                               a.getPrenom(),
+                               a.getEmail()
+                       <span style='font-weight:bold;color:#D3171B'>}</span>;
+                       BufferedWriter fw = <span style='font-weight:bold;color:#7B0052;'>new</span> BufferedWriter(<span style='font-weight:bold;color:#7B0052;'>new</span> FileWriter(this.fileName, <span style='font-weight:bold;color:#7B0052;'>true</span>));
+                       fw.append(String.join(<span style='color:#2A00FF'>";"</span>, auditeurData) + <span style='color:#2A00FF'>"\n"</span>);
+                       fw.close();
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> Auditeur retrieve(Integer id) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                       Auditeur a = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                       String line = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                       String[] data = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                       BufferedReader br = <span style='font-weight:bold;color:#7B0052;'>new</span> BufferedReader(<span style='font-weight:bold;color:#7B0052;'>new</span> FileReader(this.fileName));
+               
+                       <span style='font-weight:bold;color:#7B0052;'>while</span> ((line = br.readLine()) != <span style='font-weight:bold;color:#7B0052;'>null</span>) <span style='font-weight:bold;color:#D3171B'>{</span>
+                           data = line.split(<span style='color:#2A00FF'>";"</span>);
+                           <span style='font-weight:bold;color:#7B0052;'>if</span> (Integer.parseInt(data[0]) == id)
+                               <span style='font-weight:bold;color:#7B0052;'>break</span>;
+                           data = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                       br.close();
+               
+                       <span style='font-weight:bold;color:#7B0052;'>if</span> (data == <span style='font-weight:bold;color:#7B0052;'>null</span>)
+                           <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> NoSuchElementException();
+               
+                       <span style='font-weight:bold;color:#7B0052;'>if</span> (data != <span style='font-weight:bold;color:#7B0052;'>null</span>) <span style='font-weight:bold;color:#D3171B'>{</span>
+                           a = <span style='font-weight:bold;color:#7B0052;'>new</span> Auditeur(
+                                   data[1],
+                                   data[2],
+                                   data[3]);
+                           Integer.parseInt(data[0]);
+                           a.setId(Integer.parseInt(data[0]));
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+                       <span style='font-weight:bold;color:#7B0052;'>return</span> a;
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> List&lt;Auditeur&gt; findAll() <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                       String line;
+                       String[] data;
+                       Auditeur auditeur;
+                       List&lt;Auditeur&gt; auditeurs = <span style='font-weight:bold;color:#7B0052;'>new</span> ArrayList&lt;&gt;();
+                       BufferedReader br = <span style='font-weight:bold;color:#7B0052;'>new</span> BufferedReader(<span style='font-weight:bold;color:#7B0052;'>new</span> FileReader(fileName));
+               
+                       <span style='font-weight:bold;color:#7B0052;'>while</span> ((line = br.readLine()) != <span style='font-weight:bold;color:#7B0052;'>null</span>) <span style='font-weight:bold;color:#D3171B'>{</span>
+                           data = line.split(<span style='color:#2A00FF'>";"</span>);
+                           auditeur = <span style='font-weight:bold;color:#7B0052;'>new</span> Auditeur(
+                                   data[1],    <span style='color:#3F7F5F'>// Nom
+               </span>                    data[2],    <span style='color:#3F7F5F'>// prenom
+               </span>                    data[3]     <span style='color:#3F7F5F'>// email
+               </span>            );
+                           auditeur.setId(Integer.parseInt(data[0]));
+                           auditeurs.add(auditeur);
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                       br.close();
+               
+                       <span style='font-weight:bold;color:#7B0052;'>return</span> auditeurs;
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> update(Auditeur a) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                       BufferedReader br=<span style='font-weight:bold;color:#7B0052;'>new</span> BufferedReader(<span style='font-weight:bold;color:#7B0052;'>new</span> FileReader(this.fileName));
+                       StringBuffer sb=<span style='font-weight:bold;color:#7B0052;'>new</span> StringBuffer(<span style='color:#2A00FF'>""</span>);
+                       String line;
+                       String[] data;
+               
+                       <span style='font-weight:bold;color:#7B0052;'>while</span>((line=br.readLine())!=<span style='font-weight:bold;color:#7B0052;'>null</span>) <span style='font-weight:bold;color:#D3171B'>{</span>
+                           data = data = line.split(<span style='color:#2A00FF'>";"</span>);
+                           <span style='font-weight:bold;color:#7B0052;'>if</span> (Integer.parseInt(data[0]) == a.getId())<span style='font-weight:bold;color:#D3171B'>{</span>
+                               data[0] = String.valueOf(a.getId());
+                               data[1] = a.getNom();
+                               data[2] = a.getPrenom();
+                               data[3] = a.getEmail();
+                               sb.append(String.join(<span style='color:#2A00FF'>";"</span>, data) + <span style='color:#2A00FF'>"\n"</span>);
+                           <span style='font-weight:bold;color:#D3171B'>}</span> <span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+                               sb.append(line + <span style='color:#2A00FF'>"\n"</span>);
+                           <span style='font-weight:bold;color:#D3171B'>}</span>
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                       br.close();
+                       FileWriter fw=<span style='font-weight:bold;color:#7B0052;'>new</span> FileWriter(this.fileName);
+                       fw.write(sb.toString());
+                       fw.close();
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> delete(Integer id) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                       BufferedReader br=<span style='font-weight:bold;color:#7B0052;'>new</span> BufferedReader(<span style='font-weight:bold;color:#7B0052;'>new</span> FileReader(this.fileName));
+                       StringBuffer sb=<span style='font-weight:bold;color:#7B0052;'>new</span> StringBuffer(<span style='color:#2A00FF'>""</span>);
+                       String line = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+                       String[] data = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+               
+                       <span style='font-weight:bold;color:#7B0052;'>while</span>((line=br.readLine())!=<span style='font-weight:bold;color:#7B0052;'>null</span>) <span style='font-weight:bold;color:#D3171B'>{</span>
+                           data = line.split(<span style='color:#2A00FF'>";"</span>);
+                           <span style='font-weight:bold;color:#7B0052;'>if</span> (Integer.parseInt(data[0]) != id)
+                               sb.append(line+<span style='color:#2A00FF'>"\n"</span>);
+                       <span style='font-weight:bold;color:#D3171B'>}</span>
+                       br.close();
+               
+                       FileWriter fw=<span style='font-weight:bold;color:#7B0052;'>new</span> FileWriter(<span style='font-weight:bold;color:#7B0052;'>new</span> File(this.fileName));
+                       fw.write(sb.toString());
+                       fw.close();
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+                   <span style='font-weight:bold;color:#7B0052;'>public</span> List&lt;Auditeur&gt; filter(Criteria&lt;Auditeur&gt; criteria) <span style='font-weight:bold;color:#7B0052;'>throws</span> Exception <span style='font-weight:bold;color:#D3171B'>{</span>
+                       <span style='font-weight:bold;color:#7B0052;'>return</span> DAO.DAOUtils.filter(this, criteria);
+                   <span style='font-weight:bold;color:#D3171B'>}</span>
+               
+               <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+                         
+
+    <br />
+    <hr />
+    <h3>Conclusion, biliographie et remarques :</h3>
+
+    <p>Sacré TP ! Question 2.3 mis à part où j'ai réellement éprouvé de grosses difficultés, ce fut très agréable à réaliser et j'ai finalement appris pas mal de petites choses. </p>
+    <p>La queststion 3 fut d'ailleurs particulièrement sympathique et reposante après le run de la Q2 (j'y ai en tout cas pris beaucoup de plaisir).</p>
+
+    <p>Je continue de m'inquiéter du temps qu'il m'est nécessaire pour réaliser ces exercices, l'analyse de ce qui est attendu me prend beaucoup trop de temps.</br>
+    Si bien souvent la solution est finalement assez simple, je ne peux pas dire que cela me vienne "naturellement" ...</p>
+    <p>Revoir les visiteurs fut très apprécié, le WhileL ... un peu moins :D (même si au final c'est pas bien méchant), jouer avec les arbres XML fut aussi très instructif et plaisant mais on sent que la fatigue commence à être présente.</p>
+    <p>Je vous souhaite également à vous et à vos proches une très bonne et heureuse année 2021, fusse-t-elle moins "étonnante" et contraignante que celle écoulée. </p>
+
+    <QuestionSection>Bibliographie : </QuestionSection>
+    <p>
+    <a href="https://stackabuse.com/reading-and-writing-csvs-in-java/">https://stackabuse.com/reading-and-writing-csvs-in-java/ Reading and Writing CSVs in Java
+    </a>
+</br> et liens connexes, qui m'ont appris qu'en apparence simple, les fichiers csv peuvent se révéler piégeux :)
+    </p>
+    <p> 
+        <a href="http://www.jmdoudoux.fr/accueil_java.htm">http://www.jmdoudoux.fr/accueil_java.htm</a> </br>
+        Toute l'oeuvre d'un autre Jean Michel, Jean Michel Doudoux qui revient très très souvent pour les recherches francophones en Java et qui bien que "toufus" savent rester accessibles.
+    </p>
+</body>
+</html>

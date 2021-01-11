@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Adaptateur
+comment1.params=collection
+comment1.target=Adaptateur(java.util.Collection)
+comment2.params=
+comment2.target=Adaptateur()
+comment3.params=collection
+comment3.target=void\ setCollection(java.util.Collection)
+comment4.params=elt
+comment4.target=void\ empiler(java.lang.Object)
+comment5.params=
+comment5.target=java.lang.Object\ depiler()
+comment6.params=
+comment6.target=boolean\ estVide()
+numComments=7
