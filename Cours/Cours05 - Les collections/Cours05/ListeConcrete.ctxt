@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=ListeConcrete
-comment1.params=
-comment1.target=ListeConcrete()
-comment2.params=e
-comment2.target=boolean\ ajouter(java.lang.Object)
-comment3.params=
-comment3.target=java.util.Iterator\ iterator()
-numComments=4
