@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=PolygoneRegulier
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ PolygoneRegulier\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=nombreDeCote\ longueurDuCote
+comment1.target=PolygoneRegulier(int,\ int)
+comment2.params=
+comment2.target=int\ surface()
+comment3.params=x
+comment3.target=double\ cotg(double)
+numComments=4

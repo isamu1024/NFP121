@@ -26,7 +26,7 @@ public class Question4Test extends junit.framework.TestCase{
     
     // Visiteur<String> v = new VisiteurStringAvecSoustraction();
     // assertEquals("(33 - 2)", a.accepter(v));
-  // }
+  // }Visi
   
   public void testVisiteurEvaluation(){
       Expression a = new Addition(new Nombre(33),new Nombre(2));
