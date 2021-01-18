@@ -1,4 +1,4 @@
-package Observer.Exempletp;
+package Observer.ExempleTP;
 
 import java.util.ArrayList;
 import java.util.Observable;

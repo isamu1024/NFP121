@@ -1,4 +1,4 @@
-package Observer.Exempletp;
+package Observer.ExempleTP;
 
 public class TestDemo extends junit.framework.TestCase {
 
