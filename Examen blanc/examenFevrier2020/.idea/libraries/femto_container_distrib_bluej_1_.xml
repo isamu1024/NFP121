@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="femto_container_distrib_bluej(1)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/femto_container_distrib_bluej(1).jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/femto_container_distrib_bluej(1).jar!/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/femto_container_distrib_bluej(1).jar!/" />
+    </SOURCES>
+  </library>
+</component>

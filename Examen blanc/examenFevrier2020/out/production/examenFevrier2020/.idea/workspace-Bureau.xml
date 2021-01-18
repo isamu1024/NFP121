@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93b2f0b7-8a3d-4c63-97f9-1315c1d56d61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/Cours01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/NFP121_cours_01_introduction.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/Carre.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/Carre.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/Carre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/CarreTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/CarreTest.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/CarreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/PolygoneRegulier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/PolygoneRegulier.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/PolygoneRegulier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours01 - Introduction/cours1_demo/package.bluej" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours02 - Java/NFP121_cours_02_une_classe.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours02 - Java/NFP121_cours_02_une_classe.ppt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours03 - POO - introduction aux patrons/NFP121_cours_03_1_plusieurs_classes.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours03 - POO - introduction aux patrons/NFP121_cours_03_1_plusieurs_classes.ppt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours03 - POO - introduction aux patrons/NFP121_cours_03_2_introduction_aux_patrons.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours04 - Pattern MVC/NFP121_cours_04_2_swing_MVC.ppt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05 - Les collections.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/AbstractCollection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/AbstractCollection.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/AbstractCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/Collection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/Collection.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/ListeConcrete.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/ListeConcrete.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/ListeConcrete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/Cours05/package.bluej" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/NFP121_cours_05_1_les_collections.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours05 - Les collections La généricité/NFP121_cours_05_2_la_genericite.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours06 - Interpéteur - visiteur - composite/NFP121_cours_06_2_Memento_Command_Transaction.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours07 - introspection - injection de dépedance/NFP121_cours_07_1_introspection.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours07 - introspection - injection de dépedance/NFP121_cours_07_2_injection_de_dependance.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours08 - Décorateur/NFP121_cours_08_Decorateur.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours09 - Persistance XML DAO/NFP121_cours_09_Persistance_XML_DAO.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours11 - Patron Specification/NFP121_cours_10_design_pattern_variabilite.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Cours11 - Patron Specification/NFP121_cours_11_patron_specification_et_VIP.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Extras/extras_JVM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Extras/extras_NFP121_Junit3_Tests_Unitaires.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Extras/extras_designpatterns_cards.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Extras/extras_designpatternscard.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Cours/Extras/extras_junit3_tests.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/question1/Dest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Adaptateur/exempleCours/Adaptateur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Adaptateur/exempleCours/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Adaptateur/exempleCours/Plug.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Adaptateur/exempleCours/Prise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Adaptateur/exempleCours/PriseRCA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Factory/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Factory/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Factory/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Factory/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Factory/ShapeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Factory/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Proxy/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Proxy/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Proxy/ProxyImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Proxy/RealImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Singleton/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Synthese/src/Singleton/SingletonObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP/TP2/tp2/images/Thumbs.db" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1n4JGiuyAsiuWDYL39bzQ80NK9j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="JUnit.TestMailBoxWithNotification.testScenario2">
+    <configuration name="TestMailBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examenFevrier2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question1" />
+      <option name="MAIN_CLASS_NAME" value="question1.TestMailBox" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMailBoxWithNotification.testScenario1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examenFevrier2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question2" />
+      <option name="MAIN_CLASS_NAME" value="question2.TestMailBoxWithNotification" />
+      <option name="METHOD_NAME" value="testScenario1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMailBoxWithNotification.testScenario2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examenFevrier2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question2" />
+      <option name="MAIN_CLASS_NAME" value="question2.TestMailBoxWithNotification" />
+      <option name="METHOD_NAME" value="testScenario2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMailBox.testScenario1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examenFevrier2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question1" />
+      <option name="MAIN_CLASS_NAME" value="question1.TestMailBox" />
+      <option name="METHOD_NAME" value="testScenario1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMailBox.testScenario3_Equals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examenFevrier2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="question1" />
+      <option name="MAIN_CLASS_NAME" value="question1.TestMailBox" />
+      <option name="METHOD_NAME" value="testScenario3_Equals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMailBoxWithNotification.testScenario2" />
+        <item itemvalue="JUnit.TestMailBoxWithNotification.testScenario1" />
+        <item itemvalue="JUnit.TestMailBox" />
+        <item itemvalue="JUnit.TestMailBox.testScenario1" />
+        <item itemvalue="JUnit.TestMailBox.testScenario3_Equals" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93b2f0b7-8a3d-4c63-97f9-1315c1d56d61" name="Default Changelist" comment="" />
+      <created>1610643335443</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610643335443</updated>
+      <workItem from="1610643336627" duration="7286000" />
+      <workItem from="1610650700653" duration="3261000" />
+      <workItem from="1610655210615" duration="1276000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="465" height="466" key="DebuggerActiveHint" timestamp="1610653490117">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="465" height="466" key="DebuggerActiveHint/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653490117" />
+    <state x="1077" y="575" key="DetectedRootsChooserDialog" timestamp="1610645821348">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1077" y="575" key="DetectedRootsChooserDialog/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610645821348" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1610653989674">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989674" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1610653989674">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989674" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1610653989674">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989674" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1610653989674">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989674" />
+    <state width="2517" height="438" key="GridCell.Tab.1.bottom" timestamp="1610653989668">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="438" key="GridCell.Tab.1.bottom/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989668" />
+    <state width="2517" height="438" key="GridCell.Tab.1.center" timestamp="1610653989668">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="438" key="GridCell.Tab.1.center/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989668" />
+    <state width="2517" height="438" key="GridCell.Tab.1.left" timestamp="1610653989668">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="438" key="GridCell.Tab.1.left/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989668" />
+    <state width="2517" height="438" key="GridCell.Tab.1.right" timestamp="1610653989668">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="438" key="GridCell.Tab.1.right/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610653989668" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/question1/MailBox.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/question1/TestMailBox.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/question1/TestMailBox.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/question2/TestMailBoxWithNotification.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

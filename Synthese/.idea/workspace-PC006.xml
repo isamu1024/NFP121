@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4771de5-5d60-45b4-9f7b-14fbbdf7df9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/Cours01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/NFP121_cours_01_introduction.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/Carre.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/Carre.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/Carre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/CarreTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/CarreTest.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/CarreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/PolygoneRegulier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/PolygoneRegulier.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/PolygoneRegulier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours01 - Introduction/cours1_demo/package.bluej" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours02 - Java/NFP121_cours_02_une_classe.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours02 - Java/NFP121_cours_02_une_classe.ppt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours03 - POO - introduction aux patrons/NFP121_cours_03_1_plusieurs_classes.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours03 - POO - introduction aux patrons/NFP121_cours_03_1_plusieurs_classes.ppt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours03 - POO - introduction aux patrons/NFP121_cours_03_2_introduction_aux_patrons.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours04 - Pattern MVC/NFP121_cours_04_2_swing_MVC.ppt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05 - Les collections.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/AbstractCollection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/AbstractCollection.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/AbstractCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/Collection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/Collection.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/ListeConcrete.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/ListeConcrete.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/ListeConcrete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/Cours05/package.bluej" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/NFP121_cours_05_1_les_collections.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours05 - Les collections La généricité/NFP121_cours_05_2_la_genericite.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/NFP121_cours_06_2_Memento_Command_Transaction.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours07 - introspection - injection de dépedance/NFP121_cours_07_1_introspection.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours07 - introspection - injection de dépedance/NFP121_cours_07_2_injection_de_dependance.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours08 - Décorateur/NFP121_cours_08_Decorateur.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours09 - Persistance XML DAO/NFP121_cours_09_Persistance_XML_DAO.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours11 - Patron Specification/NFP121_cours_10_design_pattern_variabilite.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Cours11 - Patron Specification/NFP121_cours_11_patron_specification_et_VIP.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Extras/extras_JVM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Extras/extras_NFP121_Junit3_Tests_Unitaires.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Extras/extras_designpatterns_cards.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Extras/extras_designpatternscard.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cours/Extras/extras_junit3_tests.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen blanc/examenFevrier2020/question1/Dest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PatronSynthese/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/autreExemple/AdaptateurChevilleCarre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/autreExemple/ChevilleCarree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/autreExemple/ChevilleRonde.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/autreExemple/TrouRond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/exempleCours/Adaptateur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/exempleCours/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/exempleCours/Plug.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/exempleCours/Prise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Adaptateur/exempleCours/PriseRCA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ShapeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Proxy/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Proxy/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Proxy/ProxyImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Proxy/RealImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Singleton/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Singleton/SingletonObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP2/tp2/images/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/+libs/hsqldb1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/+libs/jdom.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/META-INF/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/META-INF/info.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/README.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/cobertura.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/annexe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/dao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/introduction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/preliminaire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/prerequis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question1_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question1_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question1_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question2_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question2_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question2_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question2_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question3_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question3_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question3_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question3_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question3_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question4_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question4_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question4_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question4_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question4_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question5_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question5_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question5_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question5_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/question5_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/ressources.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/images/tp9.ht123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Aff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Aff.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Aff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Fact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Fact.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Fact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Mult1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Mult1.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Mult1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Mult2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Mult2.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Mult2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Progr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Progr.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_Progr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_SOM_F.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_SOM_F.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_SOM_F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_SOM_W.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_SOM_W.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/AST_SOM_W.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/IProgr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/IProgr.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/IProgr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/JAVASerialiseDeserialise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/JAVASerialiseDeserialise.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/JAVASerialiseDeserialise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/TestDesSer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/TestDesSer.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/TestDesSer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/TestFactoriel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/TestFactoriel.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/TestFactoriel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question1/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/SerialiseDeserialiseAST_XML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/SerialiseDeserialiseAST_XML.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/SerialiseDeserialiseAST_XML.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/TestXML2AST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/TestXML2AST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/TestXML2AST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/Tests_serialAst2xml.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/Tests_serialAst2xml.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/Tests_serialAst2xml.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/XML2AST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/XML2AST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/XML2AST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question2/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/Auditeur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/Auditeur.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/Auditeur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/AuditeurDAOTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/AuditeurDAOTests$DAOFactoryTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/AuditeurDAOTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/AuditeurDAOTests.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/AuditeurDAOTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAO$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAO$DAOUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAOFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAOFactory.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DAOFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DBAuditeurDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DBAuditeurDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/DBAuditeurDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/FileAuditeurDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/FileAuditeurDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/FileAuditeurDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/TestFactoryDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/TestFactoryDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/TestFactoryDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/question3/tests/auditeurs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/submission.defs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Addition.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Addition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Binaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Binaire.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Binaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Constante.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Constante.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Constante.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Contexte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Contexte.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Contexte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Division.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Division.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Division.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Expression.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Expression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Memoire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Memoire.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Memoire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Multiplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Multiplication.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Multiplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Soustraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Soustraction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Soustraction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Variable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Variable.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/Variable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurEvaluation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurExpression.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurInfixe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurInfixe.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurInfixe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurJDOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurParDefaut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurParDefaut.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/VisiteurParDefaut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question1/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Egal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Egal.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Egal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Et.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Et.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Et.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/ExpressionBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/ExpressionBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/ExpressionBooleenne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Faux.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Faux.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Faux.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Inf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Inf.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Inf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Non.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Non.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Non.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/OperationBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/OperationBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/OperationBooleenne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Ou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Ou.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Ou.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Relation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Relation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Relation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Sup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Sup.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Sup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolEvaluation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolJDOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolToString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolToString.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurBoolToString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurExpressionBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurExpressionBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/VisiteurExpressionBooleenne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Vrai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Vrai.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/Vrai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question2/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Affectation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Affectation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Affectation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Afficher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Afficher.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Afficher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Assertion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Assertion.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Assertion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Boucle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Boucle.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Boucle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/BoucleFor2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/BoucleFor2.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/BoucleFor2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Instruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Instruction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Instruction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Iteration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Iteration.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Iteration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Mult .java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Pour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Pour.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Pour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Selection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Selection.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Selection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Sequence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Sequence.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Sequence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Somme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Somme.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/Somme.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/TantQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/TantQue.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/TantQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstEvaluation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstJDOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstToString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstToString.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstToString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstruction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/VisiteurInstruction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp6/question3/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/orig/tp9/tp9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/+libs/hsqldb1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/+libs/jdom.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/libraries/_libs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/libraries/junit_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/workspace-Bureau.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/.idea/workspace-PC006.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/META-INF/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/META-INF/info.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/README.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/auditeurs_base.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/auditeurs_base.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/auditeurs_base.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/auditeurs_base.script" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/cobertura.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/annexe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/dao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/introduction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/preliminaire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/prerequis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question1_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question1_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question1_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question2_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question2_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question2_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question2_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question3_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question3_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question3_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question3_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question3_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question4_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question4_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question4_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question4_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question4_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question5_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question5_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question5_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question5_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/question5_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/ressources.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/images/tp9.ht123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/junit-4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/+libs/hsqldb1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/+libs/jdom.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/libraries/_libs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/libraries/junit_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/workspace-Bureau.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/.idea/workspace-PC006.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/META-INF/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/META-INF/info.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/README.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/auditeurs_base.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/auditeurs_base.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/auditeurs_base.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/auditeurs_base.script" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/cobertura.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/annexe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/dao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/introduction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/preliminaire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/prerequis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question1_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question1_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question1_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question2_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question2_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question2_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question2_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question3_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question3_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question3_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question3_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question3_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question4_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question4_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question4_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question4_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question4_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question5_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question5_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question5_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question5_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/question5_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/ressources.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/images/tp9.ht123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/junit-4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Aff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Aff.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Fact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Fact.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Mult1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Mult1.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Mult2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Mult2.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Progr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_Progr.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_SOM_F.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_SOM_F.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_SOM_W.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/AST_SOM_W.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/IProgr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/IProgr.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/JAVASerialiseDeserialise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/JAVASerialiseDeserialise.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestAST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestAST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestDesSer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestDesSer.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestEvaluations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestEvaluations.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestFactoriel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestFactoriel.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestSer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/TestSer.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/testFact.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/testMult1.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/testMult2.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/testSerObject.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/testSomF.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question1/testSomW.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/SerialiseDeserialiseAST_XML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/SerialiseDeserialiseAST_XML.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/TestXML2AST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/TestXML2AST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/Tests_serialAst2xml.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/Tests_serialAst2xml.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/XML2AST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/XML2AST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question2/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/Auditeur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/Auditeur.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/AuditeurDAOTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/AuditeurDAOTests$DAOFactoryTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/AuditeurDAOTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/AuditeurDAOTests.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DAO$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DAO$DAOUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DAOFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DAOFactory.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DBAuditeurDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/DBAuditeurDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/FileAuditeurDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/FileAuditeurDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/TestFactoryDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/TestFactoryDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/question3/tests/auditeurs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/submission.defs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/submitter.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/test.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/test_tp9q2_Ast2xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/test_tp9q2_XML2AST.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/test_tp9q2_XML2AST.xmlmult1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/test_tp9q2_XML2AST.xmlmult2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/test_tp9q2_XML2AST.xmlsomF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/test_tp9q2_XML2AST.xmlsomW" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Addition.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Binaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Binaire.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Constante.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Constante.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Contexte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Contexte.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Division.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Division.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Expression.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Memoire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Memoire.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Multiplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Multiplication.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Soustraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Soustraction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Variable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/Variable.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurExpression.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurInfixe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurInfixe.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurParDefaut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/VisiteurParDefaut.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question1/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Egal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Egal.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Et.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Et.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/ExpressionBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/ExpressionBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Faux.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Faux.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Inf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Inf.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Non.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Non.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/OperationBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/OperationBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Ou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Ou.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Relation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Relation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Sup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Sup.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurBoolEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurBoolEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurBoolJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurBoolJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurBoolToString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurBoolToString.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurExpressionBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/VisiteurExpressionBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Vrai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/Vrai.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question2/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Affectation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Affectation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Afficher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Afficher.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Assertion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Assertion.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Boucle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Boucle.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/BoucleFor2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/BoucleFor2.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Instruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Instruction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Iteration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Iteration.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Mult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Mult.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Pour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Pour.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Selection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Selection.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Sequence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Sequence.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Somme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/Somme.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/TantQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/TantQue.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstToString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstToString.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/VisiteurInstruction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp6/question3/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tp9_question3/auditeurs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/out/production/tp9/tpImage/a8GpvLd_700b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Aff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Aff.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Aff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Fact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Fact.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Fact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Mult1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Mult1.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Mult1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Mult2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Mult2.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Mult2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Progr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Progr.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_Progr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_SOM_F.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_SOM_F.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_SOM_F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_SOM_W.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_SOM_W.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/AST_SOM_W.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/IProgr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/IProgr.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/IProgr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/JAVASerialiseDeserialise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/JAVASerialiseDeserialise.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/JAVASerialiseDeserialise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestAST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestAST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestAST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestDesSer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestDesSer.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestDesSer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestEvaluations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestEvaluations.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestEvaluations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestFactoriel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestFactoriel.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestFactoriel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestSer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestSer.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/TestSer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/testFact.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/testMult1.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/testMult2.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/testSerObject.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/testSomF.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question1/testSomW.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/SerialiseDeserialiseAST_XML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/SerialiseDeserialiseAST_XML.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/SerialiseDeserialiseAST_XML.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/TestXML2AST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/TestXML2AST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/TestXML2AST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/Tests_serialAst2xml.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/Tests_serialAst2xml.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/Tests_serialAst2xml.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/XML2AST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/XML2AST.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/XML2AST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question2/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/Auditeur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/Auditeur.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/Auditeur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/AuditeurDAOTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/AuditeurDAOTests$DAOFactoryTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/AuditeurDAOTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/AuditeurDAOTests.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/AuditeurDAOTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAO$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAO$DAOUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAOFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAOFactory.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DAOFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DBAuditeurDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DBAuditeurDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/DBAuditeurDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/FileAuditeurDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/FileAuditeurDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/FileAuditeurDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/TestFactoryDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/TestFactoryDAO.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/TestFactoryDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/question3/tests/auditeurs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/submission.defs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/submitter.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/test.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/test_tp9q2_Ast2xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/test_tp9q2_XML2AST.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/test_tp9q2_XML2AST.xmlmult1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/test_tp9q2_XML2AST.xmlmult2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/test_tp9q2_XML2AST.xmlsomF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/test_tp9q2_XML2AST.xmlsomW" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Addition.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Addition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Binaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Binaire.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Binaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Constante.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Constante.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Constante.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Contexte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Contexte.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Contexte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Division.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Division.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Division.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Expression.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Expression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Memoire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Memoire.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Memoire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Multiplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Multiplication.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Multiplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Soustraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Soustraction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Soustraction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Variable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Variable.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/Variable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurEvaluation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurExpression.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurInfixe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurInfixe.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurInfixe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurJDOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurParDefaut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurParDefaut.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/VisiteurParDefaut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question1/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Egal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Egal.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Egal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Et.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Et.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Et.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/ExpressionBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/ExpressionBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/ExpressionBooleenne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Faux.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Faux.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Faux.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Inf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Inf.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Inf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Non.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Non.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Non.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/OperationBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/OperationBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/OperationBooleenne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Ou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Ou.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Ou.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Relation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Relation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Relation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Sup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Sup.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Sup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolEvaluation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolJDOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolToString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolToString.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurBoolToString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurExpressionBooleenne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurExpressionBooleenne.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/VisiteurExpressionBooleenne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Vrai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Vrai.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/Vrai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question2/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Affectation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Affectation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Affectation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Afficher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Afficher.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Afficher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Assertion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Assertion.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Assertion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Boucle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Boucle.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Boucle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/BoucleFor2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/BoucleFor2.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/BoucleFor2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Instruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Instruction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Instruction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Iteration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Iteration.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Iteration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Mult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Mult.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Mult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Pour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Pour.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Pour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Selection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Selection.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Selection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Sequence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Sequence.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Sequence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Somme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Somme.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/Somme.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/TantQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/TantQue.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/TantQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstEvaluation.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstEvaluation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstJDOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstJDOM.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstJDOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstToString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstToString.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstToString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstruction.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/VisiteurInstruction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp6/question3/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tp9_question3/auditeurs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9 - back/tpImage/a8GpvLd_700b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP9/tp9/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP9/tp9/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1n1t2lDm21KmBKKUO9StRXPAf8l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Adaptateur.exempleCours" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Demo">
+    <configuration name="Demo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Singleton.Demo" />
+      <module name="Synthese" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Singleton.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Proxy.Demo" />
+      <module name="Synthese" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Proxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Factory.Demo" />
+      <module name="Synthese" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Adaptateur.exempleCours.Demo" />
+      <module name="Synthese" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Adaptateur.exempleCours.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Demo (2)" />
+        <item itemvalue="Application.Demo (1)" />
+        <item itemvalue="Application.Demo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4771de5-5d60-45b4-9f7b-14fbbdf7df9f" name="Default Changelist" comment="" />
+      <created>1610569219403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610569219403</updated>
+      <workItem from="1610569220469" duration="6190000" />
+      <workItem from="1610643319909" duration="7000" />
+      <workItem from="1610742870291" duration="366000" />
+      <workItem from="1610750510968" duration="449000" />
+      <workItem from="1610803534522" duration="3347000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="190" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1610806286472">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="190" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1610806286472" />
+    <state x="1049" y="476" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1610575304277">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1049" y="476" key="#com.intellij.ide.util.PackageChooserDialog/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610575304277" />
+    <state x="1102" y="591" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1610575306446">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1102" y="591" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610575306446" />
+    <state width="2185" height="351" key="GridCell.Tab.0.bottom" timestamp="1610575460534">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2185" height="351" key="GridCell.Tab.0.bottom/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610575460534" />
+    <state width="2185" height="351" key="GridCell.Tab.0.center" timestamp="1610575460534">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2185" height="351" key="GridCell.Tab.0.center/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610575460534" />
+    <state width="2185" height="351" key="GridCell.Tab.0.left" timestamp="1610575460534">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2185" height="351" key="GridCell.Tab.0.left/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610575460534" />
+    <state width="2185" height="351" key="GridCell.Tab.0.right" timestamp="1610575460534">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2185" height="351" key="GridCell.Tab.0.right/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610575460534" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1610750656116">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1610750656116" />
+  </component>
+</project>

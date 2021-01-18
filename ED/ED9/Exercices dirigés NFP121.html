@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0"><title>Exercices dirigés NFP121</title></head><body>
+
+<p align="left"><font size="4" color="#800080"><strong>Exercices dirigés </strong></font>
+<strong><font size="4" color="#800080">NFP121</font></strong></p>
+
+<hr>
+
+<blockquote>
+    <p><font size="4">Introspection :  </font></p>
+    <ul>
+      <li><font size="4">La liste des méthodes d'une classe,</font></li>
+      <li><font size="4">Un adaptateur et la classe à adapter issu d'un fichier 
+      de configuration,</font></li>
+      <li><font size="4">Le patron Visiteur re-visité.</font></li>
+    </ul>
+</blockquote>
+
+<hr>
+
+
+<p><font size="4">Les classes pour la question1 </font></p>
+
+
+<blockquote>
+
+
+<blockquote>
+
+
+<p>
+<img src="Exercices%20dirig%C3%A9s%20NFP121_fichiers/index_003.jpg" width="338" height="279" border="0"></p>
+
+
+<p>La classe Question1 : la classe à compléter<br>
+Les classes Entier, EntierPositif et Entier0 fournies ci-dessous</p>
+
+
+</blockquote>
+
+
+</blockquote>
+
+
+<p><font size="4">La méthode main de la classe Question1 permet d'afficher sur 
+la console, la liste de certaines méthodes d'une classe dont le nom est entré au 
+clavier.</font></p>
+
+
+<p><font size="4">Ainsi nous souhaitons obtenir : </font></p>
+
+
+<blockquote>
+  <ul>
+    <li><font size="4">La liste de toutes méthodes publiques accessibles depuis 
+    une classe,</font></li>
+    <li><font size="4">La liste de toutes méthodes accessibles depuis une classe,</font></li>
+    <li><font size="4">La liste des méthodes publiques redéfinies localement.</font></li>
+  </ul>
+</blockquote>
+
+
+<p><font size="4">Par exemple: console&gt; java Question1 <i>EntierPositif</i>, nous 
+aurons sur la console</font></p>
+
+
+<div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><b><font size="3">MethodesPubliquesLocalesEtHeritees</font></b>
+public Entier EntierPositif.copie()
+public EntierPositif EntierPositif.copie()
+public java.lang.String Entier.toString()
+public java.lang.String Entier.toString(int)
+public void Entier.setValeur(int)
+public int Entier.getValeur()
+public void Entier.inc(int)
+public final void java.lang.Object.wait() throws java.lang.InterruptedException
+public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+public boolean java.lang.Object.equals(java.lang.Object)
+public native int java.lang.Object.hashCode()
+public final native java.lang.Class&lt;?&gt; java.lang.Object.getClass()
+public final native void java.lang.Object.notify()
+public final native void java.lang.Object.notifyAll()
+
+<b><font size="3">ToutesLesMethodesAccessiblesDeCetteClasse</font></b>
+private void EntierPositif.plus1Bis()
+public Entier EntierPositif.copie()
+public EntierPositif EntierPositif.copie()
+
+<b><font size="3">LesMethodesRedefiniesLocalement</font></b>
+public EntierPositif EntierPositif.copie()
+</pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml -->
+
+
+<p><font size="4">Les classes Entier, EntierPositif et Entier0</font></p>
+
+
+<div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Entier{<br> <br>  <font color="#990044"><b>private</b></font> <font color="#ff0000"><b>int</b></font> valeur;<br>  <br>  <font color="#990044"><b>public</b></font> Entier(<font color="#ff0000"><b>int</b></font> valeur){<br>    this.valeur = valeur;<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> setValeur(<font color="#ff0000"><b>int</b></font> valeur){<br>    this.valeur = valeur;<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> inc(<font color="#ff0000"><b>int</b></font> inc){<br>    this.valeur = valeur + inc;<br>  }<br>  <br>  <font color="#990044"><b>private</b></font> <font color="#aa0000"><b>void</b></font> plus(<font color="#ff0000"><b>int</b></font> v){<br>    this.valeur = this.valeur + v;<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> Entier copie(){<br>    <font color="#990044"><b>return</b></font> <font color="#990044"><b>new</b></font> Entier(getValeur());<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#ff0000"><b>int</b></font> getValeur(){<br>    <font color="#990044"><b>return</b></font> this.valeur;<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> String toString(){<br>    <font color="#990044"><b>return</b></font> Integer.toString(valeur);<br>  }<br>  <font color="#990044"><b>public</b></font> String toString(<font color="#ff0000"><b>int</b></font> base){<br>    <font color="#990044"><b>return</b></font> Integer.toString(valeur,base);<br>  }<br>  <br>  <font color="#ff0000"><b>int</b></font> plus1(){<br>    <font color="#990044"><b>return</b></font> valeur+1;<br>  }<br>  <font color="#990044"><b>protected</b></font> <font color="#ff0000"><b>int</b></font> moins1(){<br>    <font color="#990044"><b>return</b></font> valeur-1;<br>  }<br>  <br>}</pre> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> EntierPosit<font color="#990044"><b>if</b></font> <font color="#aa0000"><b>extends</b></font> Entier{<br><br>    <font color="#990044"><b>public</b></font> EntierPosit<font color="#990044"><b>if</b></font>(<font color="#ff0000"><b>int</b></font> valeur){<br>      <font color="#990044"><b>super</b></font>(valeur);<br>      <font color="#990044"><b>if</b></font>(valeur&lt;0) <font color="#990044"><b>throw</b></font> <font color="#990044"><b>new</b></font> RuntimeException();  <br>    }<br><br>    <font color="#990044"><b>private</b></font> <font color="#aa0000"><b>void</b></font> plus1Bis(){<br>      setValeur(getValeur()+1);<br>    }<br>  <br>    <font color="#990044"><b>public</b></font> EntierPosit<font color="#990044"><b>if</b></font> copie(){<br>      <font color="#990044"><b>return</b></font> <font color="#990044"><b>new</b></font> EntierPosit<font color="#990044"><b>if</b></font>(getValeur()); <br>    }<br>}</pre> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Entier0 <font color="#aa0000"><b>extends</b></font> EntierPosit<font color="#990044"><b>if</b></font>{<br>    <font color="#990044"><b>public</b></font> Entier0(){<br>      <font color="#990044"><b>super</b></font>(0);<br>    }<br><br>  <font color="#990044"><b>public</b></font> Entier0 copie(){<br>    <font color="#990044"><b>return</b></font> <font color="#990044"><b>new</b></font> Entier0();<br>  }<br><br>}<br></pre> 
+</div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml -->
+
+<p><font size="4">QUESTION1: Compléter la classe Question1 ci-dessous, celle-ci 
+permet d'afficher sur la console les 
+méthodes publiques, héritées, redéfinies, etc... d'une classe. Le nom de la classe est saisi depuis la ligne de commande.</font></p>
+
+
+<div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><font color="#aa0000"><b>import</b></font> java.lang.reflect.*;<br><font color="#aa0000"><b>import</b></font> java.util.*;<br><br><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Question1{<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> <font color="#aa0000"><b>void</b></font> main(String[] args){<br>    <font color="#990044"><b>try</b></font>{<br>      Class&lt;?&gt; cl = Class.forName(args[0]);<br>      <font color="#777777"><i>// https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html#forName(java.lang.String)</i></font>
+      List&lt;Method&gt; l = null;
+      l = obtenirLesMethodesPubliquesLocalesEtHeritees(cl);
+      afficher(<font color="#00aa00">"MethodesPubliquesLocalesEtHeritees"</font>,l);<br>      <br>      l = obtenirToutesLesMethodesAccessiblesDeCetteClasse(cl);<br>      afficher(<font color="#00aa00">"ToutesLesMethodesAccessiblesDeCetteClasse"</font>,l);<br>      <br>      l = obtenirLesMethodesPubliquesRedefiniesLocalement(cl);<br>      afficher(<font color="#00aa00">"LesMethodesPubliquesRedefiniesLocalement"</font>,l);<br>      <br>      <br>    }<font color="#990044"><b>catch</b></font>(ExceptionInInitializerError e){<br>      System.out.println(<font color="#00aa00">"Exception: the initialization provoked by this method fails"</font>);<br>    }<font color="#990044"><b>catch</b></font>(LinkageError e){<br>      System.out.println(<font color="#00aa00">"Exception: the linkage fails"</font>);<br>    }<font color="#990044"><b>catch</b></font>(ClassNotFoundException e){<br>      System.out.println(<font color="#00aa00">"Exception: the class cannot be located"</font>);<br>    }<br>  }<br>     <br>  <font color="#990044"><b>private</b></font> <font color="#990044"><b>static</b></font> <font color="#aa0000"><b>void</b></font> afficher(String titre, List&lt;Method&gt; list){<br>    System.out.println(titre);<br>    <font color="#990044"><b>for</b></font>( Method m : list){<br>       System.out.println(m.toGenericString());<br>    }<br>    System.out.println();<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> List&lt;Method&gt; obtenirLesMethodesPubliquesLocalesEtHeritees(Class&lt;?&gt; cl){<br>    <font color="#990044"><b>return</b></font> null;<font size="4" color="#ff0000"> // à compléter, cf. Arrays.asList</font>
+  }
+  
+  <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> List&lt;Method&gt; obtenirToutesLesMethodesAccessiblesDeCetteClasse(Class&lt;?&gt; cl){<br>    <font color="#990044"><b>return</b></font> null;<font size="4" color="#ff0000"> // à compléter</font>
+  }
+  
+  <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> List&lt;Method&gt; obtenirLesMethodesPubliquesRedefiniesLocalement(Class&lt;?&gt; cl){<br><br>    <font color="#990044"><b>return</b></font> null;<font size="4" color="#ff0000"> // à compléter</font>
+  }
+  
+
+  
+  <font color="#777777"><i>// ------- methodes non vérifiées --------</i></font>
+  
+  <font color="#990044"><b>private</b></font> <font color="#990044"><b>static</b></font> <font color="#ff0000"><b>boolean</b></font> contient(List&lt;Method&gt; list, Method m){<br>    <font color="#990044"><b>for</b></font>( Method ms : list){<br>      <font color="#990044"><b>if</b></font> ((ms.getName().equals(m.getName())) &amp;&amp; <font color="#777777"><i>// meme nom</i></font>
+         <font color="#777777"><i>// modifier compatible ? a voir</i></font>
+         <font color="#777777"><i>//(m.getModifiers()==Modifier.PUBLIC) &amp;&amp;</i></font>
+         sameParameterType(ms,m) &amp;&amp; <font color="#777777"><i>// meme parametres</i></font>
+         sameReturnTypeWithCovariance(ms,m) <font color="#777777"><i>// meme type de retour incluant la covariance</i></font>
+         <font color="#777777"><i>//(ms.getReturnType()==m.getReturnType())</i></font>
+         )
+         <font color="#990044"><b>return</b></font> true;<br>    }<br>    <font color="#990044"><b>return</b></font> false;<br>  }<br>  <br><br>  <br>  <font color="#990044"><b>private</b></font> <font color="#990044"><b>static</b></font> <font color="#ff0000"><b>boolean</b></font> sameParameterType(Method me, Method m){<br>    Class&lt;?&gt;[] paramsMe = me.getParameterTypes();<br>    Class&lt;?&gt;[] paramsM  = m.getParameterTypes();<br>    <font color="#990044"><b>if</b></font>(paramsMe.length != paramsM.length) <font color="#990044"><b>return</b></font> false;<br>    <font color="#990044"><b>for</b></font>(<font color="#ff0000"><b>int</b></font> i = 0; i&lt; paramsMe.length; i++){<br>      <font color="#990044"><b>if</b></font>(paramsMe[i] !=  paramsM[i]) <font color="#990044"><b>return</b></font> false;<br>    }<br>    <font color="#990044"><b>return</b></font> true;<br>  }<br>  <br>  <font color="#990044"><b>private</b></font> <font color="#990044"><b>static</b></font> <font color="#ff0000"><b>boolean</b></font> sameReturnTypeWithCovariance(Method ms, Method m){<br><font size="4" color="#ff0000">// à compléter</font>
+    <font color="#990044"><b>return</b></font> false;<br>  }<br>  <br>  <font color="#990044"><b>private</b></font> <font color="#990044"><b>static</b></font> <font color="#ff0000"><b>boolean</b></font> sameReturnType(Method ms, Method m){<br>    <font color="#990044"><b>return</b></font> ms.getReturnType() == m.getReturnType();<br>  }<br>  <br>  <font color="#777777"><i>// ------- methodes pour les tests --------</i></font>
+  <font color="#990044"><b>public</b></font> <font color="#ff0000"><b>boolean</b></font> equals(Object obj){<br>    <font color="#990044"><b>return</b></font> false;<br>  }<br>  <font color="#990044"><b>public</b></font> <font color="#ff0000"><b>int</b></font> hashCode(){<br>    <font color="#990044"><b>return</b></font> 0;<br>  }<br>  @Override<br>  <font color="#990044"><b>public</b></font> Object clone(){<br>    <font color="#990044"><b>return</b></font> null;<br>  }</pre> 
+<pre>  <font color="#777777"><i>// ------- methodes utilitaires, cf. dont certaines sont extraites du web --------</i></font>
+  <font color="#990044"><b>private</b></font> <font color="#990044"><b>static</b></font> String methodName(){<br>    <font color="#777777"><i>// http://stackoverflow.com/questions/4065518/java-how-to-get-the-caller-function-name</i></font>
+    StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
+    StackTraceElement e = stacktrace[2];<font color="#777777"><i>//maybe this number needs to be corrected</i></font>
+    <font color="#990044"><b>return</b></font> e.getMethodName();<br>  }<br>}<br></pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --><p></p>
+
+<p>&nbsp;</p>
+
+<p><font size="4">QUESTION2: Lire les diapositives 39 et 40, tester le code de 
+la diapositive 53 ci-dessous</font></p>
+
+<p><font size="4">&nbsp;<a href="http://jfod.cnam.fr/NFP121/supports/extras_NFP121_Junit3_Tests_Unitaires.pdf">http://jfod.cnam.fr/NFP121/supports/extras_NFP121_Junit3_Tests_Unitaires.pdf</a></font></p>
+
+<div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre>  <font color="#0000ff"><i>/** Obtention de l'affichage produit par l'exécution de la méthode main d'une classe.<br>   * @param className le nom de la classe<br>   * @param args les arguments de la ligne de commande<br>   * @return le texte en tableau de lignes<br>   * @throws une exception est levée si la classe est inconnue<br>   */</i></font>
+  <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> String[] execStatic(String className, Object... args) <font color="#990044"><b>throws</b></font> Exception{<br>    java.io.PrintStream out = System.out;<br>    String[] consoleOut = null; <font color="#777777"><i>// ou new String[]{""};</i></font>
+    <font color="#990044"><b>try</b></font>{<br>      java.io.ByteArrayOutputStream baos = <font color="#990044"><b>new</b></font> java.io.ByteArrayOutputStream();<br>      java.io.PrintStream ps = <font color="#990044"><b>new</b></font> java.io.PrintStream(baos);<br>      Class&lt;?&gt; c = Class.forName(className);<br>      System.setOut(ps);<br>      c.getMethod(<font color="#00aa00">"main"</font>,String[].class).invoke(null, <font color="#990044"><b>new</b></font> Object[]{args});<br>      consoleOut = baos.toString().split(System.getProperty(<font color="#00aa00">"line.separator"</font>));<br>    }<font color="#990044"><b>finally</b></font>{<br>      System.setOut(out);<br>    }<br>    <font color="#990044"><b>return</b></font> consoleOut;<br>  }<br></pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --><p></p>
+
+<p><font size="4">&nbsp;</font></p>
+
+<p><font size="4">QUESTION3: Le patron Adaptateur, son instance est issue d'un fichier 
+de configuration cf. le cours 03_02</font></p>
+
+<blockquote>
+  <blockquote>
+
+<p><img src="Exercices%20dirig%C3%A9s%20NFP121_fichiers/index.gif" width="521" height="211" border="0"></p>
+
+  </blockquote>
+</blockquote>
+
+<p><font size="4">&nbsp;&nbsp;&nbsp; La construction d'un adaptateur nécessite de 
+transmettre une instance de la classe à adapter, cf. diapositives 40 à 43 de
+<a href="http://jfod.cnam.fr/NFP121/supports/NFP121_cours_03_2_introduction_aux_patrons.pdf">
+http://jfod.cnam.fr/NFP121/supports/NFP121_cours_03_2_introduction_aux_patrons.pdf</a>, </font></p>
+
+<p><font size="4">&nbsp;&nbsp;&nbsp; Nous souhaitons remplacer cette 
+configuration en langage Java par une configuration issue d'un fichier texte, 
+configuration que l'utilisateur peut modifier à loisirs, et surtout sans qu'il 
+soit nécessaire de faire appel au compilateur java, un simple éditeur de texte 
+fera l'affaire...</font></p>
+
+<blockquote>
+
+<blockquote>
+
+<p>
+<img src="Exercices%20dirig%C3%A9s%20NFP121_fichiers/index_002.jpg" width="348" height="219" border="0"></p>
+
+</blockquote>
+
+<p>&nbsp;<!-- DEBUT DE CODE JAVA - JavaVersHtml -->
+
+</p><p><font size="4">En Java, l'utilisateur Java doit créer un adaptateur en transmettant 
+une instance de la classe à adapter, </font></p><blockquote>
+
+<p><font size="4" color="#000080"><b>Prise prise = new Adaptateur(new PlugRCA());</b></font></p></blockquote>
+
+<p><font size="4">nous souhaitons remplacer la ligne ci-desus par</font></p><blockquote>
+
+<p><b><font size="4" color="#aa0000">Prise prise = (Prise)Configuration.genererAdaptateur("nomDuFichier.txt");</font></b></p></blockquote>
+
+<p><font size="4">A la place l'utilisateur précise simplement un nom de fichier 
+de type texte dans lequel sont précisés :</font></p><ol>
+  <li><font size="4">le nom de la classe de l'adaptateur</font></li>
+  <li><font size="4">le nom de la classe à adapter</font></li>
+  </ol>
+
+<p><font size="4">Le fichier de configuration contient au moins ces deux 
+lignes :</font></p><blockquote>
+
+<p>
+  <font size="4" face="Courier New"><b>classe_adaptateur</b>=<font color="#aa0000"><b>Adaptateur</b></font><br>
+  <b>classe_a_adapter</b>=<b><font color="#aa0000">PlugRCA</font></b></font></p></blockquote>
+
+<p><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le résultat obtenu est le même que l'exécution de </font><font size="4" color="#000080"><b>Prise prise = new Adaptateur(new PlugRCA());</b></font></p><p>
+  &nbsp;</p><p>
+  <font size="4">Si l'utilisateur souhaite changer de classes, il suffit 
+  simplement qu'il effectue une modification du fichier texte. Exemple un 
+  changement de la classe à adapter s'effectue en modifiant la 2ème ligne</font></p><blockquote>
+  <p>
+  <font size="4" face="Courier New"><b>classe_adaptateur</b>=<b>Adaptateur</b><br>
+  <b>classe_a_adapter</b>=<b><font color="#aa0000">NewPlugRCA</font></b></font></p><p>
+  <font size="4">Le résultat obtenu est le même que l'exécution de </font><font size="4" color="#000080"><b>Prise prise = new Adaptateur(new 
+  NewPlugRCA());</b></font></p></blockquote>
+<p><font size="4">Le client devient:</font></p><div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Client{<br><br>    <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> <font color="#aa0000"><b>void</b></font> main(String[] args) <font color="#990044"><b>throws</b></font> Exception{<br>      <font color="#777777"><i>//String nomDuFichier = "config.props";</i></font>
+      String nomDuFichier = <font color="#00aa00">"README.TXT"</font>; <font color="#777777"><i>// accès direct depuis bluej, icône document en haut à gauche</i></font>
+      Prise prise = (Prise)Configuration.genererAdaptateur(nomDuFichier);
+      prise.péritel();
+      
+    }
+}
+</pre> 
+</div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --><p></p>
+
+<p>&nbsp;<!-- DEBUT DE CODE JAVA - JavaVersHtml -->
+
+<!-- DEBUT DE CODE JAVA - JavaVersHtml -->
+<font size="4">La lecture d'un fichier texte de ce type s'effectue à l'aide des 
+méthodes issues de la classe
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Properties.html">Properties</a>. 
+Ce sont des méthodes de lecture de couples (clef,valeur) toutes prêtes, les 
+clefs sont uniques, la valeur est précisée sur la même ligne après le symbole 
+'=', ce sont des "String", en exemple:</font></p><blockquote>
+
+<p><font size="4">clef=valeur<br>
+</font>
+  <font size="4" face="Courier New"><b>classe_adaptateur</b>=<font color="#aa0000"><b>Adaptateur</b></font><br>
+  <b>classe_a_adapter</b>=<b><font color="#aa0000">PlugRCA</font></b></font></p></blockquote>
+<div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><font color="#aa0000"><b>import</b></font> java.util.*;<br><font color="#aa0000"><b>import</b></font> java.io.*;<br><font color="#aa0000"><b>import</b></font> java.lang.reflect.*;<br><br><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Configuration{<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> Object genererAdaptateur(String nomDuFichier) <font color="#990044"><b>throws</b></font> Exception{<br>    Properties props = <font color="#990044"><b>new</b></font> Properties();<br>    props.load(<font color="#990044"><b>new</b></font> FileInputStream(<font color="#990044"><b>new</b></font> File(nomDuFichier)));</pre> 
+<pre>    <i><b><font color="#0000ff">// lecture de la valeur associée à la propriété classe_adaptateur</font></b></i>
+    String adaptateurClassName = props.getProperty(<font color="#00aa00">"classe_adaptateur"</font>);<br>    String adaptateeClassName = props.getProperty(<font color="#00aa00">"classe_a_adapter"</font>);</pre> 
+<pre>    <br><b><font size="4" color="#ff0000">// à compléter</font></b>
+    </pre> 
+<pre>    Object adaptateur = null;<br>    <font color="#990044"><b>return</b></font> adaptateur;<br>  }<br>}<br></pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --></blockquote>
+
+<p><font size="4">&nbsp;<!-- DEBUT DE CODE JAVA - JavaVersHtml -->Les classes de l'exemple 
+issues du cours </font> </p><div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>interface</b></font> Prise{<br>  <font color="#aa0000"><b>void</b></font> peritel();<br>}</pre> 
+<pre>------------------------------------------------------</pre> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Adaptateur <font color="#aa0000"><b>implements</b></font> Prise{<br>  <font color="#990044"><b>public</b></font> Plug adaptee;<br>  <font color="#990044"><b>public</b></font> Adaptateur(Plug adaptee){<br>    this.adaptee = adaptee;<br>  }<br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> peritel(){<br>    adapté.RCA();<br>  }<br>}</pre> 
+<pre>------------------------------------------------------</pre> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>interface</b></font> Plug{<br>  <font color="#aa0000"><b>void</b></font> RCA();<br>}</pre> 
+<pre>------------------------------------------------------</pre> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> PlugRCA <font color="#aa0000"><b>implements</b></font> Plug{<br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> RCA(){<br>    System.out.println(<font color="#00aa00">"Plug RCA"</font>);<br>  }<br>}</pre> 
+<pre>------------------------------------------------------</pre> 
+<pre><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> NewPlugRCA <font color="#aa0000"><b>implements</b></font> Plug{<br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> RCA(){<br>    System.out.println(<font color="#00aa00">"New Plug RCA"</font>);<br>  }<br>}</pre> 
+<pre></pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --><p></p>
+ 
+
+<p><font size="4">Complétez la classe Configuration, proposez un nouvel 
+adaptateur et une nouvelle implémentation de l'interface Prise</font></p>
+ 
+
+<p><font size="4">La classe de Test qui pourrait aisément être complétée ...</font></p><p><!-- DEBUT DE CODE JAVA - JavaVersHtml -->
+</p><div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><font color="#aa0000"><b>import</b></font> java.io.*;<br><font color="#aa0000"><b>import</b></font> java.util.*;<br><font color="#aa0000"><b>import</b></font> java.lang.reflect.*;<br><br><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Question3Test <font color="#aa0000"><b>extends</b></font> junit.framework.TestCase{<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> <font color="#aa0000"><b>class</b></font> PriseFactice <font color="#aa0000"><b>implements</b></font> Plug{<br>    <font color="#990044"><b>private</b></font> <font color="#990044"><b>static</b></font> <font color="#ff0000"><b>int</b></font> nombre;<br>    <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> RCA(){<br>       nombre++;<br>    }<br>    <font color="#990044"><b>public</b></font> <font color="#990044"><b>static</b></font> <font color="#ff0000"><b>int</b></font> getNombre(){<br>      <font color="#990044"><b>return</b></font> nombre;<br>    }<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> testNouvellePriseRCA(){<br>    <font color="#990044"><b>try</b></font>{<br>      PrintWriter writer = <font color="#990044"><b>new</b></font> PrintWriter(<font color="#00aa00">"configTest.txt"</font>, <font color="#00aa00">"UTF-8"</font>);<br>      writer.println(<font color="#00aa00">"classe_adaptateur=Adaptateur"</font>);<br>      writer.println(<font color="#00aa00">"classe_a_adapter=Question3Test$PriseFactice"</font>);<br>      writer.close();<br>    }<font color="#990044"><b>catch</b></font> (Exception e) {<br>      fail(e.getMessage());<br>    }<br>    <font color="#990044"><b>try</b></font>{<br>      Prise prise = (Prise)Configuration.genererAdaptateur(<font color="#00aa00">"configTest.txt"</font>);<br>      assertNotNull(prise);<br>      prise.peritel();<br>      assertEquals(1, PriseFactice.getNombre());<br>    }<font color="#990044"><b>catch</b></font>(Exception e) {<br>      fail(e.getMessage());<br>    }<br>  }<br>}<br></pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml -->&nbsp;<!-- DEBUT DE CODE JAVA - JavaVersHtml -->
+<!-- DEBUT DE CODE JAVA - JavaVersHtml -->
+
+
+<p><font size="4">QUESTION4:&nbsp; Le patron Visiteur, revisité, reprendre l'exemple du cours</font></p>
+
+
+<blockquote>
+  <blockquote>
+
+
+<p><img src="Exercices%20dirig%C3%A9s%20NFP121_fichiers/index.jpg" width="522" height="256" border="0"></p>
+
+
+  </blockquote>
+</blockquote>
+
+
+<p><font size="4">&nbsp;&nbsp;&nbsp; La critique sur l'usage de ce patron réside 
+dans le fait qu'une nouvelle feuille concrète du composite engendre la 
+modification de tous les visiteurs préalablement créés, ce qui peut s'avérer 
+fastidieux.</font></p>
+
+
+<p><font size="4">&nbsp;&nbsp;&nbsp; cf. les transparents du cours, vérifiez cet 
+exemple</font></p>
+
+
+<div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"> 
+<pre><font color="#990044"><b>public</b></font> <font color="#990044"><b>abstract</b></font> <font color="#aa0000"><b>class</b></font> Expression{<br>  <font color="#990044"><b>public</b></font> &lt;T&gt; T accepter(Visiteur&lt;T&gt; v){<br>    <font color="#990044"><b>return</b></font> v.visite(this);<br>  }<br>}</pre> 
+<pre>------------------------------------------------------</pre> 
+<pre>public class Nombre extends Expression{<br>  private int valeur;<br>  public Nombre(int valeur){<br>    this.valeur = valeur;<br>  }<br>  public int getValeur(){<br>    return valeur;<br>  }<br>}</pre> 
+<pre>------------------------------------------------------<br><br>public abstract class Binaire extends Expression{<br>  private Expression op1, op2;<br>  public Binaire(Expression op1, Expression op2){<br>    this.op1 = op1;<br>    this.op2 = op2;<br>  }<br><br>  public Expression getOp1(){ return op1;}<br>  public Expression getOp2(){ return op2;}<br>}<br></pre> 
+<pre>------------------------------------------------------</pre> 
+<pre>public class Addition extends Binaire{<br><br>  public Addition(Expression op1, Expression op2){<br>    super(op1, op2);<br>  }<br><br>}<br></pre> 
+<pre>------------------------------------------------------</pre> 
+<pre>import java.lang.reflect.*;<br><br>public abstract class Visiteur&lt;T&gt;{<br>  public T visite(Expression expr){<br>    Class&lt;?&gt; cl = this.getClass();<br>    while(cl != Object.class){<br>    try{<br>      Method m = cl.getDeclaredMethod("visite",expr.getClass());<br>      return (T)m.invoke(this, expr);<br>    }catch(Exception e){<br>      cl = cl.getSuperclass();<br>    }<br>   }<br>   throw new UnsupportedOperationException();<br>  }<br>}</pre> 
+<pre>------------------------------------------------------</pre> 
+<pre>public class VisiteurString extends Visiteur&lt;String&gt;{<br><br>  public String visite(Nombre n){<br>    return Integer.toString(n.getValeur());<br>  }<br>}<br><br>------------------------------------------------------</pre> 
+<pre>public class VisiteurStringAvecAddition extends VisiteurString{<br><br>  public String visite(Addition a){<br>    return "(" + a.getOp1().accepter(this) + " + " + a.getOp2().accepter(this) + ")";<br>  }<br>}<br></pre></div>
+ <!-- FIN DE CODE JAVA - JavaVersHtml --><p></p>
+
+
+<p><font size="4">&nbsp;&nbsp;&nbsp; <!-- DEBUT DE CODE JAVA - JavaVersHtml -->
+</font></p><div style="border: 1px solid black; margin: 10px; padding: 10px; background: rgb(255, 255, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);"><font size="4"> 
+<pre><font color="#aa0000"><b><font size="2">import</font></b></font><font size="2"> java.io.*;<br><font color="#aa0000"><b>import</b></font> java.util.*;<br><font color="#aa0000"><b>import</b></font> java.lang.reflect.*;<br><br><font color="#990044"><b>public</b></font> <font color="#aa0000"><b>class</b></font> Question4Test <font color="#aa0000"><b>extends</b></font> junit.framework.TestCase{<br><br>  <br>  <br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> testVisiteurNombre(){<br>    Expression n = <font color="#990044"><b>new</b></font> Nombre(33);<br>    Visiteur&lt;String&gt; v = <font color="#990044"><b>new</b></font> VisiteurString();<br>    assertEquals(<font color="#00aa00">"33"</font>, n.accepter(v));<br>  }<br>  <br>  <font color="#990044"><b>public</b></font> <font color="#aa0000"><b>void</b></font> testVisiteurAddition(){<br>    Expression a = <font color="#990044"><b>new</b></font> Addition(<font color="#990044"><b>new</b></font> Nombre(33),<font color="#990044"><b>new</b></font> Nombre(2));<br>    Visiteur&lt;String&gt; v = <font color="#990044"><b>new</b></font> VisiteurStringAvecAddition();<br>    assertEquals(<font color="#00aa00">"(33 + 2)"</font>, a.accepter(v));<br>  }<br><br>  <br>}</font>
+</pre></font></div><font size="4">
+ <!-- FIN DE CODE JAVA - JavaVersHtml --></font><p></p>
+
+
+<p><font size="4"><br>
+</font></p>
+<p><font size="4">bibliographie :
+<a href="http://www.javaworld.com/article/2077602/learn-java/java-tip-98--reflect-on-the-visitor-design-pattern.html">
+http://www.javaworld.com/article/2077602/learn-java/java-tip-98--reflect-on-the-visitor-design-pattern.html</a></font></p>
+
+
+
+<p><font size="4">&nbsp;&nbsp;&nbsp; </font></p>
+
+
+<p><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ajoutez une nouvelle classe 
+concrète comme la Soustraction ...</font></p>
+
+
+<p>&nbsp;</p>
+
+
+<p><font size="4"><br>
+  /* Une <a href="http://lmi92.cnam.fr/nfp121/supports/podcast/ed09_27_11_2020_introspection_patrons_fabrique_visiteur/enonce/solution/">idée</a>...</font></p>
+
+
+
+</body></html>

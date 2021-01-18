@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Nombre
+comment1.params=valeur
+comment1.target=Nombre(int)
+comment2.params=v
+comment2.target=java.lang.Object\ accepter(Visiteur)
+comment3.params=
+comment3.target=int\ getValeur()
+numComments=4

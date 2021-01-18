@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11dec0e0-aba8-439b-9c29-6d822cd728a1" name="Default Changelist" comment="add revisions">
+      <change afterPath="$PROJECT_DIR$/../Synthese/Patron.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/Synthese.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/junit-4.10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/DecoMethode/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/DecoMethode/TestFile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/DecoMethode/UpperCaseInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleCours/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleCours/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleCours/I.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleCours/Texte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleCours/TexteDecore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleCours/TexteI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleTP/Beverage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleTP/Chocolate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleTP/CondimentDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleTP/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleTP/Espresso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Decorateur/ExempleTP/Milk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Memento/ExempleCours/Caretaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Memento/ExempleCours/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Memento/ExempleCours/NotePad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Observer/ExempleCours1/DemoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Observer/ExempleCours1/Observateur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Observer/ExempleCours1/ObservateurConcret.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Observer/ExempleCours1/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Synthese/src/Observer/ExempleCours1/SujetConcret.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/Cours06 - Interpéteur - visiteur - composite.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/NFP121_cours_06_1_Composite_Interpreteur_Visiteur.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/NFP121_cours_06_2_Memento_Command_Transaction.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Addition.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Addition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Binaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Binaire.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Binaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Client.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Composant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Composant.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Composant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Container.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Container.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Container.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Expression.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Expression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Label.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Label.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Label.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Nombre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Nombre.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Nombre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Panneau.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Panneau.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Panneau.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/README.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Visiteur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Visiteur.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/Visiteur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurCalcul.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurCalcul.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurCalcul.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurInfixe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurInfixe.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurInfixe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurInst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurInst.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurInst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurPile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurPile.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurPile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurPostfixe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurPostfixe.ctxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/VisiteurPostfixe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cours/Cours06 - Interpéteur - visiteur - composite/cours/package.bluej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/question1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/question1/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/question3/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/question3/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/question4/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../ED/ED9/NFP121_ED9_nov20/question4/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question1/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question1/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question1/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question2/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question2/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question2/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question2/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question3/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question3/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question3/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/tp_commit/question3/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP6/tp6/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP6/tp6/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP6/tp6/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP6/tp6/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP6/tp6/question1/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP6/tp6/question1/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP6/tp6/question1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP6/tp6/question1/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/decorateurHtmlVuEnCours/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/decorateurHtmlVuEnCours/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/question1/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/question1/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/question1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/out/production/tp8/question1/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/question1/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/question1/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/question1/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/question1/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/question2/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/question2/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/question2/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/question2/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/question3/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/question3/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/question4/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/question4/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP8/tp8/question4/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP8/tp8/question4/package.bluej" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1mzBvc6ZZHa4ICZh0S7h7RUVaex" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11dec0e0-aba8-439b-9c29-6d822cd728a1" name="Default Changelist" comment="" />
+      <created>1610486774526</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610486774526</updated>
+      <workItem from="1610486778102" duration="2321000" />
+      <workItem from="1610659499474" duration="127000" />
+      <workItem from="1611007355620" duration="20000" />
+    </task>
+    <task id="LOCAL-00001" summary="add revisions">
+      <created>1610487597369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610487597369</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add revisions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add revisions" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="277" y="169" key="Vcs.Push.Dialog.v2" timestamp="1610490419287">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="277" y="169" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1610490419287" />
+  </component>
+</project>
