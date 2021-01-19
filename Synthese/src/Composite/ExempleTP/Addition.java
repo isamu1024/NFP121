@@ -1,4 +1,4 @@
-package Composite;
+package Composite.ExempleTP;
 
 public class Addition extends Binaire{
 

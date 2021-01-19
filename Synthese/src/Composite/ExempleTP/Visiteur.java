@@ -1,4 +1,4 @@
-package Composite;
+package Composite.ExempleTP;
 
 import java.lang.reflect.Method;
 

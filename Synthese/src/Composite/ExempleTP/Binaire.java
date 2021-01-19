@@ -1,4 +1,4 @@
-package Composite;
+package Composite.ExempleTP;
 
 public class Binaire extends Expression {
     private Expression op1, op2;
