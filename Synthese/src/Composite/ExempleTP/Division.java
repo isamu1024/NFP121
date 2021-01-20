@@ -1,9 +1,0 @@
-package Composite.ExempleTP;
-
-public class Division extends Binaire {
-
-    public Division(Expression op1, Expression op2) {
-        super(op1, op2);
-    }
-
-}
