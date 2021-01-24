@@ -51,7 +51,7 @@ public abstract class TemperatureVue implements Observer {
     public double getDisplay() {
         double result = 0.0;
         try {
-            result = Double.valueOf(display.getText()).doubleValue();
+            result = Double.parseDouble(display.getText());
         } catch (NumberFormatException e) {
         }
         return result;
