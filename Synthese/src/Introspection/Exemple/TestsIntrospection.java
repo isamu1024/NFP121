@@ -25,7 +25,6 @@ public class TestsIntrospection extends junit.framework.TestCase {
             }
 
             Integer[] args = {1};
-
             Object number =  method.invoke( o, args);
 
             assertTrue(number instanceof String);
