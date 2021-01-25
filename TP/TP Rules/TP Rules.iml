@@ -7,6 +7,22 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="tp_rules1" level="project" />
+    <orderEntry type="library" name="NFP121_ed_xml_a_completer" level="project" />
+    <orderEntry type="library" name="femto_container_distrib_bluej2" level="project" />
+    <orderEntry type="library" name="examenFevrier20201" level="project" />
+    <orderEntry type="library" name="tp_rules" level="project" />
+    <orderEntry type="library" name="jdom2" level="project" />
+    <orderEntry type="library" name="tp_commit1" level="project" />
+    <orderEntry type="library" name="jdom1" level="project" />
     <orderEntry type="library" name="femto_container_distrib_bluej" level="project" />
+    <orderEntry type="library" name="jdom" level="project" />
+    <orderEntry type="library" name="Synthese" level="project" />
+    <orderEntry type="library" name="examenFevrier2020" level="project" />
+    <orderEntry type="library" name="femto_container_distrib_bluej1" level="project" />
+    <orderEntry type="library" name="TP8" level="project" />
+    <orderEntry type="library" name="+libs1" level="project" />
+    <orderEntry type="library" name="+libs" level="project" />
+    <orderEntry type="module" module-name="TP8" />
   </component>
 </module>

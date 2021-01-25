@@ -7,9 +7,19 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="randoop-4.0.4" level="project" />
+    <orderEntry type="library" name="tp_rules1" level="project" />
+    <orderEntry type="library" name="tp81" level="project" />
+    <orderEntry type="library" name="examenFevrier20201" level="project" />
+    <orderEntry type="library" name="tp_commit" level="project" />
+    <orderEntry type="library" name="tp_rules" level="project" />
     <orderEntry type="library" name="tp_commit2" level="project" />
-    <orderEntry type="library" name="tp_commit1" level="project" />
+    <orderEntry type="library" name="tp8" level="project" />
+    <orderEntry type="library" name="tp72" level="project" />
+    <orderEntry type="library" name="Synthese" level="project" />
+    <orderEntry type="library" name="junit-4.10" level="project" />
+    <orderEntry type="library" name="examenFevrier2020" level="project" />
+    <orderEntry type="library" name="tp73" level="project" />
+    <orderEntry type="library" name="junit-4.12" level="project" />
+    <orderEntry type="library" name="junit-4.101" level="project" />
   </component>
 </module>
