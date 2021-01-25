@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="tp_rules1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TP/TP Rules/tp_rules/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP/TP Rules/tp_rules/femto_container_distrib_bluej.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP/TP Rules/tp_rules/junit-4.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

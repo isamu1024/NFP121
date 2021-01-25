@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=OperationPros
+comment1.params=op\u00E9rande
+comment1.target=void\ setOp\u00E9rande(int)
+comment2.params=message
+comment2.target=void\ setMessage(java.lang.String)
+comment3.params=entite\ personne
+comment3.target=Personne\ execute(Personne,\ Personne)
+numComments=4

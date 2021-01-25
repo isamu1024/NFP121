@@ -1,0 +1,27 @@
+[
+	{	"id":"client",
+		"class":"proxy.Client",
+		"property.1":"requete",
+		"property.1.param.1":"proxy1"
+	},
+	{	"id":"proxy",
+		"class":"proxy.Proxy",
+		"property.1":"requete",
+		"property.1.param.1":"reel",
+		"property.2":"filtre",
+		"property.2.param.1":".cnam.fr"
+	},
+	{	"id":"proxy1",
+		"class":"proxy.Proxy",
+		"property.1":"requete",
+		"property.1.param.1":"reel",
+		"property.2":"filtre",
+		"property.2.param.1":".fr"
+	},
+	{	"id":"reel",
+		"class":"proxy.Reel"
+	},
+	{	"verbose":true
+	}
+
+]

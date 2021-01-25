@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="tp73">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TP/TP7/tp7/junit-4.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP/TP7/tp7/tp7q3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP/TP7/tp7/calculette.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP/TP7/tp7/smiley.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,61 @@
+[
+	{ "id":"nombre1",
+	  "class":"observer.Nombre",
+	  "property.1":"valeur",
+	  "property.1.param.1":7,
+	  "property.2":"observer",
+	  "property.2.param.1":"observateur1",
+	  "property.3":"observer",
+	  "property.3.param.1":"observateur2"
+	},
+	{ "id":"observateur1",
+	  "class":"observer.NombreObserver",
+	  "property.1":"nom",
+	  "property.1.param.1":"obs_1"
+	},
+	{ "id":"observateur2",
+	  "class":"observer.NombreObserver",
+	  "property.1":"nom",
+	  "property.1.param.1":"obs_2"
+	},
+	{ "id":"conditionEstPair",
+	  "class":"observer.ConditionEstPair"
+	},
+	{ "id":"conditionToujoursVrai",
+	  "class":"conditions.VRAI"
+	},
+	{ "id":"operationPlus1",
+	  "class":"observer.OperationPlus",
+	  "property.1":"operande",
+	  "property.1.param.1":1
+	},
+	{ "id":"operationPlus2",
+	  "class":"observer.OperationPlus",
+	  "property.1":"operande",
+	  "property.1.param.1":2
+	},
+	{ "id":"CommandePlus1",
+	  "class":"observer.CommandeNombre",
+	  "property.1":"operation",
+	  "property.1.param.1":"operationPlus1",
+	  "property.2":"condition",
+	  "property.2.param.1":"conditionEstPair"
+	},
+	{ "id":"plus",
+	  "class":"observer.CommandeNombre",
+	  "property.1":"operation",
+	  "property.1.param.1":"operationPlus1",
+	  "property.2":"condition",
+	  "property.2.param.1":"conditionToujoursVrai"
+	},
+	{ "id":"CommandePlus2",
+	  "class":"observer.CommandeNombre",
+	  "property.1":"operation",
+	  "property.1.param.1":"operationPlus2",
+	  "property.2":"condition",
+	  "property.2.param.1":"conditionEstPair"
+	},	
+	{
+		"verbose":true
+	}
+]

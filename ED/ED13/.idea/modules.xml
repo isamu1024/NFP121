@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ED13.iml" filepath="$PROJECT_DIR$/.idea/ED13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/META-INF/maven/org.glassfish/javax.json/javax.json (1).iml" filepath="$PROJECT_DIR$/META-INF/maven/org.glassfish/javax.json/javax.json (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/META-INF/maven/org.glassfish/javax.json/javax.json (2) (org.glassfish).iml" filepath="$PROJECT_DIR$/META-INF/maven/org.glassfish/javax.json/javax.json (2) (org.glassfish).iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Action
+comment1.params=discount
+comment1.target=void\ setDiscount(int)
+comment2.params=c\ customer
+comment2.target=Customer\ execute(Customer,\ Customer)
+numComments=3

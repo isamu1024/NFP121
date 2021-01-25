@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=CommandeNombre
+comment1.params=nombre\ resultat
+comment1.target=void\ execute(Nombre,\ Resultat)
+numComments=2

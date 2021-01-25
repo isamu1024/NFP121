@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=OperationPlus
+comment1.params=operande
+comment1.target=void\ setOperande(int)
+comment2.params=n\ r
+comment2.target=void\ execute(Nombre,\ Resultat)
+numComments=3

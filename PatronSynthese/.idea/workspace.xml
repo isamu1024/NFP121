@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11dec0e0-aba8-439b-9c29-6d822cd728a1" name="Default Changelist" comment="add revisions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ED/ED7/ED7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ED/ED7/ED7.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Synthese/Synthese.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Synthese/Synthese.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Commit/TP Commit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Commit/TP Commit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Rules/TP Rules.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Rules/TP Rules.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP2/TP2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP2/TP2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP6/BK/BK.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP6/BK/BK.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP6/TP6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP6/TP6.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +66,7 @@
       <workItem from="1611007355620" duration="20000" />
       <workItem from="1611008702430" duration="7000" />
       <workItem from="1611008983270" duration="9000" />
+      <workItem from="1611585074552" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="add revisions">
       <created>1610487597369</created>

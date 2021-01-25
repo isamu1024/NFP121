@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="+libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TP/TP9/tp9/out/production/tp9/+libs/hsqldb1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP/TP9/tp9/out/production/tp9/+libs/jdom.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

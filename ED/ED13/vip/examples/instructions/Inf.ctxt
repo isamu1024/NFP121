@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Inf
+comment1.params=element
+comment1.target=void\ setElement(Element)
+comment2.params=e
+comment2.target=boolean\ isSatisfied(Element)
+numComments=3

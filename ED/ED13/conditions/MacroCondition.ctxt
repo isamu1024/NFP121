@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=MacroCondition
+comment1.params=conditions
+comment1.target=void\ setConditions(Condition[])
+numComments=2

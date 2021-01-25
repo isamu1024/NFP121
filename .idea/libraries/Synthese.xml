@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Synthese">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Synthese/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Synthese/junit-4.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

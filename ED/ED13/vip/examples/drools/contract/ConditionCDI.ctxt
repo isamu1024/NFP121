@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=ConditionCDI
+comment1.params=p
+comment1.target=boolean\ isSatisfied(vip_exemples.drools.contract.Personne)
+numComments=2

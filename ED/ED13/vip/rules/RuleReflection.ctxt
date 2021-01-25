@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=RuleReflection
+comment1.params=condition
+comment1.target=void\ setCondition(java.lang.String)
+comment2.params=
+comment2.target=ICondition\ getCondition()
+comment3.params=command
+comment3.target=void\ setCommand(java.lang.String)
+comment4.params=
+comment4.target=ICommand\ getCommand()
+comment5.params=context\ result
+comment5.target=java.lang.Object\ execute(java.lang.Object,\ java.lang.Object)
+numComments=6

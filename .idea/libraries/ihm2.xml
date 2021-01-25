@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ihm2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TP/TP3/tp3/ihm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

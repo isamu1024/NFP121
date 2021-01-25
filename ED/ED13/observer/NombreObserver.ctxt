@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=NombreObserver
+comment1.params=nom
+comment1.target=void\ setNom(java.lang.String)
+comment2.params=
+comment2.target=java.util.Observable\ getSource()
+comment3.params=src\ o
+comment3.target=void\ update(java.util.Observable,\ java.lang.Object)
+numComments=4

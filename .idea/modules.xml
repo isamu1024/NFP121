@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TP/TP6/BK/BK.iml" filepath="$PROJECT_DIR$/TP/TP6/BK/BK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP7/BK/BK1.iml" filepath="$PROJECT_DIR$/TP/TP7/BK/BK1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cours/Cours.iml" filepath="$PROJECT_DIR$/Cours/Cours.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cours/Cours01 - Introduction/Cours01 - Introduction.iml" filepath="$PROJECT_DIR$/Cours/Cours01 - Introduction/Cours01 - Introduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cours/Cours05 - Les collections La généricité/Cours05 - Les collections La généricité.iml" filepath="$PROJECT_DIR$/Cours/Cours05 - Les collections La généricité/Cours05 - Les collections La généricité.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cours/Cours06 - Interpéteur - visiteur - composite/Cours06 - Interpéteur - visiteur - composite.iml" filepath="$PROJECT_DIR$/Cours/Cours06 - Interpéteur - visiteur - composite/Cours06 - Interpéteur - visiteur - composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cours/Cours06 - Interpéteur - visiteur - composite - Memento - Command - Transaction/Cours06 - Interpéteur - visiteur - composite - Memento - Command - Transaction.iml" filepath="$PROJECT_DIR$/Cours/Cours06 - Interpéteur - visiteur - composite - Memento - Command - Transaction/Cours06 - Interpéteur - visiteur - composite - Memento - Command - Transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cours/Cours08 - Décorateur/Cours08 - Décorateur.iml" filepath="$PROJECT_DIR$/Cours/Cours08 - Décorateur/Cours08 - Décorateur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED.iml" filepath="$PROJECT_DIR$/ED/ED.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED10/ED10.iml" filepath="$PROJECT_DIR$/ED/ED10/ED10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED12/ED12.iml" filepath="$PROJECT_DIR$/ED/ED12/ED12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED4/ED4.iml" filepath="$PROJECT_DIR$/ED/ED4/ED4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED6/ED6.iml" filepath="$PROJECT_DIR$/ED/ED6/ED6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED7/ED7.iml" filepath="$PROJECT_DIR$/ED/ED7/ED7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED8/ED8.iml" filepath="$PROJECT_DIR$/ED/ED8/ED8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ED/ED9/ED9.iml" filepath="$PROJECT_DIR$/ED/ED9/ED9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Examen blanc/Examen blanc.iml" filepath="$PROJECT_DIR$/Examen blanc/Examen blanc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NFP121.iml" filepath="$PROJECT_DIR$/.idea/NFP121.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP8/Original/Original.iml" filepath="$PROJECT_DIR$/TP/TP8/Original/Original.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Synthese/Synthese.iml" filepath="$PROJECT_DIR$/Synthese/Synthese.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP Commit/TP Commit.iml" filepath="$PROJECT_DIR$/TP/TP Commit/TP Commit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP Rules/TP Rules.iml" filepath="$PROJECT_DIR$/TP/TP Rules/TP Rules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP1/TP1.iml" filepath="$PROJECT_DIR$/TP/TP1/TP1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP2/TP2.iml" filepath="$PROJECT_DIR$/TP/TP2/TP2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP3/TP3.iml" filepath="$PROJECT_DIR$/TP/TP3/TP3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP4/TP4.iml" filepath="$PROJECT_DIR$/TP/TP4/TP4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP5/TP5.iml" filepath="$PROJECT_DIR$/TP/TP5/TP5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP6/TP6.iml" filepath="$PROJECT_DIR$/TP/TP6/TP6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP7/TP7.iml" filepath="$PROJECT_DIR$/TP/TP7/TP7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP8/TP8.iml" filepath="$PROJECT_DIR$/TP/TP8/TP8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP9/TP9.iml" filepath="$PROJECT_DIR$/TP/TP9/TP9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP/TP8/assertions_et_decorateur/assertions_et_decorateur.iml" filepath="$PROJECT_DIR$/TP/TP8/assertions_et_decorateur/assertions_et_decorateur.iml" />
+    </modules>
+  </component>
+</project>

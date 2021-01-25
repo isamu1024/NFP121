@@ -1,0 +1,16 @@
+[
+	{	"id":"table",
+		"class":"syntaxe_exemples.Table",
+		"property.1":"collection",
+		"property.1.param.1":"liste",
+		"property.2":"int",
+		"property.2.param.1":3,
+		"property.3":"int",
+		"property.3.param.1":5
+	},
+	{	"id":"liste",
+		"class":"java.util.HashSet"
+	},
+	{	"verbose":true
+	}
+]

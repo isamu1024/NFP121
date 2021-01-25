@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LessThan
+comment1.params=value
+comment1.target=void\ setValue(int)
+comment2.params=customer
+comment2.target=boolean\ isSatisfied(Customer)
+numComments=3

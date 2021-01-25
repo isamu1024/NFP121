@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Customer
+comment1.params=type\ years
+comment1.target=Customer(java.lang.String,\ int)
+comment2.params=
+comment2.target=Customer()
+comment3.params=
+comment3.target=java.lang.String\ getType()
+comment4.params=years
+comment4.target=void\ setYears(int)
+comment5.params=
+comment5.target=int\ getYears()
+comment6.params=discount
+comment6.target=void\ setDiscount(int)
+comment7.params=
+comment7.target=int\ getDiscount()
+numComments=8

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Examen 2019">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Examen 2019/iterator.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Examen 2019/singleton.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Examen 2019/composite.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Examen 2019/publish.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Examen 2019/cor.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

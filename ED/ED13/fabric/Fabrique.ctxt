@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Fabrique
+comment1.params=product
+comment1.target=void\ setProduct(java.lang.Object)
+comment2.params=
+comment2.target=java.lang.Object\ creer()
+numComments=3

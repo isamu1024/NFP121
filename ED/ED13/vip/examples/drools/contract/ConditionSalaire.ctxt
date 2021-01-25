@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ConditionSalaire
+comment1.params=min
+comment1.target=void\ setSalaireMin(int)
+comment2.params=max
+comment2.target=void\ setSalaireMax(int)
+comment3.params=p
+comment3.target=boolean\ isSatisfied(vip_exemples.drools.contract.Personne)
+numComments=4

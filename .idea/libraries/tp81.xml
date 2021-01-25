@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="tp81">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TP/TP8/tp8/junit-4.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP/TP8/tp8/ihm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

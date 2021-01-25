@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Logical
+comment1.params=condition1
+comment1.target=void\ setCondition1(Condition)
+comment2.params=condition2
+comment2.target=void\ setCondition2(Condition)
+numComments=3

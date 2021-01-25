@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Client1
+comment1.params=facade
+comment1.target=void\ setFacade(FacadeI)
+comment2.params=
+comment2.target=void\ executer()
+comment3.params=argv
+comment3.target=void\ main(java.lang.String[])
+numComments=4

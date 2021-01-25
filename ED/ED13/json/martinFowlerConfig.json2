@@ -1,0 +1,16 @@
+[
+	{	"id":"movieLister",
+		"class":"martin_fowler.MovieLister",
+		"property.1":"finder",
+		"property.1.param.1":"movieFinder"
+	},
+
+	{	"id":"movieFinder",
+		"class":"martin_fowler.SemiColonMovieFinder",
+		"property.1":"filename",
+		"property.1.param.1":"movies1.txt"
+	},
+	{	"verbose":false
+	}
+]
+]

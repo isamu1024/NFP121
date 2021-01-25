@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Element
+comment1.params=elt
+comment1.target=void\ setValue(java.lang.Object)
+comment2.params=
+comment2.target=java.lang.Object\ getValue()
+numComments=3

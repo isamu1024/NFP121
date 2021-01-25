@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Invoker
+comment1.params=
+comment1.target=Invoker()
+comment2.params=rule
+comment2.target=void\ setRule(IRule)
+comment3.params=allowed
+comment3.target=void\ setUndo(boolean)
+comment4.params=
+comment4.target=IRule\ getRule()
+comment5.params=context\ result
+comment5.target=java.io.Serializable\ execute(java.lang.Object,\ java.io.Serializable)
+comment6.params=
+comment6.target=java.io.Serializable\ undo()
+comment7.params=result
+comment7.target=void\ save(java.io.Serializable)
+comment8.params=
+comment8.target=java.io.Serializable\ restore()
+numComments=9

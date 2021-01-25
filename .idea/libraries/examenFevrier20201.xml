@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="examenFevrier20201">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Examen blanc/examenFevrier2020/out/production/examenFevrier2020/femto_container_distrib_bluej(1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/Examen blanc/examenFevrier2020/out/production/examenFevrier2020/junit-4.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

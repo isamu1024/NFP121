@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=InfList
+comment1.params=operand
+comment1.target=void\ setOperand(int)
+comment2.params=c
+comment2.target=boolean\ isSatisfied(java.util.Collection)
+numComments=3

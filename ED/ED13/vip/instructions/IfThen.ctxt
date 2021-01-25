@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=IfThen
+comment1.params=condition
+comment1.target=void\ setCondition(Condition)
+comment2.params=instruction
+comment2.target=void\ setInstruction(Instruction)
+comment3.params=memory
+comment3.target=java.lang.Object\ execute(java.lang.Object)
+numComments=4

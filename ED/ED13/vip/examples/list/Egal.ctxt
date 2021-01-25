@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Egal
+comment1.params=elt
+comment1.target=void\ setElt(java.lang.Object)
+comment2.params=e
+comment2.target=boolean\ isSatisfied(java.lang.Object)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
