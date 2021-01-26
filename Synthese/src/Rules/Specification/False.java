@@ -1,4 +1,4 @@
-package Specification;
+package Rules.Specification;
 
 public class False<E> extends Specification<E> {
 

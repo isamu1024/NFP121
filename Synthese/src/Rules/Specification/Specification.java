@@ -1,4 +1,4 @@
-package Specification;
+package Rules.Specification;
 
 /**
  * La classe abstraite Specification.

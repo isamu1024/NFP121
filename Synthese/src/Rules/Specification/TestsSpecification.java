@@ -1,4 +1,4 @@
-package Specification;
+package Rules.Specification;
 
 public class TestsSpecification extends junit.framework.TestCase {
 
@@ -39,7 +39,23 @@ public class TestsSpecification extends junit.framework.TestCase {
         }
     }
 
-    private static class EstInferieur extends Specification<Integer> {
+    private static class EstSuperieur extends Specification<Integer> {
+        private final int valeur;
+
+        public EstSuperieur(int valeur) {
+            this.valeur = valeur;
+        }
+
+        public boolean isSatisfiedBy(Integer i) {
+            return i > valeur;
+        }
+
+        public String interpreter() {
+            return "estSuperieur_a_" + valeur;
+        }
+    }
+
+    public static class EstInferieur extends Specification<Integer> {
         private final int valeur;
 
         public EstInferieur(int valeur) {
@@ -49,7 +65,6 @@ public class TestsSpecification extends junit.framework.TestCase {
         public boolean isSatisfiedBy(Integer i) {
             return i < valeur;
         }
-
 
         public String interpreter() {
             return "estInferieur_a_" + valeur;
@@ -65,5 +80,5 @@ public class TestsSpecification extends junit.framework.TestCase {
             return "estImpair";
         }
     }
-
 }
+

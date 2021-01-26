@@ -1,4 +1,4 @@
-package Specification;
+package Rules.Specification;
 
 public class True<E> extends Specification<E>{
 
@@ -9,6 +9,6 @@ public class True<E> extends Specification<E>{
 
     @Override
     public String interpreter() {
-        return "True";
+        return "true";
     }
 }

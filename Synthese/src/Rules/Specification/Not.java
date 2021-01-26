@@ -1,4 +1,4 @@
-package Specification;
+package Rules.Specification;
 
 public class Not<E> extends Specification<E> {
 
@@ -25,6 +25,6 @@ public class Not<E> extends Specification<E> {
 
     @Override
     public String interpreter() {
-        return "not(" + spec + ")";
+        return "not(" + this.spec.interpreter() + ")";
     }
 }
