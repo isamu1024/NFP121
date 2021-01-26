@@ -1,6 +1,6 @@
-package Factory.ExempleHeadFirst.AbstractFactory;
+package PlusieurPatterns.AbstractFactory;
 
-import Factory.ExempleHeadFirst.Cancaneur;
+import PlusieurPatterns.Cancaneur;
 
 /**
  * Un peu de contrôle qualité nous permettrait d’être certains que nos

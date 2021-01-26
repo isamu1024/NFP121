@@ -1,4 +1,4 @@
-package Factory.ExempleHeadFirst;
+package PlusieurPatterns;
 
 /**
  * Il faut bien varier les espèces si

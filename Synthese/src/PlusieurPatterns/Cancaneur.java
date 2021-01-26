@@ -1,4 +1,4 @@
-package Factory.ExempleHeadFirst;
+package PlusieurPatterns;
 
 /**
  * Cette fois, les Canards

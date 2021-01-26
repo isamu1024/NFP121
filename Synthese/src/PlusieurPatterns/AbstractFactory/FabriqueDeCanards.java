@@ -1,6 +1,6 @@
-package Factory.ExempleHeadFirst.AbstractFactory;
+package PlusieurPatterns.AbstractFactory;
 
-import Factory.ExempleHeadFirst.*;
+import PlusieurPatterns.*;
 
 /**
  * FabriqueDeCanards étend

@@ -1,4 +1,4 @@
-package Factory.ExempleHeadFirst;
+package PlusieurPatterns;
 
 /**
  * Un Appelant qui cancane mais qui n’a

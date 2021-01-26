@@ -1,7 +1,7 @@
-package Factory.ExempleHeadFirst.AbstractFactory;
+package PlusieurPatterns.AbstractFactory;
 
-import Factory.ExempleHeadFirst.*;
-import Factory.ExempleHeadFirst.Decorateur.CompteurDeCouacs;
+import PlusieurPatterns.*;
+import PlusieurPatterns.Decorateur.CompteurDeCouacs;
 
 /**
  * Maintenant, créons la fabrique dont nous avons vraiment besoin,

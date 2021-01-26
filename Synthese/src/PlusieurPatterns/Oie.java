@@ -1,4 +1,4 @@
-package Factory.ExempleHeadFirst;
+package PlusieurPatterns;
 
 /**
  * Un palmipède peut en cacher un autre. Voici une Oie qui était en train de

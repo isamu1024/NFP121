@@ -1,4 +1,4 @@
-package Factory.ExempleHeadFirst;
+package PlusieurPatterns;
 
 /**
  * À quoi bon une interface sans classes pour l’implémenter ? Il est temps de

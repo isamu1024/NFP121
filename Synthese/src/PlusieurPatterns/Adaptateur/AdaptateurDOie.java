@@ -1,7 +1,7 @@
-package Factory.ExempleHeadFirst.Adaptateur;
+package PlusieurPatterns.Adaptateur;
 
-import Factory.ExempleHeadFirst.Cancaneur;
-import Factory.ExempleHeadFirst.Oie;
+import PlusieurPatterns.Cancaneur;
+import PlusieurPatterns.Oie;
 
 /**
  * Notre simulateur s’attend à voir des interfaces Cancaneur. Comme

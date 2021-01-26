@@ -1,6 +1,6 @@
-package Factory.ExempleHeadFirst.Decorateur;
+package PlusieurPatterns.Decorateur;
 
-import Factory.ExempleHeadFirst.Cancaneur;
+import PlusieurPatterns.Cancaneur;
 
 /**
  * Nous allons faire le bonheur de ces cancanologues et leur
