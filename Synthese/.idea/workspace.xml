@@ -6,8 +6,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4771de5-5d60-45b4-9f7b-14fbbdf7df9f" name="Default Changelist" comment="suite révisions">
+      <change afterPath="$PROJECT_DIR$/Patrons.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/AbstractFactory/FabriqueDeCanards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/AbstractFactory/FabriqueDeCanardsAbstraite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/AbstractFactory/FabriqueDeComptage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/Adaptateur/AdaptateurDOie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/Appelant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/CanardEnPlastique.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/Cancaneur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/Colvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/Decorateur/CompteurDeCouacs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/Mandarin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/Oie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ExempleHeadFirst/SimulateurDeCanards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatronSynthese/.idea/PatronSynthese.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatronSynthese/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatronSynthese/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatronSynthese/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adaptateur/ExempleHeadFirst/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adaptateur/ExempleHeadFirst/Demo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,13 +79,13 @@
       <recent name="Adaptateur.exempleCours" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo">
-    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Adaptateur.ExempleHeadFirst.Demo" />
+  <component name="RunManager" selected="Application.SimulateurDeCanards">
+    <configuration name="SimulateurDeCanards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Factory.ExempleHeadFirst.SimulateurDeCanards" />
       <module name="Synthese" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Adaptateur.ExempleHeadFirst.*" />
+          <option name="PATTERN" value="Factory.ExempleHeadFirst.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo" />
-        <item itemvalue="JUnit.TestRule.testReflectionRule" />
-        <item itemvalue="JUnit.TestRule.testSimpleAvecDesEntiers" />
-        <item itemvalue="JUnit.TestsCommand" />
+        <item itemvalue="Application.SimulateurDeCanards" />
         <item itemvalue="JUnit.TestsCommand.testSimpleAvecUneException" />
+        <item itemvalue="JUnit.TestsCommand" />
+        <item itemvalue="JUnit.TestRule.testSimpleAvecDesEntiers" />
+        <item itemvalue="JUnit.TestRule.testReflectionRule" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +210,7 @@
       <workItem from="1611349815207" duration="4551000" />
       <workItem from="1611394410754" duration="30794000" />
       <workItem from="1611567124999" duration="1203000" />
-      <workItem from="1611585081651" duration="31451000" />
+      <workItem from="1611585081651" duration="35212000" />
     </task>
     <task id="LOCAL-00001" summary="suite révisions">
       <created>1610891965851</created>
@@ -308,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611693959396</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="suite révisions">
+      <created>1611695206083</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611695206083</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,26 +384,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="396" height="466" key="DebuggerActiveHint/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611524756344" />
-    <state width="2342" height="298" key="GridCell.Tab.0.bottom" timestamp="1611693942904">
+    <state width="2342" height="301" key="GridCell.Tab.0.bottom" timestamp="1611697814474">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1986" height="464" key="GridCell.Tab.0.bottom/0.0.2560.1400/336.1440.1920.1080@336.1440.1920.1080" timestamp="1611274616136" />
-    <state width="2342" height="298" key="GridCell.Tab.0.bottom/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611693942904" />
-    <state width="2342" height="298" key="GridCell.Tab.0.center" timestamp="1611693942904">
+    <state width="2342" height="301" key="GridCell.Tab.0.bottom/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611697814474" />
+    <state width="2342" height="301" key="GridCell.Tab.0.center" timestamp="1611697814474">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1986" height="464" key="GridCell.Tab.0.center/0.0.2560.1400/336.1440.1920.1080@336.1440.1920.1080" timestamp="1611274616135" />
-    <state width="2342" height="298" key="GridCell.Tab.0.center/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611693942904" />
-    <state width="2342" height="298" key="GridCell.Tab.0.left" timestamp="1611693942904">
+    <state width="2342" height="301" key="GridCell.Tab.0.center/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611697814474" />
+    <state width="2342" height="301" key="GridCell.Tab.0.left" timestamp="1611697814474">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1986" height="464" key="GridCell.Tab.0.left/0.0.2560.1400/336.1440.1920.1080@336.1440.1920.1080" timestamp="1611274616135" />
-    <state width="2342" height="298" key="GridCell.Tab.0.left/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611693942904" />
-    <state width="2342" height="298" key="GridCell.Tab.0.right" timestamp="1611693942904">
+    <state width="2342" height="301" key="GridCell.Tab.0.left/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611697814474" />
+    <state width="2342" height="301" key="GridCell.Tab.0.right" timestamp="1611697814474">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1986" height="464" key="GridCell.Tab.0.right/0.0.2560.1400/336.1440.1920.1080@336.1440.1920.1080" timestamp="1611274616135" />
-    <state width="2342" height="298" key="GridCell.Tab.0.right/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611693942904" />
+    <state width="2342" height="301" key="GridCell.Tab.0.right/0.0.2560.1400/362.1440.1920.1080/2560.-460.1440.2560@0.0.2560.1400" timestamp="1611697814474" />
     <state width="2342" height="461" key="GridCell.Tab.1.bottom" timestamp="1611674023676">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
