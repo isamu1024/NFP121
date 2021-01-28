@@ -6,17 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4771de5-5d60-45b4-9f7b-14fbbdf7df9f" name="Default Changelist" comment="suite révisions">
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/MessageListenerI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/PubSubI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/PubSubImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/SimpleSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/Subscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/SubscriberI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question1/Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question2/ProxyPubSub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question2/TestsProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/junit-4.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/MainRestore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/MainSave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
