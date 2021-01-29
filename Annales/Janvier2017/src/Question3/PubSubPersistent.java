@@ -18,12 +18,13 @@ public class PubSubPersistent extends PubSubImpl {
             try {
                 fi.createNewFile();
             } catch (Exception e) {
+                // Todo
             }
         else {
             try {
                 this.restore();
             } catch (Exception e) {
-
+                // Todo
             }
 
         }

@@ -6,9 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4771de5-5d60-45b4-9f7b-14fbbdf7df9f" name="Default Changelist" comment="suite révisions">
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/MainRestore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/MainSave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question4/PublishSubscribeI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question4/PublishSubscribeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question4/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/MainRestore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/MainRestore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/PubSubPersistent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/PubSubPersistent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ED/ED13/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../ED/ED13/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ED/ED13/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../ED/ED13/package.bluej" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP/TP Rules/tp_rules/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/../TP/TP Rules/tp_rules/package.bluej" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +84,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -196,6 +204,7 @@
       <workItem from="1611585081651" duration="37575000" />
       <workItem from="1611779642681" duration="3000" />
       <workItem from="1611789238396" duration="719000" />
+      <workItem from="1611866106361" duration="3759000" />
     </task>
     <task id="LOCAL-00001" summary="suite révisions">
       <created>1610891965851</created>
