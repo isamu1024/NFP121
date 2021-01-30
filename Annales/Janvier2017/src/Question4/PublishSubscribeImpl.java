@@ -4,14 +4,12 @@ import Question1.*;
 
 import java.util.*;
 
-class PublishSubscribeImpl implements PublishSubscribeI {
+public class PublishSubscribeImpl implements PublishSubscribeI {
 
     private final Map<String, List<SubscriberI>> topicsMembers;
 
     public PublishSubscribeImpl() {
-
         this.topicsMembers = new HashMap<>();
-
     }
 
     public int publish(String topic, Message message) {
@@ -51,6 +49,4 @@ class PublishSubscribeImpl implements PublishSubscribeI {
     public List<SubscriberI> getSubscribers(String topic) {
             return this.topicsMembers.get(topic);
     }
-
-
 }
