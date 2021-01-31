@@ -6,45 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4771de5-5d60-45b4-9f7b-14fbbdf7df9f" name="Default Changelist" comment="suite révisions">
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/libraries/junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/Fevrier2018.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/junit-4.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/ContainsFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/ContentBasedRouter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/ContentBasedRouterI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/Emitter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/EmitterI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/FilterI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/Receiver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/ReceiverI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/RegexFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/TRUE.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/TestContentBasedRouter$ReceiverTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/out/production/Fevrier2018/Question1/TestContentBasedRouter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/ContainsFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/ContentBasedRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/ContentBasedRouterI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/Emitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/EmitterI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/FilterI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/Receiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/ReceiverI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/RegexFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/TRUE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/TestContentBasedRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$SubscriberIHM.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM$SubscriberIHM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/out/production/Janvier2017/Question5/IHM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/PubSubPersistent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question3/PubSubPersistent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question5/IHM.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Janvier2017/src/Question5/IHM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question1/IHM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question2/AuthorizedUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question2/EmitterProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/src/Question2/TestProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Annales/Fevrier 2018/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +202,7 @@
       <workItem from="1611585081651" duration="37575000" />
       <workItem from="1611779642681" duration="3000" />
       <workItem from="1611789238396" duration="719000" />
-      <workItem from="1611866106361" duration="6828000" />
+      <workItem from="1611866106361" duration="8550000" />
     </task>
     <task id="LOCAL-00001" summary="suite révisions">
       <created>1610891965851</created>
