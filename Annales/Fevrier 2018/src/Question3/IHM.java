@@ -1,4 +1,6 @@
-package Question1;
+package Question3;
+
+import Question1.*;
 
 import javax.swing.*;
 import java.awt.*;

@@ -80,11 +80,11 @@
   </component>
   <component name="RunManager" selected="Application.IHM">
     <configuration name="IHM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Question1.IHM" />
+      <option name="MAIN_CLASS_NAME" value="Question3.IHM" />
       <module name="Fevrier2018" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Question1.*" />
+          <option name="PATTERN" value="Question3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +107,7 @@
       <module name="Fevrier2018" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Question1.*" />
+          <option name="PATTERN" value="Question3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,7 +122,7 @@
       <module name="Fevrier2018" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Question1.*" />
+          <option name="PATTERN" value="Question3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
