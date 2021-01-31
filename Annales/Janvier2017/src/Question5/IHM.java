@@ -46,12 +46,16 @@ public class IHM extends JFrame {
             public void actionPerformed(ActionEvent ae) {
                 SubscriberI sub = new SimpleSubscriber(souscripteur.getText());
                 pubsub.subscribe(theme.getText(), sub );
+                resultat.setText("Subscriber :" + souscripteur.getText() + " abonné au thème :" + theme.getText());
                 IHM.this.pack();
             }
         });
         this.envoyerMessage.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                Message message = new Message()
+
+                try{
+                    pubsub.publish(theme.getText(), new Message(null, message.getText()));
+                }catch (Exception e){}
 
                 IHM.this.pack();
             }

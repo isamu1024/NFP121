@@ -26,7 +26,6 @@ public class PubSubPersistent extends PubSubImpl {
             } catch (Exception e) {
                 // Todo
             }
-
         }
     }
 
