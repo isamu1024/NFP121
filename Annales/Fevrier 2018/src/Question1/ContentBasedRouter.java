@@ -60,8 +60,8 @@ public class ContentBasedRouter implements ContentBasedRouterI {
                         receiver.receive(msg);
                         number++;
                     } catch (Exception e) {
+                        setDisabled(receiver); // Ne pas l'oublier !!!
                         this.recException.add(receiver);
-                        e.printStackTrace();
                     }
                 }
             }
